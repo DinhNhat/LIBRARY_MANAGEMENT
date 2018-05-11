@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3ad54576bbad40f2a6ba6923fb728bbe" Name="Diagram1">
+        <EntityTypeShape EntityType="ThuVienDBDHModel.DangNhap" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.KhoSach" Width="1.5" PointX="1.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.LoaiSach" Width="1.5" PointX="1.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.Lop" Width="1.5" PointX="1.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.MuonSach" Width="1.5" PointX="6" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.NamHoc" Width="1.5" PointX="1.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.NguoiSuDung" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.NhaXuatBan" Width="1.5" PointX="1.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.PhieuSuDungSach" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.Sach" Width="1.5" PointX="3.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.TacGia" Width="1.5" PointX="1.5" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.TinhTrangSachMuonTra" Width="1.5" PointX="3.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.TrangThai" Width="1.5" PointX="3.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.ViTriLuuTru" Width="1.5" PointX="1.5" PointY="20.125" IsExpanded="true" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_DANGNHAP_RELATIONS_NGUOISUD" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_SACH_RELATIONS_KHOSACH" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_LOAISACH_RELATIONS_VITRILUU" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_SACH_RELATIONS_LOAISACH" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_LOP_RELATIONS_NAMHOC" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_PHIEUSUD_RELATIONS_LOP" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MuonSach_NguoiSuDung" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MuonSach_NguoiSuDung1" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MUONSACH_RELATIONS_PHIEUSUD" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MUONSACH_RELATIONS_SACH" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MUONSACH_RELATIONS_TINHTRAN" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_MUONSACH_RELATIONS_TRANGTHA" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_SACH_RELATIONS_NHAXUATB" ManuallyRouted="false" />
+        <AssociationConnector Association="ThuVienDBDHModel.FK_SACH_RELATIONS_TACGIA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
