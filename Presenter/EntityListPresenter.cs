@@ -37,7 +37,7 @@ namespace Presenter
                 view.viewListEntity(bindingsource);
         }
 
-        //Hiến thi một Entity tại một vị trí trong danh sách
+        // Show an Entity at a position in the list
         public void viewEntityAt(int index)
         {
             if (index >= 0 && index < bindingsource.Count)

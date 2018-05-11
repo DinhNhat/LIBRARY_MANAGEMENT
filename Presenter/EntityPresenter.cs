@@ -16,7 +16,7 @@ namespace Presenter
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);
 
-        //thêm mới một entity
+        // Add Method for Entity
         public int addNewEntity()
         {
             int num = 0;
@@ -34,7 +34,7 @@ namespace Presenter
             return num;
         }
 
-        //delete một entity
+        // Delete Method for Entity
         public int deleteEntity()
         {
             int num = 0;
@@ -53,7 +53,7 @@ namespace Presenter
             return num;
         }
 
-        //Cập nhật một entity
+        // Update Method for Entity
         public int updateEntity()
         {
             int num = 0;
@@ -71,7 +71,7 @@ namespace Presenter
             return num;
         }
 
-        // lấy giá trị key của entity đứng cuối cùng
+        // get the key of the last entity on the rows
         public int LastKey
         {
             get { return this.maxKey; }
