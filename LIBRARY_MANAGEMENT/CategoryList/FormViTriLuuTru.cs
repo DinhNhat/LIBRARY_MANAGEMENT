@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using View;
+using Presenter.Presenters;
 using Presenter;
 
 namespace LIBRARY_MANAGEMENT.CategoryList
 {
     public partial class FormViTriLuuTru : DevExpress.XtraEditors.XtraForm, IViewEntity<ViTriLuuTru>
     {
-        ViTriLuuTru preViTriLuuTru = new ViTriLuuTru();
+        PreViTriLuuTru preViTriLuuTru = new PreViTriLuuTru();
         int maVTLT;
 
         public FormViTriLuuTru()

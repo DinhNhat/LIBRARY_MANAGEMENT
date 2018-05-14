@@ -24,5 +24,17 @@ namespace LIBRARY_MANAGEMENT
             FormViTriLuuTru vtlt = new FormViTriLuuTru();
             vtlt.Show();
         }
+
+        private void barStaticItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTacGia tg = new FormTacGia();
+            tg.Show();
+        }
+
+        private void barStaticItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormLoaiSach ls = new FormLoaiSach();
+            ls.Show();
+        }
     }
 }

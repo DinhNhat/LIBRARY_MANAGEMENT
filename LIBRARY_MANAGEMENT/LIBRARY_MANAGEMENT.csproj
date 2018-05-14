@@ -51,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryList\FormLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormLoaiSach.Designer.cs">
+      <DependentUpon>FormLoaiSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormTacGia.Designer.cs">
+      <DependentUpon>FormTacGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormViTriLuuTru.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     <Compile Include="QLTVMain.Designer.cs">
       <DependentUpon>QLTVMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CategoryList\FormLoaiSach.resx">
+      <DependentUpon>FormLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormTacGia.resx">
+      <DependentUpon>FormTacGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormViTriLuuTru.resx">
       <DependentUpon>FormViTriLuuTru.cs</DependentUpon>
     </EmbeddedResource>

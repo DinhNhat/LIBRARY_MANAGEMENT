@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Presenter.Model1;
 using System.Data.Entity;
 
 namespace Presenter.Presenters
 {
-    public class ViTriLuuTru : EntityListPresenter<ViTriLuuTru>
+    public class PreViTriLuuTru : EntityPresenter<ViTriLuuTru>
     {
-        public ViTriLuuTru() : base()
+        public PreViTriLuuTru() : base()
         {
             base.entitySet = entitiesTV.ViTriLuuTrus;
             base.bindingsource.DataSource = base.entitySet.ToList();
