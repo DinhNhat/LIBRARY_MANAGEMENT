@@ -16,7 +16,7 @@ namespace LIBRARY_MANAGEMENT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new QLTVMain());
         }
     }
 }
