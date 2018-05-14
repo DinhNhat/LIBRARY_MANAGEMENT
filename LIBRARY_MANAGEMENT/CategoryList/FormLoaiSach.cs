@@ -18,6 +18,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     {
         PreLoaiSach preLoaiSach = new PreLoaiSach();
         PreViTriLuuTru preVTLT = new PreViTriLuuTru();
+        string maLoaiSach;
         int rowIndex;
 
         public FormLoaiSach()
@@ -30,7 +31,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public LoaiSach AddNewEntity()
         {
             LoaiSach ls = new LoaiSach();
-            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            ls.maLoaiSach = preLoaiSach.LastKey + 1.ToString();
+            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if(lookUpEdit_TenVTLT.EditValue != null)
                 ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
@@ -40,14 +42,16 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public LoaiSach DeleteEntity()
         {
             LoaiSach ls = new LoaiSach();
-            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            ls.maLoaiSach = maLoaiSach;
             return ls;
         }
 
         public LoaiSach UpdateEntity()
         {
             LoaiSach ls = new LoaiSach();
-            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            ls.maLoaiSach = maLoaiSach;
+            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if (lookUpEdit_TenVTLT.EditValue != null)
                 ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
@@ -64,6 +68,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         void IViewEntity<LoaiSach>.viewEntity(LoaiSach ls)
         {
+            maLoaiSach = ls.maLoaiSach;
             textEdit_MaLoaiSach.Text = ls.maLoaiSach;
             textEdit_TenLoaiSach.Text = ls.tenLoaiSach;
             lookUpEdit_TenVTLT.EditValue = ls.maViTriLuuTru;
