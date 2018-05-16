@@ -9,7 +9,10 @@ namespace Presenter
     public class Presenter
     {
         protected static ThuVienDBDHEntities entitiesTV;
+
+        // Constructor Method
         protected Presenter() { setEntityContext(); }
+
         protected static void setEntityContext()
         {
             if (entitiesTV == null)

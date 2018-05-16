@@ -71,7 +71,7 @@ namespace Presenter
             return num;
         }
 
-        // get the key of the last entity on the rows
+        // Get the key of the last entity on the rows
         public int LastKey
         {
             get { return this.maxKey; }
