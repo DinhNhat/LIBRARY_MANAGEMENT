@@ -8,6 +8,7 @@ namespace Presenter
 {
     public class Presenter
     {
+        // get all elements of DbSet entity from Model(Database)
         protected static ThuVienDBDHEntities entitiesTV;
 
         // Constructor Method

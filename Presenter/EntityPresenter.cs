@@ -12,7 +12,7 @@ namespace Presenter
     {
         public List<T> EntityList { get { return this.EntityList; } }
 
-        //abstract methods
+        //abstract methods to inherit in all of components(Class) from Presenters
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);
 

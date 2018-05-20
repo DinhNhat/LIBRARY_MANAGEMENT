@@ -51,17 +51,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryList\FormKhoSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormKhoSach.Designer.cs">
+      <DependentUpon>FormKhoSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormLoaiSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategoryList\FormLoaiSach.Designer.cs">
       <DependentUpon>FormLoaiSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormLop.Designer.cs">
+      <DependentUpon>FormLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormNamHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormNamHoc.Designer.cs">
+      <DependentUpon>FormNamHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormNXB.Designer.cs">
+      <DependentUpon>FormNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormPhieuSuDungSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormPhieuSuDungSach.Designer.cs">
+      <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormTacGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategoryList\FormTacGia.Designer.cs">
       <DependentUpon>FormTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormTinhTrangSachMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormTinhTrangSachMuonTra.Designer.cs">
+      <DependentUpon>FormTinhTrangSachMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormTrangThai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormTrangThai.Designer.cs">
+      <DependentUpon>FormTrangThai.cs</DependentUpon>
     </Compile>
     <Compile Include="CategoryList\FormViTriLuuTru.cs">
       <SubType>Form</SubType>
@@ -83,11 +125,32 @@
     <Compile Include="QLTVMain.Designer.cs">
       <DependentUpon>QLTVMain.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CategoryList\FormKhoSach.resx">
+      <DependentUpon>FormKhoSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormLoaiSach.resx">
       <DependentUpon>FormLoaiSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormLop.resx">
+      <DependentUpon>FormLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormNamHoc.resx">
+      <DependentUpon>FormNamHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormNXB.resx">
+      <DependentUpon>FormNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormPhieuSuDungSach.resx">
+      <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormTacGia.resx">
       <DependentUpon>FormTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormTinhTrangSachMuonTra.resx">
+      <DependentUpon>FormTinhTrangSachMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormTrangThai.resx">
+      <DependentUpon>FormTrangThai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormViTriLuuTru.resx">
       <DependentUpon>FormViTriLuuTru.cs</DependentUpon>

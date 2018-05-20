@@ -36,5 +36,41 @@ namespace LIBRARY_MANAGEMENT
             FormLoaiSach ls = new FormLoaiSach();
             ls.Show();
         }
+
+        private void barStaticItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormKhoSach ks = new FormKhoSach();
+            ks.Show();
+        }
+
+        private void barStaticItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormNXB nxb = new FormNXB();
+            nxb.Show();
+        }
+
+        private void barStaticItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTrangThai tt = new FormTrangThai();
+            tt.Show();
+        }
+
+        private void barStaticItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTinhTrangSachMuonTra ttsmt = new FormTinhTrangSachMuonTra();
+            ttsmt.Show();
+        }
+
+        private void barStaticItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormNamHoc nh = new FormNamHoc();
+            nh.Show();
+        }
+
+        private void barStaticItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormLop lop = new FormLop();
+            lop.Show();
+        }
     }
 }

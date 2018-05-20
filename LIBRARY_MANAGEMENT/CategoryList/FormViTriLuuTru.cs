@@ -25,6 +25,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preViTriLuuTru.View = this;
         }
 
+        // implement interface IViewEntity<ViTriLuuTru>
+        #region
         public ViTriLuuTru AddNewEntity()
         {
             ViTriLuuTru vtlt = new ViTriLuuTru();
@@ -59,6 +61,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             listBoxControl_VTLT.DataSource = entities;
             listBoxControl_VTLT.DisplayMember = "tenViTriLuuTru";
         }
+        #endregion
+        // End Emplimentation
 
         private void FormViTriLuuTru_Load(object sender, EventArgs e)
         {

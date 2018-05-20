@@ -32,7 +32,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             LoaiSach ls = new LoaiSach();
             ls.maLoaiSach = preLoaiSach.LastKey + 1.ToString();
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if(lookUpEdit_TenVTLT.EditValue != null)
                 ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
@@ -51,21 +51,19 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             LoaiSach ls = new LoaiSach();
             ls.maLoaiSach = maLoaiSach;
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if (lookUpEdit_TenVTLT.EditValue != null)
                 ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
             return ls;
         }
 
-
         private void FormLoaiSach_Load(object sender, EventArgs e)
         {
             preLoaiSach.ViewList();
             preVTLT.ViewList();
         }
-
-
+        
         void IViewEntity<LoaiSach>.viewEntity(LoaiSach ls)
         {
             maLoaiSach = ls.maLoaiSach;
@@ -76,7 +74,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         void IViewListEntity<LoaiSach>.viewListEntity(BindingSource entities)
         {
-            dataGridView1.DataSource = entities;
+            dataGridView_LoaiSach.DataSource = entities;
         }
 
         void IViewListEntity<ViTriLuuTru>.viewListEntity(BindingSource entities)
@@ -94,7 +92,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 preLoaiSach.addNewEntity();
             else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
                 preLoaiSach.deleteEntity();
-            else
+            else if (radioGroup_LoaiSach.EditValue.Equals("Update"))
                 preLoaiSach.updateEntity();
         }
         

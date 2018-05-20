@@ -11,22 +11,22 @@ namespace Presenter
 {
     public class EntityListPresenter<T> : Presenter where T : class
     {
+        // fields to make some changes on many methods (add, update, delete)
         protected DbSet<T> entitySet;
         protected BindingSource bindingsource = new BindingSource();
+        protected int maxKey = 0;
+        public int currentIndex;
 
         // fileds for view and viewLs
         protected IViewEntity<T> view;
         protected IViewListEntity<T> viewLs;
+
         //properties for View and ViewLs
         public IViewEntity<T> View { set { this.view = value; } }
         public IViewListEntity<T> ViewLs { set { this.viewLs = value; } }
 
-        protected int maxKey = 0;
-        public int currentIndex;
-
         //Thiết lập view cho presenter
         //public EntityListPresenter():base(){}
-
 
         // 1 method ViewList
         public void ListEntity()

@@ -9,14 +9,17 @@ namespace Presenter.Presenters
 {
     public class PreViTriLuuTru : EntityPresenter<ViTriLuuTru>
     {
+        // Constructor for the beginning data
         public PreViTriLuuTru() : base()
         {
-            base.entitySet = entitiesTV.ViTriLuuTrus;
+            // set real value for fields entitySet and bindingsource.
+            base.entitySet = entitiesTV.ViTriLuuTrus; // ViTriLuuTrus from Model Database
             base.bindingsource.DataSource = base.entitySet.ToList();
             if (base.bindingsource.Count > 0)
                 maxKey = (int)base.entitySet.Max(t => t.maViTriLuuTru);
         }
 
+        // get the first element of a specified Entity
         protected override ViTriLuuTru getEntity(ViTriLuuTru o)
         {
             ViTriLuuTru vtll = null;
@@ -24,6 +27,7 @@ namespace Presenter.Presenters
             return vtll;
         }
 
+        // renew data for new entity after changing (that means swap between both entities)
         protected override void setNewInfo(ViTriLuuTru newEntity, ViTriLuuTru old)
         {
             old.tenViTriLuuTru = newEntity.tenViTriLuuTru;
