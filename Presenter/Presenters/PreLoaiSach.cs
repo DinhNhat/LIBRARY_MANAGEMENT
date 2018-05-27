@@ -14,6 +14,7 @@ namespace Presenter.Presenters
             base.bindingsource.DataSource = base.entitySet.ToList();
         }
 
+        // check elements of EntitySet if there's been already existed element
         protected override LoaiSach getEntity(LoaiSach o)
         {
             LoaiSach ls = null;

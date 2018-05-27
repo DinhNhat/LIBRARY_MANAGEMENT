@@ -12,6 +12,8 @@ namespace Presenter.Presenters
         {
             base.entitySet = entitiesTV.Lops;
             base.bindingsource.DataSource = base.entitySet.ToList();
+            if (base.bindingsource.Count > 0)
+                maxKey = (int)base.entitySet.Max(t => t.maLop);
         }
 
         protected override Lop getEntity(Lop o)

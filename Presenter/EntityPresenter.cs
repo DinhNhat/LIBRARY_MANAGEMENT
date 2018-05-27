@@ -12,7 +12,7 @@ namespace Presenter
     {
         public List<T> EntityList { get { return this.EntityList; } }
 
-        //abstract methods to inherit in all of components(Class) from Presenters
+        //abstract methods to inherit in all of components(PreClass) from Presenters
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);
 
@@ -28,7 +28,7 @@ namespace Presenter
                 if (num > 0)
                 {
                     maxKey += 1;
-                    this.bindingsource.DataSource = entitySet.ToList();
+                    SetBindingSource();
                 }
             }
             return num;
@@ -46,7 +46,7 @@ namespace Presenter
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                 {
-                    this.bindingsource.DataSource = entitySet.ToList();
+                    SetBindingSource();
                 }
 
             }
@@ -65,7 +65,7 @@ namespace Presenter
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                 {
-                    this.bindingsource.DataSource = entitySet.ToList();
+                    SetBindingSource();
                 }
             }
             return num;

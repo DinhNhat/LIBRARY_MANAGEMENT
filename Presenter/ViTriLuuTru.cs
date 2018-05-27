@@ -21,6 +21,7 @@ namespace Presenter
     
         public int maViTriLuuTru { get; set; }
         public string tenViTriLuuTru { get; set; }
+    
         public virtual ICollection<LoaiSach> LoaiSaches { get; set; }
     }
 }

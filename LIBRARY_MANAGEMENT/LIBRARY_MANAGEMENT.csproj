@@ -87,6 +87,18 @@
     <Compile Include="CategoryList\FormPhieuSuDungSach.Designer.cs">
       <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormSach.Designer.cs">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList\FormSach1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormSach1.Designer.cs">
+      <DependentUpon>FormSach1.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormTacGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormPhieuSuDungSach.resx">
       <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormSach.resx">
+      <DependentUpon>FormSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormSach1.resx">
+      <DependentUpon>FormSach1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormTacGia.resx">
       <DependentUpon>FormTacGia.cs</DependentUpon>

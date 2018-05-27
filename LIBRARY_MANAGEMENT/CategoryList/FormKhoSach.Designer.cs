@@ -50,7 +50,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(287, 397);
+            this.panelControl1.Size = new System.Drawing.Size(249, 300);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_KhoSach
@@ -58,7 +58,7 @@
             this.listBoxControl_KhoSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_KhoSach.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_KhoSach.Name = "listBoxControl_KhoSach";
-            this.listBoxControl_KhoSach.Size = new System.Drawing.Size(283, 393);
+            this.listBoxControl_KhoSach.Size = new System.Drawing.Size(245, 296);
             this.listBoxControl_KhoSach.TabIndex = 1;
             this.listBoxControl_KhoSach.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_KhoSach_SelectedIndexChanged);
             // 
@@ -69,15 +69,15 @@
             this.panelControl2.Controls.Add(this.textEdit_KhoSach);
             this.panelControl2.Controls.Add(this.label1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(287, 0);
+            this.panelControl2.Location = new System.Drawing.Point(249, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(604, 397);
+            this.panelControl2.Size = new System.Drawing.Size(442, 300);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_KhoSach
             // 
             this.radioGroup_KhoSach.EditValue = "Update";
-            this.radioGroup_KhoSach.Location = new System.Drawing.Point(387, 268);
+            this.radioGroup_KhoSach.Location = new System.Drawing.Point(218, 155);
             this.radioGroup_KhoSach.Name = "radioGroup_KhoSach";
             this.radioGroup_KhoSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
@@ -88,7 +88,7 @@
             // 
             // simpleButton_KhoSach
             // 
-            this.simpleButton_KhoSach.Location = new System.Drawing.Point(432, 188);
+            this.simpleButton_KhoSach.Location = new System.Drawing.Point(263, 99);
             this.simpleButton_KhoSach.Name = "simpleButton_KhoSach";
             this.simpleButton_KhoSach.Size = new System.Drawing.Size(127, 40);
             this.simpleButton_KhoSach.TabIndex = 2;
@@ -97,15 +97,15 @@
             // 
             // textEdit_KhoSach
             // 
-            this.textEdit_KhoSach.Location = new System.Drawing.Point(159, 119);
+            this.textEdit_KhoSach.Location = new System.Drawing.Point(89, 50);
             this.textEdit_KhoSach.Name = "textEdit_KhoSach";
-            this.textEdit_KhoSach.Size = new System.Drawing.Size(400, 20);
+            this.textEdit_KhoSach.Size = new System.Drawing.Size(301, 20);
             this.textEdit_KhoSach.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 126);
+            this.label1.Location = new System.Drawing.Point(6, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 0;
@@ -115,10 +115,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 397);
+            this.ClientSize = new System.Drawing.Size(691, 300);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormKhoSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKhoSach";
             this.Load += new System.EventHandler(this.FormKhoSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

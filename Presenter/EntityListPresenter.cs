@@ -28,7 +28,13 @@ namespace Presenter
         //Thiết lập view cho presenter
         //public EntityListPresenter():base(){}
 
-        // 1 method ViewList
+        // Method SetBindingsource
+        protected virtual void SetBindingSource()
+        {
+            this.bindingsource.DataSource = entitySet.ToList();
+        }
+
+        // implement viewListEntity in Form to assign bindingsource for all controls on Form
         public void ListEntity()
         {
             if (viewLs != null)

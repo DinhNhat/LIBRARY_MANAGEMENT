@@ -50,7 +50,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(269, 385);
+            this.panelControl1.Size = new System.Drawing.Size(269, 282);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_NXB
@@ -58,7 +58,7 @@
             this.listBoxControl_NXB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_NXB.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_NXB.Name = "listBoxControl_NXB";
-            this.listBoxControl_NXB.Size = new System.Drawing.Size(265, 381);
+            this.listBoxControl_NXB.Size = new System.Drawing.Size(265, 278);
             this.listBoxControl_NXB.TabIndex = 0;
             this.listBoxControl_NXB.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_NXB_SelectedIndexChanged);
             // 
@@ -71,24 +71,24 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(269, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(445, 385);
+            this.panelControl2.Size = new System.Drawing.Size(474, 282);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_NXB
             // 
             this.radioGroup_NXB.EditValue = "Update";
-            this.radioGroup_NXB.Location = new System.Drawing.Point(265, 253);
+            this.radioGroup_NXB.Location = new System.Drawing.Point(255, 131);
             this.radioGroup_NXB.Name = "radioGroup_NXB";
             this.radioGroup_NXB.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_NXB.Size = new System.Drawing.Size(153, 121);
+            this.radioGroup_NXB.Size = new System.Drawing.Size(163, 95);
             this.radioGroup_NXB.TabIndex = 3;
             // 
             // simpleButton_NXB
             // 
-            this.simpleButton_NXB.Location = new System.Drawing.Point(306, 167);
+            this.simpleButton_NXB.Location = new System.Drawing.Point(306, 81);
             this.simpleButton_NXB.Name = "simpleButton_NXB";
             this.simpleButton_NXB.Size = new System.Drawing.Size(112, 44);
             this.simpleButton_NXB.TabIndex = 2;
@@ -97,14 +97,14 @@
             // 
             // textEdit_NXB
             // 
-            this.textEdit_NXB.Location = new System.Drawing.Point(120, 105);
+            this.textEdit_NXB.Location = new System.Drawing.Point(120, 43);
             this.textEdit_NXB.Name = "textEdit_NXB";
             this.textEdit_NXB.Size = new System.Drawing.Size(298, 20);
             this.textEdit_NXB.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(4, 108);
+            this.labelControl1.Location = new System.Drawing.Point(19, 46);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(92, 13);
             this.labelControl1.TabIndex = 0;
@@ -114,10 +114,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 385);
+            this.ClientSize = new System.Drawing.Size(743, 282);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormNXB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNXB";
             this.Load += new System.EventHandler(this.FormNXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

@@ -25,6 +25,12 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preViTriLuuTru.View = this;
         }
 
+        public void viewEntity(ViTriLuuTru vtlt)
+        {
+            textEdit_VTLT.Text = vtlt.tenViTriLuuTru;
+            maVTLT = vtlt.maViTriLuuTru;
+        }
+
         // implement interface IViewEntity<ViTriLuuTru>
         #region
         public ViTriLuuTru AddNewEntity()
@@ -48,12 +54,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             vtlt.maViTriLuuTru = maVTLT;
             vtlt.tenViTriLuuTru = textEdit_VTLT.Text;
             return vtlt;
-        }
-
-        public void viewEntity(ViTriLuuTru vtlt)
-        {
-            textEdit_VTLT.Text = vtlt.tenViTriLuuTru;
-            maVTLT = vtlt.maViTriLuuTru;
         }
 
         public void viewListEntity(BindingSource entities)

@@ -30,7 +30,6 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_Lop = new System.Windows.Forms.DataGridView();
-            this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -65,45 +64,34 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(286, 414);
+            this.panelControl1.Size = new System.Drawing.Size(273, 338);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_Lop
             // 
-            this.dataGridView_Lop.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridView_Lop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Lop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaLop,
             this.colTenLop,
             this.colNamHoc});
             this.dataGridView_Lop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_Lop.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Lop.Name = "dataGridView_Lop";
-            this.dataGridView_Lop.Size = new System.Drawing.Size(282, 410);
+            this.dataGridView_Lop.Size = new System.Drawing.Size(269, 334);
             this.dataGridView_Lop.TabIndex = 0;
             this.dataGridView_Lop.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Lop_RowEnter);
-            // 
-            // colMaLop
-            // 
-            this.colMaLop.DataPropertyName = "maLop";
-            this.colMaLop.HeaderText = "Mã Lớp";
-            this.colMaLop.Name = "colMaLop";
-            this.colMaLop.Width = 66;
             // 
             // colTenLop
             // 
             this.colTenLop.DataPropertyName = "tenLop";
-            this.colTenLop.HeaderText = "Tên Lớp";
+            this.colTenLop.HeaderText = "Tên lớp";
             this.colTenLop.Name = "colTenLop";
-            this.colTenLop.Width = 70;
+            this.colTenLop.Width = 113;
             // 
             // colNamHoc
             // 
-            this.colNamHoc.HeaderText = "Năm Học";
+            this.colNamHoc.HeaderText = "Năm học";
             this.colNamHoc.Name = "colNamHoc";
-            this.colNamHoc.ReadOnly = true;
             this.colNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colNamHoc.Width = 55;
+            this.colNamHoc.Width = 113;
             // 
             // panelControl2
             // 
@@ -111,9 +99,9 @@
             this.panelControl2.Controls.Add(this.panelControl4);
             this.panelControl2.Controls.Add(this.panelControl3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(286, 0);
+            this.panelControl2.Location = new System.Drawing.Point(273, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(616, 414);
+            this.panelControl2.Size = new System.Drawing.Size(404, 338);
             this.panelControl2.TabIndex = 1;
             // 
             // panelControl5
@@ -121,26 +109,26 @@
             this.panelControl5.Controls.Add(this.radioGroup_Lop);
             this.panelControl5.Controls.Add(this.simpleButton_Lop);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl5.Location = new System.Drawing.Point(2, 176);
+            this.panelControl5.Location = new System.Drawing.Point(2, 139);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(612, 236);
+            this.panelControl5.Size = new System.Drawing.Size(400, 197);
             this.panelControl5.TabIndex = 2;
             // 
             // radioGroup_Lop
             // 
             this.radioGroup_Lop.EditValue = "Update";
-            this.radioGroup_Lop.Location = new System.Drawing.Point(387, 120);
+            this.radioGroup_Lop.Location = new System.Drawing.Point(174, 53);
             this.radioGroup_Lop.Name = "radioGroup_Lop";
             this.radioGroup_Lop.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_Lop.Size = new System.Drawing.Size(181, 96);
+            this.radioGroup_Lop.Size = new System.Drawing.Size(166, 96);
             this.radioGroup_Lop.TabIndex = 1;
             // 
             // simpleButton_Lop
             // 
-            this.simpleButton_Lop.Location = new System.Drawing.Point(469, 25);
+            this.simpleButton_Lop.Location = new System.Drawing.Point(241, 0);
             this.simpleButton_Lop.Name = "simpleButton_Lop";
             this.simpleButton_Lop.Size = new System.Drawing.Size(99, 47);
             this.simpleButton_Lop.TabIndex = 0;
@@ -152,21 +140,21 @@
             this.panelControl4.Controls.Add(this.textEdit_TenLop);
             this.panelControl4.Controls.Add(this.labelControl2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(2, 89);
+            this.panelControl4.Location = new System.Drawing.Point(2, 68);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(612, 87);
+            this.panelControl4.Size = new System.Drawing.Size(400, 71);
             this.panelControl4.TabIndex = 1;
             // 
             // textEdit_TenLop
             // 
-            this.textEdit_TenLop.Location = new System.Drawing.Point(198, 26);
+            this.textEdit_TenLop.Location = new System.Drawing.Point(95, 21);
             this.textEdit_TenLop.Name = "textEdit_TenLop";
-            this.textEdit_TenLop.Size = new System.Drawing.Size(370, 20);
+            this.textEdit_TenLop.Size = new System.Drawing.Size(245, 20);
             this.textEdit_TenLop.TabIndex = 3;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(78, 33);
+            this.labelControl2.Location = new System.Drawing.Point(21, 24);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(42, 13);
             this.labelControl2.TabIndex = 1;
@@ -179,12 +167,12 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(2, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(612, 87);
+            this.panelControl3.Size = new System.Drawing.Size(400, 66);
             this.panelControl3.TabIndex = 0;
             // 
             // lookUpEdit_TenNamHoc
             // 
-            this.lookUpEdit_TenNamHoc.Location = new System.Drawing.Point(304, 46);
+            this.lookUpEdit_TenNamHoc.Location = new System.Drawing.Point(95, 29);
             this.lookUpEdit_TenNamHoc.Name = "lookUpEdit_TenNamHoc";
             this.lookUpEdit_TenNamHoc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -192,12 +180,12 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenNamHoc", "Tên năm học")});
             this.lookUpEdit_TenNamHoc.Properties.DisplayMember = "tenNamHoc";
             this.lookUpEdit_TenNamHoc.Properties.ValueMember = "maNamHoc";
-            this.lookUpEdit_TenNamHoc.Size = new System.Drawing.Size(264, 20);
+            this.lookUpEdit_TenNamHoc.Size = new System.Drawing.Size(209, 20);
             this.lookUpEdit_TenNamHoc.TabIndex = 3;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(198, 53);
+            this.labelControl3.Location = new System.Drawing.Point(21, 32);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(68, 13);
             this.labelControl3.TabIndex = 2;
@@ -207,10 +195,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 414);
+            this.ClientSize = new System.Drawing.Size(677, 338);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormLop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLop";
             this.Load += new System.EventHandler(this.FormLop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -247,7 +236,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit_TenNamHoc;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenLop;
         private System.Windows.Forms.DataGridViewComboBoxColumn colNamHoc;
     }

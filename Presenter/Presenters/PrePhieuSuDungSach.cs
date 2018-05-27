@@ -14,6 +14,7 @@ namespace Presenter.Presenters
             base.bindingsource.DataSource = entitySet.ToList();
         }
 
+        // check elements of EntitySet if there's been already existed element
         protected override PhieuSuDungSach getEntity(PhieuSuDungSach o)
         {
             PhieuSuDungSach phieu = null;
@@ -23,6 +24,11 @@ namespace Presenter.Presenters
 
         protected override void setNewInfo(PhieuSuDungSach newEntity, PhieuSuDungSach old)
         {
+            old.hoTen = newEntity.hoTen;
+            old.ngayThangNamSinh = newEntity.ngayThangNamSinh;
+            old.gioiTinh = newEntity.gioiTinh;
+            old.email = newEntity.email;
+            old.soDT = newEntity.soDT;
             old.maLop = newEntity.maLop;
         }
     }

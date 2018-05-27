@@ -101,6 +101,7 @@
     <Compile Include="Presenters\PreNamHoc.cs" />
     <Compile Include="Presenters\PreNhaXuatBan.cs" />
     <Compile Include="Presenters\PrePhieuSuDungSach.cs" />
+    <Compile Include="Presenters\PreSach.cs" />
     <Compile Include="Presenters\PreTacGia.cs" />
     <Compile Include="Presenters\PreTinhTrangSachMuonTra.cs" />
     <Compile Include="Presenters\PreTrangThai.cs" />
@@ -126,17 +127,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\View\View.csproj">
+      <Project>{b7ce4d5c-ad49-4436-b3ad-9ecc0814f6b2}</Project>
+      <Name>View</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">
@@ -150,16 +158,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\View\View.csproj">
-      <Project>{b7ce4d5c-ad49-4436-b3ad-9ecc0814f6b2}</Project>
-      <Name>View</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

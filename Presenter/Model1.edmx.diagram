@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3ad54576bbad40f2a6ba6923fb728bbe" Name="Diagram1">
+      <Diagram DiagramId="cebbe27ddc934636bee76d7ea7e9a28a" Name="Diagram1">
         <EntityTypeShape EntityType="ThuVienDBDHModel.DangNhap" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.KhoSach" Width="1.5" PointX="1.5" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.LoaiSach" Width="1.5" PointX="1.5" PointY="16.875" IsExpanded="true" />
@@ -14,7 +14,7 @@
         <EntityTypeShape EntityType="ThuVienDBDHModel.NguoiSuDung" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.NhaXuatBan" Width="1.5" PointX="1.5" PointY="22.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.PhieuSuDungSach" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ThuVienDBDHModel.Sach" Width="1.5" PointX="3.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.Sach" Width="1.5" PointX="3.75" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.TacGia" Width="1.5" PointX="1.5" PointY="25" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.TinhTrangSachMuonTra" Width="1.5" PointX="3.75" PointY="22.375" IsExpanded="true" />

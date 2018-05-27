@@ -44,7 +44,7 @@
           <Property Name="maPhieuSD" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="soTT" Type="int" Nullable="false" />
           <Property Name="maSach" Type="varchar" MaxLength="10" />
-          <Property Name="maTinhTrangSach" Type="int" />
+          <Property Name="maTinhTrangSach" Type="int" Nullable="false" />
           <Property Name="maTrangThai" Type="int" />
           <Property Name="ngayMuon" Type="datetime" Nullable="false" />
           <Property Name="ngayDuKienTra" Type="datetime" />
@@ -100,6 +100,7 @@
           <Property Name="soTrang" Type="int" />
           <Property Name="soLuong" Type="int" />
           <Property Name="thoiHanMuon" Type="int" />
+          <Property Name="giaTien" Type="int" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -224,7 +225,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MUONSACH_RELATIONS_TINHTRAN">
-          <End Role="TinhTrangSachMuonTra" Type="Self.TinhTrangSachMuonTra" Multiplicity="0..1" />
+          <End Role="TinhTrangSachMuonTra" Type="Self.TinhTrangSachMuonTra" Multiplicity="1" />
           <End Role="MuonSach" Type="Self.MuonSach" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TinhTrangSachMuonTra">
@@ -430,7 +431,7 @@
           <Property Name="maPhieuSD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="soTT" Type="Int32" Nullable="false" />
           <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="maTinhTrangSach" Type="Int32" />
+          <Property Name="maTinhTrangSach" Type="Int32" Nullable="false" />
           <Property Name="maTrangThai" Type="Int32" />
           <Property Name="ngayMuon" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ngayDuKienTra" Type="DateTime" Precision="3" />
@@ -499,6 +500,7 @@
           <Property Name="soTrang" Type="Int32" />
           <Property Name="soLuong" Type="Int32" />
           <Property Name="thoiHanMuon" Type="Int32" />
+          <Property Name="giaTien" Type="Int32" />
           <NavigationProperty Name="KhoSach" Relationship="Self.FK_SACH_RELATIONS_KHOSACH" FromRole="Sach" ToRole="KhoSach" />
           <NavigationProperty Name="LoaiSach" Relationship="Self.FK_SACH_RELATIONS_LOAISACH" FromRole="Sach" ToRole="LoaiSach" />
           <NavigationProperty Name="MuonSaches" Relationship="Self.FK_MUONSACH_RELATIONS_SACH" FromRole="Sach" ToRole="MuonSach" />
@@ -668,7 +670,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MUONSACH_RELATIONS_TINHTRAN">
-          <End Role="TinhTrangSachMuonTra" Type="Self.TinhTrangSachMuonTra" Multiplicity="0..1" />
+          <End Role="TinhTrangSachMuonTra" Type="Self.TinhTrangSachMuonTra" Multiplicity="1" />
           <End Role="MuonSach" Type="Self.MuonSach" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TinhTrangSachMuonTra">
@@ -896,6 +898,7 @@
                 <ScalarProperty Name="soTrang" ColumnName="soTrang" />
                 <ScalarProperty Name="soLuong" ColumnName="soLuong" />
                 <ScalarProperty Name="thoiHanMuon" ColumnName="thoiHanMuon" />
+                <ScalarProperty Name="giaTien" ColumnName="giaTien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

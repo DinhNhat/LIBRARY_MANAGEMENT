@@ -28,10 +28,18 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preVTLT.ViewLs = this;
         }
 
+        void IViewEntity<LoaiSach>.viewEntity(LoaiSach ls)
+        {
+            maLoaiSach = ls.maLoaiSach;
+            textEdit_MaLoaiSach.Text = ls.maLoaiSach;
+            textEdit_TenLoaiSach.Text = ls.tenLoaiSach;
+            lookUpEdit_TenVTLT.EditValue = ls.maViTriLuuTru;
+        }
+
         public LoaiSach AddNewEntity()
         {
             LoaiSach ls = new LoaiSach();
-            ls.maLoaiSach = preLoaiSach.LastKey + 1.ToString();
+            //ls.maLoaiSach = preLoaiSach.LastKey + 1.ToString();
             ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if(lookUpEdit_TenVTLT.EditValue != null)
@@ -62,14 +70,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             preLoaiSach.ViewList();
             preVTLT.ViewList();
-        }
-        
-        void IViewEntity<LoaiSach>.viewEntity(LoaiSach ls)
-        {
-            maLoaiSach = ls.maLoaiSach;
-            textEdit_MaLoaiSach.Text = ls.maLoaiSach;
-            textEdit_TenLoaiSach.Text = ls.tenLoaiSach;
-            lookUpEdit_TenVTLT.EditValue = ls.maViTriLuuTru;
         }
 
         void IViewListEntity<LoaiSach>.viewListEntity(BindingSource entities)

@@ -17,7 +17,7 @@ namespace Presenter
         public string maPhieuSD { get; set; }
         public int soTT { get; set; }
         public string maSach { get; set; }
-        public Nullable<int> maTinhTrangSach { get; set; }
+        public int maTinhTrangSach { get; set; }
         public Nullable<int> maTrangThai { get; set; }
         public System.DateTime ngayMuon { get; set; }
         public Nullable<System.DateTime> ngayDuKienTra { get; set; }

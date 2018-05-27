@@ -13,7 +13,7 @@ namespace Presenter.Presenters
             // set real value for fields entitySet and bindingsource.
             base.entitySet = entitiesTV.KhoSaches; // KhoSaches from Model Database
             base.bindingsource.DataSource = base.entitySet.ToList();
-            if (base.bindingsource.Count > 0)
+            if (base.bindingsource.Count > 0) // get element with the max key(the maximum maKhoSach)
                 maxKey = (int)base.entitySet.Max(t => t.maKhoSach);
         }
 

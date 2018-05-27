@@ -29,6 +29,7 @@ namespace Presenter
         public Nullable<int> soTrang { get; set; }
         public Nullable<int> soLuong { get; set; }
         public Nullable<int> thoiHanMuon { get; set; }
+        public Nullable<int> giaTien { get; set; }
     
         public virtual KhoSach KhoSach { get; set; }
         public virtual LoaiSach LoaiSach { get; set; }

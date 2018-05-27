@@ -14,7 +14,8 @@ using Presenter;
 
 namespace LIBRARY_MANAGEMENT.CategoryList
 {
-    public partial class FormKhoSach : DevExpress.XtraEditors.XtraForm, IViewEntity<KhoSach>
+    public partial class 
+        FormKhoSach : DevExpress.XtraEditors.XtraForm, IViewEntity<KhoSach>
     {
         PreKhoSach preKhoSach = new PreKhoSach();
         int maKhoSach;
@@ -62,7 +63,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         private void FormKhoSach_Load(object sender, EventArgs e)
         {
-            preKhoSach.ViewList();
+            preKhoSach.ListEntity();
         }
 
         private void listBoxControl_KhoSach_SelectedIndexChanged(object sender, EventArgs e)

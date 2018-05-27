@@ -32,7 +32,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             Lop lop = new Lop();
             lop.maLop = preLop.LastKey + 1;
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             lop.tenLop = textEdit_TenLop.Text;
             if (lookUpEdit_TenNamHoc.EditValue != null)
                 lop.maNamHoc = (int?)lookUpEdit_TenNamHoc.EditValue;
@@ -42,7 +41,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public Lop DeleteEntity()
         {
             Lop lop = new Lop();
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             lop.maLop = maLop;
             return lop;
         }
@@ -51,7 +49,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             Lop lop = new Lop();
             lop.maLop = maLop;
-            //lop.maLop = textEdit_MaLop.Text;
             lop.tenLop = textEdit_TenLop.Text;
             if (lookUpEdit_TenNamHoc.EditValue != null)
                 lop.maNamHoc = (int?)lookUpEdit_TenNamHoc.EditValue;
@@ -82,11 +79,18 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void simpleButton_Lop_Click(object sender, EventArgs e)
         {
             if (radioGroup_Lop.EditValue.Equals("Add"))
+            {
                 preLop.addNewEntity();
+                rowIndex = dataGridView_Lop.DataBindings.Count - 1;
+            }
             else if (radioGroup_Lop.EditValue.Equals("Delete"))
+            {
                 preLop.deleteEntity();
+            }
             else if (radioGroup_Lop.EditValue.Equals("Update"))
+            {
                 preLop.updateEntity();
+            }
         }
 
         private void dataGridView_Lop_RowEnter(object sender, DataGridViewCellEventArgs e)

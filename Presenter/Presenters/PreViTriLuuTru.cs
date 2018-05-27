@@ -19,7 +19,7 @@ namespace Presenter.Presenters
                 maxKey = (int)base.entitySet.Max(t => t.maViTriLuuTru);
         }
 
-        // get the first element of a specified Entity
+        // get the FIRST element of a specified Entity
         protected override ViTriLuuTru getEntity(ViTriLuuTru o)
         {
             ViTriLuuTru vtll = null;
