@@ -60,6 +60,7 @@
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -97,9 +98,10 @@
             this.barStaticItem14,
             this.barStaticItem15,
             this.barStaticItem5,
-            this.barStaticItem8});
+            this.barStaticItem8,
+            this.barStaticItem4});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 28;
+            this.barManager1.MaxItemId = 29;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
@@ -161,7 +163,8 @@
             this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem6),
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem14)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem14),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem4)});
             this.barSubItem3.Name = "barSubItem3";
             // 
             // barStaticItem6
@@ -345,6 +348,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "Mượn trả sách";
+            this.barStaticItem4.Id = 28;
+            this.barStaticItem4.Name = "barStaticItem4";
+            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem4_ItemClick);
+            // 
             // QLTVMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,5 +412,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem15;
         private DevExpress.XtraBars.BarStaticItem barStaticItem8;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem4;
     }
 }

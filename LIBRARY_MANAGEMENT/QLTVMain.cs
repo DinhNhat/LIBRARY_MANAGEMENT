@@ -86,5 +86,11 @@ namespace LIBRARY_MANAGEMENT
             FormKhoSach ks = new FormKhoSach();
             ks.Show();
         }
+
+        private void barStaticItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMuonTraSach mts = new FormMuonTraSach();
+            mts.Show();
+        }
     }
 }

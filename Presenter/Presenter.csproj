@@ -98,6 +98,7 @@
     <Compile Include="Presenters\PreKhoSach.cs" />
     <Compile Include="Presenters\PreLoaiSach.cs" />
     <Compile Include="Presenters\PreLop.cs" />
+    <Compile Include="Presenters\PreMuonTraSach.cs" />
     <Compile Include="Presenters\PreNamHoc.cs" />
     <Compile Include="Presenters\PreNhaXuatBan.cs" />
     <Compile Include="Presenters\PrePhieuSuDungSach.cs" />

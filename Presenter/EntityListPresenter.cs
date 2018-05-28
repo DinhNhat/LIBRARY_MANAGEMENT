@@ -29,7 +29,7 @@ namespace Presenter
         //public EntityListPresenter():base(){}
 
         // Method SetBindingsource
-        protected virtual void SetBindingSource()
+        public virtual void SetBindingSource()
         {
             this.bindingsource.DataSource = entitySet.ToList();
         }
