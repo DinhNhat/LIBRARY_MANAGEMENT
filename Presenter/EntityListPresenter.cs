@@ -15,7 +15,6 @@ namespace Presenter
         protected DbSet<T> entitySet;
         protected BindingSource bindingsource = new BindingSource();
         protected int maxKey = 0;
-        public int currentIndex;
 
         // fileds for view and viewLs
         protected IViewEntity<T> view;
@@ -24,15 +23,6 @@ namespace Presenter
         //properties for View and ViewLs
         public IViewEntity<T> View { set { this.view = value; } }
         public IViewListEntity<T> ViewLs { set { this.viewLs = value; } }
-
-        //Thiết lập view cho presenter
-        //public EntityListPresenter():base(){}
-
-        // Method SetBindingsource
-        public virtual void SetBindingSource()
-        {
-            this.bindingsource.DataSource = entitySet.ToList();
-        }
 
         // implement viewListEntity in Form to assign bindingsource for all controls on Form
         public void ListEntity()

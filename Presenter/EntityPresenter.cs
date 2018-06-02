@@ -16,6 +16,10 @@ namespace Presenter
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);
 
+        // Get the key of the last entity all of the rows
+        public int LastKey { get { return this.maxKey; } }  
+
+        #region CRUD Methods
         // Add Method for Entity
         public int addNewEntity()
         {
@@ -28,7 +32,7 @@ namespace Presenter
                 if (num > 0)
                 {
                     maxKey += 1;
-                    SetBindingSource();
+                    this.bindingsource.DataSource = entitySet.ToList();
                 }
             }
             return num;
@@ -45,10 +49,7 @@ namespace Presenter
                 entitySet.Remove(entityToDelete);
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
-                {
-                    SetBindingSource();
-                }
-
+                    this.bindingsource.DataSource = entitySet.ToList();
             }
             return num;
         }
@@ -64,17 +65,11 @@ namespace Presenter
                 setNewInfo(entity, old);
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
-                {
-                    SetBindingSource();
-                }
+                    this.bindingsource.DataSource = entitySet.ToList();
             }
             return num;
         }
+        #endregion
 
-        // Get the key of the last entity on the rows
-        public int LastKey
-        {
-            get { return this.maxKey; }
-        }
     }
 }

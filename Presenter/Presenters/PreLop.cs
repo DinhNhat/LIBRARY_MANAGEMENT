@@ -10,8 +10,10 @@ namespace Presenter.Presenters
     {
         public PreLop() : base()
         {
-            base.entitySet = entitiesTV.Lops;
+            // set real value for fields entitySet and bindingsource.
+            base.entitySet = entitiesTV.Lops; // Lops from Model Database
             base.bindingsource.DataSource = base.entitySet.ToList();
+            // assign the max ID in list entity for maxkey
             if (base.bindingsource.Count > 0)
                 maxKey = (int)base.entitySet.Max(t => t.maLop);
         }
@@ -28,5 +30,13 @@ namespace Presenter.Presenters
             old.tenLop = newEntity.tenLop;
             old.maNamHoc = newEntity.maNamHoc;
         }
+
+        public string GetLopforFilter(int malop)
+        {
+            Lop lop;
+            lop = base.entitySet.FirstOrDefault(l => l.maLop == malop);
+            return lop.tenLop;
+        }
+
     }
 }

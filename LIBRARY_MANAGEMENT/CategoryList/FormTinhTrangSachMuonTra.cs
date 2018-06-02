@@ -92,5 +92,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_TTSMT.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_TTSMT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_TTSMT.EditValue.Equals("Add"))
+                textEdit_TTSMT.ReadOnly = false;
+            else if (radioGroup_TTSMT.EditValue.Equals("Delete"))
+                textEdit_TTSMT.ReadOnly = true;
+            else if (radioGroup_TTSMT.EditValue.Equals("Update"))
+                textEdit_TTSMT.ReadOnly = false;
+        }
     }
 }

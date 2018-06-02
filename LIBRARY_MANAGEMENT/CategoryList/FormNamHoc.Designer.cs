@@ -85,7 +85,7 @@
             // 
             // radioGroup_NamHoc
             // 
-            this.radioGroup_NamHoc.EditValue = "Update";
+            this.radioGroup_NamHoc.EditValue = "Add";
             this.radioGroup_NamHoc.Location = new System.Drawing.Point(176, 153);
             this.radioGroup_NamHoc.Name = "radioGroup_NamHoc";
             this.radioGroup_NamHoc.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -94,6 +94,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_NamHoc.Size = new System.Drawing.Size(163, 100);
             this.radioGroup_NamHoc.TabIndex = 2;
+            this.radioGroup_NamHoc.SelectedIndexChanged += new System.EventHandler(this.radioGroup_NamHoc_SelectedIndexChanged);
             // 
             // textEdit_NamHoc
             // 

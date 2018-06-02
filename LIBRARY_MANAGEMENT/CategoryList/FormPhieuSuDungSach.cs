@@ -113,5 +113,39 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             rowIndex = e.RowIndex;
             prePhieuSD.viewEntityAt(rowIndex);
         }
+
+        private void radioGroup_PhieuSD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_PhieuSD.EditValue.Equals("Add"))
+            {
+                textEdit_MaPhieu.ReadOnly = false;
+                textEdit_HoTen.ReadOnly = false;
+                dateEdit_NamSinh.ReadOnly = false;
+                textEdit_Email.ReadOnly = false;
+                textEdit_SoDT.ReadOnly = false;
+                lookUpEdit_TenLop.ReadOnly = false;
+                radioGroup_GioiTinh.ReadOnly = false;
+            }
+            else if (radioGroup_PhieuSD.EditValue.Equals("Delete"))
+            {
+                textEdit_MaPhieu.ReadOnly = true;
+                textEdit_HoTen.ReadOnly = true;
+                dateEdit_NamSinh.ReadOnly = true;
+                textEdit_Email.ReadOnly = true;
+                textEdit_SoDT.ReadOnly = true;
+                lookUpEdit_TenLop.ReadOnly = true;
+                radioGroup_GioiTinh.ReadOnly = true;
+            }
+            else if (radioGroup_PhieuSD.EditValue.Equals("Update"))
+            {
+                textEdit_MaPhieu.ReadOnly = true;
+                textEdit_HoTen.ReadOnly = false;
+                dateEdit_NamSinh.ReadOnly = false;
+                textEdit_Email.ReadOnly = false;
+                textEdit_SoDT.ReadOnly = false;
+                lookUpEdit_TenLop.ReadOnly = false;
+                radioGroup_GioiTinh.ReadOnly = false;
+            }
+        }
     }
 }

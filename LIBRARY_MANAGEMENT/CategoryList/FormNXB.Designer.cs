@@ -76,7 +76,7 @@
             // 
             // radioGroup_NXB
             // 
-            this.radioGroup_NXB.EditValue = "Update";
+            this.radioGroup_NXB.EditValue = "Add";
             this.radioGroup_NXB.Location = new System.Drawing.Point(255, 131);
             this.radioGroup_NXB.Name = "radioGroup_NXB";
             this.radioGroup_NXB.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -85,6 +85,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_NXB.Size = new System.Drawing.Size(163, 95);
             this.radioGroup_NXB.TabIndex = 3;
+            this.radioGroup_NXB.SelectedIndexChanged += new System.EventHandler(this.radioGroup_NXB_SelectedIndexChanged);
             // 
             // simpleButton_NXB
             // 

@@ -10,7 +10,8 @@ namespace Presenter.Presenters
     {
         public PreLoaiSach() : base()
         {
-            base.entitySet = entitiesTV.LoaiSaches;
+            // set real value for fields entitySet and bindingsource.
+            base.entitySet = entitiesTV.LoaiSaches; // LoaiSachs from Model Database
             base.bindingsource.DataSource = base.entitySet.ToList();
         }
 

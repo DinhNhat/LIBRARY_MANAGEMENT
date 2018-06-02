@@ -76,7 +76,7 @@
             // 
             // radioGroup_TrangThai
             // 
-            this.radioGroup_TrangThai.EditValue = "Update";
+            this.radioGroup_TrangThai.EditValue = "Add";
             this.radioGroup_TrangThai.Location = new System.Drawing.Point(251, 134);
             this.radioGroup_TrangThai.Name = "radioGroup_TrangThai";
             this.radioGroup_TrangThai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -85,6 +85,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_TrangThai.Size = new System.Drawing.Size(176, 85);
             this.radioGroup_TrangThai.TabIndex = 3;
+            this.radioGroup_TrangThai.SelectedIndexChanged += new System.EventHandler(this.radioGroup_TrangThai_SelectedIndexChanged);
             // 
             // simpleButton_TrangThai
             // 

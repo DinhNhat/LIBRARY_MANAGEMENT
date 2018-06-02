@@ -92,5 +92,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_TrangThai.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_TrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_TrangThai.EditValue.Equals("Add"))
+                textEdit_TrangThai.ReadOnly = false;
+            else if (radioGroup_TrangThai.EditValue.Equals("Delete"))
+                textEdit_TrangThai.ReadOnly = true;
+            else if (radioGroup_TrangThai.EditValue.Equals("Update"))
+                textEdit_TrangThai.ReadOnly = false;
+        }
     }
 }

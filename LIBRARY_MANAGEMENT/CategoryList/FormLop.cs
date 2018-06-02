@@ -104,5 +104,24 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preLop.ViewList();
             preNamHoc.ViewList();
         }
+
+        private void radioGroup_Lop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_Lop.EditValue.Equals("Add"))
+            {
+                textEdit_TenLop.ReadOnly = false;
+                lookUpEdit_TenNamHoc.ReadOnly = false;
+            }
+            else if (radioGroup_Lop.EditValue.Equals("Delete"))
+            {
+                textEdit_TenLop.ReadOnly = true;
+                lookUpEdit_TenNamHoc.ReadOnly = true;
+            }
+            else if (radioGroup_Lop.EditValue.Equals("Update"))
+            {
+                textEdit_TenLop.ReadOnly = false;
+                lookUpEdit_TenNamHoc.ReadOnly = false;
+            }
+        }
     }
 }

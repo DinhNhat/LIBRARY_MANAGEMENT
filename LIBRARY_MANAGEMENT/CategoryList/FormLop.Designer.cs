@@ -69,6 +69,7 @@
             // 
             // dataGridView_Lop
             // 
+            this.dataGridView_Lop.AllowUserToAddRows = false;
             this.dataGridView_Lop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTenLop,
             this.colNamHoc});
@@ -116,8 +117,8 @@
             // 
             // radioGroup_Lop
             // 
-            this.radioGroup_Lop.EditValue = "Update";
-            this.radioGroup_Lop.Location = new System.Drawing.Point(174, 53);
+            this.radioGroup_Lop.EditValue = "Add";
+            this.radioGroup_Lop.Location = new System.Drawing.Point(174, 66);
             this.radioGroup_Lop.Name = "radioGroup_Lop";
             this.radioGroup_Lop.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
@@ -125,10 +126,11 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_Lop.Size = new System.Drawing.Size(166, 96);
             this.radioGroup_Lop.TabIndex = 1;
+            this.radioGroup_Lop.SelectedIndexChanged += new System.EventHandler(this.radioGroup_Lop_SelectedIndexChanged);
             // 
             // simpleButton_Lop
             // 
-            this.simpleButton_Lop.Location = new System.Drawing.Point(241, 0);
+            this.simpleButton_Lop.Location = new System.Drawing.Point(241, 13);
             this.simpleButton_Lop.Name = "simpleButton_Lop";
             this.simpleButton_Lop.Size = new System.Drawing.Size(99, 47);
             this.simpleButton_Lop.TabIndex = 0;

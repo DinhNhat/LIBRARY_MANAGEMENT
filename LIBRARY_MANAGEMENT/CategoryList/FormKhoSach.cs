@@ -93,5 +93,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_KhoSach.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_KhoSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_KhoSach.EditValue.Equals("Add"))
+                textEdit_KhoSach.ReadOnly = false;
+            else if (radioGroup_KhoSach.EditValue.Equals("Delete"))
+                textEdit_KhoSach.ReadOnly = true;
+            else if (radioGroup_KhoSach.EditValue.Equals("Update"))
+                textEdit_KhoSach.ReadOnly = false;
+        }
     }
 }

@@ -82,7 +82,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             lookUpEdit_TenVTLT.Properties.DataSource = entities;
             colVTLT.DataSource = entities;
             colVTLT.DataPropertyName = "maViTriLuuTru";
-            colVTLT.ValueMember= "maViTriLuuTru";
+            colVTLT.ValueMember = "maViTriLuuTru";
             colVTLT.DisplayMember = "tenViTriLuuTru";
         }
 
@@ -100,6 +100,29 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             rowIndex = e.RowIndex;
             preLoaiSach.viewEntityAt(rowIndex);
+        }
+
+        // Event SelectedIndexChanged for RadioGroup
+        private void radioGroup_LoaiSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_LoaiSach.EditValue.Equals("Add"))
+            {
+                textEdit_MaLoaiSach.ReadOnly = false;
+                textEdit_TenLoaiSach.ReadOnly = false;
+                lookUpEdit_TenVTLT.ReadOnly = false;
+            }
+            else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
+            {
+                textEdit_MaLoaiSach.ReadOnly = true;
+                textEdit_TenLoaiSach.ReadOnly = true;
+                lookUpEdit_TenVTLT.ReadOnly = true;
+            }
+            else if (radioGroup_LoaiSach.EditValue.Equals("Update"))
+            {
+                textEdit_MaLoaiSach.ReadOnly = true;
+                textEdit_TenLoaiSach.ReadOnly = false;
+                lookUpEdit_TenVTLT.ReadOnly = false;
+            }
         }
     }
 }

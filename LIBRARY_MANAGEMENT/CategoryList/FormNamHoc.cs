@@ -92,5 +92,17 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_NamHoc.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_NamHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_NamHoc.EditValue.Equals("Add"))
+                textEdit_NamHoc.ReadOnly = false;
+            else 
+                if (radioGroup_NamHoc.EditValue.Equals("Delete"))
+                    textEdit_NamHoc.ReadOnly = true;
+            else
+                if (radioGroup_NamHoc.EditValue.Equals("Update"))
+                    textEdit_NamHoc.ReadOnly = false;
+        }
     }
 }

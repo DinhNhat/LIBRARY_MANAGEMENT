@@ -10,13 +10,16 @@ namespace Presenter.Presenters
 {
     public class PreMuonTraSach : EntityPresenter<MuonSach>
     {
-        public string maphieu;
+        public string maPhieuSD;
+        public string tenLop;
+        PrePhieuSuDungSach prePhieu = new PrePhieuSuDungSach();
+        PreLop lop = new PreLop();
         public PreMuonTraSach() : base()
         {
             base.entitySet = entitiesTV.MuonSaches;
             //base.bindingsource.DataSource = entitySet.ToList();
-            //if (base.bindingsource.Count > 0)
-            //    maxKey = (int)base.entitySet.Max(t => t.soTT);
+            if (base.bindingsource.Count > 0)
+                maxKey = (int)base.entitySet.Max(t => t.soTT);
         }
 
         protected override MuonSach getEntity(MuonSach o)
@@ -36,17 +39,23 @@ namespace Presenter.Presenters
             old.nguoiNhanSachTra = newEntity.nguoiNhanSachTra;
         }
 
-
-        // get entity by maPhieuSD
+        // filter entity by maPhieuSD
         public void getChiTietbyPhieuSD(string maphieu)
         {
-            this.maphieu = maphieu;
             base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maphieu).ToList();
         }
 
-        public override void SetBindingSource()
+        public void SetBindingSource()
         {
-            getChiTietbyPhieuSD(this.maphieu);
+            getChiTietbyPhieuSD(this.maPhieuSD);
+        }
+
+        public PhieuSuDungSach GetEntityPhieuForFilter()
+        {
+            PhieuSuDungSach ph = new PhieuSuDungSach();
+            ph = prePhieu.GetPhieuforFilterbyMaPhieu(maPhieuSD);
+            tenLop = lop.GetLopforFilter((Int32)ph.maLop);
+            return ph;
         }
 
     }

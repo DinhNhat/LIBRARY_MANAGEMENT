@@ -32,16 +32,16 @@
             this.listBoxControl_VTLT = new DevExpress.XtraEditors.ListBoxControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton_VTLT = new DevExpress.XtraEditors.SimpleButton();
-            this.radioGroup_VTLT = new DevExpress.XtraEditors.RadioGroup();
             this.textEdit_VTLT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl_VTLT = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroup_VTLT = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl_VTLT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -83,18 +83,6 @@
             this.simpleButton_VTLT.Text = "Cập nhật";
             this.simpleButton_VTLT.Click += new System.EventHandler(this.simpleButton_VTLT_Click);
             // 
-            // radioGroup_VTLT
-            // 
-            this.radioGroup_VTLT.EditValue = "Update";
-            this.radioGroup_VTLT.Location = new System.Drawing.Point(228, 127);
-            this.radioGroup_VTLT.Name = "radioGroup_VTLT";
-            this.radioGroup_VTLT.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_VTLT.Size = new System.Drawing.Size(163, 96);
-            this.radioGroup_VTLT.TabIndex = 2;
-            // 
             // textEdit_VTLT
             // 
             this.textEdit_VTLT.Location = new System.Drawing.Point(97, 33);
@@ -109,6 +97,19 @@
             this.labelControl_VTLT.Size = new System.Drawing.Size(71, 13);
             this.labelControl_VTLT.TabIndex = 0;
             this.labelControl_VTLT.Text = "Vị Trí Lưu Trữ :";
+            // 
+            // radioGroup_VTLT
+            // 
+            this.radioGroup_VTLT.EditValue = "Add";
+            this.radioGroup_VTLT.Location = new System.Drawing.Point(228, 127);
+            this.radioGroup_VTLT.Name = "radioGroup_VTLT";
+            this.radioGroup_VTLT.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
+            this.radioGroup_VTLT.Size = new System.Drawing.Size(163, 96);
+            this.radioGroup_VTLT.TabIndex = 2;
+            this.radioGroup_VTLT.SelectedIndexChanged += new System.EventHandler(this.radioGroup_VTLT_SelectedIndexChanged);
             // 
             // FormViTriLuuTru
             // 
@@ -127,8 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -139,8 +140,8 @@
         private DevExpress.XtraEditors.ListBoxControl listBoxControl_VTLT;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton_VTLT;
-        private DevExpress.XtraEditors.RadioGroup radioGroup_VTLT;
         private DevExpress.XtraEditors.TextEdit textEdit_VTLT;
         private DevExpress.XtraEditors.LabelControl labelControl_VTLT;
+        private DevExpress.XtraEditors.RadioGroup radioGroup_VTLT;
     }
 }

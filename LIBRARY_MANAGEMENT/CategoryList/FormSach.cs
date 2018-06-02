@@ -170,5 +170,51 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             rowIndex = e.RowIndex;
             preSach.viewEntityAt(rowIndex);
         }
+
+        private void radioGroup_Sach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_Sach.EditValue.Equals("Add"))
+            {
+                textEdit_MaSach.ReadOnly = false;
+                textEdit_TenSach.ReadOnly = false;
+                textEdit_NamXB.ReadOnly = false;
+                textEdit_SoTrang.ReadOnly = false;
+                textEdit_SoLuong.ReadOnly = false;
+                textEdit_ThoiHanMuon.ReadOnly = false;
+                textEdit_GiaTien.ReadOnly = false ;
+                lookUpEdit_TenLoaiSach.ReadOnly = false;
+                lookUpEdit_TenTacGia.ReadOnly = false;
+                lookUpEdit_TenNXB.ReadOnly = false;
+                lookUpEdit_TenKhoSach.ReadOnly = false;
+            }
+            else if(radioGroup_Sach.EditValue.Equals("Delete"))
+            {
+                textEdit_MaSach.ReadOnly = true;
+                textEdit_TenSach.ReadOnly = true;
+                textEdit_NamXB.ReadOnly = true;
+                textEdit_SoTrang.ReadOnly = true;
+                textEdit_SoLuong.ReadOnly = true;
+                textEdit_ThoiHanMuon.ReadOnly = true;
+                textEdit_GiaTien.ReadOnly = true;
+                lookUpEdit_TenLoaiSach.ReadOnly = true;
+                lookUpEdit_TenTacGia.ReadOnly = true;
+                lookUpEdit_TenNXB.ReadOnly = true;
+                lookUpEdit_TenKhoSach.ReadOnly = true;
+            }
+            else if(radioGroup_Sach.EditValue.Equals("Update"))
+            {
+                textEdit_MaSach.ReadOnly = true;
+                textEdit_TenSach.ReadOnly = false;
+                textEdit_NamXB.ReadOnly = false;
+                textEdit_SoTrang.ReadOnly = false;
+                textEdit_SoLuong.ReadOnly = false;
+                textEdit_ThoiHanMuon.ReadOnly = false;
+                textEdit_GiaTien.ReadOnly = false;
+                lookUpEdit_TenLoaiSach.ReadOnly = false;
+                lookUpEdit_TenTacGia.ReadOnly = false;
+                lookUpEdit_TenNXB.ReadOnly = false;
+                lookUpEdit_TenKhoSach.ReadOnly = false;
+            }
+        }
     }
 }

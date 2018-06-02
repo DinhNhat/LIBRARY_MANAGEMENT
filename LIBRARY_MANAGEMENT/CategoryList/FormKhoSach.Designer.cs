@@ -76,7 +76,7 @@
             // 
             // radioGroup_KhoSach
             // 
-            this.radioGroup_KhoSach.EditValue = "Update";
+            this.radioGroup_KhoSach.EditValue = "Add";
             this.radioGroup_KhoSach.Location = new System.Drawing.Point(218, 155);
             this.radioGroup_KhoSach.Name = "radioGroup_KhoSach";
             this.radioGroup_KhoSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -85,6 +85,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_KhoSach.Size = new System.Drawing.Size(172, 96);
             this.radioGroup_KhoSach.TabIndex = 3;
+            this.radioGroup_KhoSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_KhoSach_SelectedIndexChanged);
             // 
             // simpleButton_KhoSach
             // 

@@ -92,5 +92,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_NXB.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_NXB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_NXB.EditValue.Equals("Add"))
+                textEdit_NXB.ReadOnly = false;
+            else if (radioGroup_NXB.EditValue.Equals("Delete"))
+                textEdit_NXB.ReadOnly = true;
+            else if (radioGroup_NXB.EditValue.Equals("Update"))
+                textEdit_NXB.ReadOnly = false;
+        }
     }
 }

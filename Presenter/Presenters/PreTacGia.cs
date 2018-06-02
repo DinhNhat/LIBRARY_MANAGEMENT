@@ -14,6 +14,7 @@ namespace Presenter.Presenters
             // set real value for fields entitySet and bindingsource.
             base.entitySet = entitiesTV.TacGias; // TacGias from Model Database
             base.bindingsource.DataSource = base.entitySet.ToList();
+            // assign the max ID in list entity for maxkey
             if (base.bindingsource.Count > 0)
                 maxKey = (int)base.entitySet.Max(t => t.maTacGia);
         }

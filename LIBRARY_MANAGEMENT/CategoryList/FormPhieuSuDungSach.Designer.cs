@@ -87,6 +87,7 @@
             // 
             // dataGridView_PhieuSD
             // 
+            this.dataGridView_PhieuSD.AllowUserToAddRows = false;
             this.dataGridView_PhieuSD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaPhieuSD,
             this.colHoTen,
@@ -321,7 +322,7 @@
             // 
             // radioGroup_PhieuSD
             // 
-            this.radioGroup_PhieuSD.EditValue = "Update";
+            this.radioGroup_PhieuSD.EditValue = "Add";
             this.radioGroup_PhieuSD.Location = new System.Drawing.Point(188, 63);
             this.radioGroup_PhieuSD.Name = "radioGroup_PhieuSD";
             this.radioGroup_PhieuSD.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
@@ -330,6 +331,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
             this.radioGroup_PhieuSD.Size = new System.Drawing.Size(176, 94);
             this.radioGroup_PhieuSD.TabIndex = 0;
+            this.radioGroup_PhieuSD.SelectedIndexChanged += new System.EventHandler(this.radioGroup_PhieuSD_SelectedIndexChanged);
             // 
             // FormPhieuSuDungSach
             // 

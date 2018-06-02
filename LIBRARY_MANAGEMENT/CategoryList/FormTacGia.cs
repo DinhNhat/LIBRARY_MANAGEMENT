@@ -92,5 +92,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_TacGia.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_TacGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_TacGia.EditValue.Equals("Add"))
+                textEdit_TacGia.ReadOnly = false;
+            else if (radioGroup_TacGia.EditValue.Equals("Delete"))
+                textEdit_TacGia.ReadOnly = true;
+            else if (radioGroup_TacGia.EditValue.Equals("Update"))
+                textEdit_TacGia.ReadOnly = false;
+        }
     }
 }

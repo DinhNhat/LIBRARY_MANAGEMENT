@@ -96,5 +96,15 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 listBoxControl_VTLT.SelectedIndex = selectedIndex;
             }
         }
+
+        private void radioGroup_VTLT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (radioGroup_VTLT.EditValue.Equals("Add"))
+                textEdit_VTLT.ReadOnly = false;
+            else if (radioGroup_VTLT.EditValue.Equals("Delete"))
+                textEdit_VTLT.ReadOnly = true;
+            else if (radioGroup_VTLT.EditValue.Equals("Update"))
+                textEdit_VTLT.ReadOnly = false;
+        }
     }
 }

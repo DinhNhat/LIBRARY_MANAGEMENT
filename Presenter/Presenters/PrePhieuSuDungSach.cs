@@ -31,5 +31,12 @@ namespace Presenter.Presenters
             old.soDT = newEntity.soDT;
             old.maLop = newEntity.maLop;
         }
+
+        public PhieuSuDungSach GetPhieuforFilterbyMaPhieu(string maphieu)
+        {
+            PhieuSuDungSach ph = new PhieuSuDungSach();
+            ph = base.entitySet.FirstOrDefault(t => t.maPhieuSD == maphieu);
+            return ph;
+        }
     }
 }
