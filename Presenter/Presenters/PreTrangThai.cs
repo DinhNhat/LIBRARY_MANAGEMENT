@@ -31,5 +31,12 @@ namespace Presenter.Presenters
         {
             old.tenTrangThai = newEntity.tenTrangThai;
         }
+
+        public int GetMaTrangThaiforFilter(string tentrangthai)
+        {
+            TrangThai trangthai = new TrangThai();
+            trangthai = base.entitySet.FirstOrDefault(tt => tt.tenTrangThai == tentrangthai);
+            return trangthai.maTrangThai;
+        }
     }
 }

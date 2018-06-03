@@ -9,9 +9,7 @@ using View;
 namespace Presenter
 {
     public abstract class EntityPresenter<T> : EntityListPresenter<T> where T : class
-    {
-        public List<T> EntityList { get { return this.EntityList; } }
-
+    { 
         //abstract methods to inherit in all of components(PreClass) from Presenters
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);

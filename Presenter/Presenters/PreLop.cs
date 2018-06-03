@@ -31,7 +31,7 @@ namespace Presenter.Presenters
             old.maNamHoc = newEntity.maNamHoc;
         }
 
-        public string GetLopforFilter(int malop)
+        public string GetTenLopforFilter(int malop)
         {
             Lop lop;
             lop = base.entitySet.FirstOrDefault(l => l.maLop == malop);

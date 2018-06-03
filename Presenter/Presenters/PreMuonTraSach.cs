@@ -10,14 +10,16 @@ namespace Presenter.Presenters
 {
     public class PreMuonTraSach : EntityPresenter<MuonSach>
     {
-        public string maPhieuSD;
+        public Object maPhieuSD;
+        public Object trangThai;
         public string tenLop;
         PrePhieuSuDungSach prePhieu = new PrePhieuSuDungSach();
         PreLop lop = new PreLop();
+        PreTrangThai trangthai = new PreTrangThai();
         public PreMuonTraSach() : base()
         {
             base.entitySet = entitiesTV.MuonSaches;
-            //base.bindingsource.DataSource = entitySet.ToList();
+            base.bindingsource.DataSource = entitySet.ToList();
             if (base.bindingsource.Count > 0)
                 maxKey = (int)base.entitySet.Max(t => t.soTT);
         }
@@ -40,21 +42,45 @@ namespace Presenter.Presenters
         }
 
         // filter entity by maPhieuSD
-        public void getChiTietbyPhieuSD(string maphieu)
+        public Boolean getChiTietbyPhieuSD(Object maphieu, Object trangthai)
         {
-            base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maphieu).ToList();
+            if (maphieu != null && trangthai == null)
+            {
+                string maphieu1 = maphieu.ToString();
+                base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maphieu1).ToList();
+                return true;
+            }
+            else if(maphieu != null && trangthai != null)
+            {
+                string maphieu1 = maphieu.ToString();
+                int matt = (Int32)trangthai;
+                base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maphieu1 && ms.maTrangThai == matt).ToList();
+                return true;
+            }
+            else if(maphieu == null && trangthai != null)
+            {
+                int matt = (Int32)trangthai;
+                base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maTrangThai == matt).ToList();
+                return false;
+            }
+            else
+            {
+                base.bindingsource.DataSource = null;
+                return false;
+            }
         }
 
-        public void SetBindingSource()
+        public Boolean SetBindingSource()
         {
-            getChiTietbyPhieuSD(this.maPhieuSD);
+            return getChiTietbyPhieuSD(this.maPhieuSD, this.trangThai);
         }
 
         public PhieuSuDungSach GetEntityPhieuForFilter()
         {
-            PhieuSuDungSach ph = new PhieuSuDungSach();
-            ph = prePhieu.GetPhieuforFilterbyMaPhieu(maPhieuSD);
-            tenLop = lop.GetLopforFilter((Int32)ph.maLop);
+            PhieuSuDungSach ph;
+            ph = prePhieu.GetEntityPhieuforFilterbyMaPhieu(this.maPhieuSD);
+            if(ph != null)
+                tenLop = lop.GetTenLopforFilter((Int32)ph.maLop);
             return ph;
         }
 

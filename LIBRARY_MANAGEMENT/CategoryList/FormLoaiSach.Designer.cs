@@ -65,7 +65,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(407, 367);
+            this.panelControl1.Size = new System.Drawing.Size(401, 366);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_LoaiSach
@@ -78,7 +78,7 @@
             this.dataGridView_LoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_LoaiSach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_LoaiSach.Name = "dataGridView_LoaiSach";
-            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(403, 363);
+            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(397, 362);
             this.dataGridView_LoaiSach.TabIndex = 0;
             this.dataGridView_LoaiSach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -113,9 +113,9 @@
             this.panelControl2.Controls.Add(this.lookUpEdit_TenVTLT);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(407, 0);
+            this.panelControl2.Location = new System.Drawing.Point(401, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(475, 72);
+            this.panelControl2.Size = new System.Drawing.Size(472, 72);
             this.panelControl2.TabIndex = 1;
             // 
             // lookUpEdit_TenVTLT
@@ -146,9 +146,9 @@
             this.panelControl3.Controls.Add(this.textEdit_MaLoaiSach);
             this.panelControl3.Controls.Add(this.labelControl1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(407, 72);
+            this.panelControl3.Location = new System.Drawing.Point(401, 72);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(475, 97);
+            this.panelControl3.Size = new System.Drawing.Size(472, 97);
             this.panelControl3.TabIndex = 2;
             // 
             // labelControl3
@@ -195,9 +195,9 @@
             this.panelControl4.Controls.Add(this.radioGroup_LoaiSach);
             this.panelControl4.Controls.Add(this.simpleButton_LoaiSach);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(407, 169);
+            this.panelControl4.Location = new System.Drawing.Point(401, 169);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(475, 198);
+            this.panelControl4.Size = new System.Drawing.Size(472, 197);
             this.panelControl4.TabIndex = 3;
             // 
             // radioGroup_LoaiSach
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 367);
+            this.ClientSize = new System.Drawing.Size(873, 366);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);

@@ -16,6 +16,9 @@ namespace Presenter
         protected BindingSource bindingsource = new BindingSource();
         protected int maxKey = 0;
 
+        // properties for bindingsource
+        public BindingSource Bindingsource { get { return this.bindingsource; } }
+
         // fileds for view and viewLs
         protected IViewEntity<T> view;
         protected IViewListEntity<T> viewLs;
