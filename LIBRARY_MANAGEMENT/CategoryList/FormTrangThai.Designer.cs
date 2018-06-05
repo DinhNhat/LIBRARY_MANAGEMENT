@@ -77,21 +77,21 @@
             // radioGroup_TrangThai
             // 
             this.radioGroup_TrangThai.EditValue = "Add";
-            this.radioGroup_TrangThai.Location = new System.Drawing.Point(251, 134);
+            this.radioGroup_TrangThai.Location = new System.Drawing.Point(288, 134);
             this.radioGroup_TrangThai.Name = "radioGroup_TrangThai";
             this.radioGroup_TrangThai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_TrangThai.Size = new System.Drawing.Size(176, 85);
+            this.radioGroup_TrangThai.Size = new System.Drawing.Size(139, 85);
             this.radioGroup_TrangThai.TabIndex = 3;
             this.radioGroup_TrangThai.SelectedIndexChanged += new System.EventHandler(this.radioGroup_TrangThai_SelectedIndexChanged);
             // 
             // simpleButton_TrangThai
             // 
-            this.simpleButton_TrangThai.Location = new System.Drawing.Point(302, 83);
+            this.simpleButton_TrangThai.Location = new System.Drawing.Point(133, 168);
             this.simpleButton_TrangThai.Name = "simpleButton_TrangThai";
-            this.simpleButton_TrangThai.Size = new System.Drawing.Size(125, 45);
+            this.simpleButton_TrangThai.Size = new System.Drawing.Size(125, 51);
             this.simpleButton_TrangThai.TabIndex = 2;
             this.simpleButton_TrangThai.Text = "Cập nhật";
             this.simpleButton_TrangThai.Click += new System.EventHandler(this.simpleButton_TrangThai_Click);

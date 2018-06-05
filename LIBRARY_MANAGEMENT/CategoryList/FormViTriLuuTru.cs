@@ -80,8 +80,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             int selectedIndex = listBoxControl_VTLT.SelectedIndex;
             if (radioGroup_VTLT.EditValue.Equals("Add"))
             {
-                preViTriLuuTru.addNewEntity();
-                listBoxControl_VTLT.SelectedIndex = listBoxControl_VTLT.ItemCount - 1;
+                int num = preViTriLuuTru.addNewEntity();
+                if (num > 0)
+                    listBoxControl_VTLT.SelectedIndex = listBoxControl_VTLT.ItemCount - 1;
             }
             else
                 if (radioGroup_VTLT.EditValue.Equals("Delete"))

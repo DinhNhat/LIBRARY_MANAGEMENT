@@ -21,7 +21,7 @@ namespace Presenter.Presenters
         protected override KhoSach getEntity(KhoSach o)
         {
             KhoSach ks = null;
-            ks = base.entitySet.FirstOrDefault(t => t.maKhoSach == o.maKhoSach);
+            ks = base.entitySet.FirstOrDefault(t => t.maKhoSach == o.maKhoSach || t.tenKhoSach == o.tenKhoSach);
             return ks;
         }
 

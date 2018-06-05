@@ -23,6 +23,9 @@ namespace Presenter
     
         public string maNguoiSD { get; set; }
         public string tenNguoiSD { get; set; }
+        public string password { get; set; }
+        public Nullable<bool> admin { get; set; }
+        public Nullable<bool> enable { get; set; }
     
         public virtual ICollection<DangNhap> DangNhaps { get; set; }
         public virtual ICollection<MuonSach> MuonSaches { get; set; }

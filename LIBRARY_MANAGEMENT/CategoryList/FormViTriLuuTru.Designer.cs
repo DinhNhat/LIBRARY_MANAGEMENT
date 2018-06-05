@@ -32,16 +32,16 @@
             this.listBoxControl_VTLT = new DevExpress.XtraEditors.ListBoxControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton_VTLT = new DevExpress.XtraEditors.SimpleButton();
+            this.radioGroup_VTLT = new DevExpress.XtraEditors.RadioGroup();
             this.textEdit_VTLT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl_VTLT = new DevExpress.XtraEditors.LabelControl();
-            this.radioGroup_VTLT = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl_VTLT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -50,7 +50,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(270, 267);
+            this.panelControl1.Size = new System.Drawing.Size(270, 249);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_VTLT
@@ -58,7 +58,7 @@
             this.listBoxControl_VTLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_VTLT.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_VTLT.Name = "listBoxControl_VTLT";
-            this.listBoxControl_VTLT.Size = new System.Drawing.Size(266, 263);
+            this.listBoxControl_VTLT.Size = new System.Drawing.Size(266, 245);
             this.listBoxControl_VTLT.TabIndex = 0;
             this.listBoxControl_VTLT.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_VTLT_SelectedIndexChanged);
             // 
@@ -71,17 +71,30 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(270, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(437, 267);
+            this.panelControl2.Size = new System.Drawing.Size(437, 249);
             this.panelControl2.TabIndex = 1;
             // 
             // simpleButton_VTLT
             // 
-            this.simpleButton_VTLT.Location = new System.Drawing.Point(276, 73);
+            this.simpleButton_VTLT.Location = new System.Drawing.Point(97, 142);
             this.simpleButton_VTLT.Name = "simpleButton_VTLT";
             this.simpleButton_VTLT.Size = new System.Drawing.Size(115, 48);
             this.simpleButton_VTLT.TabIndex = 3;
             this.simpleButton_VTLT.Text = "Cập nhật";
             this.simpleButton_VTLT.Click += new System.EventHandler(this.simpleButton_VTLT_Click);
+            // 
+            // radioGroup_VTLT
+            // 
+            this.radioGroup_VTLT.EditValue = "Add";
+            this.radioGroup_VTLT.Location = new System.Drawing.Point(249, 105);
+            this.radioGroup_VTLT.Name = "radioGroup_VTLT";
+            this.radioGroup_VTLT.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
+            this.radioGroup_VTLT.Size = new System.Drawing.Size(142, 85);
+            this.radioGroup_VTLT.TabIndex = 2;
+            this.radioGroup_VTLT.SelectedIndexChanged += new System.EventHandler(this.radioGroup_VTLT_SelectedIndexChanged);
             // 
             // textEdit_VTLT
             // 
@@ -98,24 +111,11 @@
             this.labelControl_VTLT.TabIndex = 0;
             this.labelControl_VTLT.Text = "Vị Trí Lưu Trữ :";
             // 
-            // radioGroup_VTLT
-            // 
-            this.radioGroup_VTLT.EditValue = "Add";
-            this.radioGroup_VTLT.Location = new System.Drawing.Point(228, 127);
-            this.radioGroup_VTLT.Name = "radioGroup_VTLT";
-            this.radioGroup_VTLT.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_VTLT.Size = new System.Drawing.Size(163, 96);
-            this.radioGroup_VTLT.TabIndex = 2;
-            this.radioGroup_VTLT.SelectedIndexChanged += new System.EventHandler(this.radioGroup_VTLT_SelectedIndexChanged);
-            // 
             // FormViTriLuuTru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 267);
+            this.ClientSize = new System.Drawing.Size(707, 249);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormViTriLuuTru";
@@ -128,8 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup_VTLT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_VTLT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

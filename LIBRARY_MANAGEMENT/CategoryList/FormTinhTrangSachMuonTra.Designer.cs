@@ -50,7 +50,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(266, 268);
+            this.panelControl1.Size = new System.Drawing.Size(266, 229);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_TTSMT
@@ -58,7 +58,7 @@
             this.listBoxControl_TTSMT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_TTSMT.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_TTSMT.Name = "listBoxControl_TTSMT";
-            this.listBoxControl_TTSMT.Size = new System.Drawing.Size(262, 264);
+            this.listBoxControl_TTSMT.Size = new System.Drawing.Size(262, 225);
             this.listBoxControl_TTSMT.TabIndex = 0;
             this.listBoxControl_TTSMT.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_TTSMT_SelectedIndexChanged);
             // 
@@ -71,14 +71,14 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(266, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(476, 268);
+            this.panelControl2.Size = new System.Drawing.Size(476, 229);
             this.panelControl2.TabIndex = 1;
             // 
             // simpleButton_TTSMT
             // 
-            this.simpleButton_TTSMT.Location = new System.Drawing.Point(300, 83);
+            this.simpleButton_TTSMT.Location = new System.Drawing.Point(133, 147);
             this.simpleButton_TTSMT.Name = "simpleButton_TTSMT";
-            this.simpleButton_TTSMT.Size = new System.Drawing.Size(118, 45);
+            this.simpleButton_TTSMT.Size = new System.Drawing.Size(118, 53);
             this.simpleButton_TTSMT.TabIndex = 3;
             this.simpleButton_TTSMT.Text = "Cập nhật";
             this.simpleButton_TTSMT.Click += new System.EventHandler(this.simpleButton_TTSMT_Click);
@@ -86,13 +86,13 @@
             // radioGroup_TTSMT
             // 
             this.radioGroup_TTSMT.EditValue = "Add";
-            this.radioGroup_TTSMT.Location = new System.Drawing.Point(242, 134);
+            this.radioGroup_TTSMT.Location = new System.Drawing.Point(278, 118);
             this.radioGroup_TTSMT.Name = "radioGroup_TTSMT";
             this.radioGroup_TTSMT.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_TTSMT.Size = new System.Drawing.Size(176, 85);
+            this.radioGroup_TTSMT.Size = new System.Drawing.Size(140, 82);
             this.radioGroup_TTSMT.TabIndex = 2;
             this.radioGroup_TTSMT.SelectedIndexChanged += new System.EventHandler(this.radioGroup_TTSMT_SelectedIndexChanged);
             // 
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 268);
+            this.ClientSize = new System.Drawing.Size(742, 229);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormTinhTrangSachMuonTra";

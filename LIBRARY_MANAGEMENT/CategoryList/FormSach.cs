@@ -32,6 +32,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preTacGia.ViewLs = this;
             preNXB.ViewLs = this;
             preKhoSach.ViewLs = this;
+            dataGridView_Sach.AutoGenerateColumns = false;
         }
 
         void IViewEntity<Sach>.viewEntity(Sach sach)

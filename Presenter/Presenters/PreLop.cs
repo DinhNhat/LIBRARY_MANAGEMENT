@@ -21,7 +21,7 @@ namespace Presenter.Presenters
         protected override Lop getEntity(Lop o)
         {
             Lop l = null;
-            l = base.entitySet.FirstOrDefault(t => t.maLop == o.maLop);
+            l = base.entitySet.FirstOrDefault(t => t.maLop == o.maLop || t.tenLop == o.tenLop);
             return l;
         }
 

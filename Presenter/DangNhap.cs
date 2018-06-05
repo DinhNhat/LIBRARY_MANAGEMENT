@@ -14,9 +14,10 @@ namespace Presenter
     
     public partial class DangNhap
     {
+        public int maDangNhap { get; set; }
         public System.DateTime thoiGianDangNhap { get; set; }
         public string maNguoiSD { get; set; }
-        public System.DateTime thoiGianThoat { get; set; }
+        public Nullable<System.DateTime> thoiGianThoat { get; set; }
     
         public virtual NguoiSuDung NguoiSuDung { get; set; }
     }

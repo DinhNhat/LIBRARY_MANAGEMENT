@@ -7,11 +7,12 @@
       <Schema Namespace="ThuVienDBDHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DangNhap">
           <Key>
-            <PropertyRef Name="thoiGianDangNhap" />
+            <PropertyRef Name="maDangNhap" />
           </Key>
+          <Property Name="maDangNhap" Type="int" Nullable="false" />
           <Property Name="thoiGianDangNhap" Type="datetime" Nullable="false" />
           <Property Name="maNguoiSD" Type="varchar" MaxLength="20" />
-          <Property Name="thoiGianThoat" Type="datetime" Nullable="false" />
+          <Property Name="thoiGianThoat" Type="datetime" />
         </EntityType>
         <EntityType Name="KhoSach">
           <Key>
@@ -65,7 +66,10 @@
             <PropertyRef Name="maNguoiSD" />
           </Key>
           <Property Name="maNguoiSD" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="tenNguoiSD" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tenNguoiSD" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="varchar" MaxLength="20" />
+          <Property Name="admin" Type="bit" />
+          <Property Name="enable" Type="bit" />
         </EntityType>
         <EntityType Name="NhaXuatBan">
           <Key>
@@ -388,11 +392,12 @@
       <Schema Namespace="ThuVienDBDHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="DangNhap">
           <Key>
-            <PropertyRef Name="thoiGianDangNhap" />
+            <PropertyRef Name="maDangNhap" />
           </Key>
+          <Property Name="maDangNhap" Type="Int32" Nullable="false" />
           <Property Name="thoiGianDangNhap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="maNguoiSD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="thoiGianThoat" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="thoiGianThoat" Type="DateTime" Precision="3" />
           <NavigationProperty Name="NguoiSuDung" Relationship="Self.FK_DANGNHAP_RELATIONS_NGUOISUD" FromRole="DangNhap" ToRole="NguoiSuDung" />
         </EntityType>
         <EntityType Name="KhoSach">
@@ -459,7 +464,10 @@
             <PropertyRef Name="maNguoiSD" />
           </Key>
           <Property Name="maNguoiSD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="tenNguoiSD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenNguoiSD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="admin" Type="Boolean" />
+          <Property Name="enable" Type="Boolean" />
           <NavigationProperty Name="DangNhaps" Relationship="Self.FK_DANGNHAP_RELATIONS_NGUOISUD" FromRole="NguoiSuDung" ToRole="DangNhap" />
           <NavigationProperty Name="MuonSaches" Relationship="Self.FK_MuonSach_NguoiSuDung" FromRole="NguoiSuDung" ToRole="MuonSach" />
           <NavigationProperty Name="MuonSaches1" Relationship="Self.FK_MuonSach_NguoiSuDung1" FromRole="NguoiSuDung" ToRole="MuonSach" />
@@ -799,6 +807,7 @@
           <EntitySetMapping Name="DangNhaps">
             <EntityTypeMapping TypeName="ThuVienDBDHModel.DangNhap">
               <MappingFragment StoreEntitySet="DangNhap">
+                <ScalarProperty Name="maDangNhap" ColumnName="maDangNhap" />
                 <ScalarProperty Name="thoiGianDangNhap" ColumnName="thoiGianDangNhap" />
                 <ScalarProperty Name="maNguoiSD" ColumnName="maNguoiSD" />
                 <ScalarProperty Name="thoiGianThoat" ColumnName="thoiGianThoat" />
@@ -861,6 +870,9 @@
               <MappingFragment StoreEntitySet="NguoiSuDung">
                 <ScalarProperty Name="maNguoiSD" ColumnName="maNguoiSD" />
                 <ScalarProperty Name="tenNguoiSD" ColumnName="tenNguoiSD" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="admin" ColumnName="admin" />
+                <ScalarProperty Name="enable" ColumnName="enable" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

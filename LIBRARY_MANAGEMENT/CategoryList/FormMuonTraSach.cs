@@ -34,6 +34,40 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preSach.ViewLs = this;
             preTTSMT.ViewLs = this;
             preTrangThai.ViewLs = this;
+            dataGridView_MuonTraSach.AutoGenerateColumns = false;
+        }
+
+        private void FormMuonTraSach_Load(object sender, EventArgs e)
+        {
+            prePhieu.ViewList();
+            preSach.ViewList();
+            preTTSMT.ViewList();
+            preTrangThai.ViewList();
+        }
+
+        void IViewEntity<MuonSach>.viewEntity(MuonSach muonsach)
+        {
+            soTT = muonsach.soTT;
+            maPhieu = muonsach.maPhieuSD;
+            dateEdit_NgayMuon.EditValue = (DateTime)muonsach.ngayMuon;
+            if (muonsach.ngayDuKienTra != null)
+                dateEdit_NgayDuKienTra.EditValue = (DateTime)muonsach.ngayDuKienTra;
+            else
+                dateEdit_NgayDuKienTra.EditValue = null;
+            if (muonsach.ngayTra != null)
+                dateEdit_NgayTra.EditValue = (DateTime)muonsach.ngayTra;
+            else
+                dateEdit_NgayTra.EditValue = null;
+            textEdit_TienPhat.Text = muonsach.tienPhat.ToString();
+            lookUpEdit_MaPhieu.EditValue = muonsach.maPhieuSD;
+            lookUpEdit_Sach.EditValue = muonsach.maSach;
+            lookUpEdit_TinhTrang.EditValue = muonsach.maTinhTrangSach;
+            lookUpEdit_TrangThai.EditValue = muonsach.maTrangThai;
+        }
+
+        void IViewListEntity<MuonSach>.viewListEntity(BindingSource entities)
+        {
+            dataGridView_MuonTraSach.DataSource = entities;
         }
 
         // CRUD Methods
@@ -66,25 +100,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             else
                 ms.tienPhat = null;
 
-            //if (textEdit_NguoiChoMuon.Text != null)
-            //{
-            //    if (textEdit_NguoiChoMuon.Text == "")
-            //        ms.nguoiChoMuon = null;
-            //    else
-            //        ms.nguoiChoMuon = textEdit_NguoiChoMuon.Text;
-            //}
-            //else
-            //    ms.nguoiChoMuon = null;
-
-            //if (textEdit_NguoiNhanTraSach.Text != null)
-            //{
-            //    if (textEdit_NguoiNhanTraSach.Text == "")
-            //        ms.nguoiNhanSachTra = null;
-            //    else
-            //        ms.nguoiNhanSachTra = textEdit_NguoiNhanTraSach.Text;
-            //}
-            //else
-            //    ms.nguoiNhanSachTra = null;
             return ms;
         }
 
@@ -98,43 +113,34 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public MuonSach UpdateEntity()
         {
-            throw new NotImplementedException();
+            MuonSach ms = new MuonSach();
+            ms.maPhieuSD = maPhieu;
+            ms.soTT = soTT;
+            if (lookUpEdit_Sach.EditValue != null)
+                ms.maSach = lookUpEdit_Sach.EditValue.ToString();
+            if (lookUpEdit_TinhTrang.EditValue != null)
+                ms.maTinhTrangSach = (Int32)lookUpEdit_TinhTrang.EditValue;
+            if (lookUpEdit_TrangThai.EditValue != null)
+                ms.maTrangThai = (Int32)lookUpEdit_TrangThai.EditValue;
+            if (dateEdit_NgayMuon.EditValue != null)
+                ms.ngayMuon = (DateTime)dateEdit_NgayMuon.EditValue;
+            if (dateEdit_NgayDuKienTra.EditValue != null)
+                ms.ngayDuKienTra = (DateTime)dateEdit_NgayDuKienTra.EditValue;
+            if (dateEdit_NgayTra.EditValue != null)
+                ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
+            if (textEdit_TienPhat.Text != null)
+            {
+                if (textEdit_TienPhat.Text == "")
+                    ms.tienPhat = null;
+                else
+                    ms.tienPhat = Int32.Parse(textEdit_TienPhat.Text);
+            }
+            else
+                ms.tienPhat = null;
+
+            return ms;
         }
         #endregion
-
-        void IViewEntity<MuonSach>.viewEntity(MuonSach muonsach)
-        {
-            soTT = muonsach.soTT;
-            maPhieu = muonsach.maPhieuSD;
-            dateEdit_NgayMuon.EditValue = (DateTime)muonsach.ngayMuon;
-            if (muonsach.ngayDuKienTra != null)
-                dateEdit_NgayDuKienTra.EditValue = (DateTime)muonsach.ngayDuKienTra;
-            else
-                dateEdit_NgayDuKienTra.EditValue = null;
-            if (muonsach.ngayTra != null)
-                dateEdit_NgayTra.EditValue = (DateTime)muonsach.ngayTra;
-            else
-                dateEdit_NgayTra.EditValue = null;
-            textEdit_TienPhat.Text = muonsach.tienPhat.ToString();
-            lookUpEdit_MaPhieu.EditValue = muonsach.maPhieuSD;
-            lookUpEdit_Sach.EditValue = muonsach.maSach;
-            lookUpEdit_TinhTrang.EditValue = muonsach.maTinhTrangSach;
-            lookUpEdit_TrangThai.EditValue = muonsach.maTrangThai;
-        }
-
-        void IViewListEntity<MuonSach>.viewListEntity(BindingSource entities)
-        {
-            dataGridView_MuonTraSach.DataSource = entities;
-        }
-
-        private void FormMuonTraSach_Load(object sender, EventArgs e)
-        {
-            lookUpEdit_MaPhieu_forFilter.Properties.DataSource = preMuonTraSach.Bindingsource.DataSource;
-            prePhieu.ViewList();
-            preSach.ViewList();
-            preTTSMT.ViewList();
-            preTrangThai.ViewList();
-        }
 
         // ViewList Methods for LookUpEdit
         #region
@@ -174,10 +180,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         #endregion
 
-        // View Entity Phieu at maphieu by filtering
-        void ViewEntityPhieubyFilter()
+        // View Detail for Doc Gia
+        void ViewChiTietDocGiabyFilter()
         {
-            //preMuonTraSach.maPhieuSD = maph;
             PhieuSuDungSach phieu;
             phieu = preMuonTraSach.GetEntityPhieuForFilter();
             if(phieu != null)
@@ -198,49 +203,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             } 
         }
 
-        private void simpleButton_LocPhieu_Click(object sender, EventArgs e)
+        // clear data from some controls for filter nothing or clear button
+        void ClearDatafromControl()
         {
-            preMuonTraSach.maPhieuSD = lookUpEdit_MaPhieu_forFilter.EditValue;
-            preMuonTraSach.trangThai = lookUpEdit_TrangThai_forFilter.EditValue;
-            
-            if(preMuonTraSach.SetBindingSource() == true)
-            {
-                //preMuonTraSach.SetBindingSource();
-                ViewEntityPhieubyFilter();
-                preMuonTraSach.ViewList();
-            }
-            else
-            {
-                //preMuonTraSach.SetBindingSource();
-                preMuonTraSach.ViewList();
-            }    
-        }
-
-        private void dataGridView_MuonTraSach_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            rowIndex = e.RowIndex;
-            if (rowIndex >= 0)
-                preMuonTraSach.viewEntityAt(rowIndex);
-        }
-
-        private void simpleButton_MuonTraSach_Click(object sender, EventArgs e)
-        {
-            if (radioGroup_MuonTraSach.EditValue.Equals("Add"))
-            {
-                preMuonTraSach.addNewEntity();
-                rowIndex = dataGridView_MuonTraSach.DataBindings.Count - 1;
-            }
-            else if (radioGroup_MuonTraSach.EditValue.Equals("Delete"))
-            {
-                preMuonTraSach.deleteEntity();
-            }
-        }
-
-        // Clear data for Clear Button
-        private void ClearOldData()
-        {
-            lookUpEdit_MaPhieu_forFilter.EditValue = null;
-            lookUpEdit_TrangThai_forFilter.EditValue = null;
             lookUpEdit_MaPhieu.EditValue = null;
             lookUpEdit_Sach.EditValue = null;
             lookUpEdit_TinhTrang.EditValue = null;
@@ -249,9 +214,102 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             dateEdit_NgayDuKienTra.EditValue = null;
             dateEdit_NgayTra.EditValue = null;
             textEdit_TienPhat.Text = "";
+        }
+
+        private void simpleButton_LocMaPhieu_Click(object sender, EventArgs e)
+        {
+            preMuonTraSach.maPhieuSD = textEdit_MaPhieu_forFilter.Text;
+            lookUpEdit_TrangThai_forFilter.EditValue = null;
+            preMuonTraSach.trangThai = null;
+
+            if (preMuonTraSach.SetBindingSource() == true) // value of text != ""
+            {
+                if (preMuonTraSach.CountForBindingSource > 0) // value of text right
+                {
+                    ViewChiTietDocGiabyFilter();
+                    preMuonTraSach.ViewList();
+                }
+                else // value of text wrong
+                {
+                    preMuonTraSach.ViewList();
+                    ClearDatafromControl();
+                }
+            }
+            else // value of text == ""
+            {
+                ViewChiTietDocGiabyFilter();
+                ClearDatafromControl();
+            }
+        }
+
+        private void simpleButton_LocTrangThai_Click(object sender, EventArgs e)
+        {
+            textEdit_MaPhieu_forFilter.Text = "";
+            preMuonTraSach.maPhieuSD = "";
+            preMuonTraSach.trangThai = lookUpEdit_TrangThai_forFilter.EditValue;
+
+            if (preMuonTraSach.SetBindingSource() == true) // context: lookUpEdit_TrangThai_forFilter.EditValue != null
+            {
+                if (preMuonTraSach.CountForBindingSource > 0) // context: lookUpEdit_TrangThai_forFilter.EditValue already exists
+                {
+                    ViewChiTietDocGiabyFilter();
+                    preMuonTraSach.ViewList();
+                }
+                else // context: lookUpEdit_TrangThai_forFilter.EditValue haven't existed yet
+                {
+                    preMuonTraSach.ViewList();
+                    ClearDatafromControl();
+                }
+            }
+            else // context: lookUpEdit_TrangThai_forFilter.EditValue == null
+            {
+                ViewChiTietDocGiabyFilter();
+                ClearDatafromControl();
+            }
+        }
+
+        private void simpleButton_MuonTraSach_Click(object sender, EventArgs e)
+        {
+            if (radioGroup_MuonTraSach.EditValue.Equals("Add"))
+            {
+                preMuonTraSach.oldMaPhieu = lookUpEdit_MaPhieu.EditValue.ToString();
+                preMuonTraSach.addNewEntity();
+                preMuonTraSach.SetBindingSourceWhereMaPhieu(preMuonTraSach.oldMaPhieu);
+                preMuonTraSach.ViewList();
+            }
+            else if (radioGroup_MuonTraSach.EditValue.Equals("Delete"))
+            {
+                preMuonTraSach.oldMaPhieu = lookUpEdit_MaPhieu.EditValue.ToString();
+                preMuonTraSach.deleteEntity();
+                if(preMuonTraSach.SetBindingSourceAgainforDelete() == true)
+                    preMuonTraSach.ViewList();
+                else
+                {
+                    preMuonTraSach.maPhieuSD = "";
+                    ViewChiTietDocGiabyFilter();
+                    ClearDatafromControl();
+                }
+            }
+            else if(radioGroup_MuonTraSach.EditValue.Equals("Update"))
+            {
+                preMuonTraSach.oldMaPhieu = lookUpEdit_MaPhieu.EditValue.ToString();
+                preMuonTraSach.updateEntity();
+                preMuonTraSach.SetBindingSourceWhereMaPhieu(preMuonTraSach.oldMaPhieu);
+                preMuonTraSach.ViewList();
+            }
+        }
+
+        // Clear data for Clear Button
+        private void ClearOldData()
+        {
+            textEdit_MaPhieu_forFilter.Text = "";
+            lookUpEdit_TrangThai_forFilter.EditValue = null;
+
+            ClearDatafromControl();
 
             preMuonTraSach.maPhieuSD = "";
-            ViewEntityPhieubyFilter();
+            preMuonTraSach.trangThai = null;
+            ViewChiTietDocGiabyFilter();
             preMuonTraSach.SetBindingSource();
             preMuonTraSach.ViewList();
         }
@@ -297,5 +355,16 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 textEdit_TienPhat.ReadOnly = false;
             }
         }
+
+        private void dataGridView_MuonTraSach_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowIndex = e.RowIndex;
+            if (rowIndex >= 0)
+                preMuonTraSach.viewEntityAt(rowIndex);
+            MuonSach ms = (MuonSach)preMuonTraSach.Bindingsource[rowIndex];
+            preMuonTraSach.maPhieuSD = ms.maPhieuSD;
+            ViewChiTietDocGiabyFilter();
+        }
+
     }
 }

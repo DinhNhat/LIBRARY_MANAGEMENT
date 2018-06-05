@@ -76,8 +76,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             int selectedIndex = listBoxControl_NXB.SelectedIndex;
             if (radioGroup_NXB.EditValue.Equals("Add"))
             {
-                preNXB.addNewEntity();
-                listBoxControl_NXB.SelectedIndex = listBoxControl_NXB.ItemCount - 1;
+                int num = preNXB.addNewEntity();
+                if (num > 0)
+                    listBoxControl_NXB.SelectedIndex = listBoxControl_NXB.ItemCount - 1;
             }
             else
                 if (radioGroup_NXB.EditValue.Equals("Delete"))

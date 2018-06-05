@@ -76,8 +76,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             int selectedIndex = listBoxControl_TacGia.SelectedIndex;
             if (radioGroup_TacGia.EditValue.Equals("Add"))
             {
-                preTacGia.addNewEntity();
-                listBoxControl_TacGia.SelectedIndex = listBoxControl_TacGia.ItemCount - 1;
+                int num = preTacGia.addNewEntity();
+                if (num > 0)
+                    listBoxControl_TacGia.SelectedIndex = listBoxControl_TacGia.ItemCount - 1;
             }
             else
                 if (radioGroup_TacGia.EditValue.Equals("Delete"))

@@ -22,7 +22,7 @@ namespace Presenter.Presenters
         protected override TinhTrangSachMuonTra getEntity(TinhTrangSachMuonTra o)
         {
             TinhTrangSachMuonTra ttsmt = null;
-            ttsmt = base.entitySet.FirstOrDefault(t => t.maTinhTrangSach == o.maTinhTrangSach);
+            ttsmt = base.entitySet.FirstOrDefault(t => t.maTinhTrangSach == o.maTinhTrangSach || t.tenTinhTrangSach == o.tenTinhTrangSach);
             return ttsmt;
         }
 

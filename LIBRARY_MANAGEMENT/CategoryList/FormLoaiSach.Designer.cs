@@ -30,9 +30,6 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_LoaiSach = new System.Windows.Forms.DataGridView();
-            this.colMaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVTLT = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lookUpEdit_TenVTLT = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -44,6 +41,9 @@
             this.simpleButton_LoaiSach = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.radioGroup_LoaiSach = new DevExpress.XtraEditors.RadioGroup();
+            this.colMaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVTLT = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LoaiSach)).BeginInit();
@@ -65,12 +65,13 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(401, 366);
+            this.panelControl1.Size = new System.Drawing.Size(511, 320);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_LoaiSach
             // 
             this.dataGridView_LoaiSach.AllowUserToAddRows = false;
+            this.dataGridView_LoaiSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_LoaiSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaLoaiSach,
             this.colTenLoaiSach,
@@ -78,34 +79,9 @@
             this.dataGridView_LoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_LoaiSach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_LoaiSach.Name = "dataGridView_LoaiSach";
-            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(397, 362);
+            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(507, 316);
             this.dataGridView_LoaiSach.TabIndex = 0;
             this.dataGridView_LoaiSach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            // 
-            // colMaLoaiSach
-            // 
-            this.colMaLoaiSach.DataPropertyName = "maLoaiSach";
-            this.colMaLoaiSach.HeaderText = "Mã loại sách";
-            this.colMaLoaiSach.Name = "colMaLoaiSach";
-            this.colMaLoaiSach.ReadOnly = true;
-            this.colMaLoaiSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colMaLoaiSach.Width = 120;
-            // 
-            // colTenLoaiSach
-            // 
-            this.colTenLoaiSach.DataPropertyName = "tenLoaiSach";
-            this.colTenLoaiSach.HeaderText = "Tên loại sách";
-            this.colTenLoaiSach.Name = "colTenLoaiSach";
-            this.colTenLoaiSach.ReadOnly = true;
-            this.colTenLoaiSach.Width = 120;
-            // 
-            // colVTLT
-            // 
-            this.colVTLT.HeaderText = "Vị trí lưu trữ";
-            this.colVTLT.Name = "colVTLT";
-            this.colVTLT.ReadOnly = true;
-            this.colVTLT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colVTLT.Width = 120;
             // 
             // panelControl2
             // 
@@ -113,9 +89,9 @@
             this.panelControl2.Controls.Add(this.lookUpEdit_TenVTLT);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(401, 0);
+            this.panelControl2.Location = new System.Drawing.Point(511, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(472, 72);
+            this.panelControl2.Size = new System.Drawing.Size(475, 72);
             this.panelControl2.TabIndex = 1;
             // 
             // lookUpEdit_TenVTLT
@@ -146,9 +122,9 @@
             this.panelControl3.Controls.Add(this.textEdit_MaLoaiSach);
             this.panelControl3.Controls.Add(this.labelControl1);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(401, 72);
+            this.panelControl3.Location = new System.Drawing.Point(511, 72);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(472, 97);
+            this.panelControl3.Size = new System.Drawing.Size(475, 97);
             this.panelControl3.TabIndex = 2;
             // 
             // labelControl3
@@ -183,9 +159,9 @@
             // 
             // simpleButton_LoaiSach
             // 
-            this.simpleButton_LoaiSach.Location = new System.Drawing.Point(289, 18);
+            this.simpleButton_LoaiSach.Location = new System.Drawing.Point(137, 58);
             this.simpleButton_LoaiSach.Name = "simpleButton_LoaiSach";
-            this.simpleButton_LoaiSach.Size = new System.Drawing.Size(127, 43);
+            this.simpleButton_LoaiSach.Size = new System.Drawing.Size(131, 52);
             this.simpleButton_LoaiSach.TabIndex = 2;
             this.simpleButton_LoaiSach.Text = "Cập nhật";
             this.simpleButton_LoaiSach.Click += new System.EventHandler(this.simpleButton_LoaiSach_Click);
@@ -195,29 +171,54 @@
             this.panelControl4.Controls.Add(this.radioGroup_LoaiSach);
             this.panelControl4.Controls.Add(this.simpleButton_LoaiSach);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(401, 169);
+            this.panelControl4.Location = new System.Drawing.Point(511, 169);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(472, 197);
+            this.panelControl4.Size = new System.Drawing.Size(475, 151);
             this.panelControl4.TabIndex = 3;
             // 
             // radioGroup_LoaiSach
             // 
             this.radioGroup_LoaiSach.EditValue = "Add";
-            this.radioGroup_LoaiSach.Location = new System.Drawing.Point(221, 67);
+            this.radioGroup_LoaiSach.Location = new System.Drawing.Point(288, 39);
             this.radioGroup_LoaiSach.Name = "radioGroup_LoaiSach";
             this.radioGroup_LoaiSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_LoaiSach.Size = new System.Drawing.Size(195, 96);
+            this.radioGroup_LoaiSach.Size = new System.Drawing.Size(141, 71);
             this.radioGroup_LoaiSach.TabIndex = 0;
             this.radioGroup_LoaiSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_LoaiSach_SelectedIndexChanged);
+            // 
+            // colMaLoaiSach
+            // 
+            this.colMaLoaiSach.DataPropertyName = "maLoaiSach";
+            this.colMaLoaiSach.HeaderText = "Mã loại sách";
+            this.colMaLoaiSach.Name = "colMaLoaiSach";
+            this.colMaLoaiSach.ReadOnly = true;
+            this.colMaLoaiSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // colTenLoaiSach
+            // 
+            this.colTenLoaiSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colTenLoaiSach.DataPropertyName = "tenLoaiSach";
+            this.colTenLoaiSach.HeaderText = "Tên loại sách";
+            this.colTenLoaiSach.Name = "colTenLoaiSach";
+            this.colTenLoaiSach.ReadOnly = true;
+            this.colTenLoaiSach.Width = 94;
+            // 
+            // colVTLT
+            // 
+            this.colVTLT.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colVTLT.HeaderText = "Vị trí lưu trữ";
+            this.colVTLT.Name = "colVTLT";
+            this.colVTLT.ReadOnly = true;
+            this.colVTLT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FormLoaiSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 366);
+            this.ClientSize = new System.Drawing.Size(986, 320);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);

@@ -9,7 +9,9 @@ using View;
 namespace Presenter
 {
     public abstract class EntityPresenter<T> : EntityListPresenter<T> where T : class
-    { 
+    {
+        public int countBindingSourcePresenter;
+
         //abstract methods to inherit in all of components(PreClass) from Presenters
         abstract protected T getEntity(T o);
         abstract protected void setNewInfo(T newEntity, T old);
@@ -23,9 +25,10 @@ namespace Presenter
         {
             int num = 0;
             T entity = view.AddNewEntity();
-            if (getEntity(entity) == null)
+            if (getEntity(entity) == null) 
             {
                 entitySet.Add(entity);
+                countBindingSourcePresenter = bindingsource.Count; // check how many enities in bindingsource
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                 {
@@ -45,6 +48,7 @@ namespace Presenter
             if (entityToDelete != null)
             {
                 entitySet.Remove(entityToDelete);
+                countBindingSourcePresenter = bindingsource.Count; // check how many enities in bindingsource
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                     this.bindingsource.DataSource = entitySet.ToList();

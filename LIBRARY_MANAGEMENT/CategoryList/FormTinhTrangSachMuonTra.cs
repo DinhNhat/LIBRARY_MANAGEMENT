@@ -76,11 +76,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             int selectedIndex = listBoxControl_TTSMT.SelectedIndex;
             if (radioGroup_TTSMT.EditValue.Equals("Add"))
             {
-                preTinhTrangSachMuonTra.addNewEntity();
-                listBoxControl_TTSMT.SelectedIndex = listBoxControl_TTSMT.ItemCount - 1;
+                int num = preTinhTrangSachMuonTra.addNewEntity();
+                if (num > 0)
+                    listBoxControl_TTSMT.SelectedIndex = listBoxControl_TTSMT.ItemCount - 1;
             }
-            else
-                if (radioGroup_TTSMT.EditValue.Equals("Delete"))
+            else if (radioGroup_TTSMT.EditValue.Equals("Delete"))
             {
                 int num = preTinhTrangSachMuonTra.deleteEntity();
                 if (num > 0)

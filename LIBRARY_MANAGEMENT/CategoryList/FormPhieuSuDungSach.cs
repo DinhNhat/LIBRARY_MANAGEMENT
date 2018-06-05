@@ -26,6 +26,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             InitializeComponent();
             prePhieuSD.View = this;
             preLop.ViewLs = this;
+            dataGridView_PhieuSD.AutoGenerateColumns = false;
         }
 
         void IViewEntity<PhieuSuDungSach>.viewEntity(PhieuSuDungSach phieu)

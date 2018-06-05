@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton_LocTrangThai = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEdit_TrangThai_forFilter = new DevExpress.XtraEditors.LookUpEdit();
+            this.simpleButton_Clear = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit_MaPhieu_forFilter = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton_LocMaPhieu = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView_MuonTraSach = new System.Windows.Forms.DataGridView();
             this.colSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colTinhTrang = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -63,9 +72,7 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton_MuonTraSach = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_NguoiNhanTraSach = new DevExpress.XtraEditors.TextEdit();
-            this.radioGroup_MuonTraSach = new DevExpress.XtraEditors.RadioGroup();
             this.textEdit_NguoiChoMuon = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit_TienPhat = new DevExpress.XtraEditors.TextEdit();
@@ -78,16 +85,15 @@
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton_MuonTraSach = new DevExpress.XtraEditors.SimpleButton();
+            this.radioGroup_MuonTraSach = new DevExpress.XtraEditors.RadioGroup();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.lookUpEdit_TrangThai_forFilter = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit_MaPhieu_forFilter = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton_Clear = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton_LocPhieu = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
+            this.panelControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_TrangThai_forFilter.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_MaPhieu_forFilter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MuonTraSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -106,7 +112,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NguoiNhanTraSach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_MuonTraSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NguoiChoMuon.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TienPhat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties.CalendarTimeProperties)).BeginInit();
@@ -115,24 +120,116 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_MuonTraSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_TrangThai_forFilter.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_MaPhieu_forFilter.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.panelControl6);
             this.panelControl1.Controls.Add(this.dataGridView_MuonTraSach);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(643, 642);
+            this.panelControl1.Size = new System.Drawing.Size(895, 723);
             this.panelControl1.TabIndex = 0;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Controls.Add(this.simpleButton_LocTrangThai);
+            this.panelControl6.Controls.Add(this.labelControl19);
+            this.panelControl6.Controls.Add(this.lookUpEdit_TrangThai_forFilter);
+            this.panelControl6.Controls.Add(this.simpleButton_Clear);
+            this.panelControl6.Controls.Add(this.textEdit_MaPhieu_forFilter);
+            this.panelControl6.Controls.Add(this.simpleButton_LocMaPhieu);
+            this.panelControl6.Controls.Add(this.labelControl16);
+            this.panelControl6.Controls.Add(this.labelControl18);
+            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControl6.Location = new System.Drawing.Point(2, 593);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(891, 128);
+            this.panelControl6.TabIndex = 1;
+            // 
+            // simpleButton_LocTrangThai
+            // 
+            this.simpleButton_LocTrangThai.Location = new System.Drawing.Point(415, 69);
+            this.simpleButton_LocTrangThai.Name = "simpleButton_LocTrangThai";
+            this.simpleButton_LocTrangThai.Size = new System.Drawing.Size(115, 35);
+            this.simpleButton_LocTrangThai.TabIndex = 26;
+            this.simpleButton_LocTrangThai.Text = "Lọc trạng thái";
+            this.simpleButton_LocTrangThai.Click += new System.EventHandler(this.simpleButton_LocTrangThai_Click);
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Blue;
+            this.labelControl19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelControl19.LineColor = System.Drawing.Color.White;
+            this.labelControl19.Location = new System.Drawing.Point(2, 2);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(74, 13);
+            this.labelControl19.TabIndex = 25;
+            this.labelControl19.Text = "Thông tin lọc";
+            // 
+            // lookUpEdit_TrangThai_forFilter
+            // 
+            this.lookUpEdit_TrangThai_forFilter.Location = new System.Drawing.Point(178, 77);
+            this.lookUpEdit_TrangThai_forFilter.Name = "lookUpEdit_TrangThai_forFilter";
+            this.lookUpEdit_TrangThai_forFilter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_TrangThai_forFilter.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenTrangThai", "Tên trạng thái")});
+            this.lookUpEdit_TrangThai_forFilter.Properties.DisplayMember = "tenTrangThai";
+            this.lookUpEdit_TrangThai_forFilter.Properties.ValueMember = "maTrangThai";
+            this.lookUpEdit_TrangThai_forFilter.Size = new System.Drawing.Size(208, 20);
+            this.lookUpEdit_TrangThai_forFilter.TabIndex = 24;
+            // 
+            // simpleButton_Clear
+            // 
+            this.simpleButton_Clear.Location = new System.Drawing.Point(564, 31);
+            this.simpleButton_Clear.Name = "simpleButton_Clear";
+            this.simpleButton_Clear.Size = new System.Drawing.Size(115, 62);
+            this.simpleButton_Clear.TabIndex = 19;
+            this.simpleButton_Clear.Text = "Làm mới";
+            this.simpleButton_Clear.Click += new System.EventHandler(this.simpleButton_Clear_Click);
+            // 
+            // textEdit_MaPhieu_forFilter
+            // 
+            this.textEdit_MaPhieu_forFilter.Location = new System.Drawing.Point(178, 28);
+            this.textEdit_MaPhieu_forFilter.Name = "textEdit_MaPhieu_forFilter";
+            this.textEdit_MaPhieu_forFilter.Size = new System.Drawing.Size(208, 20);
+            this.textEdit_MaPhieu_forFilter.TabIndex = 19;
+            // 
+            // simpleButton_LocMaPhieu
+            // 
+            this.simpleButton_LocMaPhieu.Location = new System.Drawing.Point(415, 20);
+            this.simpleButton_LocMaPhieu.Name = "simpleButton_LocMaPhieu";
+            this.simpleButton_LocMaPhieu.Size = new System.Drawing.Size(115, 35);
+            this.simpleButton_LocMaPhieu.TabIndex = 18;
+            this.simpleButton_LocMaPhieu.Text = "Lọc mã phiếu";
+            this.simpleButton_LocMaPhieu.Click += new System.EventHandler(this.simpleButton_LocMaPhieu_Click);
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(83, 31);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(50, 13);
+            this.labelControl16.TabIndex = 11;
+            this.labelControl16.Text = "Mã phiếu :";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(83, 80);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(56, 13);
+            this.labelControl18.TabIndex = 20;
+            this.labelControl18.Text = "Trạng thái :";
             // 
             // dataGridView_MuonTraSach
             // 
             this.dataGridView_MuonTraSach.AllowUserToAddRows = false;
+            this.dataGridView_MuonTraSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_MuonTraSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MuonTraSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSach,
@@ -147,24 +244,33 @@
             this.dataGridView_MuonTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_MuonTraSach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_MuonTraSach.Name = "dataGridView_MuonTraSach";
-            this.dataGridView_MuonTraSach.Size = new System.Drawing.Size(639, 638);
+            this.dataGridView_MuonTraSach.Size = new System.Drawing.Size(891, 719);
             this.dataGridView_MuonTraSach.TabIndex = 0;
             this.dataGridView_MuonTraSach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MuonTraSach_RowEnter);
             // 
             // colSach
             // 
+            this.colSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.colSach.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colSach.HeaderText = "Sách";
             this.colSach.Name = "colSach";
+            this.colSach.Width = 36;
             // 
             // colTinhTrang
             // 
+            this.colTinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTinhTrang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colTinhTrang.HeaderText = "Tình trạng";
             this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.Width = 56;
             // 
             // colTrangThai
             // 
+            this.colTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTrangThai.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colTrangThai.HeaderText = "Trạng thái";
             this.colTrangThai.Name = "colTrangThai";
+            this.colTrangThai.Width = 56;
             // 
             // colNgayMuon
             // 
@@ -192,13 +298,17 @@
             // 
             // colNguoiChoMuon
             // 
+            this.colNguoiChoMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colNguoiChoMuon.HeaderText = "Người cho mượn";
             this.colNguoiChoMuon.Name = "colNguoiChoMuon";
+            this.colNguoiChoMuon.Width = 101;
             // 
             // colNguoiNhanSachTra
             // 
+            this.colNguoiNhanSachTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colNguoiNhanSachTra.HeaderText = "Người nhận sách trả";
             this.colNguoiNhanSachTra.Name = "colNguoiNhanSachTra";
+            this.colNguoiNhanSachTra.Width = 105;
             // 
             // panelControl2
             // 
@@ -214,9 +324,9 @@
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(643, 0);
+            this.panelControl2.Location = new System.Drawing.Point(895, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(634, 132);
+            this.panelControl2.Size = new System.Drawing.Size(382, 187);
             this.panelControl2.TabIndex = 1;
             // 
             // labelControl20
@@ -226,13 +336,13 @@
             this.labelControl20.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl20.Location = new System.Drawing.Point(2, 2);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(89, 13);
+            this.labelControl20.Size = new System.Drawing.Size(79, 13);
             this.labelControl20.TabIndex = 10;
-            this.labelControl20.Text = "Thông tin phiếu";
+            this.labelControl20.Text = "Thông độc giả";
             // 
             // textEdit_SoDT
             // 
-            this.textEdit_SoDT.Location = new System.Drawing.Point(421, 67);
+            this.textEdit_SoDT.Location = new System.Drawing.Point(132, 156);
             this.textEdit_SoDT.Name = "textEdit_SoDT";
             this.textEdit_SoDT.Properties.ReadOnly = true;
             this.textEdit_SoDT.Size = new System.Drawing.Size(145, 20);
@@ -240,7 +350,7 @@
             // 
             // textEdit_Email
             // 
-            this.textEdit_Email.Location = new System.Drawing.Point(421, 35);
+            this.textEdit_Email.Location = new System.Drawing.Point(132, 127);
             this.textEdit_Email.Name = "textEdit_Email";
             this.textEdit_Email.Properties.ReadOnly = true;
             this.textEdit_Email.Size = new System.Drawing.Size(145, 20);
@@ -277,7 +387,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(346, 38);
+            this.labelControl5.Location = new System.Drawing.Point(18, 130);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(31, 13);
             this.labelControl5.TabIndex = 4;
@@ -285,7 +395,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(346, 70);
+            this.labelControl4.Location = new System.Drawing.Point(18, 159);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(69, 13);
             this.labelControl4.TabIndex = 3;
@@ -327,9 +437,9 @@
             this.panelControl3.Controls.Add(this.labelControl7);
             this.panelControl3.Controls.Add(this.labelControl6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(643, 132);
+            this.panelControl3.Location = new System.Drawing.Point(895, 187);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(634, 170);
+            this.panelControl3.Size = new System.Drawing.Size(382, 162);
             this.panelControl3.TabIndex = 2;
             // 
             // labelControl22
@@ -339,13 +449,13 @@
             this.labelControl22.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl22.Location = new System.Drawing.Point(2, 2);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(90, 13);
+            this.labelControl22.Size = new System.Drawing.Size(110, 13);
             this.labelControl22.TabIndex = 19;
-            this.labelControl22.Text = "Thông tin mượn";
+            this.labelControl22.Text = "Thông tin mượn trả";
             // 
             // lookUpEdit_MaPhieu
             // 
-            this.lookUpEdit_MaPhieu.Location = new System.Drawing.Point(132, 39);
+            this.lookUpEdit_MaPhieu.Location = new System.Drawing.Point(132, 28);
             this.lookUpEdit_MaPhieu.Name = "lookUpEdit_MaPhieu";
             this.lookUpEdit_MaPhieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -358,7 +468,7 @@
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(18, 42);
+            this.labelControl17.Location = new System.Drawing.Point(17, 31);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Size = new System.Drawing.Size(50, 13);
             this.labelControl17.TabIndex = 8;
@@ -366,7 +476,7 @@
             // 
             // lookUpEdit_TrangThai
             // 
-            this.lookUpEdit_TrangThai.Location = new System.Drawing.Point(132, 135);
+            this.lookUpEdit_TrangThai.Location = new System.Drawing.Point(132, 126);
             this.lookUpEdit_TrangThai.Name = "lookUpEdit_TrangThai";
             this.lookUpEdit_TrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -379,7 +489,7 @@
             // 
             // lookUpEdit_TinhTrang
             // 
-            this.lookUpEdit_TinhTrang.Location = new System.Drawing.Point(132, 104);
+            this.lookUpEdit_TinhTrang.Location = new System.Drawing.Point(132, 92);
             this.lookUpEdit_TinhTrang.Name = "lookUpEdit_TinhTrang";
             this.lookUpEdit_TinhTrang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -392,7 +502,7 @@
             // 
             // lookUpEdit_Sach
             // 
-            this.lookUpEdit_Sach.Location = new System.Drawing.Point(132, 70);
+            this.lookUpEdit_Sach.Location = new System.Drawing.Point(132, 58);
             this.lookUpEdit_Sach.Name = "lookUpEdit_Sach";
             this.lookUpEdit_Sach.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -405,7 +515,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(18, 138);
+            this.labelControl8.Location = new System.Drawing.Point(18, 129);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(56, 13);
             this.labelControl8.TabIndex = 4;
@@ -413,15 +523,15 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(18, 107);
+            this.labelControl7.Location = new System.Drawing.Point(18, 95);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(100, 13);
+            this.labelControl7.Size = new System.Drawing.Size(81, 13);
             this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "Tên tình trạng sách :";
+            this.labelControl7.Text = "Tình trạng sách :";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(18, 73);
+            this.labelControl6.Location = new System.Drawing.Point(18, 61);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(50, 13);
             this.labelControl6.TabIndex = 2;
@@ -430,9 +540,7 @@
             // panelControl4
             // 
             this.panelControl4.Controls.Add(this.labelControl21);
-            this.panelControl4.Controls.Add(this.simpleButton_MuonTraSach);
             this.panelControl4.Controls.Add(this.textEdit_NguoiNhanTraSach);
-            this.panelControl4.Controls.Add(this.radioGroup_MuonTraSach);
             this.panelControl4.Controls.Add(this.textEdit_NguoiChoMuon);
             this.panelControl4.Controls.Add(this.labelControl15);
             this.panelControl4.Controls.Add(this.textEdit_TienPhat);
@@ -446,9 +554,9 @@
             this.panelControl4.Controls.Add(this.labelControl10);
             this.panelControl4.Controls.Add(this.labelControl9);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(643, 302);
+            this.panelControl4.Location = new System.Drawing.Point(895, 349);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(634, 221);
+            this.panelControl4.Size = new System.Drawing.Size(382, 250);
             this.panelControl4.TabIndex = 3;
             // 
             // labelControl21
@@ -458,49 +566,27 @@
             this.labelControl21.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelControl21.Location = new System.Drawing.Point(2, 2);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(90, 13);
+            this.labelControl21.Size = new System.Drawing.Size(110, 13);
             this.labelControl21.TabIndex = 18;
-            this.labelControl21.Text = "Thông tin mượn";
-            // 
-            // simpleButton_MuonTraSach
-            // 
-            this.simpleButton_MuonTraSach.Location = new System.Drawing.Point(428, 124);
-            this.simpleButton_MuonTraSach.Name = "simpleButton_MuonTraSach";
-            this.simpleButton_MuonTraSach.Size = new System.Drawing.Size(155, 59);
-            this.simpleButton_MuonTraSach.TabIndex = 1;
-            this.simpleButton_MuonTraSach.Text = "Cập nhật";
-            this.simpleButton_MuonTraSach.Click += new System.EventHandler(this.simpleButton_MuonTraSach_Click);
+            this.labelControl21.Text = "Thông tin mượn trả";
             // 
             // textEdit_NguoiNhanTraSach
             // 
-            this.textEdit_NguoiNhanTraSach.Location = new System.Drawing.Point(132, 185);
+            this.textEdit_NguoiNhanTraSach.Location = new System.Drawing.Point(132, 221);
             this.textEdit_NguoiNhanTraSach.Name = "textEdit_NguoiNhanTraSach";
             this.textEdit_NguoiNhanTraSach.Size = new System.Drawing.Size(208, 20);
             this.textEdit_NguoiNhanTraSach.TabIndex = 17;
             // 
-            // radioGroup_MuonTraSach
-            // 
-            this.radioGroup_MuonTraSach.EditValue = "Add";
-            this.radioGroup_MuonTraSach.Location = new System.Drawing.Point(428, 32);
-            this.radioGroup_MuonTraSach.Name = "radioGroup_MuonTraSach";
-            this.radioGroup_MuonTraSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Xóa", "Xóa")});
-            this.radioGroup_MuonTraSach.Size = new System.Drawing.Size(155, 84);
-            this.radioGroup_MuonTraSach.TabIndex = 0;
-            this.radioGroup_MuonTraSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_MuonTraSach_SelectedIndexChanged);
-            // 
             // textEdit_NguoiChoMuon
             // 
-            this.textEdit_NguoiChoMuon.Location = new System.Drawing.Point(132, 157);
+            this.textEdit_NguoiChoMuon.Location = new System.Drawing.Point(132, 189);
             this.textEdit_NguoiChoMuon.Name = "textEdit_NguoiChoMuon";
             this.textEdit_NguoiChoMuon.Size = new System.Drawing.Size(208, 20);
             this.textEdit_NguoiChoMuon.TabIndex = 16;
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(318, 124);
+            this.labelControl15.Location = new System.Drawing.Point(318, 152);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(20, 13);
             this.labelControl15.TabIndex = 15;
@@ -508,7 +594,7 @@
             // 
             // textEdit_TienPhat
             // 
-            this.textEdit_TienPhat.Location = new System.Drawing.Point(132, 121);
+            this.textEdit_TienPhat.Location = new System.Drawing.Point(132, 149);
             this.textEdit_TienPhat.Name = "textEdit_TienPhat";
             this.textEdit_TienPhat.Properties.Mask.BeepOnError = true;
             this.textEdit_TienPhat.Properties.Mask.EditMask = "f0";
@@ -519,7 +605,7 @@
             // dateEdit_NgayTra
             // 
             this.dateEdit_NgayTra.EditValue = null;
-            this.dateEdit_NgayTra.Location = new System.Drawing.Point(130, 88);
+            this.dateEdit_NgayTra.Location = new System.Drawing.Point(132, 111);
             this.dateEdit_NgayTra.Name = "dateEdit_NgayTra";
             this.dateEdit_NgayTra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -531,7 +617,7 @@
             // dateEdit_NgayDuKienTra
             // 
             this.dateEdit_NgayDuKienTra.EditValue = null;
-            this.dateEdit_NgayDuKienTra.Location = new System.Drawing.Point(130, 59);
+            this.dateEdit_NgayDuKienTra.Location = new System.Drawing.Point(132, 69);
             this.dateEdit_NgayDuKienTra.Name = "dateEdit_NgayDuKienTra";
             this.dateEdit_NgayDuKienTra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -543,7 +629,7 @@
             // dateEdit_NgayMuon
             // 
             this.dateEdit_NgayMuon.EditValue = null;
-            this.dateEdit_NgayMuon.Location = new System.Drawing.Point(130, 29);
+            this.dateEdit_NgayMuon.Location = new System.Drawing.Point(132, 29);
             this.dateEdit_NgayMuon.Name = "dateEdit_NgayMuon";
             this.dateEdit_NgayMuon.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -554,7 +640,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(18, 188);
+            this.labelControl14.Location = new System.Drawing.Point(17, 224);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(104, 13);
             this.labelControl14.TabIndex = 10;
@@ -562,7 +648,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(18, 160);
+            this.labelControl13.Location = new System.Drawing.Point(17, 190);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(85, 13);
             this.labelControl13.TabIndex = 9;
@@ -570,7 +656,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(18, 124);
+            this.labelControl12.Location = new System.Drawing.Point(18, 152);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(52, 13);
             this.labelControl12.TabIndex = 8;
@@ -578,7 +664,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(18, 91);
+            this.labelControl11.Location = new System.Drawing.Point(18, 114);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(49, 13);
             this.labelControl11.TabIndex = 7;
@@ -586,7 +672,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(18, 62);
+            this.labelControl10.Location = new System.Drawing.Point(17, 72);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(87, 13);
             this.labelControl10.TabIndex = 6;
@@ -594,104 +680,49 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(18, 32);
+            this.labelControl9.Location = new System.Drawing.Point(17, 32);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(62, 13);
             this.labelControl9.TabIndex = 5;
             this.labelControl9.Text = "Ngày mượn :";
             // 
+            // simpleButton_MuonTraSach
+            // 
+            this.simpleButton_MuonTraSach.Location = new System.Drawing.Point(17, 41);
+            this.simpleButton_MuonTraSach.Name = "simpleButton_MuonTraSach";
+            this.simpleButton_MuonTraSach.Size = new System.Drawing.Size(136, 59);
+            this.simpleButton_MuonTraSach.TabIndex = 1;
+            this.simpleButton_MuonTraSach.Text = "Cập nhật";
+            this.simpleButton_MuonTraSach.Click += new System.EventHandler(this.simpleButton_MuonTraSach_Click);
+            // 
+            // radioGroup_MuonTraSach
+            // 
+            this.radioGroup_MuonTraSach.EditValue = "Add";
+            this.radioGroup_MuonTraSach.Location = new System.Drawing.Point(178, 23);
+            this.radioGroup_MuonTraSach.Name = "radioGroup_MuonTraSach";
+            this.radioGroup_MuonTraSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
+            this.radioGroup_MuonTraSach.Size = new System.Drawing.Size(162, 75);
+            this.radioGroup_MuonTraSach.TabIndex = 0;
+            this.radioGroup_MuonTraSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_MuonTraSach_SelectedIndexChanged);
+            // 
             // panelControl5
             // 
-            this.panelControl5.Controls.Add(this.lookUpEdit_TrangThai_forFilter);
-            this.panelControl5.Controls.Add(this.lookUpEdit_MaPhieu_forFilter);
-            this.panelControl5.Controls.Add(this.labelControl19);
-            this.panelControl5.Controls.Add(this.labelControl18);
-            this.panelControl5.Controls.Add(this.simpleButton_Clear);
-            this.panelControl5.Controls.Add(this.simpleButton_LocPhieu);
-            this.panelControl5.Controls.Add(this.labelControl16);
+            this.panelControl5.Controls.Add(this.radioGroup_MuonTraSach);
+            this.panelControl5.Controls.Add(this.simpleButton_MuonTraSach);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl5.Location = new System.Drawing.Point(643, 523);
+            this.panelControl5.Location = new System.Drawing.Point(895, 599);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(634, 119);
+            this.panelControl5.Size = new System.Drawing.Size(382, 124);
             this.panelControl5.TabIndex = 4;
-            // 
-            // lookUpEdit_TrangThai_forFilter
-            // 
-            this.lookUpEdit_TrangThai_forFilter.Location = new System.Drawing.Point(132, 57);
-            this.lookUpEdit_TrangThai_forFilter.Name = "lookUpEdit_TrangThai_forFilter";
-            this.lookUpEdit_TrangThai_forFilter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_TrangThai_forFilter.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenTrangThai", "Tên trạng thái")});
-            this.lookUpEdit_TrangThai_forFilter.Properties.DisplayMember = "tenTrangThai";
-            this.lookUpEdit_TrangThai_forFilter.Properties.ValueMember = "maTrangThai";
-            this.lookUpEdit_TrangThai_forFilter.Size = new System.Drawing.Size(206, 20);
-            this.lookUpEdit_TrangThai_forFilter.TabIndex = 24;
-            // 
-            // lookUpEdit_MaPhieu_forFilter
-            // 
-            this.lookUpEdit_MaPhieu_forFilter.Location = new System.Drawing.Point(132, 27);
-            this.lookUpEdit_MaPhieu_forFilter.Name = "lookUpEdit_MaPhieu_forFilter";
-            this.lookUpEdit_MaPhieu_forFilter.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_MaPhieu_forFilter.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("maPhieuSD", "Mã phiếu")});
-            this.lookUpEdit_MaPhieu_forFilter.Properties.DisplayMember = "maPhieuSD";
-            this.lookUpEdit_MaPhieu_forFilter.Properties.ValueMember = "maPhieuSD";
-            this.lookUpEdit_MaPhieu_forFilter.Size = new System.Drawing.Size(206, 20);
-            this.lookUpEdit_MaPhieu_forFilter.TabIndex = 23;
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.Blue;
-            this.labelControl19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelControl19.LineColor = System.Drawing.Color.White;
-            this.labelControl19.Location = new System.Drawing.Point(2, 2);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(74, 13);
-            this.labelControl19.TabIndex = 22;
-            this.labelControl19.Text = "Thông tin lọc";
-            // 
-            // labelControl18
-            // 
-            this.labelControl18.Location = new System.Drawing.Point(18, 60);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(56, 13);
-            this.labelControl18.TabIndex = 20;
-            this.labelControl18.Text = "Trạng thái :";
-            // 
-            // simpleButton_Clear
-            // 
-            this.simpleButton_Clear.Location = new System.Drawing.Point(435, 30);
-            this.simpleButton_Clear.Name = "simpleButton_Clear";
-            this.simpleButton_Clear.Size = new System.Drawing.Size(83, 48);
-            this.simpleButton_Clear.TabIndex = 19;
-            this.simpleButton_Clear.Text = "Dọn dẹp";
-            this.simpleButton_Clear.Click += new System.EventHandler(this.simpleButton_Clear_Click);
-            // 
-            // simpleButton_LocPhieu
-            // 
-            this.simpleButton_LocPhieu.Location = new System.Drawing.Point(346, 30);
-            this.simpleButton_LocPhieu.Name = "simpleButton_LocPhieu";
-            this.simpleButton_LocPhieu.Size = new System.Drawing.Size(83, 48);
-            this.simpleButton_LocPhieu.TabIndex = 18;
-            this.simpleButton_LocPhieu.Text = "Lọc";
-            this.simpleButton_LocPhieu.Click += new System.EventHandler(this.simpleButton_LocPhieu_Click);
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(18, 30);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(50, 13);
-            this.labelControl16.TabIndex = 11;
-            this.labelControl16.Text = "Mã phiếu :";
             // 
             // FormMuonTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 642);
+            this.ClientSize = new System.Drawing.Size(1277, 723);
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
@@ -703,6 +734,11 @@
             this.Load += new System.EventHandler(this.FormMuonTraSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
+            this.panelControl6.ResumeLayout(false);
+            this.panelControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_TrangThai_forFilter.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_MaPhieu_forFilter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MuonTraSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
@@ -724,7 +760,6 @@
             this.panelControl4.ResumeLayout(false);
             this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NguoiNhanTraSach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_MuonTraSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NguoiChoMuon.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TienPhat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties.CalendarTimeProperties)).EndInit();
@@ -733,11 +768,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup_MuonTraSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
-            this.panelControl5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_TrangThai_forFilter.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit_MaPhieu_forFilter.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -781,10 +814,19 @@
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton simpleButton_MuonTraSach;
         private DevExpress.XtraEditors.RadioGroup radioGroup_MuonTraSach;
-        private DevExpress.XtraEditors.SimpleButton simpleButton_LocPhieu;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_LocMaPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private DevExpress.XtraEditors.LookUpEdit lookUpEdit_MaPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_Clear;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.LabelControl labelControl22;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit_TrangThai_forFilter;
+        private DevExpress.XtraEditors.TextEdit textEdit_MaPhieu_forFilter;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
         private System.Windows.Forms.DataGridViewComboBoxColumn colSach;
         private System.Windows.Forms.DataGridViewComboBoxColumn colTinhTrang;
         private System.Windows.Forms.DataGridViewComboBoxColumn colTrangThai;
@@ -794,13 +836,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTienPhat;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNguoiChoMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNguoiNhanSachTra;
-        private DevExpress.XtraEditors.SimpleButton simpleButton_Clear;
-        private DevExpress.XtraEditors.LabelControl labelControl18;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
-        private DevExpress.XtraEditors.LabelControl labelControl22;
-        private DevExpress.XtraEditors.LabelControl labelControl21;
-        private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit_MaPhieu_forFilter;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit_TrangThai_forFilter;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_LocTrangThai;
     }
 }

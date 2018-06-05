@@ -30,13 +30,6 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_PhieuSD = new System.Windows.Forms.DataGridView();
-            this.colMaPhieuSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayThangNamSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lookUpEdit_TenLop = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -56,6 +49,13 @@
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton_PhieuSD = new DevExpress.XtraEditors.SimpleButton();
             this.radioGroup_PhieuSD = new DevExpress.XtraEditors.RadioGroup();
+            this.colMaPhieuSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayThangNamSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PhieuSD)).BeginInit();
@@ -82,12 +82,13 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(755, 569);
+            this.panelControl1.Size = new System.Drawing.Size(755, 514);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_PhieuSD
             // 
             this.dataGridView_PhieuSD.AllowUserToAddRows = false;
+            this.dataGridView_PhieuSD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_PhieuSD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaPhieuSD,
             this.colHoTen,
@@ -100,56 +101,9 @@
             this.dataGridView_PhieuSD.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_PhieuSD.Name = "dataGridView_PhieuSD";
             this.dataGridView_PhieuSD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView_PhieuSD.Size = new System.Drawing.Size(751, 565);
+            this.dataGridView_PhieuSD.Size = new System.Drawing.Size(751, 510);
             this.dataGridView_PhieuSD.TabIndex = 0;
             this.dataGridView_PhieuSD.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PhieuSD_RowEnter);
-            // 
-            // colMaPhieuSD
-            // 
-            this.colMaPhieuSD.DataPropertyName = "maPhieuSD";
-            this.colMaPhieuSD.HeaderText = "Mã Phiếu Sử Dụng";
-            this.colMaPhieuSD.Name = "colMaPhieuSD";
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "hoTen";
-            this.colHoTen.HeaderText = "Họ Tên";
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Width = 101;
-            // 
-            // colNgayThangNamSinh
-            // 
-            this.colNgayThangNamSinh.DataPropertyName = "ngayThangNamSinh";
-            this.colNgayThangNamSinh.HeaderText = "Ngày Tháng Năm Sinh";
-            this.colNgayThangNamSinh.Name = "colNgayThangNamSinh";
-            this.colNgayThangNamSinh.Width = 101;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "gioiTinh";
-            this.colGioiTinh.HeaderText = "Giới Tính";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Width = 102;
-            // 
-            // colEmail
-            // 
-            this.colEmail.DataPropertyName = "email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.Width = 101;
-            // 
-            // colSoDT
-            // 
-            this.colSoDT.DataPropertyName = "soDT";
-            this.colSoDT.HeaderText = "Số Điện Thoại";
-            this.colSoDT.Name = "colSoDT";
-            this.colSoDT.Width = 101;
-            // 
-            // colTenLop
-            // 
-            this.colTenLop.HeaderText = "Tên Lớp";
-            this.colTenLop.Name = "colTenLop";
-            this.colTenLop.Width = 101;
             // 
             // panelControl2
             // 
@@ -308,14 +262,14 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(755, 356);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(431, 213);
+            this.panelControl4.Size = new System.Drawing.Size(431, 158);
             this.panelControl4.TabIndex = 3;
             // 
             // simpleButton_PhieuSD
             // 
-            this.simpleButton_PhieuSD.Location = new System.Drawing.Point(255, 20);
+            this.simpleButton_PhieuSD.Location = new System.Drawing.Point(82, 72);
             this.simpleButton_PhieuSD.Name = "simpleButton_PhieuSD";
-            this.simpleButton_PhieuSD.Size = new System.Drawing.Size(109, 37);
+            this.simpleButton_PhieuSD.Size = new System.Drawing.Size(109, 47);
             this.simpleButton_PhieuSD.TabIndex = 1;
             this.simpleButton_PhieuSD.Text = "Cập nhật";
             this.simpleButton_PhieuSD.Click += new System.EventHandler(this.simpleButton_PhieuSD_Click);
@@ -323,21 +277,69 @@
             // radioGroup_PhieuSD
             // 
             this.radioGroup_PhieuSD.EditValue = "Add";
-            this.radioGroup_PhieuSD.Location = new System.Drawing.Point(188, 63);
+            this.radioGroup_PhieuSD.Location = new System.Drawing.Point(221, 40);
             this.radioGroup_PhieuSD.Name = "radioGroup_PhieuSD";
             this.radioGroup_PhieuSD.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_PhieuSD.Size = new System.Drawing.Size(176, 94);
+            this.radioGroup_PhieuSD.Size = new System.Drawing.Size(143, 79);
             this.radioGroup_PhieuSD.TabIndex = 0;
             this.radioGroup_PhieuSD.SelectedIndexChanged += new System.EventHandler(this.radioGroup_PhieuSD_SelectedIndexChanged);
+            // 
+            // colMaPhieuSD
+            // 
+            this.colMaPhieuSD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMaPhieuSD.DataPropertyName = "maPhieuSD";
+            this.colMaPhieuSD.HeaderText = "Mã Phiếu Sử Dụng";
+            this.colMaPhieuSD.Name = "colMaPhieuSD";
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colHoTen.DataPropertyName = "hoTen";
+            this.colHoTen.HeaderText = "Họ Tên";
+            this.colHoTen.Name = "colHoTen";
+            // 
+            // colNgayThangNamSinh
+            // 
+            this.colNgayThangNamSinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNgayThangNamSinh.DataPropertyName = "ngayThangNamSinh";
+            this.colNgayThangNamSinh.HeaderText = "Ngày Tháng Năm Sinh";
+            this.colNgayThangNamSinh.Name = "colNgayThangNamSinh";
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "gioiTinh";
+            this.colGioiTinh.HeaderText = "Giới Tính";
+            this.colGioiTinh.Name = "colGioiTinh";
+            // 
+            // colEmail
+            // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colEmail.DataPropertyName = "email";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.Name = "colEmail";
+            // 
+            // colSoDT
+            // 
+            this.colSoDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colSoDT.DataPropertyName = "soDT";
+            this.colSoDT.HeaderText = "Số Điện Thoại";
+            this.colSoDT.Name = "colSoDT";
+            // 
+            // colTenLop
+            // 
+            this.colTenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenLop.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colTenLop.HeaderText = "Tên Lớp";
+            this.colTenLop.Name = "colTenLop";
             // 
             // FormPhieuSuDungSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 569);
+            this.ClientSize = new System.Drawing.Size(1186, 514);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);

@@ -22,7 +22,7 @@ namespace Presenter.Presenters
         protected override NamHoc getEntity(NamHoc o)
         {
             NamHoc nh = null;
-            nh = base.entitySet.FirstOrDefault(t => t.maNamHoc == o.maNamHoc);
+            nh = base.entitySet.FirstOrDefault(t => t.maNamHoc == o.maNamHoc || t.tenNamHoc == o.tenNamHoc);
             return nh;
         }
 

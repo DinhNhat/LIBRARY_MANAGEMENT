@@ -26,6 +26,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             InitializeComponent();
             preLoaiSach.View = this;
             preVTLT.ViewLs = this;
+            dataGridView_LoaiSach.AutoGenerateColumns = false;
         }
 
         void IViewEntity<LoaiSach>.viewEntity(LoaiSach ls)
@@ -89,7 +90,10 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void simpleButton_LoaiSach_Click(object sender, EventArgs e)
         {
             if (radioGroup_LoaiSach.EditValue.Equals("Add"))
+            {
                 preLoaiSach.addNewEntity();
+                rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
+            } 
             else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
                 preLoaiSach.deleteEntity();
             else if (radioGroup_LoaiSach.EditValue.Equals("Update"))

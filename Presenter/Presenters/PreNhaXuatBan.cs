@@ -22,7 +22,7 @@ namespace Presenter.Presenters
         protected override NhaXuatBan getEntity(NhaXuatBan o)
         {
             NhaXuatBan nxb = null;
-            nxb = base.entitySet.FirstOrDefault(t => t.maNXB == o.maNXB);
+            nxb = base.entitySet.FirstOrDefault(t => t.maNXB == o.maNXB || t.tenNXB == o.tenNXB);
             return nxb;
         }
 

@@ -23,7 +23,7 @@ namespace Presenter.Presenters
         protected override TacGia getEntity(TacGia o)
         {
             TacGia tg = null;
-            tg = base.entitySet.FirstOrDefault(t => t.maTacGia == o.maTacGia);
+            tg = base.entitySet.FirstOrDefault(t => t.maTacGia == o.maTacGia || t.tenTacGia == o.tenTacGia);
             return tg;
         }
 

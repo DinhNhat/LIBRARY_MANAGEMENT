@@ -77,11 +77,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             int selectedIndex = listBoxControl_KhoSach.SelectedIndex;
             if (radioGroup_KhoSach.EditValue.Equals("Add"))
             {
-                preKhoSach.addNewEntity();
-                listBoxControl_KhoSach.SelectedIndex = listBoxControl_KhoSach.ItemCount - 1;
+                int num = preKhoSach.addNewEntity();
+                if (num > 0)
+                    listBoxControl_KhoSach.SelectedIndex = listBoxControl_KhoSach.ItemCount - 1;
             }
-            else
-                if (radioGroup_KhoSach.EditValue.Equals("Delete"))
+            else if (radioGroup_KhoSach.EditValue.Equals("Delete"))
             {
                 int num = preKhoSach.deleteEntity();
                 if (num > 0)

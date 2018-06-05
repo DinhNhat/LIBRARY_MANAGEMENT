@@ -50,7 +50,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(253, 257);
+            this.panelControl1.Size = new System.Drawing.Size(253, 217);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_TacGia
@@ -58,7 +58,7 @@
             this.listBoxControl_TacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_TacGia.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_TacGia.Name = "listBoxControl_TacGia";
-            this.listBoxControl_TacGia.Size = new System.Drawing.Size(249, 253);
+            this.listBoxControl_TacGia.Size = new System.Drawing.Size(249, 213);
             this.listBoxControl_TacGia.TabIndex = 0;
             this.listBoxControl_TacGia.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_TacGia_SelectedIndexChanged);
             // 
@@ -71,27 +71,27 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(253, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(393, 257);
+            this.panelControl2.Size = new System.Drawing.Size(393, 217);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_TacGia
             // 
             this.radioGroup_TacGia.EditValue = "Add";
-            this.radioGroup_TacGia.Location = new System.Drawing.Point(152, 115);
+            this.radioGroup_TacGia.Location = new System.Drawing.Point(195, 95);
             this.radioGroup_TacGia.Name = "radioGroup_TacGia";
             this.radioGroup_TacGia.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_TacGia.Size = new System.Drawing.Size(182, 96);
+            this.radioGroup_TacGia.Size = new System.Drawing.Size(139, 87);
             this.radioGroup_TacGia.TabIndex = 3;
             this.radioGroup_TacGia.SelectedIndexChanged += new System.EventHandler(this.radioGroup_TacGia_SelectedIndexChanged);
             // 
             // simpleButton_TacGia
             // 
-            this.simpleButton_TacGia.Location = new System.Drawing.Point(209, 69);
+            this.simpleButton_TacGia.Location = new System.Drawing.Point(51, 129);
             this.simpleButton_TacGia.Name = "simpleButton_TacGia";
-            this.simpleButton_TacGia.Size = new System.Drawing.Size(125, 40);
+            this.simpleButton_TacGia.Size = new System.Drawing.Size(125, 53);
             this.simpleButton_TacGia.TabIndex = 2;
             this.simpleButton_TacGia.Text = "Cập nhật";
             this.simpleButton_TacGia.Click += new System.EventHandler(this.simpleButton_TacGia_Click);
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 257);
+            this.ClientSize = new System.Drawing.Size(646, 217);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormTacGia";

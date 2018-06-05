@@ -24,7 +24,7 @@ namespace Presenter.Presenters
         protected override ViTriLuuTru getEntity(ViTriLuuTru o)
         {
             ViTriLuuTru vtll = null;
-            vtll = base.entitySet.FirstOrDefault(t => t.maViTriLuuTru == o.maViTriLuuTru);
+            vtll = base.entitySet.FirstOrDefault(t => t.maViTriLuuTru == o.maViTriLuuTru || t.tenViTriLuuTru == o.tenViTriLuuTru);
             return vtll;
         }
 

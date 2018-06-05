@@ -26,6 +26,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             InitializeComponent();
             preLop.View = this;
             preNamHoc.ViewLs = this;
+            dataGridView_Lop.AutoGenerateColumns = false;
         }
 
         public Lop AddNewEntity()

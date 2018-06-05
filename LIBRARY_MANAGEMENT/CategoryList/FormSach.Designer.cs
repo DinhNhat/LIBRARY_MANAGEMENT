@@ -30,17 +30,6 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_Sach = new System.Windows.Forms.DataGridView();
-            this.colMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThoiHanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTacGia = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colLoaiSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colNhaXB = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colKhoSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lookUpEdit_TenKhoSach = new DevExpress.XtraEditors.LookUpEdit();
             this.lookUpEdit_TenNXB = new DevExpress.XtraEditors.LookUpEdit();
@@ -70,6 +59,17 @@
             this.radioGroup_Sach = new DevExpress.XtraEditors.RadioGroup();
             this.simpleButton_Sach = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.colMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThoiHanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTacGia = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colLoaiSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colNhaXB = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colKhoSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sach)).BeginInit();
@@ -99,12 +99,13 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(728, 605);
+            this.panelControl1.Size = new System.Drawing.Size(868, 605);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_Sach
             // 
             this.dataGridView_Sach.AllowUserToAddRows = false;
+            this.dataGridView_Sach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Sach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaSach,
             this.colTenSach,
@@ -120,82 +121,9 @@
             this.dataGridView_Sach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_Sach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Sach.Name = "dataGridView_Sach";
-            this.dataGridView_Sach.Size = new System.Drawing.Size(724, 601);
+            this.dataGridView_Sach.Size = new System.Drawing.Size(864, 601);
             this.dataGridView_Sach.TabIndex = 0;
             this.dataGridView_Sach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Sach_RowEnter);
-            // 
-            // colMaSach
-            // 
-            this.colMaSach.DataPropertyName = "maSach";
-            this.colMaSach.HeaderText = "Mã sách";
-            this.colMaSach.Name = "colMaSach";
-            this.colMaSach.Width = 38;
-            // 
-            // colTenSach
-            // 
-            this.colTenSach.DataPropertyName = "tenSach";
-            this.colTenSach.HeaderText = "Tên sách";
-            this.colTenSach.Name = "colTenSach";
-            this.colTenSach.Width = 38;
-            // 
-            // colNamXB
-            // 
-            this.colNamXB.DataPropertyName = "namXB";
-            this.colNamXB.HeaderText = "Năm xuất bản";
-            this.colNamXB.Name = "colNamXB";
-            this.colNamXB.Width = 37;
-            // 
-            // colSoTrang
-            // 
-            this.colSoTrang.DataPropertyName = "soTrang";
-            this.colSoTrang.HeaderText = "Số trang";
-            this.colSoTrang.Name = "colSoTrang";
-            this.colSoTrang.Width = 38;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.DataPropertyName = "soLuong";
-            this.colSoLuong.HeaderText = "Số lượng";
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.Width = 38;
-            // 
-            // colThoiHanMuon
-            // 
-            this.colThoiHanMuon.DataPropertyName = "thoiHanMuon";
-            this.colThoiHanMuon.HeaderText = "Thời hạn mượn";
-            this.colThoiHanMuon.Name = "colThoiHanMuon";
-            this.colThoiHanMuon.Width = 38;
-            // 
-            // colGiaTien
-            // 
-            this.colGiaTien.DataPropertyName = "giaTien";
-            this.colGiaTien.HeaderText = "Giá tiền";
-            this.colGiaTien.Name = "colGiaTien";
-            this.colGiaTien.Width = 38;
-            // 
-            // colTacGia
-            // 
-            this.colTacGia.HeaderText = "Tác giả";
-            this.colTacGia.Name = "colTacGia";
-            this.colTacGia.Width = 38;
-            // 
-            // colLoaiSach
-            // 
-            this.colLoaiSach.HeaderText = "Loại sách";
-            this.colLoaiSach.Name = "colLoaiSach";
-            this.colLoaiSach.Width = 37;
-            // 
-            // colNhaXB
-            // 
-            this.colNhaXB.HeaderText = "Nhà xuất bản";
-            this.colNhaXB.Name = "colNhaXB";
-            this.colNhaXB.Width = 38;
-            // 
-            // colKhoSach
-            // 
-            this.colKhoSach.HeaderText = "Kho sách";
-            this.colKhoSach.Name = "colKhoSach";
-            this.colKhoSach.Width = 38;
             // 
             // panelControl2
             // 
@@ -208,9 +136,9 @@
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(728, 0);
+            this.panelControl2.Location = new System.Drawing.Point(868, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(412, 191);
+            this.panelControl2.Size = new System.Drawing.Size(386, 191);
             this.panelControl2.TabIndex = 1;
             // 
             // lookUpEdit_TenKhoSach
@@ -316,14 +244,14 @@
             this.panelControl3.Controls.Add(this.labelControl6);
             this.panelControl3.Controls.Add(this.labelControl5);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(728, 191);
+            this.panelControl3.Location = new System.Drawing.Point(868, 191);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(412, 278);
+            this.panelControl3.Size = new System.Drawing.Size(386, 305);
             this.panelControl3.TabIndex = 2;
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(261, 247);
+            this.labelControl13.Location = new System.Drawing.Point(261, 271);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(20, 13);
             this.labelControl13.TabIndex = 19;
@@ -331,14 +259,14 @@
             // 
             // textEdit_NamXB
             // 
-            this.textEdit_NamXB.Location = new System.Drawing.Point(110, 83);
+            this.textEdit_NamXB.Location = new System.Drawing.Point(110, 110);
             this.textEdit_NamXB.Name = "textEdit_NamXB";
             this.textEdit_NamXB.Size = new System.Drawing.Size(109, 20);
             this.textEdit_NamXB.TabIndex = 18;
             // 
             // textEdit_GiaTien
             // 
-            this.textEdit_GiaTien.Location = new System.Drawing.Point(110, 244);
+            this.textEdit_GiaTien.Location = new System.Drawing.Point(110, 268);
             this.textEdit_GiaTien.Name = "textEdit_GiaTien";
             this.textEdit_GiaTien.Properties.Mask.BeepOnError = true;
             this.textEdit_GiaTien.Properties.Mask.EditMask = "f0";
@@ -348,7 +276,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(17, 247);
+            this.labelControl11.Location = new System.Drawing.Point(17, 271);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(43, 13);
             this.labelControl11.TabIndex = 16;
@@ -356,7 +284,7 @@
             // 
             // textEdit_ThoiHanMuon
             // 
-            this.textEdit_ThoiHanMuon.Location = new System.Drawing.Point(110, 206);
+            this.textEdit_ThoiHanMuon.Location = new System.Drawing.Point(110, 231);
             this.textEdit_ThoiHanMuon.Name = "textEdit_ThoiHanMuon";
             this.textEdit_ThoiHanMuon.Properties.Mask.BeepOnError = true;
             this.textEdit_ThoiHanMuon.Properties.Mask.EditMask = "f0";
@@ -366,7 +294,7 @@
             // 
             // textEdit_SoLuong
             // 
-            this.textEdit_SoLuong.Location = new System.Drawing.Point(110, 162);
+            this.textEdit_SoLuong.Location = new System.Drawing.Point(110, 189);
             this.textEdit_SoLuong.Name = "textEdit_SoLuong";
             this.textEdit_SoLuong.Properties.Mask.BeepOnError = true;
             this.textEdit_SoLuong.Properties.Mask.EditMask = "f0";
@@ -376,7 +304,7 @@
             // 
             // textEdit_SoTrang
             // 
-            this.textEdit_SoTrang.Location = new System.Drawing.Point(110, 124);
+            this.textEdit_SoTrang.Location = new System.Drawing.Point(110, 149);
             this.textEdit_SoTrang.Name = "textEdit_SoTrang";
             this.textEdit_SoTrang.Properties.Mask.BeepOnError = true;
             this.textEdit_SoTrang.Properties.Mask.EditMask = "f0";
@@ -386,21 +314,21 @@
             // 
             // textEdit_TenSach
             // 
-            this.textEdit_TenSach.Location = new System.Drawing.Point(110, 39);
+            this.textEdit_TenSach.Location = new System.Drawing.Point(110, 68);
             this.textEdit_TenSach.Name = "textEdit_TenSach";
             this.textEdit_TenSach.Size = new System.Drawing.Size(241, 20);
             this.textEdit_TenSach.TabIndex = 11;
             // 
             // textEdit_MaSach
             // 
-            this.textEdit_MaSach.Location = new System.Drawing.Point(110, 3);
+            this.textEdit_MaSach.Location = new System.Drawing.Point(110, 30);
             this.textEdit_MaSach.Name = "textEdit_MaSach";
             this.textEdit_MaSach.Size = new System.Drawing.Size(137, 20);
             this.textEdit_MaSach.TabIndex = 10;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(225, 209);
+            this.labelControl12.Location = new System.Drawing.Point(225, 234);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(24, 13);
             this.labelControl12.TabIndex = 9;
@@ -408,7 +336,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(17, 209);
+            this.labelControl10.Location = new System.Drawing.Point(13, 234);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(78, 13);
             this.labelControl10.TabIndex = 9;
@@ -416,7 +344,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(17, 165);
+            this.labelControl9.Location = new System.Drawing.Point(17, 192);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(49, 13);
             this.labelControl9.TabIndex = 8;
@@ -424,7 +352,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(17, 127);
+            this.labelControl8.Location = new System.Drawing.Point(17, 152);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(48, 13);
             this.labelControl8.TabIndex = 7;
@@ -432,7 +360,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(17, 86);
+            this.labelControl7.Location = new System.Drawing.Point(17, 113);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(74, 13);
             this.labelControl7.TabIndex = 6;
@@ -440,7 +368,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(17, 42);
+            this.labelControl6.Location = new System.Drawing.Point(17, 71);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(50, 13);
             this.labelControl6.TabIndex = 5;
@@ -448,7 +376,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(17, 6);
+            this.labelControl5.Location = new System.Drawing.Point(17, 33);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(46, 13);
             this.labelControl5.TabIndex = 4;
@@ -457,19 +385,19 @@
             // radioGroup_Sach
             // 
             this.radioGroup_Sach.EditValue = "Add";
-            this.radioGroup_Sach.Location = new System.Drawing.Point(157, 20);
+            this.radioGroup_Sach.Location = new System.Drawing.Point(154, 18);
             this.radioGroup_Sach.Name = "radioGroup_Sach";
             this.radioGroup_Sach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_Sach.Size = new System.Drawing.Size(194, 91);
+            this.radioGroup_Sach.Size = new System.Drawing.Size(143, 69);
             this.radioGroup_Sach.TabIndex = 3;
             this.radioGroup_Sach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_Sach_SelectedIndexChanged);
             // 
             // simpleButton_Sach
             // 
-            this.simpleButton_Sach.Location = new System.Drawing.Point(17, 34);
+            this.simpleButton_Sach.Location = new System.Drawing.Point(17, 30);
             this.simpleButton_Sach.Name = "simpleButton_Sach";
             this.simpleButton_Sach.Size = new System.Drawing.Size(115, 57);
             this.simpleButton_Sach.TabIndex = 4;
@@ -482,17 +410,90 @@
             this.panelControl4.Controls.Add(this.simpleButton_Sach);
             this.panelControl4.Controls.Add(this.radioGroup_Sach);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(728, 469);
+            this.panelControl4.Location = new System.Drawing.Point(868, 496);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(412, 136);
+            this.panelControl4.Size = new System.Drawing.Size(386, 109);
             this.panelControl4.TabIndex = 5;
+            // 
+            // colMaSach
+            // 
+            this.colMaSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colMaSach.DataPropertyName = "maSach";
+            this.colMaSach.HeaderText = "Mã sách";
+            this.colMaSach.Name = "colMaSach";
+            // 
+            // colTenSach
+            // 
+            this.colTenSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenSach.DataPropertyName = "tenSach";
+            this.colTenSach.HeaderText = "Tên sách";
+            this.colTenSach.Name = "colTenSach";
+            // 
+            // colNamXB
+            // 
+            this.colNamXB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNamXB.DataPropertyName = "namXB";
+            this.colNamXB.HeaderText = "Năm xuất bản";
+            this.colNamXB.Name = "colNamXB";
+            // 
+            // colSoTrang
+            // 
+            this.colSoTrang.DataPropertyName = "soTrang";
+            this.colSoTrang.HeaderText = "Số trang";
+            this.colSoTrang.Name = "colSoTrang";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "soLuong";
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // colThoiHanMuon
+            // 
+            this.colThoiHanMuon.DataPropertyName = "thoiHanMuon";
+            this.colThoiHanMuon.HeaderText = "Thời hạn mượn";
+            this.colThoiHanMuon.Name = "colThoiHanMuon";
+            // 
+            // colGiaTien
+            // 
+            this.colGiaTien.DataPropertyName = "giaTien";
+            this.colGiaTien.HeaderText = "Giá tiền";
+            this.colGiaTien.Name = "colGiaTien";
+            // 
+            // colTacGia
+            // 
+            this.colTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTacGia.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colTacGia.HeaderText = "Tác giả";
+            this.colTacGia.Name = "colTacGia";
+            // 
+            // colLoaiSach
+            // 
+            this.colLoaiSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colLoaiSach.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colLoaiSach.HeaderText = "Loại sách";
+            this.colLoaiSach.Name = "colLoaiSach";
+            // 
+            // colNhaXB
+            // 
+            this.colNhaXB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNhaXB.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colNhaXB.HeaderText = "Nhà xuất bản";
+            this.colNhaXB.Name = "colNhaXB";
+            // 
+            // colKhoSach
+            // 
+            this.colKhoSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colKhoSach.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colKhoSach.HeaderText = "Kho sách";
+            this.colKhoSach.Name = "colKhoSach";
             // 
             // FormSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1140, 605);
+            this.ClientSize = new System.Drawing.Size(1254, 605);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
