@@ -91,21 +91,34 @@ namespace LIBRARY_MANAGEMENT
 
         private void barStaticItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormMuonTraSach mts = new FormMuonTraSach();
-            mts.Show();
+            FormTinhTrangSachMuonTra ttsmt = new FormTinhTrangSachMuonTra();
+            ttsmt.Show();
         }
 
         private void barStaticItem10_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FormTinhTrangSachMuonTra ttsmt = new FormTinhTrangSachMuonTra();
-            ttsmt.Show();
+            
+        }
+
+        private void barStaticItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barStaticItem10_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormMuonTraSach mts = new FormMuonTraSach();
+            mts.Show();
         }
 
         #endregion
 
         private void QLTVMain_Load(object sender, EventArgs e)
         {
-
+            FormDangNhap formDangNhap = new FormDangNhap();
+            formDangNhap.ShowDialog();
         }
+
+        
     }
 }

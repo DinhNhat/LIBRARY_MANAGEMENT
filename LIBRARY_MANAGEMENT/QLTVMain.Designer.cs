@@ -45,10 +45,10 @@
             this.barStaticItem8 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem9 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem10 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem13 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem12 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem11 = new DevExpress.XtraBars.BarSubItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -66,6 +66,7 @@
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.barStaticItem10 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -108,10 +109,11 @@
             this.barSubItem10,
             this.barSubItem11,
             this.barStaticItem9,
-            this.barStaticItem10,
-            this.barStaticItem13});
+            this.barStaticItem13,
+            this.barStaticItem12,
+            this.barStaticItem10});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 37;
+            this.barManager1.MaxItemId = 39;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
@@ -245,8 +247,8 @@
             this.barSubItem7.Id = 29;
             this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem10),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem13)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem13),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem10)});
             this.barSubItem7.Name = "barSubItem7";
             // 
             // barStaticItem9
@@ -257,17 +259,9 @@
             this.barStaticItem9.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem9_ItemClick);
             // 
-            // barStaticItem10
-            // 
-            this.barStaticItem10.Caption = "Tình trạng sách mượn trả";
-            this.barStaticItem10.Id = 35;
-            this.barStaticItem10.Name = "barStaticItem10";
-            this.barStaticItem10.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.barStaticItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_1);
-            // 
             // barStaticItem13
             // 
-            this.barStaticItem13.Caption = "Quản lý mượn trả sách";
+            this.barStaticItem13.Caption = "Tình trạng sách mượn trả";
             this.barStaticItem13.Id = 36;
             this.barStaticItem13.Name = "barStaticItem13";
             this.barStaticItem13.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -283,7 +277,17 @@
             // 
             this.barSubItem9.Caption = "Quản trị hệ thống";
             this.barSubItem9.Id = 31;
+            this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem12)});
             this.barSubItem9.Name = "barSubItem9";
+            // 
+            // barStaticItem12
+            // 
+            this.barStaticItem12.Caption = "Quản lý người sử dụng";
+            this.barStaticItem12.Id = 37;
+            this.barStaticItem12.Name = "barStaticItem12";
+            this.barStaticItem12.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem12_ItemClick);
             // 
             // barSubItem10
             // 
@@ -402,6 +406,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             // 
+            // barStaticItem10
+            // 
+            this.barStaticItem10.Caption = "Quản lý mượn trả sách";
+            this.barStaticItem10.Id = 38;
+            this.barStaticItem10.Name = "barStaticItem10";
+            this.barStaticItem10.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_2);
+            // 
             // QLTVMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,7 +475,8 @@
         private DevExpress.XtraBars.BarSubItem barSubItem9;
         private DevExpress.XtraBars.BarSubItem barSubItem10;
         private DevExpress.XtraBars.BarSubItem barSubItem11;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem10;
         private DevExpress.XtraBars.BarStaticItem barStaticItem13;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem12;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem10;
     }
 }

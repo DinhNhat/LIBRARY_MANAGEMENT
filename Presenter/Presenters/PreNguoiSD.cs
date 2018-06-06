@@ -28,11 +28,24 @@ namespace Presenter.Presenters
             old.tenNguoiSD = newEntity.tenNguoiSD;
         }
 
-        public NguoiSuDung CheckUser(string maNguoiSD, string tenNguoiSD)
+        public NguoiSuDung CheckUser(NguoiSuDung ng)
         {
             NguoiSuDung ngsd = null;
-            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == maNguoiSD || t.tenNguoiSD == tenNguoiSD);
+            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == ng.maNguoiSD || t.tenNguoiSD == ng.tenNguoiSD);
             return ngsd;
+        }
+
+        public string GetIDUserbyName_and_Password(string tenuser, string passWord)
+        {
+            string idUser = "";
+            NguoiSuDung ngsd = new NguoiSuDung();
+            ngsd = base.entitySet.FirstOrDefault(ng => ng.tenNguoiSD == tenuser && ng.password == passWord);
+            if(ngsd != null)
+            {
+                idUser = ngsd.maNguoiSD;
+                return idUser;
+            }
+            return idUser;
         }
     }
 }

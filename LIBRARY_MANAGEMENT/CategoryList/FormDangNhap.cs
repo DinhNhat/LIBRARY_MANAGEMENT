@@ -16,9 +16,13 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 {
     public partial class FormDangNhap : DevExpress.XtraEditors.XtraForm, IViewEntity<DangNhap>
     {
+        PreDangNhap preDangNhap = new PreDangNhap();
+        int maDangNhap;
+
         public FormDangNhap()
         {
             InitializeComponent();
+            preDangNhap.View = this;
         }
 
         private void FormDangNhap_Load(object sender, EventArgs e)
@@ -26,10 +30,14 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         }
 
-        #region // CRUD Methods
+        #region CRUD Methods
         public DangNhap AddNewEntity()
         {
-            throw new NotImplementedException();
+            DangNhap dn = new DangNhap();
+            dn.maDangNhap = preDangNhap.LastKey + 1;
+            dn.thoiGianDangNhap = DateTime.Now;
+            dn.maNguoiSD = preDangNhap.GetIdUser();
+            return dn;
         }
 
         public DangNhap DeleteEntity()
@@ -43,6 +51,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         }
         #endregion
 
+        #region Methods inherit from IViewEntity - ViewEntity and ViewListEntity
         public void viewEntity(DangNhap entity)
         {
             throw new NotImplementedException();
@@ -52,6 +61,41 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             throw new NotImplementedException();
         }
+        #endregion
 
+        private void simpleButton_DangNhap_Click(object sender, EventArgs e)
+        {
+            preDangNhap.nguoiSuDung.tenNguoiSD = textEdit_TenUser.Text;
+            preDangNhap.nguoiSuDung.password = textEdit_Password.Text;
+            if(preDangNhap.CheckIskUser() == true)
+            {
+                preDangNhap.isDangNhap = true;
+                int num = preDangNhap.addNewEntity();
+                if (num > 0)
+                {
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Error!!!!!!!!!!!");
+            }
+            else
+            {
+                labelControl_Error.Text = "Thông tin đăng nhập không đúng! Vui lòng nhập lại.";
+            }
+            
+        }
+
+        private void simpleButton_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (preDangNhap.isDangNhap == true)
+                this.Dispose();
+            else
+                Application.Exit();
+        }
     }
 }

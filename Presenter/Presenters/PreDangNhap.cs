@@ -8,27 +8,52 @@ namespace Presenter.Presenters
 {
     public class PreDangNhap : EntityPresenter<DangNhap>
     {
-        public string maNguoiSuDung;
-        public string tenNguoiSuDung;
-        public PreNguoiSD nguoiSuDung = new PreNguoiSD();
-        public Boolean isDangNhap;
+        public NguoiSuDung nguoiSuDung = new NguoiSuDung();
+        public Boolean isDangNhap = false;
+
+        public PreDangNhap() : base()
+        {
+            // set real value for fields entitySet and bindingsource.
+            base.entitySet = entitiesTV.DangNhaps; // DangNhaps from Model Database
+            base.bindingsource.DataSource = base.entitySet.ToList();
+            if (base.bindingsource.Count > 0) // get element with the max key(the maximum maKhoSach)
+                maxKey = (int)base.entitySet.Max(t => t.maDangNhap);
+        }
 
         protected override DangNhap getEntity(DangNhap o)
         {
-            throw new NotImplementedException();
+            DangNhap dn = null;
+            dn = base.entitySet.FirstOrDefault(t => t.maDangNhap == o.maDangNhap);
+            return dn;
         }
 
         protected override void setNewInfo(DangNhap newEntity, DangNhap old)
         {
-            throw new NotImplementedException();
+            old.thoiGianThoat = newEntity.thoiGianThoat;
+        }
+
+        public string GetIdUser()
+        {
+            string idUser;
+            PreNguoiSD preuser = new PreNguoiSD();
+            idUser = preuser.GetIDUserbyName_and_Password(nguoiSuDung.tenNguoiSD, nguoiSuDung.password);
+            return idUser;
         }
 
         // check for Nguoisd true or false
-        public NguoiSuDung CheckIskNguoiSuDung()
+        public Boolean CheckIskUser()
         {
-            NguoiSuDung ng = null;
-            ng = nguoiSuDung.CheckUser(this.maNguoiSuDung, this.tenNguoiSuDung);
-            return ng;
+            Boolean check = false;
+            PreNguoiSD prengsd = new PreNguoiSD();
+            NguoiSuDung ngsd = new NguoiSuDung();
+            ngsd = prengsd.CheckUser(nguoiSuDung);
+            if (ngsd != null)
+            {
+                check = true;
+                return check;
+            }
+            else
+                return check;
         }
 
     }
