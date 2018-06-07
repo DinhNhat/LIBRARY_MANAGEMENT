@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTVMain));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
@@ -46,27 +47,25 @@
             this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem9 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem13 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem10 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
             this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem12 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem14 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem16 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem11 = new DevExpress.XtraBars.BarSubItem();
-            this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.barToolbarsListItem1 = new DevExpress.XtraBars.BarToolbarsListItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.barStaticItem10 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
@@ -76,8 +75,7 @@
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2,
-            this.bar3});
+            this.bar2});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -88,17 +86,14 @@
             this.barStaticItem1,
             this.barStaticItem2,
             this.barStaticItem3,
-            this.barSubItem2,
             this.barListItem1,
             this.barSubItem3,
             this.barToolbarsListItem1,
             this.barEditItem1,
-            this.barSubItem4,
             this.barStaticItem6,
             this.barStaticItem7,
             this.barSubItem5,
             this.barStaticItem11,
-            this.barSubItem6,
             this.barStaticItem15,
             this.barStaticItem5,
             this.barStaticItem8,
@@ -111,14 +106,15 @@
             this.barStaticItem9,
             this.barStaticItem13,
             this.barStaticItem12,
-            this.barStaticItem10});
+            this.barStaticItem10,
+            this.barStaticItem14,
+            this.barStaticItem16});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 39;
+            this.barManager1.MaxItemId = 42;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
             this.repositoryItemLookUpEdit2});
-            this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
             // 
@@ -127,14 +123,14 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem8),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem10),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem11)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem5, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem9, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem10, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem11, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -142,11 +138,13 @@
             // barSubItem1
             // 
             this.barSubItem1.Caption = "Độc giả";
+            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
             this.barSubItem1.Id = 0;
+            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
             this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem2),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem3)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem1.Name = "barSubItem1";
             // 
             // barStaticItem1
@@ -176,11 +174,13 @@
             // barSubItem3
             // 
             this.barSubItem3.Caption = "Sách";
+            this.barSubItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.Glyph")));
             this.barSubItem3.Id = 8;
+            this.barSubItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.LargeGlyph")));
             this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem6),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem4)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem6, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem4, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem3.Name = "barSubItem3";
             // 
             // barStaticItem6
@@ -210,11 +210,13 @@
             // barSubItem5
             // 
             this.barSubItem5.Caption = "Danh mục";
+            this.barSubItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem5.Glyph")));
             this.barSubItem5.Id = 18;
+            this.barSubItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem5.LargeGlyph")));
             this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem11),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem15),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem8)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem11, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem15, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem5.Name = "barSubItem5";
             // 
             // barStaticItem11
@@ -244,11 +246,12 @@
             // barSubItem7
             // 
             this.barSubItem7.Caption = "Mượn trả sách";
+            this.barSubItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem7.Glyph")));
             this.barSubItem7.Id = 29;
             this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem9),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem13),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem10)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem9, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem13, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem10, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem7.Name = "barSubItem7";
             // 
             // barStaticItem9
@@ -267,18 +270,28 @@
             this.barStaticItem13.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem13_ItemClick);
             // 
+            // barStaticItem10
+            // 
+            this.barStaticItem10.Caption = "Quản lý mượn trả sách";
+            this.barStaticItem10.Id = 38;
+            this.barStaticItem10.Name = "barStaticItem10";
+            this.barStaticItem10.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_2);
+            // 
             // barSubItem8
             // 
             this.barSubItem8.Caption = "Tra cứu thống kê";
+            this.barSubItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem8.Glyph")));
             this.barSubItem8.Id = 30;
             this.barSubItem8.Name = "barSubItem8";
             // 
             // barSubItem9
             // 
             this.barSubItem9.Caption = "Quản trị hệ thống";
+            this.barSubItem9.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem9.Glyph")));
             this.barSubItem9.Id = 31;
             this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem12)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem12, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem9.Name = "barSubItem9";
             // 
             // barStaticItem12
@@ -291,61 +304,64 @@
             // 
             // barSubItem10
             // 
-            this.barSubItem10.Caption = "Hồ sơ";
+            this.barSubItem10.Caption = "Cài đặt cá nhân";
+            this.barSubItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem10.Glyph")));
             this.barSubItem10.Id = 32;
+            this.barSubItem10.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem14, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem16, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.barSubItem10.Name = "barSubItem10";
+            // 
+            // barStaticItem14
+            // 
+            this.barStaticItem14.Caption = "Đổi mật khẩu";
+            this.barStaticItem14.Id = 39;
+            this.barStaticItem14.Name = "barStaticItem14";
+            this.barStaticItem14.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem14_ItemClick);
+            // 
+            // barStaticItem16
+            // 
+            this.barStaticItem16.Caption = "Thoát chương trình";
+            this.barStaticItem16.Id = 40;
+            this.barStaticItem16.Name = "barStaticItem16";
+            this.barStaticItem16.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem16_ItemClick);
             // 
             // barSubItem11
             // 
             this.barSubItem11.Caption = "Cửa sổ";
+            this.barSubItem11.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem11.Glyph")));
             this.barSubItem11.Id = 33;
             this.barSubItem11.Name = "barSubItem11";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Status bar";
-            this.bar3.CanDockStyle = DevExpress.XtraBars.BarCanDockStyle.Bottom;
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 0;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar3.OptionsBar.AllowQuickCustomization = false;
-            this.bar3.OptionsBar.DrawDragBorder = false;
-            this.bar3.OptionsBar.UseWholeRow = true;
-            this.bar3.Text = "Status bar";
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(897, 22);
+            this.barDockControlTop.Size = new System.Drawing.Size(1037, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 339);
-            this.barDockControlBottom.Size = new System.Drawing.Size(897, 23);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 367);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1037, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 22);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 317);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 327);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(897, 22);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 317);
-            // 
-            // barSubItem2
-            // 
-            this.barSubItem2.Caption = "barSubItem2";
-            this.barSubItem2.Id = 6;
-            this.barSubItem2.Name = "barSubItem2";
+            this.barDockControlRight.Location = new System.Drawing.Point(1037, 40);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 327);
             // 
             // barListItem1
             // 
@@ -373,18 +389,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
-            // barSubItem4
-            // 
-            this.barSubItem4.Caption = "barSubItem4";
-            this.barSubItem4.Id = 11;
-            this.barSubItem4.Name = "barSubItem4";
-            // 
-            // barSubItem6
-            // 
-            this.barSubItem6.Caption = "barSubItem6";
-            this.barSubItem6.Id = 22;
-            this.barSubItem6.Name = "barSubItem6";
-            // 
             // barStaticItem5
             // 
             this.barStaticItem5.Caption = "barStaticItem5";
@@ -406,19 +410,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             // 
-            // barStaticItem10
-            // 
-            this.barStaticItem10.Caption = "Quản lý mượn trả sách";
-            this.barStaticItem10.Id = 38;
-            this.barStaticItem10.Name = "barStaticItem10";
-            this.barStaticItem10.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.barStaticItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_2);
-            // 
             // QLTVMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 362);
+            this.ClientSize = new System.Drawing.Size(1037, 367);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -428,7 +424,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLTVMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.QLTVMain_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QLTVMain_FormClosed);
+            this.Shown += new System.EventHandler(this.QLTVMain_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
@@ -444,14 +441,12 @@
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarStaticItem barStaticItem3;
-        private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarListItem barListItem1;
         private DevExpress.XtraBars.BarSubItem barSubItem3;
         private DevExpress.XtraBars.BarStaticItem barStaticItem6;
@@ -459,12 +454,10 @@
         private DevExpress.XtraBars.BarToolbarsListItem barToolbarsListItem1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
-        private DevExpress.XtraBars.BarSubItem barSubItem4;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
         private DevExpress.XtraBars.BarSubItem barSubItem5;
         private DevExpress.XtraBars.BarStaticItem barStaticItem11;
-        private DevExpress.XtraBars.BarSubItem barSubItem6;
         private DevExpress.XtraBars.BarStaticItem barStaticItem15;
         private DevExpress.XtraBars.BarStaticItem barStaticItem8;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
@@ -478,5 +471,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem13;
         private DevExpress.XtraBars.BarStaticItem barStaticItem12;
         private DevExpress.XtraBars.BarStaticItem barStaticItem10;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem14;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem16;
     }
 }

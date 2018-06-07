@@ -32,28 +32,21 @@ namespace Presenter.Presenters
             old.thoiGianThoat = newEntity.thoiGianThoat;
         }
 
-        public string GetIdUser()
-        {
-            string idUser;
-            PreNguoiSD preuser = new PreNguoiSD();
-            idUser = preuser.GetIDUserbyName_and_Password(nguoiSuDung.tenNguoiSD, nguoiSuDung.password);
-            return idUser;
-        }
+        //public string GetIdUser()
+        //{
+        //    string idUser;
+        //    PreNguoiSD preuser = new PreNguoiSD();
+        //    idUser = preuser.GetIDUserbyName_and_Password(nguoiSuDung.tenNguoiSD, nguoiSuDung.password);
+        //    return idUser;
+        //}
 
         // check for Nguoisd true or false
-        public Boolean CheckIskUser()
+        public NguoiSuDung CheckIskUser()
         {
-            Boolean check = false;
             PreNguoiSD prengsd = new PreNguoiSD();
             NguoiSuDung ngsd = new NguoiSuDung();
             ngsd = prengsd.CheckUser(nguoiSuDung);
-            if (ngsd != null)
-            {
-                check = true;
-                return check;
-            }
-            else
-                return check;
+            return ngsd;
         }
 
     }

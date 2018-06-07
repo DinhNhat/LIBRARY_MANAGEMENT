@@ -9,17 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using LIBRARY_MANAGEMENT.CategoryList;
+using View;
+using Presenter.Presenters;
 using Presenter;
 
 namespace LIBRARY_MANAGEMENT
 {
-    public partial class QLTVMain : DevExpress.XtraEditors.XtraForm
+    public partial class QLTVMain : DevExpress.XtraEditors.XtraForm, IViewEntity<DangNhap>
     {
-        public NguoiSuDung user;
+        static public NguoiSuDung user = new NguoiSuDung();
+        static public DangNhap login = new DangNhap();
+        public PreDangNhap predangnhap = new PreDangNhap();
+
+        // save the old password for changing
+        private static string _oldPassword;
+
+        public static string OldPassword { get { return _oldPassword; } }
 
         public QLTVMain()
         {
             InitializeComponent();
+            predangnhap.View = this;
         }
 
         // All barStaticItems
@@ -52,11 +62,6 @@ namespace LIBRARY_MANAGEMENT
         {
             FormViTriLuuTru vtlt = new FormViTriLuuTru();
             vtlt.Show();
-        }
-
-        private void barStaticItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            
         }
 
         private void barStaticItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -95,30 +100,104 @@ namespace LIBRARY_MANAGEMENT
             ttsmt.Show();
         }
 
+        private void barStaticItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
         private void barStaticItem10_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
-        }
-
-        private void barStaticItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
 
         private void barStaticItem10_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormMuonTraSach mts = new FormMuonTraSach();
             mts.Show();
+        } 
+
+        private void barStaticItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormQuanLyNguoiSuDung qlUser = new FormQuanLyNguoiSuDung();
+            qlUser.Show();
+        }
+
+        // show FormXacThuc
+        private void barStaticItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormXacThucThoat xtt = new FormXacThucThoat();
+            xtt.ShowDialog();
+        }
+
+        // Show FormDoimatkhau
+        private void barStaticItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormDoiMatKhau dmk = new FormDoiMatKhau();
+            dmk.ShowDialog();
         }
 
         #endregion
 
-        private void QLTVMain_Load(object sender, EventArgs e)
+        // Inherit DangNhapEntity
+        #region
+        public void viewEntity(DangNhap entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void viewListEntity(BindingSource entities)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DangNhap AddNewEntity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DangNhap DeleteEntity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DangNhap UpdateEntity()
+        {
+            DangNhap dn = new DangNhap();
+            dn.maDangNhap = login.maDangNhap;
+            dn.thoiGianThoat = DateTime.Now;
+            return dn;
+        }
+        #endregion
+
+        public void UpdateLogin()
+        {
+            predangnhap.updateEntity();
+        }
+
+        private void QLTVMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            predangnhap.updateEntity();
+            Application.Exit();
+        }
+
+        static public void SetOldPasswordforUser()
+        {
+            QLTVMain._oldPassword = QLTVMain.user.password;
+        }
+
+        // set IsAdmin to Disable barSubItem Quan tri he thong
+        public void SetStatusBarSubItemQuanTriHeThong()
+        {
+            if (user.admin == true)
+                this.barSubItem11.Enabled = true;
+            else
+                this.barSubItem11.Enabled = false;
+        }
+
+        private void QLTVMain_Shown(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.ShowDialog();
         }
-
-        
     }
 }

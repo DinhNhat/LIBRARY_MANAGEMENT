@@ -57,6 +57,12 @@
     <Compile Include="CategoryList\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormDoiMatKhau.Designer.cs">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormKhoSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     <Compile Include="CategoryList\FormPhieuSuDungSach.Designer.cs">
       <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormQuanLyNguoiSuDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormQuanLyNguoiSuDung.Designer.cs">
+      <DependentUpon>FormQuanLyNguoiSuDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     <Compile Include="CategoryList\FormViTriLuuTru.Designer.cs">
       <DependentUpon>FormViTriLuuTru.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormXacThucThoat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormXacThucThoat.Designer.cs">
+      <DependentUpon>FormXacThucThoat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +163,9 @@
     </Compile>
     <EmbeddedResource Include="CategoryList\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormDoiMatKhau.resx">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormKhoSach.resx">
       <DependentUpon>FormKhoSach.cs</DependentUpon>
@@ -167,6 +188,9 @@
     <EmbeddedResource Include="CategoryList\FormPhieuSuDungSach.resx">
       <DependentUpon>FormPhieuSuDungSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormQuanLyNguoiSuDung.resx">
+      <DependentUpon>FormQuanLyNguoiSuDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormSach.resx">
       <DependentUpon>FormSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormViTriLuuTru.resx">
       <DependentUpon>FormViTriLuuTru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormXacThucThoat.resx">
+      <DependentUpon>FormXacThucThoat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -208,7 +235,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Presenter\Presenter.csproj">
       <Project>{daf6a71f-9e55-41dc-9566-e4bc5dd2732a}</Project>

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl_Error = new DevExpress.XtraEditors.LabelControl();
@@ -35,73 +38,107 @@
             this.textEdit_Password = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton_DangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_Thoat = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton_Clear = new DevExpress.XtraEditors.SimpleButton();
+            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_Password.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(62, 35);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(48, 35);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(97, 13);
+            this.labelControl1.Size = new System.Drawing.Size(117, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên người sử dụng :";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(62, 83);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(48, 83);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.Size = new System.Drawing.Size(61, 16);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Mật khẩu :";
             // 
             // labelControl_Error
             // 
-            this.labelControl_Error.Appearance.Font = new System.Drawing.Font("Nirmala UI", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.labelControl_Error.Appearance.Font = new System.Drawing.Font("Nirmala UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl_Error.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.labelControl_Error.Location = new System.Drawing.Point(203, 194);
+            this.labelControl_Error.Location = new System.Drawing.Point(102, 208);
             this.labelControl_Error.Name = "labelControl_Error";
-            this.labelControl_Error.Size = new System.Drawing.Size(69, 13);
+            this.labelControl_Error.Size = new System.Drawing.Size(384, 20);
             this.labelControl_Error.TabIndex = 2;
-            this.labelControl_Error.Text = "MessageEror";
+            this.labelControl_Error.Text = "Thông tin đăng nhập không đúng !!! Vui lòng nhập lại.";
+            this.labelControl_Error.Visible = false;
             // 
             // textEdit_TenUser
             // 
             this.textEdit_TenUser.Location = new System.Drawing.Point(203, 32);
             this.textEdit_TenUser.Name = "textEdit_TenUser";
-            this.textEdit_TenUser.Size = new System.Drawing.Size(251, 20);
+            this.textEdit_TenUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_TenUser.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_TenUser.Size = new System.Drawing.Size(251, 22);
             this.textEdit_TenUser.TabIndex = 3;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.Contains;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            conditionValidationRule1.Value1 = "@";
+            this.dxValidationProvider1.SetValidationRule(this.textEdit_TenUser, conditionValidationRule1);
             // 
             // textEdit_Password
             // 
             this.textEdit_Password.Location = new System.Drawing.Point(203, 80);
             this.textEdit_Password.Name = "textEdit_Password";
-            this.textEdit_Password.Size = new System.Drawing.Size(251, 20);
+            this.textEdit_Password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_Password.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_Password.Size = new System.Drawing.Size(251, 22);
             this.textEdit_Password.TabIndex = 4;
             // 
             // simpleButton_DangNhap
             // 
-            this.simpleButton_DangNhap.Location = new System.Drawing.Point(203, 126);
+            this.simpleButton_DangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_DangNhap.Appearance.Options.UseFont = true;
+            this.simpleButton_DangNhap.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_DangNhap.Image")));
+            this.simpleButton_DangNhap.Location = new System.Drawing.Point(87, 126);
             this.simpleButton_DangNhap.Name = "simpleButton_DangNhap";
-            this.simpleButton_DangNhap.Size = new System.Drawing.Size(107, 35);
+            this.simpleButton_DangNhap.Size = new System.Drawing.Size(121, 35);
             this.simpleButton_DangNhap.TabIndex = 5;
             this.simpleButton_DangNhap.Text = "Đăng nhập";
             this.simpleButton_DangNhap.Click += new System.EventHandler(this.simpleButton_DangNhap_Click);
             // 
             // simpleButton_Thoat
             // 
-            this.simpleButton_Thoat.Location = new System.Drawing.Point(340, 126);
+            this.simpleButton_Thoat.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_Thoat.Appearance.Options.UseFont = true;
+            this.simpleButton_Thoat.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_Thoat.Image")));
+            this.simpleButton_Thoat.Location = new System.Drawing.Point(384, 127);
             this.simpleButton_Thoat.Name = "simpleButton_Thoat";
-            this.simpleButton_Thoat.Size = new System.Drawing.Size(114, 35);
+            this.simpleButton_Thoat.Size = new System.Drawing.Size(121, 35);
             this.simpleButton_Thoat.TabIndex = 6;
             this.simpleButton_Thoat.Text = "Thoát";
             this.simpleButton_Thoat.Click += new System.EventHandler(this.simpleButton_Thoat_Click);
+            // 
+            // simpleButton_Clear
+            // 
+            this.simpleButton_Clear.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_Clear.Appearance.Options.UseFont = true;
+            this.simpleButton_Clear.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_Clear.Image")));
+            this.simpleButton_Clear.Location = new System.Drawing.Point(230, 127);
+            this.simpleButton_Clear.Name = "simpleButton_Clear";
+            this.simpleButton_Clear.Size = new System.Drawing.Size(121, 35);
+            this.simpleButton_Clear.TabIndex = 7;
+            this.simpleButton_Clear.Text = "Làm mới";
+            this.simpleButton_Clear.Click += new System.EventHandler(this.simpleButton_Clear_Click);
             // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 222);
+            this.ClientSize = new System.Drawing.Size(567, 255);
+            this.Controls.Add(this.simpleButton_Clear);
             this.Controls.Add(this.simpleButton_Thoat);
             this.Controls.Add(this.simpleButton_DangNhap);
             this.Controls.Add(this.textEdit_Password);
@@ -113,9 +150,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangNhap";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDangNhap_FormClosed);
-            this.Load += new System.EventHandler(this.FormDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_Password.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +167,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit_Password;
         private DevExpress.XtraEditors.SimpleButton simpleButton_DangNhap;
         private DevExpress.XtraEditors.SimpleButton simpleButton_Thoat;
+        private DevExpress.XtraEditors.SimpleButton simpleButton_Clear;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
     }
 }

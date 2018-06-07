@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.DXErrorProvider;
 using View;
 using Presenter.Presenters;
 using Presenter;
@@ -17,6 +18,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     public partial class FormDangNhap : DevExpress.XtraEditors.XtraForm, IViewEntity<DangNhap>
     {
         PreDangNhap preDangNhap = new PreDangNhap();
+        QLTVMain formMain;
         int maDangNhap;
 
         public FormDangNhap()
@@ -25,18 +27,14 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preDangNhap.View = this;
         }
 
-        private void FormDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        #region CRUD Methods
+        #region Methods inherit from IViewEntityDangNhap
         public DangNhap AddNewEntity()
         {
             DangNhap dn = new DangNhap();
             dn.maDangNhap = preDangNhap.LastKey + 1;
             dn.thoiGianDangNhap = DateTime.Now;
-            dn.maNguoiSD = preDangNhap.GetIdUser();
+            dn.maNguoiSD = preDangNhap.CheckIskUser().maNguoiSD; // get maNguoiSD
+            this.maDangNhap = dn.maDangNhap;
             return dn;
         }
 
@@ -49,9 +47,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             throw new NotImplementedException();
         }
-        #endregion
 
-        #region Methods inherit from IViewEntity - ViewEntity and ViewListEntity
         public void viewEntity(DangNhap entity)
         {
             throw new NotImplementedException();
@@ -67,20 +63,31 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             preDangNhap.nguoiSuDung.tenNguoiSD = textEdit_TenUser.Text;
             preDangNhap.nguoiSuDung.password = textEdit_Password.Text;
-            if(preDangNhap.CheckIskUser() == true)
+
+            try
             {
-                preDangNhap.isDangNhap = true;
-                int num = preDangNhap.addNewEntity();
-                if (num > 0)
+                if (preDangNhap.CheckIskUser() != null) // user has already exist
                 {
-                    this.Close();
+                    int num = preDangNhap.addNewEntity();
+                    if (num > 0)
+                    {
+                        // after adding DangNhap successfully and SaveChange is so then assign maDangNhap to user in QLTVMainForm
+                        QLTVMain.login.maDangNhap = this.maDangNhap;
+                        QLTVMain.user = preDangNhap.CheckIskUser();
+                        QLTVMain.SetOldPasswordforUser();
+                        preDangNhap.isDangNhap = true;
+                        this.Close();
+                    }
+                    // Login successfully
                 }
-                else
-                    MessageBox.Show("Error!!!!!!!!!!!");
+                //else
+                {
+                    labelControl_Error.Visible = true;
+                }
             }
-            else
+            catch
             {
-                labelControl_Error.Text = "Thông tin đăng nhập không đúng! Vui lòng nhập lại.";
+                labelControl_Error.Visible = true;
             }
             
         }
@@ -93,9 +100,22 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (preDangNhap.isDangNhap == true)
+            {
+                formMain = new QLTVMain();
+                formMain.SetStatusBarSubItemQuanTriHeThong();
+                QLTVMain.SetOldPasswordforUser();
+                //System.Threading.Thread.Sleep(4000);
                 this.Dispose();
+            }
             else
                 Application.Exit();
+        }
+
+        private void simpleButton_Clear_Click(object sender, EventArgs e)
+        {
+            textEdit_TenUser.Text = "";
+            textEdit_Password.Text = "";
+            labelControl_Error.Text = "";
         }
     }
 }

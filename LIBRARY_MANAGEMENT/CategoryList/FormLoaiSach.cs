@@ -40,7 +40,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public LoaiSach AddNewEntity()
         {
             LoaiSach ls = new LoaiSach();
-            //ls.maLoaiSach = preLoaiSach.LastKey + 1.ToString();
             ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
             if(lookUpEdit_TenVTLT.EditValue != null)
@@ -51,7 +50,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public LoaiSach DeleteEntity()
         {
             LoaiSach ls = new LoaiSach();
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             ls.maLoaiSach = maLoaiSach;
             return ls;
         }

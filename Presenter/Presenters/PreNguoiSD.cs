@@ -18,20 +18,22 @@ namespace Presenter.Presenters
         protected override NguoiSuDung getEntity(NguoiSuDung o)
         {
             NguoiSuDung ngsd = null;
-            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == o.maNguoiSD || t.tenNguoiSD == o.tenNguoiSD);
+            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == o.maNguoiSD && t.tenNguoiSD == o.tenNguoiSD);
             return ngsd;
         }
 
         protected override void setNewInfo(NguoiSuDung newEntity, NguoiSuDung old)
         {
-            old.maNguoiSD = newEntity.maNguoiSD;
             old.tenNguoiSD = newEntity.tenNguoiSD;
+            old.password = newEntity.password;
+            old.admin = newEntity.admin;
+            old.enable = newEntity.enable;
         }
 
         public NguoiSuDung CheckUser(NguoiSuDung ng)
         {
             NguoiSuDung ngsd = null;
-            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == ng.maNguoiSD || t.tenNguoiSD == ng.tenNguoiSD);
+            ngsd = base.entitySet.FirstOrDefault(t => t.tenNguoiSD == ng.tenNguoiSD && t.password == ng.password);
             return ngsd;
         }
 

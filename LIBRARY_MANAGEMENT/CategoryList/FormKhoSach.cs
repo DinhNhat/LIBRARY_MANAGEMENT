@@ -14,8 +14,7 @@ using Presenter;
 
 namespace LIBRARY_MANAGEMENT.CategoryList
 {
-    public partial class 
-        FormKhoSach : DevExpress.XtraEditors.XtraForm, IViewEntity<KhoSach>
+    public partial class FormKhoSach : DevExpress.XtraEditors.XtraForm, IViewEntity<KhoSach>
     {
         PreKhoSach preKhoSach = new PreKhoSach();
         int maKhoSach;
