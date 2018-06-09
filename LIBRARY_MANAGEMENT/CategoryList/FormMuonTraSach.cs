@@ -14,13 +14,14 @@ using Presenter;
 
 namespace LIBRARY_MANAGEMENT.CategoryList
 {
-    public partial class FormMuonTraSach : DevExpress.XtraEditors.XtraForm, IViewEntity<MuonSach>, IViewListEntity<Sach>, IViewListEntity<TinhTrangSachMuonTra>, IViewListEntity<TrangThai>, IViewListEntity<PhieuSuDungSach>
+    public partial class FormMuonTraSach : DevExpress.XtraEditors.XtraForm, IViewEntity<MuonSach>, IViewListEntity<Sach>, IViewListEntity<TinhTrangSachMuonTra>, IViewListEntity<TrangThai>, IViewListEntity<PhieuSuDungSach>, IViewListEntity<NguoiSuDung>
     {
         PreMuonTraSach preMuonTraSach = new PreMuonTraSach();
         PrePhieuSuDungSach prePhieu = new PrePhieuSuDungSach();
         PreSach preSach = new PreSach();
         PreTinhTrangSachMuonTra preTTSMT = new PreTinhTrangSachMuonTra();
         PreTrangThai preTrangThai = new PreTrangThai();
+        PreNguoiSD preNguoiSD = new PreNguoiSD();
 
         int soTT;
         string maPhieu;
@@ -34,6 +35,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preSach.ViewLs = this;
             preTTSMT.ViewLs = this;
             preTrangThai.ViewLs = this;
+            preNguoiSD.ViewLs = this;
             dataGridView_MuonTraSach.AutoGenerateColumns = false;
         }
 
@@ -43,6 +45,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preSach.ViewList();
             preTTSMT.ViewList();
             preTrangThai.ViewList();
+            preNguoiSD.ViewList();
         }
 
         void IViewEntity<MuonSach>.viewEntity(MuonSach muonsach)
@@ -91,14 +94,13 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             if (dateEdit_NgayTra.EditValue != null)
                 ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
             if (textEdit_TienPhat.Text != null)
-            {
                 if(textEdit_TienPhat.Text == "")
                     ms.tienPhat = null;
                 else
                     ms.tienPhat = Int32.Parse(textEdit_TienPhat.Text);
-            }
             else
                 ms.tienPhat = null;
+            ms.nguoiChoMuon = QLTVMain.user.maNguoiSD;
 
             return ms;
         }
@@ -129,14 +131,13 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             if (dateEdit_NgayTra.EditValue != null)
                 ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
             if (textEdit_TienPhat.Text != null)
-            {
                 if (textEdit_TienPhat.Text == "")
                     ms.tienPhat = null;
                 else
                     ms.tienPhat = Int32.Parse(textEdit_TienPhat.Text);
-            }
             else
                 ms.tienPhat = null;
+            ms.nguoiChoMuon = QLTVMain.user.maNguoiSD;
 
             return ms;
         }
@@ -177,7 +178,19 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             colTinhTrang.DisplayMember = "tenTinhTrangSach";
         }
 
+        void IViewListEntity<NguoiSuDung>.viewListEntity(BindingSource entities)
+        {
+            colNguoiChoMuon.DataSource = entities;
+            colNguoiNhanSachTra.DataSource = entities;
 
+            colNguoiChoMuon.DataPropertyName = "maNguoiSD";
+            colNguoiChoMuon.ValueMember = "maNguoiSD";
+            colNguoiChoMuon.DisplayMember = "tenNguoiSD";
+
+            colNguoiNhanSachTra.DataPropertyName = "maNguoiSD";
+            colNguoiNhanSachTra.ValueMember = "maNguoiSD";
+            colNguoiNhanSachTra.DisplayMember = "tenNguoiSD";
+        }
         #endregion
 
         // View Detail for Doc Gia
@@ -220,23 +233,19 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             preMuonTraSach.maPhieuSD = textEdit_MaPhieu_forFilter.Text;
             lookUpEdit_TrangThai_forFilter.EditValue = null;
-            preMuonTraSach.trangThai = null;
-
-            if (preMuonTraSach.SetBindingSource() == true) // value of text != ""
+            preMuonTraSach.isButtonLocMaPhieuClicked = true;
+            preMuonTraSach.isButtonLocTrangThaiClicked = false;
+            preMuonTraSach.SetBindingSource();
+            //preMuonTraSach.trangThai = null;
+            if (preMuonTraSach.countForExit > 0) // value of text has already existed
             {
-                if (preMuonTraSach.CountForBindingSource > 0) // value of text right
-                {
-                    ViewChiTietDocGiabyFilter();
-                    preMuonTraSach.ViewList();
-                }
-                else // value of text wrong
-                {
-                    preMuonTraSach.ViewList();
-                    ClearDatafromControl();
-                }
+                ViewChiTietDocGiabyFilter();
+                preNguoiSD.ViewList();
+                preMuonTraSach.ViewList();
             }
-            else // value of text == ""
+            else // value of text wrong or == ""
             {
+                preMuonTraSach.ViewList();
                 ViewChiTietDocGiabyFilter();
                 ClearDatafromControl();
             }
@@ -244,26 +253,24 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         private void simpleButton_LocTrangThai_Click(object sender, EventArgs e)
         {
-            textEdit_MaPhieu_forFilter.Text = "";
-            preMuonTraSach.maPhieuSD = "";
-            preMuonTraSach.trangThai = lookUpEdit_TrangThai_forFilter.EditValue;
-
-            if (preMuonTraSach.SetBindingSource() == true) // context: lookUpEdit_TrangThai_forFilter.EditValue != null
-            {
-                if (preMuonTraSach.CountForBindingSource > 0) // context: lookUpEdit_TrangThai_forFilter.EditValue already exists
-                {
-                    ViewChiTietDocGiabyFilter();
-                    preMuonTraSach.ViewList();
-                }
-                else // context: lookUpEdit_TrangThai_forFilter.EditValue haven't existed yet
-                {
-                    preMuonTraSach.ViewList();
-                    ClearDatafromControl();
-                }
-            }
-            else // context: lookUpEdit_TrangThai_forFilter.EditValue == null
+            preMuonTraSach.maPhieuSD = textEdit_MaPhieu_forFilter.Text;
+            if (lookUpEdit_TrangThai_forFilter.EditValue != null)
+                preMuonTraSach.trangThai = (Int32)lookUpEdit_TrangThai_forFilter.EditValue;
+            else
+                preMuonTraSach.trangThai = 0;
+            preMuonTraSach.isButtonLocMaPhieuClicked = false;
+            preMuonTraSach.isButtonLocTrangThaiClicked = true;
+            preMuonTraSach.SetBindingSource();
+            //preMuonTraSach.trangThai = null;
+            if (preMuonTraSach.countForExit > 0) // value of text has already existed
             {
                 ViewChiTietDocGiabyFilter();
+                preMuonTraSach.ViewList();
+            }
+            else // value of text wrong or == ""
+            {
+                ViewChiTietDocGiabyFilter();
+                preMuonTraSach.ViewList();
                 ClearDatafromControl();
             }
         }
@@ -292,31 +299,12 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if(radioGroup_MuonTraSach.EditValue.Equals("Update"))
             {
+                // check trang thai
                 preMuonTraSach.oldMaPhieu = lookUpEdit_MaPhieu.EditValue.ToString();
                 preMuonTraSach.updateEntity();
                 preMuonTraSach.SetBindingSourceWhereMaPhieu(preMuonTraSach.oldMaPhieu);
                 preMuonTraSach.ViewList();
             }
-        }
-
-        // Clear data for Clear Button
-        private void ClearOldData()
-        {
-            textEdit_MaPhieu_forFilter.Text = "";
-            lookUpEdit_TrangThai_forFilter.EditValue = null;
-
-            ClearDatafromControl();
-
-            preMuonTraSach.maPhieuSD = "";
-            preMuonTraSach.trangThai = null;
-            ViewChiTietDocGiabyFilter();
-            preMuonTraSach.SetBindingSource();
-            preMuonTraSach.ViewList();
-        }
-
-        private void simpleButton_Clear_Click(object sender, EventArgs e)
-        {
-            ClearOldData();
         }
 
         private void radioGroup_MuonTraSach_SelectedIndexChanged(object sender, EventArgs e)

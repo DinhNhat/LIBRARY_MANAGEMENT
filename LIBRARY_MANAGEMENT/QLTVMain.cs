@@ -174,30 +174,30 @@ namespace LIBRARY_MANAGEMENT
             predangnhap.updateEntity();
         }
 
-        private void QLTVMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            predangnhap.updateEntity();
-            Application.Exit();
-        }
-
         static public void SetOldPasswordforUser()
         {
             QLTVMain._oldPassword = QLTVMain.user.password;
         }
 
-        // set IsAdmin to Disable barSubItem Quan tri he thong
-        public void SetStatusBarSubItemQuanTriHeThong()
+        private void QLTVMain_Shown(object sender, EventArgs e)
         {
-            if (user.admin == true)
-                this.barSubItem11.Enabled = true;
-            else
-                this.barSubItem11.Enabled = false;
+            
         }
 
-        private void QLTVMain_Shown(object sender, EventArgs e)
+        private void QLTVMain_Load(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.ShowDialog();
+            if (user.admin == true)
+                this.barSubItem9.Enabled = true;
+            else
+                this.barSubItem9.Enabled = false;
+        }
+
+        private void QLTVMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            predangnhap.updateEntity();
+            Application.Exit();
         }
     }
 }

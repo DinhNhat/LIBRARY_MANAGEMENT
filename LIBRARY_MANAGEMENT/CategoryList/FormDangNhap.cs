@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.DXErrorProvider;
+using System.Threading;
 using View;
 using Presenter.Presenters;
 using Presenter;
@@ -63,6 +64,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             preDangNhap.nguoiSuDung.tenNguoiSD = textEdit_TenUser.Text;
             preDangNhap.nguoiSuDung.password = textEdit_Password.Text;
+            labelControl_Error.ForeColor = Color.Blue;
+            labelControl_Error.Text = " Đang đăng nhập .... ";
+            labelControl_Error.Update();
 
             try
             {
@@ -80,14 +84,16 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                     }
                     // Login successfully
                 }
-                //else
+                else // Invalid Input
                 {
-                    labelControl_Error.Visible = true;
+                    labelControl_Error.ForeColor = Color.Red;
+                    labelControl_Error.Text = " Thông tin đăng nhập không đúng !!! Vui lòng nhập lại. ";
                 }
             }
             catch
             {
-                labelControl_Error.Visible = true;
+                labelControl_Error.ForeColor = Color.Red;
+                labelControl_Error.Text = " Thông tin đăng nhập không đúng !!! Vui lòng nhập lại. ";
             }
             
         }
@@ -97,12 +103,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             Application.Exit();
         }
 
-        private void FormDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (preDangNhap.isDangNhap == true)
             {
                 formMain = new QLTVMain();
-                formMain.SetStatusBarSubItemQuanTriHeThong();
                 QLTVMain.SetOldPasswordforUser();
                 //System.Threading.Thread.Sleep(4000);
                 this.Dispose();
@@ -115,7 +120,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             textEdit_TenUser.Text = "";
             textEdit_Password.Text = "";
-            labelControl_Error.Text = "";
         }
+
+        
     }
 }

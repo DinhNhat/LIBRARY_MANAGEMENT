@@ -35,12 +35,7 @@ namespace Presenter.Presenters
         public PhieuSuDungSach GetEntityPhieuforFilterbyMaPhieu(string maphieu)
         {
             PhieuSuDungSach ph;
-            if (maphieu != "")
-            {
-                ph = base.entitySet.FirstOrDefault(t => t.maPhieuSD == maphieu);
-            }
-            else
-                ph = null;
+            ph = base.entitySet.FirstOrDefault(t => t.maPhieuSD == maphieu);
             return ph;
         }
     }

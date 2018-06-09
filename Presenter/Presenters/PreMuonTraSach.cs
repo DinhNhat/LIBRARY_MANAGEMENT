@@ -11,10 +11,14 @@ namespace Presenter.Presenters
     public class PreMuonTraSach : EntityPresenter<MuonSach>
     {
         public string maPhieuSD;
-        public Object trangThai;
+        public int trangThai;
         public string tenLop;
         private int countForBindingsource;
         public string oldMaPhieu;
+        public int countForExit;
+
+        public Boolean isButtonLocMaPhieuClicked = false;
+        public Boolean isButtonLocTrangThaiClicked = false;
 
         public int CountForBindingSource { get { return this.countForBindingsource; } }
 
@@ -46,6 +50,8 @@ namespace Presenter.Presenters
             old.ngayDuKienTra = newEntity.ngayDuKienTra;
             old.ngayTra = newEntity.ngayTra;
             old.tienPhat = newEntity.tienPhat;
+            old.nguoiChoMuon = newEntity.nguoiChoMuon;
+            old.nguoiNhanSachTra = newEntity.nguoiNhanSachTra;
         }
 
         public Boolean SetBindingSourceAgainforDelete()
@@ -73,15 +79,15 @@ namespace Presenter.Presenters
         }
 
         public void SetBindingSourceWhereMaPhieu(string maToSet)
-        {
-            // oldMaPhieu already exits
-
+        { 
             base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maToSet).ToList();
+            this.countForExit = base.bindingsource.Count;
         }
 
-        private void SetBindingSourceWhereTrangThai(int maToSet)
+        private void SetBindingSourceWhereTrangThaiandMaPhieu(string maphieu, int matrangthai)
         {
-            base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maTrangThai == maToSet).ToList();
+            base.bindingsource.DataSource = base.entitySet.Where(ms => ms.maPhieuSD == maphieu && ms.maTrangThai == matrangthai).ToList();
+            this.countForExit = base.bindingsource.Count;
         }
 
         private int SetFilterMode(string maphieu, Object matrangthai)
@@ -124,7 +130,7 @@ namespace Presenter.Presenters
                 case 3:
                     {
                         int tt = (Int32)trangthai;
-                        SetBindingSourceWhereTrangThai(tt);
+                        SetBindingSourceWhereTrangThaiandMaPhieu(maphieu, tt);
                         this.countForBindingsource = base.bindingsource.Count;
                         break;
                     }
@@ -135,15 +141,17 @@ namespace Presenter.Presenters
                         boolean = false;
                         break;
                     }
-               
             }
             #endregion
             return boolean;
         }
 
-        public Boolean SetBindingSource()
+        public void SetBindingSource()
         {
-            return getChiTietbyPhieuSD(this.maPhieuSD, this.trangThai);
+            if(isButtonLocMaPhieuClicked == true)
+                SetBindingSourceWhereMaPhieu(maPhieuSD);
+            if(isButtonLocTrangThaiClicked == true)
+                SetBindingSourceWhereTrangThaiandMaPhieu(maPhieuSD, trangThai);
         }
 
         public void CheckCountPresenterforBindingSource()

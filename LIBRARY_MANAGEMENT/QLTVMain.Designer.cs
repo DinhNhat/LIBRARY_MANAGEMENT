@@ -54,6 +54,7 @@
             this.barSubItem10 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem14 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem16 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem17 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem11 = new DevExpress.XtraBars.BarSubItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -108,9 +109,10 @@
             this.barStaticItem12,
             this.barStaticItem10,
             this.barStaticItem14,
-            this.barStaticItem16});
+            this.barStaticItem16,
+            this.barStaticItem17});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 42;
+            this.barManager1.MaxItemId = 43;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
@@ -150,6 +152,7 @@
             // barStaticItem1
             // 
             this.barStaticItem1.Caption = "Lớp";
+            this.barStaticItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.Glyph")));
             this.barStaticItem1.Id = 1;
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -158,6 +161,7 @@
             // barStaticItem2
             // 
             this.barStaticItem2.Caption = "Năm học";
+            this.barStaticItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem2.Glyph")));
             this.barStaticItem2.Id = 2;
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -166,6 +170,7 @@
             // barStaticItem3
             // 
             this.barStaticItem3.Caption = "Phiếu sử dụng sách";
+            this.barStaticItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem3.Glyph")));
             this.barStaticItem3.Id = 3;
             this.barStaticItem3.Name = "barStaticItem3";
             this.barStaticItem3.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -186,6 +191,7 @@
             // barStaticItem6
             // 
             this.barStaticItem6.Caption = "Loại sách";
+            this.barStaticItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem6.Glyph")));
             this.barStaticItem6.Id = 12;
             this.barStaticItem6.Name = "barStaticItem6";
             this.barStaticItem6.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -194,6 +200,7 @@
             // barStaticItem7
             // 
             this.barStaticItem7.Caption = "Vị trí lưu trữ";
+            this.barStaticItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem7.Glyph")));
             this.barStaticItem7.Id = 13;
             this.barStaticItem7.Name = "barStaticItem7";
             this.barStaticItem7.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -202,6 +209,7 @@
             // barStaticItem4
             // 
             this.barStaticItem4.Caption = "Thông tin chi tiết sách";
+            this.barStaticItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem4.Glyph")));
             this.barStaticItem4.Id = 28;
             this.barStaticItem4.Name = "barStaticItem4";
             this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -222,6 +230,7 @@
             // barStaticItem11
             // 
             this.barStaticItem11.Caption = "Nhà xuất bản";
+            this.barStaticItem11.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem11.Glyph")));
             this.barStaticItem11.Id = 20;
             this.barStaticItem11.Name = "barStaticItem11";
             this.barStaticItem11.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -230,6 +239,7 @@
             // barStaticItem15
             // 
             this.barStaticItem15.Caption = "Kho sách";
+            this.barStaticItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem15.Glyph")));
             this.barStaticItem15.Id = 25;
             this.barStaticItem15.Name = "barStaticItem15";
             this.barStaticItem15.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -238,6 +248,7 @@
             // barStaticItem8
             // 
             this.barStaticItem8.Caption = "Tác giả";
+            this.barStaticItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem8.Glyph")));
             this.barStaticItem8.Id = 27;
             this.barStaticItem8.Name = "barStaticItem8";
             this.barStaticItem8.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -257,6 +268,7 @@
             // barStaticItem9
             // 
             this.barStaticItem9.Caption = "Trạng thái";
+            this.barStaticItem9.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem9.Glyph")));
             this.barStaticItem9.Id = 34;
             this.barStaticItem9.Name = "barStaticItem9";
             this.barStaticItem9.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -265,6 +277,7 @@
             // barStaticItem13
             // 
             this.barStaticItem13.Caption = "Tình trạng sách mượn trả";
+            this.barStaticItem13.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem13.Glyph")));
             this.barStaticItem13.Id = 36;
             this.barStaticItem13.Name = "barStaticItem13";
             this.barStaticItem13.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -273,6 +286,7 @@
             // barStaticItem10
             // 
             this.barStaticItem10.Caption = "Quản lý mượn trả sách";
+            this.barStaticItem10.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem10.Glyph")));
             this.barStaticItem10.Id = 38;
             this.barStaticItem10.Name = "barStaticItem10";
             this.barStaticItem10.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -297,6 +311,7 @@
             // barStaticItem12
             // 
             this.barStaticItem12.Caption = "Quản lý người sử dụng";
+            this.barStaticItem12.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem12.Glyph")));
             this.barStaticItem12.Id = 37;
             this.barStaticItem12.Name = "barStaticItem12";
             this.barStaticItem12.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -315,6 +330,7 @@
             // barStaticItem14
             // 
             this.barStaticItem14.Caption = "Đổi mật khẩu";
+            this.barStaticItem14.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem14.Glyph")));
             this.barStaticItem14.Id = 39;
             this.barStaticItem14.Name = "barStaticItem14";
             this.barStaticItem14.TextAlignment = System.Drawing.StringAlignment.Near;
@@ -322,11 +338,19 @@
             // 
             // barStaticItem16
             // 
-            this.barStaticItem16.Caption = "Thoát chương trình";
+            this.barStaticItem16.Caption = "Đăng xuất";
+            this.barStaticItem16.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem16.Glyph")));
             this.barStaticItem16.Id = 40;
             this.barStaticItem16.Name = "barStaticItem16";
             this.barStaticItem16.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem16.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem16_ItemClick);
+            // 
+            // barStaticItem17
+            // 
+            this.barStaticItem17.Caption = "Đăng nhập bằng tài khoản khác";
+            this.barStaticItem17.Id = 42;
+            this.barStaticItem17.Name = "barStaticItem17";
+            this.barStaticItem17.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // barSubItem11
             // 
@@ -424,7 +448,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLTVMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QLTVMain_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QLTVMain_FormClosing);
+            this.Load += new System.EventHandler(this.QLTVMain_Load);
             this.Shown += new System.EventHandler(this.QLTVMain_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
@@ -473,5 +498,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem10;
         private DevExpress.XtraBars.BarStaticItem barStaticItem14;
         private DevExpress.XtraBars.BarStaticItem barStaticItem16;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem17;
     }
 }
