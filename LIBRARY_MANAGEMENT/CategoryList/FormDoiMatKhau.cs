@@ -61,23 +61,65 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         #endregion
 
-
+        private Boolean CheckIsOldaPassword()
+        {
+            if (textEdit_OldPassword.Text != "") // user is typing...
+            {
+                if (QLTVMain.OldPassword == textEdit_OldPassword.Text) // old password was right !!!
+                    return true;
+                else
+                    return false;
+            }
+            else // user leave it blank
+                return false;
+        }
 
         private void simpleButton_UpdatePassword_Click(object sender, EventArgs e)
         {
-            prengsd.updateEntity();
-        }
-
-        private void simpleButton_Clear_Click(object sender, EventArgs e)
-        {
-            textEdit_OldPassword.Text = "";
-            textEdit_NewPassword.Text = "";
-            textEdit_NewPasswordAgain.Text = "";
+            // check new password again == new password Is??
+            if(textEdit_NewPassword.Text != "")
+            {
+                if(textEdit_NewPasswordAgain.Text == textEdit_NewPassword.Text)
+                {
+                    labelControl_DoiMatKhau.ForeColor = Color.Blue;
+                    labelControl_DoiMatKhau.Text = " Đổi mật khẩu thành công !!! ";
+                    labelControl_DoiMatKhau.Update();
+                    prengsd.updateEntity();
+                }
+                else
+                {
+                    labelControl_DoiMatKhau.ForeColor = Color.Red;
+                    labelControl_DoiMatKhau.Text = " Mật khẩu mới không hợp lệ !!! Vui lòng nhập lại ";
+                    labelControl_DoiMatKhau.Update();
+                }
+            }
+            else
+            {
+                labelControl_DoiMatKhau.ForeColor = Color.Red;
+                labelControl_DoiMatKhau.Text = " Mật khẩu mới không hợp lệ !!! Vui lòng nhập lại ";
+                labelControl_DoiMatKhau.Update();
+            }
         }
 
         private void simpleButton_Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void textEdit_OldPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (CheckIsOldaPassword() == false)
+            {
+                labelControl_CheckOldPassword.ForeColor = Color.Red;
+                labelControl_CheckOldPassword.Text = " Mật khẩu cũ không đúng!!! Vui lòng nhập lại. ";
+                labelControl_CheckOldPassword.Update();
+            }
+            else
+            {
+                labelControl_CheckOldPassword.ForeColor = Color.Blue;
+                labelControl_CheckOldPassword.Text = " Mật khẩu cũ đúng. ";
+                labelControl_CheckOldPassword.Update();
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Presenter.Presenters
         protected override NguoiSuDung getEntity(NguoiSuDung o)
         {
             NguoiSuDung ngsd = null;
-            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == o.maNguoiSD && t.tenNguoiSD == o.tenNguoiSD);
+            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == o.maNguoiSD);
             return ngsd;
         }
 

@@ -53,10 +53,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             soTT = muonsach.soTT;
             maPhieu = muonsach.maPhieuSD;
             dateEdit_NgayMuon.EditValue = (DateTime)muonsach.ngayMuon;
-            if (muonsach.ngayDuKienTra != null)
-                dateEdit_NgayDuKienTra.EditValue = (DateTime)muonsach.ngayDuKienTra;
-            else
-                dateEdit_NgayDuKienTra.EditValue = null;
             if (muonsach.ngayTra != null)
                 dateEdit_NgayTra.EditValue = (DateTime)muonsach.ngayTra;
             else
@@ -89,8 +85,14 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 ms.maTrangThai = (Int32)lookUpEdit_TrangThai.EditValue;
             if(dateEdit_NgayMuon.EditValue != null)
                 ms.ngayMuon = (DateTime)dateEdit_NgayMuon.EditValue;
-            if (dateEdit_NgayDuKienTra.EditValue != null)
-                ms.ngayDuKienTra = (DateTime)dateEdit_NgayDuKienTra.EditValue;
+            if (lookUpEdit_Sach.EditValue != null)
+            {
+                object thoihanmuon = preMuonTraSach.GetThoiHanMuonby_MaSach(lookUpEdit_Sach.EditValue.ToString());
+                if (thoihanmuon != null)
+                    ms.ngayDuKienTra = ms.ngayMuon.AddDays((Int32)thoihanmuon);
+                else
+                    ms.ngayDuKienTra = null;
+            } 
             if (dateEdit_NgayTra.EditValue != null)
                 ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
             if (textEdit_TienPhat.Text != null)
@@ -126,8 +128,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 ms.maTrangThai = (Int32)lookUpEdit_TrangThai.EditValue;
             if (dateEdit_NgayMuon.EditValue != null)
                 ms.ngayMuon = (DateTime)dateEdit_NgayMuon.EditValue;
-            if (dateEdit_NgayDuKienTra.EditValue != null)
-                ms.ngayDuKienTra = (DateTime)dateEdit_NgayDuKienTra.EditValue;
             if (dateEdit_NgayTra.EditValue != null)
                 ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
             if (textEdit_TienPhat.Text != null)
@@ -137,7 +137,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                     ms.tienPhat = Int32.Parse(textEdit_TienPhat.Text);
             else
                 ms.tienPhat = null;
-            ms.nguoiChoMuon = QLTVMain.user.maNguoiSD;
+            ms.nguoiNhanSachTra = QLTVMain.user.maNguoiSD;
 
             return ms;
         }
@@ -148,7 +148,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         void IViewListEntity<PhieuSuDungSach>.viewListEntity(BindingSource entities)
         {
             lookUpEdit_MaPhieu.Properties.DataSource = entities;
-            // lookUpEdit_MaPhieu_forFilter.Properties.DataSource = entities;
         }
         void IViewListEntity<Sach>.viewListEntity(BindingSource entities)
         {
@@ -183,11 +182,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             colNguoiChoMuon.DataSource = entities;
             colNguoiNhanSachTra.DataSource = entities;
 
-            colNguoiChoMuon.DataPropertyName = "maNguoiSD";
+            colNguoiChoMuon.DataPropertyName = "nguoiChoMuon";
             colNguoiChoMuon.ValueMember = "maNguoiSD";
             colNguoiChoMuon.DisplayMember = "tenNguoiSD";
 
-            colNguoiNhanSachTra.DataPropertyName = "maNguoiSD";
+            colNguoiNhanSachTra.DataPropertyName = "nguoiNhanSachTra";
             colNguoiNhanSachTra.ValueMember = "maNguoiSD";
             colNguoiNhanSachTra.DisplayMember = "tenNguoiSD";
         }
@@ -224,7 +223,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             lookUpEdit_TinhTrang.EditValue = null;
             lookUpEdit_TrangThai.EditValue = null;
             dateEdit_NgayMuon.EditValue = null;
-            dateEdit_NgayDuKienTra.EditValue = null;
             dateEdit_NgayTra.EditValue = null;
             textEdit_TienPhat.Text = "";
         }
@@ -240,7 +238,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             if (preMuonTraSach.countForExit > 0) // value of text has already existed
             {
                 ViewChiTietDocGiabyFilter();
-                preNguoiSD.ViewList();
                 preMuonTraSach.ViewList();
             }
             else // value of text wrong or == ""
@@ -299,7 +296,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if(radioGroup_MuonTraSach.EditValue.Equals("Update"))
             {
-                // check trang thai
+                // check trangthai
                 preMuonTraSach.oldMaPhieu = lookUpEdit_MaPhieu.EditValue.ToString();
                 preMuonTraSach.updateEntity();
                 preMuonTraSach.SetBindingSourceWhereMaPhieu(preMuonTraSach.oldMaPhieu);
@@ -311,34 +308,37 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_MuonTraSach.EditValue.Equals("Add"))
             {
+                simpleButton_MuonTraSach.Text = "Thêm mượn trả sách";
+                simpleButton_MuonTraSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 lookUpEdit_MaPhieu.ReadOnly = false;
                 lookUpEdit_Sach.ReadOnly = false;
                 lookUpEdit_TinhTrang.ReadOnly = false;
                 lookUpEdit_TrangThai.ReadOnly = false;
                 dateEdit_NgayMuon.ReadOnly = false;
-                dateEdit_NgayDuKienTra.ReadOnly = false;
                 dateEdit_NgayTra.ReadOnly = false;
                 textEdit_TienPhat.ReadOnly = false;
             }
             else if (radioGroup_MuonTraSach.EditValue.Equals("Delete"))
             {
+                simpleButton_MuonTraSach.Text = "Xóa mượn trả sách";
+                simpleButton_MuonTraSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 lookUpEdit_MaPhieu.ReadOnly = true;
                 lookUpEdit_Sach.ReadOnly = true;
                 lookUpEdit_TinhTrang.ReadOnly = true;
                 lookUpEdit_TrangThai.ReadOnly = true;
                 dateEdit_NgayMuon.ReadOnly = true;
-                dateEdit_NgayDuKienTra.ReadOnly = true;
                 dateEdit_NgayTra.ReadOnly = true;
                 textEdit_TienPhat.ReadOnly = true;
             }
             else if(radioGroup_MuonTraSach.EditValue.Equals("Update"))
             {
+                simpleButton_MuonTraSach.Text = "Cập nhật mượn trả sách";
+                simpleButton_MuonTraSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 lookUpEdit_MaPhieu.ReadOnly = true;
                 lookUpEdit_Sach.ReadOnly = false;
                 lookUpEdit_TinhTrang.ReadOnly = false;
                 lookUpEdit_TrangThai.ReadOnly = false;
                 dateEdit_NgayMuon.ReadOnly = false;
-                dateEdit_NgayDuKienTra.ReadOnly = false;
                 dateEdit_NgayTra.ReadOnly = false;
                 textEdit_TienPhat.ReadOnly = false;
             }

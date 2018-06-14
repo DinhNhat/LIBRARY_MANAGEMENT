@@ -60,7 +60,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             sach.namXB= Int32.Parse(textEdit_NamXB.Text);
             sach.soTrang = Int32.Parse(textEdit_SoTrang.Text);
             sach.soLuong = Int32.Parse(textEdit_SoLuong.Text);
-            sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
+            //sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
+            if(textEdit_ThoiHanMuon.Text == "" || textEdit_ThoiHanMuon.Text == "0")
+                sach.thoiHanMuon = null;
+            else
+                sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
             sach.giaTien = Int32.Parse(textEdit_GiaTien.Text);
             if (lookUpEdit_TenTacGia.EditValue != null)
                 sach.maTacGia = (int?)lookUpEdit_TenTacGia.EditValue;
@@ -176,6 +180,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_Sach.EditValue.Equals("Add"))
             {
+                simpleButton_Sach.Text = "Thêm sách";
+                simpleButton_Sach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_MaSach.ReadOnly = false;
                 textEdit_TenSach.ReadOnly = false;
                 textEdit_NamXB.ReadOnly = false;
@@ -190,6 +196,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if(radioGroup_Sach.EditValue.Equals("Delete"))
             {
+                simpleButton_Sach.Text = "Xóa sách";
+                simpleButton_Sach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_MaSach.ReadOnly = true;
                 textEdit_TenSach.ReadOnly = true;
                 textEdit_NamXB.ReadOnly = true;
@@ -204,6 +212,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if(radioGroup_Sach.EditValue.Equals("Update"))
             {
+                simpleButton_Sach.Text = "Sửa thông tin sách";
+                simpleButton_Sach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_MaSach.ReadOnly = true;
                 textEdit_TenSach.ReadOnly = false;
                 textEdit_NamXB.ReadOnly = false;

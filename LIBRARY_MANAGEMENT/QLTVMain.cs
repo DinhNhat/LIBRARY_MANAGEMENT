@@ -179,11 +179,7 @@ namespace LIBRARY_MANAGEMENT
             QLTVMain._oldPassword = QLTVMain.user.password;
         }
 
-        private void QLTVMain_Shown(object sender, EventArgs e)
-        {
-            
-        }
-
+        // set BarSubItem_QuanLyUser for Is Admin????
         private void QLTVMain_Load(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();

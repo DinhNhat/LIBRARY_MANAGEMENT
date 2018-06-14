@@ -32,14 +32,6 @@ namespace Presenter.Presenters
             old.thoiGianThoat = newEntity.thoiGianThoat;
         }
 
-        //public string GetIdUser()
-        //{
-        //    string idUser;
-        //    PreNguoiSD preuser = new PreNguoiSD();
-        //    idUser = preuser.GetIDUserbyName_and_Password(nguoiSuDung.tenNguoiSD, nguoiSuDung.password);
-        //    return idUser;
-        //}
-
         // check for Nguoisd true or false
         public NguoiSuDung CheckIskUser()
         {

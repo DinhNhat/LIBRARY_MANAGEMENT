@@ -96,11 +96,25 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_TTSMT_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_TTSMT.EditValue.Equals("Add"))
+            {
+                simpleButton_TTSMT.Text = "Thêm tình trạng sách";
+                simpleButton_TTSMT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_TTSMT.ReadOnly = false;
+            }
+                
             else if (radioGroup_TTSMT.EditValue.Equals("Delete"))
+            {
+                simpleButton_TTSMT.Text = "Xóa tình trạng sách";
+                simpleButton_TTSMT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_TTSMT.ReadOnly = true;
+            }
+                
             else if (radioGroup_TTSMT.EditValue.Equals("Update"))
+            {
+                simpleButton_TTSMT.Text = "Sửa tên tình trạng sách";
+                simpleButton_TTSMT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_TTSMT.ReadOnly = false;
+            }
         }
     }
 }

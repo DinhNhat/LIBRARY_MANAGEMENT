@@ -96,11 +96,23 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_KhoSach_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_KhoSach.EditValue.Equals("Add"))
+            {
                 textEdit_KhoSach.ReadOnly = false;
+                simpleButton_KhoSach.Text = "Thêm kho sách";
+                this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            }
             else if (radioGroup_KhoSach.EditValue.Equals("Delete"))
+            {
                 textEdit_KhoSach.ReadOnly = true;
+                simpleButton_KhoSach.Text = "Xóa kho sách";
+                this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
+            }
             else if (radioGroup_KhoSach.EditValue.Equals("Update"))
+            {
                 textEdit_KhoSach.ReadOnly = false;
+                simpleButton_KhoSach.Text = "Sửa tên kho sách";
+                this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
+            }
         }
     }
 }

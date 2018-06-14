@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMuonTraSach));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
@@ -39,11 +40,11 @@
             this.simpleButton_LocMaPhieu = new DevExpress.XtraEditors.SimpleButton();
             this.dataGridView_MuonTraSach = new System.Windows.Forms.DataGridView();
             this.colSach = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colTinhTrang = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colTrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colNgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayDuKienTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTinhTrang = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNguoiChoMuon = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colNguoiNhanSachTra = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -73,10 +74,8 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit_NgayMuon = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit_NgayDuKienTra = new DevExpress.XtraEditors.DateEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit_TienPhat = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit_NgayTra = new DevExpress.XtraEditors.DateEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -117,8 +116,6 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TienPhat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties)).BeginInit();
@@ -136,7 +133,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(895, 749);
+            this.panelControl1.Size = new System.Drawing.Size(879, 749);
             this.panelControl1.TabIndex = 0;
             // 
             // panelControl6
@@ -145,7 +142,7 @@
             this.panelControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl6.Location = new System.Drawing.Point(2, 615);
             this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(891, 132);
+            this.panelControl6.Size = new System.Drawing.Size(875, 132);
             this.panelControl6.TabIndex = 1;
             // 
             // groupControl5
@@ -159,7 +156,7 @@
             this.groupControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl5.Location = new System.Drawing.Point(2, 2);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(887, 128);
+            this.groupControl5.Size = new System.Drawing.Size(871, 128);
             this.groupControl5.TabIndex = 0;
             this.groupControl5.Text = "LỌC PHIÊU";
             // 
@@ -167,9 +164,10 @@
             // 
             this.simpleButton_LocTrangThai.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_LocTrangThai.Appearance.Options.UseFont = true;
+            this.simpleButton_LocTrangThai.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_LocTrangThai.Image")));
             this.simpleButton_LocTrangThai.Location = new System.Drawing.Point(473, 82);
             this.simpleButton_LocTrangThai.Name = "simpleButton_LocTrangThai";
-            this.simpleButton_LocTrangThai.Size = new System.Drawing.Size(115, 35);
+            this.simpleButton_LocTrangThai.Size = new System.Drawing.Size(161, 35);
             this.simpleButton_LocTrangThai.TabIndex = 26;
             this.simpleButton_LocTrangThai.Text = "Lọc trạng thái";
             this.simpleButton_LocTrangThai.Click += new System.EventHandler(this.simpleButton_LocTrangThai_Click);
@@ -220,9 +218,10 @@
             // 
             this.simpleButton_LocMaPhieu.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_LocMaPhieu.Appearance.Options.UseFont = true;
+            this.simpleButton_LocMaPhieu.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton_LocMaPhieu.Image")));
             this.simpleButton_LocMaPhieu.Location = new System.Drawing.Point(473, 32);
             this.simpleButton_LocMaPhieu.Name = "simpleButton_LocMaPhieu";
-            this.simpleButton_LocMaPhieu.Size = new System.Drawing.Size(115, 35);
+            this.simpleButton_LocMaPhieu.Size = new System.Drawing.Size(161, 35);
             this.simpleButton_LocMaPhieu.TabIndex = 18;
             this.simpleButton_LocMaPhieu.Text = "Lọc mã phiếu";
             this.simpleButton_LocMaPhieu.Click += new System.EventHandler(this.simpleButton_LocMaPhieu_Click);
@@ -234,18 +233,18 @@
             this.dataGridView_MuonTraSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_MuonTraSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSach,
-            this.colTinhTrang,
             this.colTrangThai,
             this.colNgayMuon,
             this.colNgayDuKienTra,
             this.colNgayTra,
+            this.colTinhTrang,
             this.colTienPhat,
             this.colNguoiChoMuon,
             this.colNguoiNhanSachTra});
             this.dataGridView_MuonTraSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_MuonTraSach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_MuonTraSach.Name = "dataGridView_MuonTraSach";
-            this.dataGridView_MuonTraSach.Size = new System.Drawing.Size(891, 745);
+            this.dataGridView_MuonTraSach.Size = new System.Drawing.Size(875, 745);
             this.dataGridView_MuonTraSach.TabIndex = 0;
             this.dataGridView_MuonTraSach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MuonTraSach_RowEnter);
             // 
@@ -256,14 +255,6 @@
             this.colSach.HeaderText = "Sách";
             this.colSach.Name = "colSach";
             this.colSach.Width = 36;
-            // 
-            // colTinhTrang
-            // 
-            this.colTinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colTinhTrang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.colTinhTrang.HeaderText = "Tình trạng";
-            this.colTinhTrang.Name = "colTinhTrang";
-            this.colTinhTrang.Width = 56;
             // 
             // colTrangThai
             // 
@@ -291,6 +282,14 @@
             this.colNgayTra.HeaderText = "Ngày trả";
             this.colNgayTra.Name = "colNgayTra";
             // 
+            // colTinhTrang
+            // 
+            this.colTinhTrang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTinhTrang.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.colTinhTrang.HeaderText = "Tình trạng";
+            this.colTinhTrang.Name = "colTinhTrang";
+            this.colTinhTrang.Width = 56;
+            // 
             // colTienPhat
             // 
             this.colTienPhat.DataPropertyName = "tienPhat";
@@ -299,31 +298,29 @@
             // 
             // colNguoiChoMuon
             // 
-            this.colNguoiChoMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNguoiChoMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colNguoiChoMuon.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colNguoiChoMuon.HeaderText = "Người cho mượn";
             this.colNguoiChoMuon.Name = "colNguoiChoMuon";
             this.colNguoiChoMuon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNguoiChoMuon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colNguoiChoMuon.Width = 101;
             // 
             // colNguoiNhanSachTra
             // 
-            this.colNguoiNhanSachTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNguoiNhanSachTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colNguoiNhanSachTra.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colNguoiNhanSachTra.HeaderText = "Người nhận sách trả";
             this.colNguoiNhanSachTra.Name = "colNguoiNhanSachTra";
             this.colNguoiNhanSachTra.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNguoiNhanSachTra.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colNguoiNhanSachTra.Width = 105;
             // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(this.groupControl3);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(895, 0);
+            this.panelControl2.Location = new System.Drawing.Point(879, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(438, 187);
+            this.panelControl2.Size = new System.Drawing.Size(425, 187);
             this.panelControl2.TabIndex = 1;
             // 
             // groupControl3
@@ -341,7 +338,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(2, 2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(434, 183);
+            this.groupControl3.Size = new System.Drawing.Size(421, 183);
             this.groupControl3.TabIndex = 11;
             this.groupControl3.Text = "CHI TIẾT ĐỘC GIẢ";
             // 
@@ -449,9 +446,9 @@
             // 
             this.panelControl3.Controls.Add(this.groupControl4);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(895, 187);
+            this.panelControl3.Location = new System.Drawing.Point(879, 187);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(438, 162);
+            this.panelControl3.Size = new System.Drawing.Size(425, 162);
             this.panelControl3.TabIndex = 2;
             // 
             // groupControl4
@@ -467,7 +464,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(2, 2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(434, 158);
+            this.groupControl4.Size = new System.Drawing.Size(421, 158);
             this.groupControl4.TabIndex = 0;
             this.groupControl4.Text = "THÔNG TIN MƯỢN";
             // 
@@ -571,32 +568,30 @@
             // 
             this.panelControl4.Controls.Add(this.groupControl2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(895, 349);
+            this.panelControl4.Location = new System.Drawing.Point(879, 349);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(438, 197);
+            this.panelControl4.Size = new System.Drawing.Size(425, 197);
             this.panelControl4.TabIndex = 3;
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.labelControl15);
             this.groupControl2.Controls.Add(this.dateEdit_NgayMuon);
-            this.groupControl2.Controls.Add(this.dateEdit_NgayDuKienTra);
             this.groupControl2.Controls.Add(this.labelControl9);
             this.groupControl2.Controls.Add(this.textEdit_TienPhat);
-            this.groupControl2.Controls.Add(this.labelControl10);
             this.groupControl2.Controls.Add(this.labelControl11);
             this.groupControl2.Controls.Add(this.dateEdit_NgayTra);
             this.groupControl2.Controls.Add(this.labelControl12);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(434, 193);
+            this.groupControl2.Size = new System.Drawing.Size(421, 193);
             this.groupControl2.TabIndex = 19;
             this.groupControl2.Text = "THÔNG TIN MƯỢN";
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(352, 150);
+            this.labelControl15.Location = new System.Drawing.Point(350, 137);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(20, 13);
             this.labelControl15.TabIndex = 15;
@@ -616,20 +611,6 @@
             this.dateEdit_NgayMuon.Size = new System.Drawing.Size(208, 20);
             this.dateEdit_NgayMuon.TabIndex = 11;
             // 
-            // dateEdit_NgayDuKienTra
-            // 
-            this.dateEdit_NgayDuKienTra.EditValue = null;
-            this.dateEdit_NgayDuKienTra.Location = new System.Drawing.Point(166, 75);
-            this.dateEdit_NgayDuKienTra.Name = "dateEdit_NgayDuKienTra";
-            this.dateEdit_NgayDuKienTra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateEdit_NgayDuKienTra.Properties.Appearance.Options.UseFont = true;
-            this.dateEdit_NgayDuKienTra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_NgayDuKienTra.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit_NgayDuKienTra.Size = new System.Drawing.Size(208, 20);
-            this.dateEdit_NgayDuKienTra.TabIndex = 12;
-            // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -641,7 +622,7 @@
             // 
             // textEdit_TienPhat
             // 
-            this.textEdit_TienPhat.Location = new System.Drawing.Point(166, 145);
+            this.textEdit_TienPhat.Location = new System.Drawing.Point(164, 133);
             this.textEdit_TienPhat.Name = "textEdit_TienPhat";
             this.textEdit_TienPhat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_TienPhat.Properties.Appearance.Options.UseFont = true;
@@ -651,19 +632,10 @@
             this.textEdit_TienPhat.Size = new System.Drawing.Size(180, 20);
             this.textEdit_TienPhat.TabIndex = 14;
             // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(16, 77);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(103, 16);
-            this.labelControl10.TabIndex = 6;
-            this.labelControl10.Text = "Ngày dự kiến trả :";
-            // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(16, 108);
+            this.labelControl11.Location = new System.Drawing.Point(16, 88);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(57, 16);
             this.labelControl11.TabIndex = 7;
@@ -672,7 +644,7 @@
             // dateEdit_NgayTra
             // 
             this.dateEdit_NgayTra.EditValue = null;
-            this.dateEdit_NgayTra.Location = new System.Drawing.Point(166, 106);
+            this.dateEdit_NgayTra.Location = new System.Drawing.Point(164, 86);
             this.dateEdit_NgayTra.Name = "dateEdit_NgayTra";
             this.dateEdit_NgayTra.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateEdit_NgayTra.Properties.Appearance.Options.UseFont = true;
@@ -686,7 +658,7 @@
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(16, 147);
+            this.labelControl12.Location = new System.Drawing.Point(16, 135);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(63, 16);
             this.labelControl12.TabIndex = 8;
@@ -696,25 +668,26 @@
             // 
             this.simpleButton_MuonTraSach.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_MuonTraSach.Appearance.Options.UseFont = true;
-            this.simpleButton_MuonTraSach.Location = new System.Drawing.Point(46, 89);
+            this.simpleButton_MuonTraSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_MuonTraSach.Location = new System.Drawing.Point(16, 101);
             this.simpleButton_MuonTraSach.Name = "simpleButton_MuonTraSach";
-            this.simpleButton_MuonTraSach.Size = new System.Drawing.Size(136, 59);
+            this.simpleButton_MuonTraSach.Size = new System.Drawing.Size(192, 59);
             this.simpleButton_MuonTraSach.TabIndex = 1;
-            this.simpleButton_MuonTraSach.Text = "Cập nhật";
+            this.simpleButton_MuonTraSach.Text = "Thêm mượn trả sách";
             this.simpleButton_MuonTraSach.Click += new System.EventHandler(this.simpleButton_MuonTraSach_Click);
             // 
             // radioGroup_MuonTraSach
             // 
             this.radioGroup_MuonTraSach.EditValue = "Add";
-            this.radioGroup_MuonTraSach.Location = new System.Drawing.Point(212, 79);
+            this.radioGroup_MuonTraSach.Location = new System.Drawing.Point(219, 46);
             this.radioGroup_MuonTraSach.Name = "radioGroup_MuonTraSach";
             this.radioGroup_MuonTraSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup_MuonTraSach.Properties.Appearance.Options.UseFont = true;
             this.radioGroup_MuonTraSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_MuonTraSach.Size = new System.Drawing.Size(162, 81);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm mượn trả sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Cập nhật mượn trả sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa mượn trả sách")});
+            this.radioGroup_MuonTraSach.Size = new System.Drawing.Size(192, 114);
             this.radioGroup_MuonTraSach.TabIndex = 0;
             this.radioGroup_MuonTraSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_MuonTraSach_SelectedIndexChanged);
             // 
@@ -722,9 +695,9 @@
             // 
             this.panelControl5.Controls.Add(this.groupControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl5.Location = new System.Drawing.Point(895, 546);
+            this.panelControl5.Location = new System.Drawing.Point(879, 546);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(438, 203);
+            this.panelControl5.Size = new System.Drawing.Size(425, 203);
             this.panelControl5.TabIndex = 4;
             // 
             // groupControl1
@@ -743,7 +716,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(434, 199);
+            this.groupControl1.Size = new System.Drawing.Size(421, 199);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "LỰA CHỌN VIỆC THỰC HIỆN";
             // 
@@ -751,7 +724,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 749);
+            this.ClientSize = new System.Drawing.Size(1304, 749);
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
@@ -799,8 +772,6 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayMuon.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayDuKienTra.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TienPhat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_NgayTra.Properties)).EndInit();
@@ -839,11 +810,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit textEdit_TienPhat;
         private DevExpress.XtraEditors.DateEdit dateEdit_NgayTra;
-        private DevExpress.XtraEditors.DateEdit dateEdit_NgayDuKienTra;
         private DevExpress.XtraEditors.DateEdit dateEdit_NgayMuon;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private DevExpress.XtraEditors.SimpleButton simpleButton_MuonTraSach;
@@ -857,19 +826,19 @@
         private DevExpress.XtraEditors.TextEdit textEdit_MaPhieu_forFilter;
         private DevExpress.XtraEditors.PanelControl panelControl6;
         private DevExpress.XtraEditors.SimpleButton simpleButton_LocTrangThai;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colSach;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colTinhTrang;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colTrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayDuKienTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTienPhat;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colNguoiChoMuon;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colNguoiNhanSachTra;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colSach;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayDuKienTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTra;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colTinhTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTienPhat;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colNguoiChoMuon;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colNguoiNhanSachTra;
     }
 }

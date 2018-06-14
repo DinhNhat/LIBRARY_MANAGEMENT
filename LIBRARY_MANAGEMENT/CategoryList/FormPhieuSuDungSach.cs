@@ -44,7 +44,20 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public PhieuSuDungSach AddNewEntity()
         {
             PhieuSuDungSach phieu = new PhieuSuDungSach();
-            //phieu.maPhieuSD = prePhieuSD.LastKey + 1.ToString();
+            //object maphieu = new object();
+            //maphieu = textEdit_MaPhieu.Text;
+            //if(maphieu != null)
+            //{
+            //    if (maphieu.ToString() != "")
+            //        phieu.maPhieuSD = textEdit_MaPhieu.Text;
+            //    else
+            //        phieu.maPhieuSD = null;
+            //}
+            //else
+            //{
+            //    phieu.maPhieuSD = null;
+            //}
+            //phieu.maPhieuSD = textEdit_MaPhieu.Text;
             phieu.maPhieuSD = textEdit_MaPhieu.Text;
             phieu.hoTen = textEdit_HoTen.Text;
             phieu.ngayThangNamSinh = (DateTime)dateEdit_NamSinh.EditValue;
@@ -59,7 +72,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         public PhieuSuDungSach DeleteEntity()
         {
             PhieuSuDungSach phieu = new PhieuSuDungSach();
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             phieu.maPhieuSD = maPhieu;
             return phieu;
         }

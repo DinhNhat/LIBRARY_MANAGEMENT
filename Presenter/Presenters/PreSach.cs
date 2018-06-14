@@ -31,5 +31,12 @@ namespace Presenter.Presenters
             old.thoiHanMuon = newEntity.thoiHanMuon;
             old.giaTien = newEntity.giaTien;
         }
+
+        public Sach GetThoiHanMuonbyMaSach(string masach)
+        {
+            Sach sach = null;
+            sach = base.entitySet.FirstOrDefault(t => t.maSach == masach);
+            return sach;
+        }
     }
 }

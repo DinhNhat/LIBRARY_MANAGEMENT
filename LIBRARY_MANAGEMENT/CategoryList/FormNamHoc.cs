@@ -96,13 +96,25 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_NamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_NamHoc.EditValue.Equals("Add"))
+            {
+                simpleButton_NamHoc.Text = "Thêm năm học";
+                simpleButton_NamHoc.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_NamHoc.ReadOnly = false;
+            }
             else 
                 if (radioGroup_NamHoc.EditValue.Equals("Delete"))
-                    textEdit_NamHoc.ReadOnly = true;
+            {
+                simpleButton_NamHoc.Text = "Xóa năm học";
+                simpleButton_NamHoc.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
+                textEdit_NamHoc.ReadOnly = true;
+            }
             else
                 if (radioGroup_NamHoc.EditValue.Equals("Update"))
-                    textEdit_NamHoc.ReadOnly = false;
+            {
+                simpleButton_NamHoc.Text = "Sửa tên năm học";
+                simpleButton_NamHoc.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
+                textEdit_NamHoc.ReadOnly = false;
+            }
         }
     }
 }

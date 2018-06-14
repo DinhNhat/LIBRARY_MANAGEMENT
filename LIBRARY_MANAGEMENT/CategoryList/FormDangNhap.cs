@@ -72,17 +72,26 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             {
                 if (preDangNhap.CheckIskUser() != null) // user has already exist
                 {
-                    int num = preDangNhap.addNewEntity();
-                    if (num > 0)
+                    // check enable of User
+                    if(preDangNhap.CheckIskUser().enable == true)
                     {
-                        // after adding DangNhap successfully and SaveChange is so then assign maDangNhap to user in QLTVMainForm
-                        QLTVMain.login.maDangNhap = this.maDangNhap;
-                        QLTVMain.user = preDangNhap.CheckIskUser();
-                        QLTVMain.SetOldPasswordforUser();
-                        preDangNhap.isDangNhap = true;
-                        this.Close();
+                        int num = preDangNhap.addNewEntity();
+                        if (num > 0)
+                        {
+                            // after adding DangNhap successfully and SaveChange is so then assign maDangNhap to user in QLTVMainForm
+                            QLTVMain.login.maDangNhap = this.maDangNhap;
+                            QLTVMain.user = preDangNhap.CheckIskUser();
+                            QLTVMain.SetOldPasswordforUser();
+                            preDangNhap.isDangNhap = true;
+                            this.Close();
+                        }
+                        // Login successfully
                     }
-                    // Login successfully
+                    else
+                    {
+                        labelControl_Error.ForeColor = Color.Red;
+                        labelControl_Error.Text = " Người sử dụng này đã bị vô hiệu hóa!!! ";
+                    }
                 }
                 else // Invalid Input
                 {
@@ -109,19 +118,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             {
                 formMain = new QLTVMain();
                 QLTVMain.SetOldPasswordforUser();
-                //System.Threading.Thread.Sleep(4000);
                 this.Dispose();
             }
             else
                 Application.Exit();
         }
 
-        private void simpleButton_Clear_Click(object sender, EventArgs e)
-        {
-            textEdit_TenUser.Text = "";
-            textEdit_Password.Text = "";
-        }
-
-        
     }
 }

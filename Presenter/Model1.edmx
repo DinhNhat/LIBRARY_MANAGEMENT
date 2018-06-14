@@ -144,6 +144,25 @@
           <Property Name="maViTriLuuTru" Type="int" Nullable="false" />
           <Property Name="tenViTriLuuTru" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TraCuu">
+          <Key>
+            <PropertyRef Name="maSach" />
+            <PropertyRef Name="tenKhoSach" />
+          </Key>
+          <Property Name="maSach" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="namXB" Type="int" />
+          <Property Name="soTrang" Type="int" />
+          <Property Name="thoiHanMuon" Type="int" />
+          <Property Name="giaTien" Type="int" />
+          <Property Name="soLuong" Type="int" />
+          <Property Name="tenLoaiSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenTacGia" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenNXB" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenKhoSach" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
           <End Role="DangNhap" Type="Self.DangNhap" Multiplicity="*" />
@@ -328,6 +347,21 @@
           <EntitySet Name="TinhTrangSachMuonTra" EntityType="Self.TinhTrangSachMuonTra" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrangThai" EntityType="Self.TrangThai" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViTriLuuTru" EntityType="Self.ViTriLuuTru" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TraCuu" EntityType="Self.TraCuu" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TraCuu].[maSach] AS [maSach], 
+[TraCuu].[tenSach] AS [tenSach], 
+[TraCuu].[namXB] AS [namXB], 
+[TraCuu].[soTrang] AS [soTrang], 
+[TraCuu].[thoiHanMuon] AS [thoiHanMuon], 
+[TraCuu].[giaTien] AS [giaTien], 
+[TraCuu].[soLuong] AS [soLuong], 
+[TraCuu].[tenLoaiSach] AS [tenLoaiSach], 
+[TraCuu].[tenTacGia] AS [tenTacGia], 
+[TraCuu].[tenNXB] AS [tenNXB], 
+[TraCuu].[tenKhoSach] AS [tenKhoSach]
+FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDung" />
             <End Role="DangNhap" EntitySet="DangNhap" />
@@ -557,6 +591,23 @@
           <Property Name="tenViTriLuuTru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="LoaiSaches" Relationship="Self.FK_LOAISACH_RELATIONS_VITRILUU" FromRole="ViTriLuuTru" ToRole="LoaiSach" />
         </EntityType>
+        <EntityType Name="TraCuu">
+          <Key>
+            <PropertyRef Name="maSach" />
+            <PropertyRef Name="tenKhoSach" />
+          </Key>
+          <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="namXB" Type="Int32" />
+          <Property Name="soTrang" Type="Int32" />
+          <Property Name="thoiHanMuon" Type="Int32" />
+          <Property Name="giaTien" Type="Int32" />
+          <Property Name="soLuong" Type="Int32" />
+          <Property Name="tenLoaiSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenKhoSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
           <End Role="DangNhap" Type="Self.DangNhap" Multiplicity="*" />
@@ -741,6 +792,7 @@
           <EntitySet Name="TinhTrangSachMuonTras" EntityType="Self.TinhTrangSachMuonTra" />
           <EntitySet Name="TrangThais" EntityType="Self.TrangThai" />
           <EntitySet Name="ViTriLuuTrus" EntityType="Self.ViTriLuuTru" />
+          <EntitySet Name="TraCuus" EntityType="Self.TraCuu" />
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDungs" />
             <End Role="DangNhap" EntitySet="DangNhaps" />
@@ -954,6 +1006,23 @@
               <MappingFragment StoreEntitySet="ViTriLuuTru">
                 <ScalarProperty Name="maViTriLuuTru" ColumnName="maViTriLuuTru" />
                 <ScalarProperty Name="tenViTriLuuTru" ColumnName="tenViTriLuuTru" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraCuus">
+            <EntityTypeMapping TypeName="ThuVienDBDHModel.TraCuu">
+              <MappingFragment StoreEntitySet="TraCuu">
+                <ScalarProperty Name="maSach" ColumnName="maSach" />
+                <ScalarProperty Name="tenSach" ColumnName="tenSach" />
+                <ScalarProperty Name="namXB" ColumnName="namXB" />
+                <ScalarProperty Name="soTrang" ColumnName="soTrang" />
+                <ScalarProperty Name="thoiHanMuon" ColumnName="thoiHanMuon" />
+                <ScalarProperty Name="giaTien" ColumnName="giaTien" />
+                <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+                <ScalarProperty Name="tenLoaiSach" ColumnName="tenLoaiSach" />
+                <ScalarProperty Name="tenTacGia" ColumnName="tenTacGia" />
+                <ScalarProperty Name="tenNXB" ColumnName="tenNXB" />
+                <ScalarProperty Name="tenKhoSach" ColumnName="tenKhoSach" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -121,6 +121,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_QuanLyNguoiSD.EditValue.Equals("Add"))
             {
+                simpleButton_QuanLyUser.Text = "Thêm người sử dụng";
+                simpleButton_QuanLyUser.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_MaNguoiSD.ReadOnly = false;
                 textEdit_TenNguoiSD.ReadOnly = false;
                 textEdit_MatKhau.ReadOnly = false;
@@ -129,6 +131,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if(radioGroup_QuanLyNguoiSD.EditValue.Equals("Delete"))
             {
+                simpleButton_QuanLyUser.Text = "Xóa người sử dụng";
+                simpleButton_QuanLyUser.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_MaNguoiSD.ReadOnly = true;
                 textEdit_TenNguoiSD.ReadOnly = true;
                 textEdit_MatKhau.ReadOnly = true;
@@ -137,6 +141,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
             else if (radioGroup_QuanLyNguoiSD.EditValue.Equals("Update"))
             {
+                simpleButton_QuanLyUser.Text = "Sửa thông tin người sử dụng";
+                simpleButton_QuanLyUser.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_MaNguoiSD.ReadOnly = true;
                 textEdit_TenNguoiSD.ReadOnly = false;
                 textEdit_MatKhau.ReadOnly = false;

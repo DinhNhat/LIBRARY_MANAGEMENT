@@ -101,11 +101,23 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_VTLT_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_VTLT.EditValue.Equals("Add"))
+            {
                 textEdit_VTLT.ReadOnly = false;
+                simpleButton_VTLT.Text = "Thêm vị trí lưu trữ";
+                simpleButton_VTLT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            }
             else if (radioGroup_VTLT.EditValue.Equals("Delete"))
+            {
                 textEdit_VTLT.ReadOnly = true;
+                simpleButton_VTLT.Text = "Xóa vị trí lưu trữ";
+                simpleButton_VTLT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
+            }
             else if (radioGroup_VTLT.EditValue.Equals("Update"))
+            {
                 textEdit_VTLT.ReadOnly = false;
+                simpleButton_VTLT.Text = "Sửa tên vị trí lưu trữ";
+                simpleButton_VTLT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
+            }
         }
     }
 }

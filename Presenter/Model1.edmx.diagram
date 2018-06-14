@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d47d7e323c1445f0a0d252cfa4a8b017" Name="Diagram1">
+      <Diagram DiagramId="d74c23951a6347dc9cd33c7f17a08792" Name="Diagram1">
         <EntityTypeShape EntityType="ThuVienDBDHModel.DangNhap" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.KhoSach" Width="1.5" PointX="1.5" PointY="14.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.LoaiSach" Width="1.5" PointX="1.5" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.Lop" Width="1.5" PointX="1.5" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.MuonSach" Width="1.5" PointX="6" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.NamHoc" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ThuVienDBDHModel.NguoiSuDung" Width="1.5" PointX="0.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.NguoiSuDung" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.NhaXuatBan" Width="1.5" PointX="1.5" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.PhieuSuDungSach" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.Sach" Width="1.5" PointX="3.75" PointY="17.125" IsExpanded="true" />
@@ -20,6 +20,7 @@
         <EntityTypeShape EntityType="ThuVienDBDHModel.TinhTrangSachMuonTra" Width="1.5" PointX="3.75" PointY="22.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.TrangThai" Width="1.5" PointX="3.75" PointY="24.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ThuVienDBDHModel.ViTriLuuTru" Width="1.5" PointX="1.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ThuVienDBDHModel.TraCuu" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="ThuVienDBDHModel.FK_DANGNHAP_RELATIONS_NGUOISUD" ManuallyRouted="false" />
         <AssociationConnector Association="ThuVienDBDHModel.FK_SACH_RELATIONS_KHOSACH" ManuallyRouted="false" />
         <AssociationConnector Association="ThuVienDBDHModel.FK_LOAISACH_RELATIONS_VITRILUU" ManuallyRouted="false" />

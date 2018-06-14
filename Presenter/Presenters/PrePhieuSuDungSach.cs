@@ -8,6 +8,8 @@ namespace Presenter.Presenters
 {
     public class PrePhieuSuDungSach : EntityPresenter<PhieuSuDungSach>
     {
+        public Boolean checkMaPhieuIsBlank;
+
         public PrePhieuSuDungSach() : base()
         {
             base.entitySet = entitiesTV.PhieuSuDungSaches;

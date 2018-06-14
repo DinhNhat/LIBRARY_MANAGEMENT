@@ -106,6 +106,7 @@
     <Compile Include="Presenters\PreSach.cs" />
     <Compile Include="Presenters\PreTacGia.cs" />
     <Compile Include="Presenters\PreTinhTrangSachMuonTra.cs" />
+    <Compile Include="Presenters\PreTraCuu.cs" />
     <Compile Include="Presenters\PreTrangThai.cs" />
     <Compile Include="Presenters\PreViTriLuuTru.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +120,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TinhTrangSachMuonTra.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TrangThai.cs">

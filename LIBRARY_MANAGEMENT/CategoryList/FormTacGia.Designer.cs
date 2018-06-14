@@ -50,15 +50,17 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(253, 217);
+            this.panelControl1.Size = new System.Drawing.Size(298, 310);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_TacGia
             // 
+            this.listBoxControl_TacGia.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_TacGia.Appearance.Options.UseFont = true;
             this.listBoxControl_TacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_TacGia.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_TacGia.Name = "listBoxControl_TacGia";
-            this.listBoxControl_TacGia.Size = new System.Drawing.Size(249, 213);
+            this.listBoxControl_TacGia.Size = new System.Drawing.Size(294, 306);
             this.listBoxControl_TacGia.TabIndex = 0;
             this.listBoxControl_TacGia.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_TacGia_SelectedIndexChanged);
             // 
@@ -69,45 +71,53 @@
             this.panelControl2.Controls.Add(this.textEdit_TacGia);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(253, 0);
+            this.panelControl2.Location = new System.Drawing.Point(298, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(393, 217);
+            this.panelControl2.Size = new System.Drawing.Size(496, 310);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_TacGia
             // 
             this.radioGroup_TacGia.EditValue = "Add";
-            this.radioGroup_TacGia.Location = new System.Drawing.Point(195, 95);
+            this.radioGroup_TacGia.Location = new System.Drawing.Point(250, 135);
             this.radioGroup_TacGia.Name = "radioGroup_TacGia";
+            this.radioGroup_TacGia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroup_TacGia.Properties.Appearance.Options.UseFont = true;
             this.radioGroup_TacGia.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_TacGia.Size = new System.Drawing.Size(139, 87);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm tác giả"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa tên tác giả"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa tác giả")});
+            this.radioGroup_TacGia.Size = new System.Drawing.Size(172, 100);
             this.radioGroup_TacGia.TabIndex = 3;
             this.radioGroup_TacGia.SelectedIndexChanged += new System.EventHandler(this.radioGroup_TacGia_SelectedIndexChanged);
             // 
             // simpleButton_TacGia
             // 
-            this.simpleButton_TacGia.Location = new System.Drawing.Point(51, 129);
+            this.simpleButton_TacGia.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_TacGia.Appearance.Options.UseFont = true;
+            this.simpleButton_TacGia.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_TacGia.Location = new System.Drawing.Point(66, 175);
             this.simpleButton_TacGia.Name = "simpleButton_TacGia";
-            this.simpleButton_TacGia.Size = new System.Drawing.Size(125, 53);
+            this.simpleButton_TacGia.Size = new System.Drawing.Size(150, 60);
             this.simpleButton_TacGia.TabIndex = 2;
-            this.simpleButton_TacGia.Text = "Cập nhật";
+            this.simpleButton_TacGia.Text = "Thêm tác giả";
             this.simpleButton_TacGia.Click += new System.EventHandler(this.simpleButton_TacGia_Click);
             // 
             // textEdit_TacGia
             // 
-            this.textEdit_TacGia.Location = new System.Drawing.Point(64, 25);
+            this.textEdit_TacGia.Location = new System.Drawing.Point(122, 35);
             this.textEdit_TacGia.Name = "textEdit_TacGia";
-            this.textEdit_TacGia.Size = new System.Drawing.Size(270, 20);
+            this.textEdit_TacGia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_TacGia.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_TacGia.Size = new System.Drawing.Size(300, 22);
             this.textEdit_TacGia.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(16, 28);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(51, 40);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(42, 13);
+            this.labelControl1.Size = new System.Drawing.Size(52, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tác Giả :";
             // 
@@ -115,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 217);
+            this.ClientSize = new System.Drawing.Size(794, 310);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormTacGia";

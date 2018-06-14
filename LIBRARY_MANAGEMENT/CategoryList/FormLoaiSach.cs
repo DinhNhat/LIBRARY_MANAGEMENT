@@ -89,11 +89,40 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_LoaiSach.EditValue.Equals("Add"))
             {
-                preLoaiSach.addNewEntity();
-                rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
-            } 
+                try
+                {
+                    preLoaiSach.addNewEntity();
+                    rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
+                }
+                catch
+                {
+                    labelControl_ErrorheThong.ForeColor = Color.Red;
+                    labelControl_ErrorheThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
+                    labelControl_ErrorheThong.Update();
+                }
+            }
+            //else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
+            //{
+            //    try
+            //    {
+            //        preLoaiSach.deleteEntity();
+            //    }
+            //    catch
+            //    {
+            //        labelControl_ErrorheThong.ForeColor = Color.Red;
+            //        labelControl_ErrorheThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+            //        labelControl_ErrorheThong.Update();
+            //    }
+            //}
+            //if (radioGroup_LoaiSach.EditValue.Equals("Add"))
+            //{
+            //    preLoaiSach.addNewEntity();
+            //    rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
+            //}
             else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
+            {
                 preLoaiSach.deleteEntity();
+            }
             else if (radioGroup_LoaiSach.EditValue.Equals("Update"))
                 preLoaiSach.updateEntity();
         }
@@ -109,22 +138,39 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_LoaiSach.EditValue.Equals("Add"))
             {
+                simpleButton_LoaiSach.Text = "Thêm loại sách";
+                simpleButton_LoaiSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_MaLoaiSach.ReadOnly = false;
                 textEdit_TenLoaiSach.ReadOnly = false;
                 lookUpEdit_TenVTLT.ReadOnly = false;
             }
             else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
             {
+                simpleButton_LoaiSach.Text = "Xóa loại sách";
+                simpleButton_LoaiSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_MaLoaiSach.ReadOnly = true;
                 textEdit_TenLoaiSach.ReadOnly = true;
                 lookUpEdit_TenVTLT.ReadOnly = true;
             }
             else if (radioGroup_LoaiSach.EditValue.Equals("Update"))
             {
+                simpleButton_LoaiSach.Text = "Sửa tên loại sách";
+                simpleButton_LoaiSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_MaLoaiSach.ReadOnly = true;
                 textEdit_TenLoaiSach.ReadOnly = false;
                 lookUpEdit_TenVTLT.ReadOnly = false;
             }
         }
+
+        //private void textEdit_MaLoaiSach_Leave(object sender, EventArgs e)
+        //{
+        //    string check = textEdit_MaLoaiSach.Text;
+        //    if(check == "")
+        //    {
+        //        labelControl_ErrorMaLoaiSach.ForeColor = Color.Red;
+        //        labelControl_ErrorMaLoaiSach.Text = "Mã loại sách không được để trống";
+        //        labelControl_ErrorMaLoaiSach.Update();
+        //    }
+        //}
     }
 }

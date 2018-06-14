@@ -25,6 +25,7 @@ namespace Presenter.Presenters
         PrePhieuSuDungSach prePhieu = new PrePhieuSuDungSach();
         PreLop lop = new PreLop();
         PreTrangThai trangthai = new PreTrangThai();
+        PreSach sach = new PreSach();
 
         public PreMuonTraSach() : base()
         {
@@ -45,13 +46,16 @@ namespace Presenter.Presenters
         {
             old.maSach = newEntity.maSach;
             old.maTinhTrangSach = newEntity.maTinhTrangSach;
-            old.maTrangThai = newEntity.maTrangThai;
+            // check matrangthai 1 dang duoc muon - 2 da tra
+            if (newEntity.maTrangThai == 2 && old.maTrangThai == 1)
+            {
+                old.maTrangThai = 2;
+                old.nguoiNhanSachTra = newEntity.nguoiNhanSachTra;
+            }  
             old.ngayMuon = newEntity.ngayMuon;
             old.ngayDuKienTra = newEntity.ngayDuKienTra;
             old.ngayTra = newEntity.ngayTra;
-            old.tienPhat = newEntity.tienPhat;
-            old.nguoiChoMuon = newEntity.nguoiChoMuon;
-            old.nguoiNhanSachTra = newEntity.nguoiNhanSachTra;
+            old.tienPhat = newEntity.tienPhat;  
         }
 
         public Boolean SetBindingSourceAgainforDelete()
@@ -73,9 +77,7 @@ namespace Presenter.Presenters
                 }
             }
             else
-            {
                 return false;
-            }
         }
 
         public void SetBindingSourceWhereMaPhieu(string maToSet)
@@ -90,61 +92,61 @@ namespace Presenter.Presenters
             this.countForExit = base.bindingsource.Count;
         }
 
-        private int SetFilterMode(string maphieu, Object matrangthai)
-        {
-            // for button LocMaPhieu
-            if (maphieu != "" && matrangthai == null)
-                return 1; // true
-            else if (maphieu == "" && matrangthai == null)
-                return 2; // false
+        //private int SetFilterMode(string maphieu, Object matrangthai)
+        //{
+        //    // for button LocMaPhieu
+        //    if (maphieu != "" && matrangthai == null)
+        //        return 1; // true
+        //    else if (maphieu == "" && matrangthai == null)
+        //        return 2; // false
 
-            // for button LocTrangThai
-            else if (maphieu == "" && matrangthai != null)
-                return 3; // true
-            else // if (maphieu == "" && matrangthai == null)
-                return 4; // false
-        }
+        //    // for button LocTrangThai
+        //    else if (maphieu == "" && matrangthai != null)
+        //        return 3; // true
+        //    else // if (maphieu == "" && matrangthai == null)
+        //        return 4; // false
+        //}
 
-        // filter entity by maPhieuSD
-        public Boolean getChiTietbyPhieuSD(string maphieu, Object trangthai)
-        {
-            Boolean boolean = true;
-            int mode = SetFilterMode(maphieu, trangthai);
+        //// filter entity by maPhieuSD
+        //public Boolean getChiTietbyPhieuSD(string maphieu, Object trangthai)
+        //{
+        //    Boolean boolean = true;
+        //    int mode = SetFilterMode(maphieu, trangthai);
 
-            #region
-            switch(mode)
-            {
-                case 1:
-                    {
-                        SetBindingSourceWhereMaPhieu(maphieu);
-                        this.countForBindingsource = base.bindingsource.Count;
-                        break;
-                    }
-                case 2:
-                    {
-                        SetBindingSourceWhereMaPhieu(maphieu);
-                        this.countForBindingsource = base.bindingsource.Count;
-                        boolean = false;
-                        break;
-                    }
-                case 3:
-                    {
-                        int tt = (Int32)trangthai;
-                        SetBindingSourceWhereTrangThaiandMaPhieu(maphieu, tt);
-                        this.countForBindingsource = base.bindingsource.Count;
-                        break;
-                    }
-                case 4:
-                    {
-                        SetBindingSourceWhereMaPhieu(maphieu);
-                        this.countForBindingsource = base.bindingsource.Count;
-                        boolean = false;
-                        break;
-                    }
-            }
-            #endregion
-            return boolean;
-        }
+        //    #region
+        //    switch(mode)
+        //    {
+        //        case 1:
+        //            {
+        //                SetBindingSourceWhereMaPhieu(maphieu);
+        //                this.countForBindingsource = base.bindingsource.Count;
+        //                break;
+        //            }
+        //        case 2:
+        //            {
+        //                SetBindingSourceWhereMaPhieu(maphieu);
+        //                this.countForBindingsource = base.bindingsource.Count;
+        //                boolean = false;
+        //                break;
+        //            }
+        //        case 3:
+        //            {
+        //                int tt = (Int32)trangthai;
+        //                SetBindingSourceWhereTrangThaiandMaPhieu(maphieu, tt);
+        //                this.countForBindingsource = base.bindingsource.Count;
+        //                break;
+        //            }
+        //        case 4:
+        //            {
+        //                SetBindingSourceWhereMaPhieu(maphieu);
+        //                this.countForBindingsource = base.bindingsource.Count;
+        //                boolean = false;
+        //                break;
+        //            }
+        //    }
+        //    #endregion
+        //    return boolean;
+        //}
 
         public void SetBindingSource()
         {
@@ -169,6 +171,14 @@ namespace Presenter.Presenters
             if(ph != null)
                 tenLop = lop.GetTenLopforFilter((Int32)ph.maLop);
             return ph;
+        }
+
+        // Get ThoiHanMuonbyMaSach
+        public object GetThoiHanMuonby_MaSach(string masach)
+        {
+            object ob;
+            ob = (Object)sach.GetThoiHanMuonbyMaSach(masach).thoiHanMuon;
+            return ob;
         }
 
     }

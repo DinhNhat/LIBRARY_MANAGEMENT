@@ -30,6 +30,9 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_LoaiSach = new System.Windows.Forms.DataGridView();
+            this.colMaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colVTLT = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.lookUpEdit_TenVTLT = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -40,10 +43,8 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton_LoaiSach = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl_ErrorheThong = new DevExpress.XtraEditors.LabelControl();
             this.radioGroup_LoaiSach = new DevExpress.XtraEditors.RadioGroup();
-            this.colMaLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVTLT = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LoaiSach)).BeginInit();
@@ -65,7 +66,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(511, 320);
+            this.panelControl1.Size = new System.Drawing.Size(511, 391);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_LoaiSach
@@ -79,115 +80,9 @@
             this.dataGridView_LoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_LoaiSach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_LoaiSach.Name = "dataGridView_LoaiSach";
-            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(507, 316);
+            this.dataGridView_LoaiSach.Size = new System.Drawing.Size(507, 387);
             this.dataGridView_LoaiSach.TabIndex = 0;
             this.dataGridView_LoaiSach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.panelControl2.Controls.Add(this.lookUpEdit_TenVTLT);
-            this.panelControl2.Controls.Add(this.labelControl2);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(511, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(475, 72);
-            this.panelControl2.TabIndex = 1;
-            // 
-            // lookUpEdit_TenVTLT
-            // 
-            this.lookUpEdit_TenVTLT.Location = new System.Drawing.Point(170, 33);
-            this.lookUpEdit_TenVTLT.Name = "lookUpEdit_TenVTLT";
-            this.lookUpEdit_TenVTLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit_TenVTLT.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenViTriLuuTru", "Tên vị trí lưu trữ")});
-            this.lookUpEdit_TenVTLT.Properties.DisplayMember = "tenViTriLuuTru";
-            this.lookUpEdit_TenVTLT.Properties.ValueMember = "maViTriLuuTru";
-            this.lookUpEdit_TenVTLT.Size = new System.Drawing.Size(246, 20);
-            this.lookUpEdit_TenVTLT.TabIndex = 4;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(41, 36);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(85, 13);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Tên vị trí lưu trữ :";
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Controls.Add(this.textEdit_TenLoaiSach);
-            this.panelControl3.Controls.Add(this.textEdit_MaLoaiSach);
-            this.panelControl3.Controls.Add(this.labelControl1);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl3.Location = new System.Drawing.Point(511, 72);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(475, 97);
-            this.panelControl3.TabIndex = 2;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(41, 69);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(69, 13);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Tên loại sách :";
-            // 
-            // textEdit_TenLoaiSach
-            // 
-            this.textEdit_TenLoaiSach.Location = new System.Drawing.Point(170, 62);
-            this.textEdit_TenLoaiSach.Name = "textEdit_TenLoaiSach";
-            this.textEdit_TenLoaiSach.Size = new System.Drawing.Size(246, 20);
-            this.textEdit_TenLoaiSach.TabIndex = 3;
-            // 
-            // textEdit_MaLoaiSach
-            // 
-            this.textEdit_MaLoaiSach.Location = new System.Drawing.Point(170, 20);
-            this.textEdit_MaLoaiSach.Name = "textEdit_MaLoaiSach";
-            this.textEdit_MaLoaiSach.Size = new System.Drawing.Size(194, 20);
-            this.textEdit_MaLoaiSach.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(41, 27);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(65, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã loại sách :";
-            // 
-            // simpleButton_LoaiSach
-            // 
-            this.simpleButton_LoaiSach.Location = new System.Drawing.Point(137, 58);
-            this.simpleButton_LoaiSach.Name = "simpleButton_LoaiSach";
-            this.simpleButton_LoaiSach.Size = new System.Drawing.Size(131, 52);
-            this.simpleButton_LoaiSach.TabIndex = 2;
-            this.simpleButton_LoaiSach.Text = "Cập nhật";
-            this.simpleButton_LoaiSach.Click += new System.EventHandler(this.simpleButton_LoaiSach_Click);
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Controls.Add(this.radioGroup_LoaiSach);
-            this.panelControl4.Controls.Add(this.simpleButton_LoaiSach);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(511, 169);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(475, 151);
-            this.panelControl4.TabIndex = 3;
-            // 
-            // radioGroup_LoaiSach
-            // 
-            this.radioGroup_LoaiSach.EditValue = "Add";
-            this.radioGroup_LoaiSach.Location = new System.Drawing.Point(288, 39);
-            this.radioGroup_LoaiSach.Name = "radioGroup_LoaiSach";
-            this.radioGroup_LoaiSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_LoaiSach.Size = new System.Drawing.Size(141, 71);
-            this.radioGroup_LoaiSach.TabIndex = 0;
-            this.radioGroup_LoaiSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_LoaiSach_SelectedIndexChanged);
             // 
             // colMaLoaiSach
             // 
@@ -214,11 +109,141 @@
             this.colVTLT.ReadOnly = true;
             this.colVTLT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // panelControl2
+            // 
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panelControl2.Controls.Add(this.lookUpEdit_TenVTLT);
+            this.panelControl2.Controls.Add(this.labelControl2);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl2.Location = new System.Drawing.Point(511, 0);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(534, 72);
+            this.panelControl2.TabIndex = 1;
+            // 
+            // lookUpEdit_TenVTLT
+            // 
+            this.lookUpEdit_TenVTLT.Location = new System.Drawing.Point(170, 33);
+            this.lookUpEdit_TenVTLT.Name = "lookUpEdit_TenVTLT";
+            this.lookUpEdit_TenVTLT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lookUpEdit_TenVTLT.Properties.Appearance.Options.UseFont = true;
+            this.lookUpEdit_TenVTLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit_TenVTLT.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenViTriLuuTru", "Tên vị trí lưu trữ")});
+            this.lookUpEdit_TenVTLT.Properties.DisplayMember = "tenViTriLuuTru";
+            this.lookUpEdit_TenVTLT.Properties.ValueMember = "maViTriLuuTru";
+            this.lookUpEdit_TenVTLT.Size = new System.Drawing.Size(281, 22);
+            this.lookUpEdit_TenVTLT.TabIndex = 4;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(41, 36);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(103, 16);
+            this.labelControl2.TabIndex = 3;
+            this.labelControl2.Text = "Tên vị trí lưu trữ :";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.labelControl3);
+            this.panelControl3.Controls.Add(this.textEdit_TenLoaiSach);
+            this.panelControl3.Controls.Add(this.textEdit_MaLoaiSach);
+            this.panelControl3.Controls.Add(this.labelControl1);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl3.Location = new System.Drawing.Point(511, 72);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(534, 129);
+            this.panelControl3.TabIndex = 2;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(41, 82);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(85, 16);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "Tên loại sách :";
+            // 
+            // textEdit_TenLoaiSach
+            // 
+            this.textEdit_TenLoaiSach.Location = new System.Drawing.Point(170, 79);
+            this.textEdit_TenLoaiSach.Name = "textEdit_TenLoaiSach";
+            this.textEdit_TenLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_TenLoaiSach.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_TenLoaiSach.Size = new System.Drawing.Size(281, 22);
+            this.textEdit_TenLoaiSach.TabIndex = 3;
+            // 
+            // textEdit_MaLoaiSach
+            // 
+            this.textEdit_MaLoaiSach.Location = new System.Drawing.Point(170, 20);
+            this.textEdit_MaLoaiSach.Name = "textEdit_MaLoaiSach";
+            this.textEdit_MaLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_MaLoaiSach.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_MaLoaiSach.Size = new System.Drawing.Size(194, 22);
+            this.textEdit_MaLoaiSach.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(41, 23);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(80, 16);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Mã loại sách :";
+            // 
+            // simpleButton_LoaiSach
+            // 
+            this.simpleButton_LoaiSach.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_LoaiSach.Appearance.Options.UseFont = true;
+            this.simpleButton_LoaiSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_LoaiSach.Location = new System.Drawing.Point(85, 79);
+            this.simpleButton_LoaiSach.Name = "simpleButton_LoaiSach";
+            this.simpleButton_LoaiSach.Size = new System.Drawing.Size(147, 58);
+            this.simpleButton_LoaiSach.TabIndex = 2;
+            this.simpleButton_LoaiSach.Text = "Thêm loại sách";
+            this.simpleButton_LoaiSach.Click += new System.EventHandler(this.simpleButton_LoaiSach_Click);
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.labelControl_ErrorheThong);
+            this.panelControl4.Controls.Add(this.radioGroup_LoaiSach);
+            this.panelControl4.Controls.Add(this.simpleButton_LoaiSach);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl4.Location = new System.Drawing.Point(511, 201);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(534, 190);
+            this.panelControl4.TabIndex = 3;
+            // 
+            // labelControl_ErrorheThong
+            // 
+            this.labelControl_ErrorheThong.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_ErrorheThong.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl_ErrorheThong.Location = new System.Drawing.Point(154, 146);
+            this.labelControl_ErrorheThong.Name = "labelControl_ErrorheThong";
+            this.labelControl_ErrorheThong.Size = new System.Drawing.Size(0, 16);
+            this.labelControl_ErrorheThong.TabIndex = 3;
+            // 
+            // radioGroup_LoaiSach
+            // 
+            this.radioGroup_LoaiSach.EditValue = "Add";
+            this.radioGroup_LoaiSach.Location = new System.Drawing.Point(269, 30);
+            this.radioGroup_LoaiSach.Name = "radioGroup_LoaiSach";
+            this.radioGroup_LoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroup_LoaiSach.Properties.Appearance.Options.UseFont = true;
+            this.radioGroup_LoaiSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm loại sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa loại sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa loại sách")});
+            this.radioGroup_LoaiSach.Size = new System.Drawing.Size(182, 107);
+            this.radioGroup_LoaiSach.TabIndex = 0;
+            this.radioGroup_LoaiSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_LoaiSach_SelectedIndexChanged);
+            // 
             // FormLoaiSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 320);
+            this.ClientSize = new System.Drawing.Size(1045, 391);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
@@ -241,6 +266,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_MaLoaiSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup_LoaiSach.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -264,5 +290,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaLoaiSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenLoaiSach;
         private System.Windows.Forms.DataGridViewComboBoxColumn colVTLT;
+        private DevExpress.XtraEditors.LabelControl labelControl_ErrorheThong;
     }
 }

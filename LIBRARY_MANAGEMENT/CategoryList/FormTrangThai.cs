@@ -96,11 +96,23 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_TrangThai_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_TrangThai.EditValue.Equals("Add"))
+            {
+                simpleButton_TrangThai.Text = "Thêm trạng thái";
+                simpleButton_TrangThai.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_TrangThai.ReadOnly = false;
+            }
             else if (radioGroup_TrangThai.EditValue.Equals("Delete"))
+            {
+                simpleButton_TrangThai.Text = "Xóa trạng thái";
+                simpleButton_TrangThai.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_TrangThai.ReadOnly = true;
+            }
             else if (radioGroup_TrangThai.EditValue.Equals("Update"))
+            {
+                simpleButton_TrangThai.Text = "Sửa tên trạng thái";
+                simpleButton_TrangThai.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_TrangThai.ReadOnly = false;
+            }    
         }
     }
 }

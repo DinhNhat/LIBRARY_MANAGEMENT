@@ -25,7 +25,7 @@ namespace Presenter
         {
             int num = 0;
             T entity = view.AddNewEntity();
-            if (getEntity(entity) == null) 
+            if (getEntity(entity) == null)
             {
                 entitySet.Add(entity);
                 countBindingSourcePresenter = bindingsource.Count; // check how many enities in bindingsource

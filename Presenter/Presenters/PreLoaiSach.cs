@@ -8,6 +8,8 @@ namespace Presenter.Presenters
 {
     public class PreLoaiSach : EntityPresenter<LoaiSach>
     {
+        public Boolean maLoaiSachIsBlank;
+
         public PreLoaiSach() : base()
         {
             // set real value for fields entitySet and bindingsource.

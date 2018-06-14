@@ -50,15 +50,17 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(269, 243);
+            this.panelControl1.Size = new System.Drawing.Size(296, 289);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_NXB
             // 
+            this.listBoxControl_NXB.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_NXB.Appearance.Options.UseFont = true;
             this.listBoxControl_NXB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_NXB.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_NXB.Name = "listBoxControl_NXB";
-            this.listBoxControl_NXB.Size = new System.Drawing.Size(265, 239);
+            this.listBoxControl_NXB.Size = new System.Drawing.Size(292, 285);
             this.listBoxControl_NXB.TabIndex = 0;
             this.listBoxControl_NXB.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_NXB_SelectedIndexChanged);
             // 
@@ -69,45 +71,53 @@
             this.panelControl2.Controls.Add(this.textEdit_NXB);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(269, 0);
+            this.panelControl2.Location = new System.Drawing.Point(296, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(474, 243);
+            this.panelControl2.Size = new System.Drawing.Size(531, 289);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_NXB
             // 
             this.radioGroup_NXB.EditValue = "Add";
-            this.radioGroup_NXB.Location = new System.Drawing.Point(282, 124);
+            this.radioGroup_NXB.Location = new System.Drawing.Point(251, 134);
             this.radioGroup_NXB.Name = "radioGroup_NXB";
+            this.radioGroup_NXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroup_NXB.Properties.Appearance.Options.UseFont = true;
             this.radioGroup_NXB.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_NXB.Size = new System.Drawing.Size(136, 78);
-            this.radioGroup_NXB.TabIndex = 3;
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm nhà xuất bản"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa tên nhà xuất bản"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa nhà xuất bản")});
+            this.radioGroup_NXB.Size = new System.Drawing.Size(181, 105);
+            this.radioGroup_NXB.TabIndex = 2;
             this.radioGroup_NXB.SelectedIndexChanged += new System.EventHandler(this.radioGroup_NXB_SelectedIndexChanged);
             // 
             // simpleButton_NXB
             // 
-            this.simpleButton_NXB.Location = new System.Drawing.Point(151, 151);
+            this.simpleButton_NXB.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_NXB.Appearance.Options.UseFont = true;
+            this.simpleButton_NXB.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_NXB.Location = new System.Drawing.Point(61, 178);
             this.simpleButton_NXB.Name = "simpleButton_NXB";
-            this.simpleButton_NXB.Size = new System.Drawing.Size(112, 51);
-            this.simpleButton_NXB.TabIndex = 2;
-            this.simpleButton_NXB.Text = "Cập nhật";
+            this.simpleButton_NXB.Size = new System.Drawing.Size(165, 61);
+            this.simpleButton_NXB.TabIndex = 5;
+            this.simpleButton_NXB.Text = "Thêm nhà xuất bản";
             this.simpleButton_NXB.Click += new System.EventHandler(this.simpleButton_NXB_Click);
             // 
             // textEdit_NXB
             // 
-            this.textEdit_NXB.Location = new System.Drawing.Point(120, 43);
+            this.textEdit_NXB.Location = new System.Drawing.Point(151, 43);
             this.textEdit_NXB.Name = "textEdit_NXB";
-            this.textEdit_NXB.Size = new System.Drawing.Size(298, 20);
+            this.textEdit_NXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_NXB.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_NXB.Size = new System.Drawing.Size(281, 24);
             this.textEdit_NXB.TabIndex = 1;
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Location = new System.Drawing.Point(19, 46);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(92, 13);
+            this.labelControl1.Size = new System.Drawing.Size(109, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên nhà xuất bản :";
             // 
@@ -115,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 243);
+            this.ClientSize = new System.Drawing.Size(827, 289);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormNXB";

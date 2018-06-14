@@ -97,11 +97,23 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void radioGroup_TacGia_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (radioGroup_TacGia.EditValue.Equals("Add"))
+            {
                 textEdit_TacGia.ReadOnly = false;
+                simpleButton_TacGia.Text = "Thêm tác giả";
+                simpleButton_TacGia.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            }
             else if (radioGroup_TacGia.EditValue.Equals("Delete"))
+            {
                 textEdit_TacGia.ReadOnly = true;
+                simpleButton_TacGia.Text = "Xóa tác giả";
+                simpleButton_TacGia.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
+            }
             else if (radioGroup_TacGia.EditValue.Equals("Update"))
+            {
                 textEdit_TacGia.ReadOnly = false;
+                simpleButton_TacGia.Text = "Sửa tên tác giả";
+                simpleButton_TacGia.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
+            }
         }
     }
 }

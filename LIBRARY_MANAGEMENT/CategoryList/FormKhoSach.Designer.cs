@@ -50,15 +50,17 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(249, 240);
+            this.panelControl1.Size = new System.Drawing.Size(249, 258);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_KhoSach
             // 
+            this.listBoxControl_KhoSach.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_KhoSach.Appearance.Options.UseFont = true;
             this.listBoxControl_KhoSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_KhoSach.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_KhoSach.Name = "listBoxControl_KhoSach";
-            this.listBoxControl_KhoSach.Size = new System.Drawing.Size(245, 236);
+            this.listBoxControl_KhoSach.Size = new System.Drawing.Size(245, 254);
             this.listBoxControl_KhoSach.TabIndex = 1;
             this.listBoxControl_KhoSach.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_KhoSach_SelectedIndexChanged);
             // 
@@ -71,44 +73,53 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(249, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(442, 240);
+            this.panelControl2.Size = new System.Drawing.Size(483, 258);
             this.panelControl2.TabIndex = 1;
             // 
             // radioGroup_KhoSach
             // 
             this.radioGroup_KhoSach.EditValue = "Add";
-            this.radioGroup_KhoSach.Location = new System.Drawing.Point(253, 118);
+            this.radioGroup_KhoSach.Location = new System.Drawing.Point(259, 117);
             this.radioGroup_KhoSach.Name = "radioGroup_KhoSach";
+            this.radioGroup_KhoSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroup_KhoSach.Properties.Appearance.Options.UseFont = true;
+            this.radioGroup_KhoSach.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.radioGroup_KhoSach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_KhoSach.Size = new System.Drawing.Size(137, 79);
-            this.radioGroup_KhoSach.TabIndex = 3;
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm kho sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa tên kho sách"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa kho sách")});
+            this.radioGroup_KhoSach.Size = new System.Drawing.Size(159, 102);
+            this.radioGroup_KhoSach.TabIndex = 2;
             this.radioGroup_KhoSach.SelectedIndexChanged += new System.EventHandler(this.radioGroup_KhoSach_SelectedIndexChanged);
             // 
             // simpleButton_KhoSach
             // 
-            this.simpleButton_KhoSach.Location = new System.Drawing.Point(89, 147);
+            this.simpleButton_KhoSach.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_KhoSach.Appearance.Options.UseFont = true;
+            this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_KhoSach.Location = new System.Drawing.Point(59, 163);
             this.simpleButton_KhoSach.Name = "simpleButton_KhoSach";
-            this.simpleButton_KhoSach.Size = new System.Drawing.Size(127, 50);
-            this.simpleButton_KhoSach.TabIndex = 2;
-            this.simpleButton_KhoSach.Text = "Cập nhật";
+            this.simpleButton_KhoSach.Size = new System.Drawing.Size(152, 56);
+            this.simpleButton_KhoSach.TabIndex = 5;
+            this.simpleButton_KhoSach.Text = "Thêm kho sách";
             this.simpleButton_KhoSach.Click += new System.EventHandler(this.simpleButton_KhoSach_Click);
             // 
             // textEdit_KhoSach
             // 
-            this.textEdit_KhoSach.Location = new System.Drawing.Point(89, 50);
+            this.textEdit_KhoSach.Location = new System.Drawing.Point(136, 50);
             this.textEdit_KhoSach.Name = "textEdit_KhoSach";
-            this.textEdit_KhoSach.Size = new System.Drawing.Size(301, 20);
+            this.textEdit_KhoSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_KhoSach.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_KhoSach.Size = new System.Drawing.Size(282, 24);
             this.textEdit_KhoSach.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 53);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên kho sách :";
             // 
@@ -116,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 240);
+            this.ClientSize = new System.Drawing.Size(732, 258);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormKhoSach";

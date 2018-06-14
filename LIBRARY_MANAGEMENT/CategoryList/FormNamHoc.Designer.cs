@@ -50,15 +50,17 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(244, 272);
+            this.panelControl1.Size = new System.Drawing.Size(288, 296);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_NamHoc
             // 
+            this.listBoxControl_NamHoc.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_NamHoc.Appearance.Options.UseFont = true;
             this.listBoxControl_NamHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_NamHoc.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_NamHoc.Name = "listBoxControl_NamHoc";
-            this.listBoxControl_NamHoc.Size = new System.Drawing.Size(240, 268);
+            this.listBoxControl_NamHoc.Size = new System.Drawing.Size(284, 292);
             this.listBoxControl_NamHoc.TabIndex = 0;
             this.listBoxControl_NamHoc.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_NamHoc_SelectedIndexChanged);
             // 
@@ -69,45 +71,53 @@
             this.panelControl2.Controls.Add(this.textEdit_NamHoc);
             this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(244, 0);
+            this.panelControl2.Location = new System.Drawing.Point(288, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(397, 272);
+            this.panelControl2.Size = new System.Drawing.Size(447, 296);
             this.panelControl2.TabIndex = 1;
             // 
             // simpleButton_NamHoc
             // 
-            this.simpleButton_NamHoc.Location = new System.Drawing.Point(75, 167);
+            this.simpleButton_NamHoc.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton_NamHoc.Appearance.Options.UseFont = true;
+            this.simpleButton_NamHoc.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
+            this.simpleButton_NamHoc.Location = new System.Drawing.Point(46, 187);
             this.simpleButton_NamHoc.Name = "simpleButton_NamHoc";
-            this.simpleButton_NamHoc.Size = new System.Drawing.Size(114, 47);
+            this.simpleButton_NamHoc.Size = new System.Drawing.Size(140, 56);
             this.simpleButton_NamHoc.TabIndex = 3;
-            this.simpleButton_NamHoc.Text = "Cập nhật";
+            this.simpleButton_NamHoc.Text = "Thêm năm học";
             this.simpleButton_NamHoc.Click += new System.EventHandler(this.simpleButton_NamHoc_Click);
             // 
             // radioGroup_NamHoc
             // 
             this.radioGroup_NamHoc.EditValue = "Add";
-            this.radioGroup_NamHoc.Location = new System.Drawing.Point(207, 131);
+            this.radioGroup_NamHoc.Location = new System.Drawing.Point(220, 141);
             this.radioGroup_NamHoc.Name = "radioGroup_NamHoc";
+            this.radioGroup_NamHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioGroup_NamHoc.Properties.Appearance.Options.UseFont = true;
             this.radioGroup_NamHoc.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa")});
-            this.radioGroup_NamHoc.Size = new System.Drawing.Size(132, 83);
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm năm học"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa tên năm học"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa năm học")});
+            this.radioGroup_NamHoc.Size = new System.Drawing.Size(158, 102);
             this.radioGroup_NamHoc.TabIndex = 2;
             this.radioGroup_NamHoc.SelectedIndexChanged += new System.EventHandler(this.radioGroup_NamHoc_SelectedIndexChanged);
             // 
             // textEdit_NamHoc
             // 
-            this.textEdit_NamHoc.Location = new System.Drawing.Point(85, 54);
+            this.textEdit_NamHoc.Location = new System.Drawing.Point(102, 54);
             this.textEdit_NamHoc.Name = "textEdit_NamHoc";
-            this.textEdit_NamHoc.Size = new System.Drawing.Size(254, 20);
+            this.textEdit_NamHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_NamHoc.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_NamHoc.Size = new System.Drawing.Size(276, 22);
             this.textEdit_NamHoc.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(22, 57);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(21, 57);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 13);
+            this.labelControl1.Size = new System.Drawing.Size(59, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Năm học :";
             // 
@@ -115,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 272);
+            this.ClientSize = new System.Drawing.Size(735, 296);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormNamHoc";

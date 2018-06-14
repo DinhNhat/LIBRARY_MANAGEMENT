@@ -110,16 +110,22 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_Lop.EditValue.Equals("Add"))
             {
+                simpleButton_Lop.Text = "Thêm lớp";
+                simpleButton_Lop.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
                 textEdit_TenLop.ReadOnly = false;
                 lookUpEdit_TenNamHoc.ReadOnly = false;
             }
             else if (radioGroup_Lop.EditValue.Equals("Delete"))
             {
+                simpleButton_Lop.Text = "Xóa lớp";
+                simpleButton_Lop.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
                 textEdit_TenLop.ReadOnly = true;
                 lookUpEdit_TenNamHoc.ReadOnly = true;
             }
             else if (radioGroup_Lop.EditValue.Equals("Update"))
             {
+                simpleButton_Lop.Text = "Sửa tên lớp";
+                simpleButton_Lop.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
                 textEdit_TenLop.ReadOnly = false;
                 lookUpEdit_TenNamHoc.ReadOnly = false;
             }
