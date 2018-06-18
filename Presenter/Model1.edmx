@@ -145,11 +145,27 @@
           <Property Name="tenViTriLuuTru" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'ThuVienDBDH.dbo.MuonTraSach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MuonTraSach">
+          <Key>
+            <PropertyRef Name="maTinhTrangSach" />
+            <PropertyRef Name="ngayMuon" />
+          </Key>
+          <Property Name="maSach" Type="varchar" MaxLength="10" />
+          <Property Name="maTinhTrangSach" Type="int" Nullable="false" />
+          <Property Name="maTrangThai" Type="int" />
+          <Property Name="ngayMuon" Type="datetime" Nullable="false" />
+          <Property Name="ngayDuKienTra" Type="datetime" />
+          <Property Name="ngayTra" Type="datetime" />
+          <Property Name="tienPhat" Type="int" />
+          <Property Name="tenTrangThai" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenTinhTrangSach" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TraCuu">
           <Key>
             <PropertyRef Name="maSach" />
-            <PropertyRef Name="tenKhoSach" />
           </Key>
           <Property Name="maSach" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="tenSach" Type="nvarchar" MaxLength="50" />
@@ -158,10 +174,40 @@ warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu' does not have a primary ke
           <Property Name="thoiHanMuon" Type="int" />
           <Property Name="giaTien" Type="int" />
           <Property Name="soLuong" Type="int" />
+          <Property Name="maSachMuonTra" Type="varchar" MaxLength="10" />
+          <Property Name="tenTrangThai" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenTinhTrangSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngayMuon" Type="datetime" />
+          <Property Name="ngayDuKienTra" Type="datetime" />
+          <Property Name="ngayTra" Type="datetime" />
+          <Property Name="tienPhat" Type="int" />
           <Property Name="tenLoaiSach" Type="nvarchar" MaxLength="50" />
           <Property Name="tenTacGia" Type="nvarchar" MaxLength="50" />
           <Property Name="tenNXB" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenKhoSach" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="TraCuu1">
+          <Key>
+            <PropertyRef Name="maSach" />
+            <PropertyRef Name="tenKhoSach" />
+          </Key>
+          <Property Name="maSach" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="namXB" Type="int" />
+          <Property Name="soTrang" Type="int" />
+          <Property Name="soLuong" Type="int" />
+          <Property Name="thoiHanMuon" Type="int" />
+          <Property Name="giaTien" Type="int" />
+          <Property Name="tenLoaiSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="tenTacGia" Type="nvarchar" MaxLength="50" />
+          <Property Name="maTacGia" Type="int" />
+          <Property Name="maLoaiSach" Type="varchar" MaxLength="10" />
+          <Property Name="maNXB" Type="int" />
+          <Property Name="maKhoSach" Type="int" />
           <Property Name="tenKhoSach" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tenNXB" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
@@ -347,6 +393,19 @@ warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu' does not have a primary ke
           <EntitySet Name="TinhTrangSachMuonTra" EntityType="Self.TinhTrangSachMuonTra" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrangThai" EntityType="Self.TrangThai" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ViTriLuuTru" EntityType="Self.ViTriLuuTru" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MuonTraSach" EntityType="Self.MuonTraSach" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[MuonTraSach].[maSach] AS [maSach], 
+[MuonTraSach].[maTinhTrangSach] AS [maTinhTrangSach], 
+[MuonTraSach].[maTrangThai] AS [maTrangThai], 
+[MuonTraSach].[ngayMuon] AS [ngayMuon], 
+[MuonTraSach].[ngayDuKienTra] AS [ngayDuKienTra], 
+[MuonTraSach].[ngayTra] AS [ngayTra], 
+[MuonTraSach].[tienPhat] AS [tienPhat], 
+[MuonTraSach].[tenTrangThai] AS [tenTrangThai], 
+[MuonTraSach].[tenTinhTrangSach] AS [tenTinhTrangSach]
+FROM [dbo].[MuonTraSach] AS [MuonTraSach]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="TraCuu" EntityType="Self.TraCuu" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
 [TraCuu].[maSach] AS [maSach], 
@@ -356,11 +415,37 @@ warning 6002: The table/view 'ThuVienDBDH.dbo.TraCuu' does not have a primary ke
 [TraCuu].[thoiHanMuon] AS [thoiHanMuon], 
 [TraCuu].[giaTien] AS [giaTien], 
 [TraCuu].[soLuong] AS [soLuong], 
+[TraCuu].[maSachMuonTra] AS [maSachMuonTra], 
+[TraCuu].[tenTrangThai] AS [tenTrangThai], 
+[TraCuu].[tenTinhTrangSach] AS [tenTinhTrangSach], 
+[TraCuu].[ngayMuon] AS [ngayMuon], 
+[TraCuu].[ngayDuKienTra] AS [ngayDuKienTra], 
+[TraCuu].[ngayTra] AS [ngayTra], 
+[TraCuu].[tienPhat] AS [tienPhat], 
 [TraCuu].[tenLoaiSach] AS [tenLoaiSach], 
 [TraCuu].[tenTacGia] AS [tenTacGia], 
 [TraCuu].[tenNXB] AS [tenNXB], 
 [TraCuu].[tenKhoSach] AS [tenKhoSach]
 FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TraCuu1" EntityType="Self.TraCuu1" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TraCuu1].[maSach] AS [maSach], 
+[TraCuu1].[tenSach] AS [tenSach], 
+[TraCuu1].[namXB] AS [namXB], 
+[TraCuu1].[soTrang] AS [soTrang], 
+[TraCuu1].[soLuong] AS [soLuong], 
+[TraCuu1].[thoiHanMuon] AS [thoiHanMuon], 
+[TraCuu1].[giaTien] AS [giaTien], 
+[TraCuu1].[tenLoaiSach] AS [tenLoaiSach], 
+[TraCuu1].[tenTacGia] AS [tenTacGia], 
+[TraCuu1].[maTacGia] AS [maTacGia], 
+[TraCuu1].[maLoaiSach] AS [maLoaiSach], 
+[TraCuu1].[maNXB] AS [maNXB], 
+[TraCuu1].[maKhoSach] AS [maKhoSach], 
+[TraCuu1].[tenKhoSach] AS [tenKhoSach], 
+[TraCuu1].[tenNXB] AS [tenNXB]
+FROM [dbo].[TraCuu1] AS [TraCuu1]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDung" />
@@ -591,10 +676,24 @@ FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
           <Property Name="tenViTriLuuTru" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="LoaiSaches" Relationship="Self.FK_LOAISACH_RELATIONS_VITRILUU" FromRole="ViTriLuuTru" ToRole="LoaiSach" />
         </EntityType>
+        <EntityType Name="MuonTraSach">
+          <Key>
+            <PropertyRef Name="maTinhTrangSach" />
+            <PropertyRef Name="ngayMuon" />
+          </Key>
+          <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="maTinhTrangSach" Type="Int32" Nullable="false" />
+          <Property Name="maTrangThai" Type="Int32" />
+          <Property Name="ngayMuon" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ngayDuKienTra" Type="DateTime" Precision="3" />
+          <Property Name="ngayTra" Type="DateTime" Precision="3" />
+          <Property Name="tienPhat" Type="Int32" />
+          <Property Name="tenTrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenTinhTrangSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="TraCuu">
           <Key>
             <PropertyRef Name="maSach" />
-            <PropertyRef Name="tenKhoSach" />
           </Key>
           <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="tenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -603,10 +702,38 @@ FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
           <Property Name="thoiHanMuon" Type="Int32" />
           <Property Name="giaTien" Type="Int32" />
           <Property Name="soLuong" Type="Int32" />
+          <Property Name="maSachMuonTra" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tenTrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenTinhTrangSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngayMuon" Type="DateTime" Precision="3" />
+          <Property Name="ngayDuKienTra" Type="DateTime" Precision="3" />
+          <Property Name="ngayTra" Type="DateTime" Precision="3" />
+          <Property Name="tienPhat" Type="Int32" />
           <Property Name="tenLoaiSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="tenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="tenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenKhoSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TraCuu1">
+          <Key>
+            <PropertyRef Name="maSach" />
+            <PropertyRef Name="tenKhoSach" />
+          </Key>
+          <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="namXB" Type="Int32" />
+          <Property Name="soTrang" Type="Int32" />
+          <Property Name="soLuong" Type="Int32" />
+          <Property Name="thoiHanMuon" Type="Int32" />
+          <Property Name="giaTien" Type="Int32" />
+          <Property Name="tenLoaiSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="maTacGia" Type="Int32" />
+          <Property Name="maLoaiSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="maNXB" Type="Int32" />
+          <Property Name="maKhoSach" Type="Int32" />
           <Property Name="tenKhoSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
@@ -792,7 +919,9 @@ FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
           <EntitySet Name="TinhTrangSachMuonTras" EntityType="Self.TinhTrangSachMuonTra" />
           <EntitySet Name="TrangThais" EntityType="Self.TrangThai" />
           <EntitySet Name="ViTriLuuTrus" EntityType="Self.ViTriLuuTru" />
+          <EntitySet Name="MuonTraSaches" EntityType="Self.MuonTraSach" />
           <EntitySet Name="TraCuus" EntityType="Self.TraCuu" />
+          <EntitySet Name="TraCuu1" EntityType="Self.TraCuu1" />
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDungs" />
             <End Role="DangNhap" EntitySet="DangNhaps" />
@@ -1009,6 +1138,21 @@ FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="MuonTraSaches">
+            <EntityTypeMapping TypeName="ThuVienDBDHModel.MuonTraSach">
+              <MappingFragment StoreEntitySet="MuonTraSach">
+                <ScalarProperty Name="maSach" ColumnName="maSach" />
+                <ScalarProperty Name="maTinhTrangSach" ColumnName="maTinhTrangSach" />
+                <ScalarProperty Name="maTrangThai" ColumnName="maTrangThai" />
+                <ScalarProperty Name="ngayMuon" ColumnName="ngayMuon" />
+                <ScalarProperty Name="ngayDuKienTra" ColumnName="ngayDuKienTra" />
+                <ScalarProperty Name="ngayTra" ColumnName="ngayTra" />
+                <ScalarProperty Name="tienPhat" ColumnName="tienPhat" />
+                <ScalarProperty Name="tenTrangThai" ColumnName="tenTrangThai" />
+                <ScalarProperty Name="tenTinhTrangSach" ColumnName="tenTinhTrangSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TraCuus">
             <EntityTypeMapping TypeName="ThuVienDBDHModel.TraCuu">
               <MappingFragment StoreEntitySet="TraCuu">
@@ -1019,10 +1163,38 @@ FROM [dbo].[TraCuu] AS [TraCuu]</DefiningQuery>
                 <ScalarProperty Name="thoiHanMuon" ColumnName="thoiHanMuon" />
                 <ScalarProperty Name="giaTien" ColumnName="giaTien" />
                 <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+                <ScalarProperty Name="maSachMuonTra" ColumnName="maSachMuonTra" />
+                <ScalarProperty Name="tenTrangThai" ColumnName="tenTrangThai" />
+                <ScalarProperty Name="tenTinhTrangSach" ColumnName="tenTinhTrangSach" />
+                <ScalarProperty Name="ngayMuon" ColumnName="ngayMuon" />
+                <ScalarProperty Name="ngayDuKienTra" ColumnName="ngayDuKienTra" />
+                <ScalarProperty Name="ngayTra" ColumnName="ngayTra" />
+                <ScalarProperty Name="tienPhat" ColumnName="tienPhat" />
                 <ScalarProperty Name="tenLoaiSach" ColumnName="tenLoaiSach" />
                 <ScalarProperty Name="tenTacGia" ColumnName="tenTacGia" />
                 <ScalarProperty Name="tenNXB" ColumnName="tenNXB" />
                 <ScalarProperty Name="tenKhoSach" ColumnName="tenKhoSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraCuu1">
+            <EntityTypeMapping TypeName="ThuVienDBDHModel.TraCuu1">
+              <MappingFragment StoreEntitySet="TraCuu1">
+                <ScalarProperty Name="maSach" ColumnName="maSach" />
+                <ScalarProperty Name="tenSach" ColumnName="tenSach" />
+                <ScalarProperty Name="namXB" ColumnName="namXB" />
+                <ScalarProperty Name="soTrang" ColumnName="soTrang" />
+                <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+                <ScalarProperty Name="thoiHanMuon" ColumnName="thoiHanMuon" />
+                <ScalarProperty Name="giaTien" ColumnName="giaTien" />
+                <ScalarProperty Name="tenLoaiSach" ColumnName="tenLoaiSach" />
+                <ScalarProperty Name="tenTacGia" ColumnName="tenTacGia" />
+                <ScalarProperty Name="maTacGia" ColumnName="maTacGia" />
+                <ScalarProperty Name="maLoaiSach" ColumnName="maLoaiSach" />
+                <ScalarProperty Name="maNXB" ColumnName="maNXB" />
+                <ScalarProperty Name="maKhoSach" ColumnName="maKhoSach" />
+                <ScalarProperty Name="tenKhoSach" ColumnName="tenKhoSach" />
+                <ScalarProperty Name="tenNXB" ColumnName="tenNXB" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -81,6 +81,9 @@
     <Compile Include="MuonSach.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="MuonTraSach.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="NamHoc.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -123,6 +126,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TraCuu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuu1.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TrangThai.cs">

@@ -128,6 +128,14 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 ms.maTrangThai = (Int32)lookUpEdit_TrangThai.EditValue;
             if (dateEdit_NgayMuon.EditValue != null)
                 ms.ngayMuon = (DateTime)dateEdit_NgayMuon.EditValue;
+            if (lookUpEdit_Sach.EditValue != null)
+            {
+                object thoihanmuon = preMuonTraSach.GetThoiHanMuonby_MaSach(lookUpEdit_Sach.EditValue.ToString());
+                if (thoihanmuon != null)
+                    ms.ngayDuKienTra = ms.ngayMuon.AddDays((Int32)thoihanmuon);
+                else
+                    ms.ngayDuKienTra = null;
+            }
             if (dateEdit_NgayTra.EditValue != null)
                 ms.ngayTra = (DateTime)dateEdit_NgayTra.EditValue;
             if (textEdit_TienPhat.Text != null)

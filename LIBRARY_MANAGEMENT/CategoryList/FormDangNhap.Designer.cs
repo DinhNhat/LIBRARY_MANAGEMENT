@@ -64,11 +64,11 @@
             // 
             // labelControl_Error
             // 
-            this.labelControl_Error.Appearance.Font = new System.Drawing.Font("Nirmala UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_Error.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl_Error.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl_Error.Location = new System.Drawing.Point(183, 194);
             this.labelControl_Error.Name = "labelControl_Error";
-            this.labelControl_Error.Size = new System.Drawing.Size(0, 20);
+            this.labelControl_Error.Size = new System.Drawing.Size(46, 19);
             this.labelControl_Error.TabIndex = 2;
             // 
             // textEdit_TenUser

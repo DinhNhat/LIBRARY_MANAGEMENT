@@ -215,7 +215,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(868, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(421, 231);
+            this.panelControl2.Size = new System.Drawing.Size(461, 231);
             this.panelControl2.TabIndex = 1;
             // 
             // groupControl_DanhMucSach
@@ -231,13 +231,13 @@
             this.groupControl_DanhMucSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_DanhMucSach.Location = new System.Drawing.Point(2, 2);
             this.groupControl_DanhMucSach.Name = "groupControl_DanhMucSach";
-            this.groupControl_DanhMucSach.Size = new System.Drawing.Size(417, 227);
+            this.groupControl_DanhMucSach.Size = new System.Drawing.Size(457, 227);
             this.groupControl_DanhMucSach.TabIndex = 0;
             this.groupControl_DanhMucSach.Text = "CÁC DANH MỤC SÁCH";
             // 
             // lookUpEdit_TenKhoSach
             // 
-            this.lookUpEdit_TenKhoSach.Location = new System.Drawing.Point(160, 129);
+            this.lookUpEdit_TenKhoSach.Location = new System.Drawing.Point(145, 129);
             this.lookUpEdit_TenKhoSach.Name = "lookUpEdit_TenKhoSach";
             this.lookUpEdit_TenKhoSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit_TenKhoSach.Properties.Appearance.Options.UseFont = true;
@@ -252,7 +252,7 @@
             // 
             // lookUpEdit_TenNXB
             // 
-            this.lookUpEdit_TenNXB.Location = new System.Drawing.Point(160, 175);
+            this.lookUpEdit_TenNXB.Location = new System.Drawing.Point(145, 175);
             this.lookUpEdit_TenNXB.Name = "lookUpEdit_TenNXB";
             this.lookUpEdit_TenNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit_TenNXB.Properties.Appearance.Options.UseFont = true;
@@ -267,7 +267,7 @@
             // 
             // lookUpEdit_TenLoaiSach
             // 
-            this.lookUpEdit_TenLoaiSach.Location = new System.Drawing.Point(160, 82);
+            this.lookUpEdit_TenLoaiSach.Location = new System.Drawing.Point(145, 82);
             this.lookUpEdit_TenLoaiSach.Name = "lookUpEdit_TenLoaiSach";
             this.lookUpEdit_TenLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit_TenLoaiSach.Properties.Appearance.Options.UseFont = true;
@@ -282,7 +282,7 @@
             // 
             // lookUpEdit_TenTacGia
             // 
-            this.lookUpEdit_TenTacGia.Location = new System.Drawing.Point(160, 40);
+            this.lookUpEdit_TenTacGia.Location = new System.Drawing.Point(145, 40);
             this.lookUpEdit_TenTacGia.Name = "lookUpEdit_TenTacGia";
             this.lookUpEdit_TenTacGia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lookUpEdit_TenTacGia.Properties.Appearance.Options.UseFont = true;
@@ -337,7 +337,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(868, 231);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(421, 357);
+            this.panelControl3.Size = new System.Drawing.Size(461, 357);
             this.panelControl3.TabIndex = 2;
             // 
             // groupControl_ThongTinSach
@@ -363,14 +363,14 @@
             this.groupControl_ThongTinSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_ThongTinSach.Location = new System.Drawing.Point(2, 2);
             this.groupControl_ThongTinSach.Name = "groupControl_ThongTinSach";
-            this.groupControl_ThongTinSach.Size = new System.Drawing.Size(417, 353);
+            this.groupControl_ThongTinSach.Size = new System.Drawing.Size(457, 353);
             this.groupControl_ThongTinSach.TabIndex = 0;
             this.groupControl_ThongTinSach.Text = "THÔNG TIN CHI TIẾT SÁCH";
             // 
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(275, 213);
+            this.labelControl15.Location = new System.Drawing.Point(262, 213);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(27, 16);
             this.labelControl15.TabIndex = 21;
@@ -379,7 +379,7 @@
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(275, 171);
+            this.labelControl14.Location = new System.Drawing.Point(260, 171);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(30, 16);
             this.labelControl14.TabIndex = 20;
@@ -388,7 +388,7 @@
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(275, 310);
+            this.labelControl13.Location = new System.Drawing.Point(260, 310);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(24, 16);
             this.labelControl13.TabIndex = 19;
@@ -405,7 +405,7 @@
             // 
             // textEdit_NamXB
             // 
-            this.textEdit_NamXB.Location = new System.Drawing.Point(160, 124);
+            this.textEdit_NamXB.Location = new System.Drawing.Point(145, 124);
             this.textEdit_NamXB.Name = "textEdit_NamXB";
             this.textEdit_NamXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_NamXB.Properties.Appearance.Options.UseFont = true;
@@ -432,7 +432,7 @@
             // 
             // textEdit_GiaTien
             // 
-            this.textEdit_GiaTien.Location = new System.Drawing.Point(158, 307);
+            this.textEdit_GiaTien.Location = new System.Drawing.Point(145, 307);
             this.textEdit_GiaTien.Name = "textEdit_GiaTien";
             this.textEdit_GiaTien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_GiaTien.Properties.Appearance.Options.UseFont = true;
@@ -444,7 +444,7 @@
             // 
             // textEdit_MaSach
             // 
-            this.textEdit_MaSach.Location = new System.Drawing.Point(160, 33);
+            this.textEdit_MaSach.Location = new System.Drawing.Point(145, 33);
             this.textEdit_MaSach.Name = "textEdit_MaSach";
             this.textEdit_MaSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_MaSach.Properties.Appearance.Options.UseFont = true;
@@ -453,7 +453,7 @@
             // 
             // textEdit_SoLuong
             // 
-            this.textEdit_SoLuong.Location = new System.Drawing.Point(158, 210);
+            this.textEdit_SoLuong.Location = new System.Drawing.Point(145, 210);
             this.textEdit_SoLuong.Name = "textEdit_SoLuong";
             this.textEdit_SoLuong.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_SoLuong.Properties.Appearance.Options.UseFont = true;
@@ -465,7 +465,7 @@
             // 
             // textEdit_SoTrang
             // 
-            this.textEdit_SoTrang.Location = new System.Drawing.Point(160, 168);
+            this.textEdit_SoTrang.Location = new System.Drawing.Point(145, 168);
             this.textEdit_SoTrang.Name = "textEdit_SoTrang";
             this.textEdit_SoTrang.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_SoTrang.Properties.Appearance.Options.UseFont = true;
@@ -478,7 +478,7 @@
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(275, 263);
+            this.labelControl12.Location = new System.Drawing.Point(262, 263);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(27, 16);
             this.labelControl12.TabIndex = 9;
@@ -486,7 +486,7 @@
             // 
             // textEdit_ThoiHanMuon
             // 
-            this.textEdit_ThoiHanMuon.Location = new System.Drawing.Point(158, 260);
+            this.textEdit_ThoiHanMuon.Location = new System.Drawing.Point(145, 260);
             this.textEdit_ThoiHanMuon.Name = "textEdit_ThoiHanMuon";
             this.textEdit_ThoiHanMuon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_ThoiHanMuon.Properties.Appearance.Options.UseFont = true;
@@ -507,11 +507,11 @@
             // 
             // textEdit_TenSach
             // 
-            this.textEdit_TenSach.Location = new System.Drawing.Point(160, 76);
+            this.textEdit_TenSach.Location = new System.Drawing.Point(145, 76);
             this.textEdit_TenSach.Name = "textEdit_TenSach";
             this.textEdit_TenSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_TenSach.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_TenSach.Size = new System.Drawing.Size(238, 22);
+            this.textEdit_TenSach.Size = new System.Drawing.Size(272, 22);
             this.textEdit_TenSach.TabIndex = 11;
             // 
             // labelControl8
@@ -571,7 +571,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(868, 588);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(421, 161);
+            this.panelControl4.Size = new System.Drawing.Size(461, 161);
             this.panelControl4.TabIndex = 5;
             // 
             // groupControl_LuaChonThucHien
@@ -581,7 +581,7 @@
             this.groupControl_LuaChonThucHien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_LuaChonThucHien.Location = new System.Drawing.Point(2, 2);
             this.groupControl_LuaChonThucHien.Name = "groupControl_LuaChonThucHien";
-            this.groupControl_LuaChonThucHien.Size = new System.Drawing.Size(417, 157);
+            this.groupControl_LuaChonThucHien.Size = new System.Drawing.Size(457, 157);
             this.groupControl_LuaChonThucHien.TabIndex = 8;
             this.groupControl_LuaChonThucHien.Text = "LỰA CHỌN THỰC HIỆN";
             // 
@@ -590,7 +590,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1289, 749);
+            this.ClientSize = new System.Drawing.Size(1329, 749);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);

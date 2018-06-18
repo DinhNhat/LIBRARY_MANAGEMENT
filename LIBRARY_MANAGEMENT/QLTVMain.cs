@@ -136,6 +136,12 @@ namespace LIBRARY_MANAGEMENT
             dmk.ShowDialog();
         }
 
+        private void barStaticItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTraCuu tracuu = new FormTraCuu();
+            tracuu.Show();
+        }
+
         #endregion
 
         // Inherit DangNhapEntity
@@ -195,5 +201,6 @@ namespace LIBRARY_MANAGEMENT
             predangnhap.updateEntity();
             Application.Exit();
         }
+
     }
 }

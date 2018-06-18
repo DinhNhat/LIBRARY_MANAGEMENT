@@ -49,6 +49,7 @@
             this.barStaticItem_TinhTrangSach = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItemQuanLyMuonTraSach = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_QuanLyNguoiSuDung = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem_CaiDatCaNhan = new DevExpress.XtraBars.BarSubItem();
@@ -110,9 +111,10 @@
             this.barStaticItemQuanLyMuonTraSach,
             this.barStaticItem_DoiMatKhau,
             this.barStaticItem_DangXuat,
-            this.barStaticItem17});
+            this.barStaticItem17,
+            this.barStaticItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 43;
+            this.barManager1.MaxItemId = 44;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
@@ -297,7 +299,18 @@
             this.barSubItem8.Caption = "Tra cứu thống kê";
             this.barSubItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem8.Glyph")));
             this.barSubItem8.Id = 30;
+            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1)});
             this.barSubItem8.Name = "barSubItem8";
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "Tra cứu";
+            this.barStaticItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.Glyph")));
+            this.barStaticItem1.Id = 43;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem1_ItemClick_1);
             // 
             // barSubItem9
             // 
@@ -357,28 +370,28 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1037, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(1073, 40);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 367);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1037, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 380);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1073, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 327);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 340);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1037, 40);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 327);
+            this.barDockControlRight.Location = new System.Drawing.Point(1073, 40);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 340);
             // 
             // barListItem1
             // 
@@ -438,7 +451,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 367);
+            this.ClientSize = new System.Drawing.Size(1073, 380);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -498,5 +511,6 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem_DoiMatKhau;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_DangXuat;
         private DevExpress.XtraBars.BarStaticItem barStaticItem17;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
     }
 }

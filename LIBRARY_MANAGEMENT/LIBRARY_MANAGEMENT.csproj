@@ -129,6 +129,12 @@
     <Compile Include="CategoryList\FormTinhTrangSachMuonTra.Designer.cs">
       <DependentUpon>FormTinhTrangSachMuonTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormTraCuu.Designer.cs">
+      <DependentUpon>FormTraCuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormTrangThai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormTinhTrangSachMuonTra.resx">
       <DependentUpon>FormTinhTrangSachMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormTraCuu.resx">
+      <DependentUpon>FormTraCuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormTrangThai.resx">
       <DependentUpon>FormTrangThai.cs</DependentUpon>
