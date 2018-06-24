@@ -12,22 +12,27 @@ namespace Presenter
     using System;
     using System.Collections.Generic;
     
-    public partial class TraCuu1
+    public partial class View_Sach
     {
         public string maSach { get; set; }
         public string tenSach { get; set; }
+        public Nullable<int> soLuong { get; set; }
+        public int soLuongDangMuon { get; set; }
+        public Nullable<int> soLuongCon { get; set; }
+        public Nullable<int> thoiHanMuon { get; set; }
+        public Nullable<System.DateTime> NgayTraMin { get; set; }
+        public Nullable<System.DateTime> NgayTraMax { get; set; }
         public Nullable<int> namXB { get; set; }
         public Nullable<int> soTrang { get; set; }
-        public Nullable<int> soLuong { get; set; }
-        public Nullable<int> thoiHanMuon { get; set; }
         public Nullable<int> giaTien { get; set; }
-        public string tenLoaiSach { get; set; }
-        public string tenTacGia { get; set; }
         public Nullable<int> maTacGia { get; set; }
         public string maLoaiSach { get; set; }
         public Nullable<int> maNXB { get; set; }
         public Nullable<int> maKhoSach { get; set; }
-        public string tenKhoSach { get; set; }
+        public string tenLoaiSach { get; set; }
+        public string tenViTriLuuTru { get; set; }
         public string tenNXB { get; set; }
+        public string tenTacGia { get; set; }
+        public string tenKhoSach { get; set; }
     }
 }

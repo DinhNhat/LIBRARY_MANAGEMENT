@@ -50,19 +50,17 @@
             this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThoiHanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayDuKienTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoaiSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNhaXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKhoSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTienPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuongDangMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuongCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThoiHanMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayTraMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgayTraMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SachTraCuu)).BeginInit();
@@ -83,7 +81,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1370, 499);
+            this.panelControl1.Size = new System.Drawing.Size(1354, 499);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_SachTraCuu
@@ -95,23 +93,21 @@
             this.colTenSach,
             this.colNamXB,
             this.colSoTrang,
-            this.colThoiHanMuon,
             this.colGiaTien,
-            this.colSoLuong,
-            this.colTrangThai,
-            this.colTinhTrang,
-            this.colNgayMuon,
-            this.colNgayDuKienTra,
-            this.colNgayTra,
             this.colLoaiSach,
             this.colTacGia,
             this.colNhaXB,
             this.colKhoSach,
-            this.colTienPhat});
+            this.colSoLuong,
+            this.colSoLuongDangMuon,
+            this.colSoLuongCon,
+            this.colThoiHanMuon,
+            this.colNgayTraMin,
+            this.colNgayTraMax});
             this.dataGridView_SachTraCuu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_SachTraCuu.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_SachTraCuu.Name = "dataGridView_SachTraCuu";
-            this.dataGridView_SachTraCuu.Size = new System.Drawing.Size(1366, 495);
+            this.dataGridView_SachTraCuu.Size = new System.Drawing.Size(1350, 495);
             this.dataGridView_SachTraCuu.TabIndex = 0;
             // 
             // panelControl2
@@ -122,7 +118,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 499);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(569, 250);
+            this.panelControl2.Size = new System.Drawing.Size(569, 234);
             this.panelControl2.TabIndex = 1;
             // 
             // simpleButton_TenSachTraCuu
@@ -172,7 +168,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(569, 499);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(801, 250);
+            this.panelControl3.Size = new System.Drawing.Size(785, 234);
             this.panelControl3.TabIndex = 2;
             // 
             // simpleButton_TraCuuKhoSach
@@ -330,65 +326,19 @@
             this.colSoTrang.Name = "colSoTrang";
             this.colSoTrang.Width = 73;
             // 
-            // colThoiHanMuon
-            // 
-            this.colThoiHanMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colThoiHanMuon.DataPropertyName = "thoiHanMuon";
-            this.colThoiHanMuon.HeaderText = "Thời hạn mượn";
-            this.colThoiHanMuon.Name = "colThoiHanMuon";
-            this.colThoiHanMuon.Width = 95;
-            // 
             // colGiaTien
             // 
             this.colGiaTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colGiaTien.DataPropertyName = "giaTien";
             this.colGiaTien.HeaderText = "Giá tiền";
             this.colGiaTien.Name = "colGiaTien";
-            this.colGiaTien.Width = 63;
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colSoLuong.DataPropertyName = "soLuong";
-            this.colSoLuong.HeaderText = "Số lượng";
-            this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.Width = 69;
-            // 
-            // colTrangThai
-            // 
-            this.colTrangThai.DataPropertyName = "tenTrangThai";
-            this.colTrangThai.HeaderText = "Trạng thái";
-            this.colTrangThai.Name = "colTrangThai";
-            // 
-            // colTinhTrang
-            // 
-            this.colTinhTrang.DataPropertyName = "tenTinhTrangSach";
-            this.colTinhTrang.HeaderText = "Tình trạng";
-            this.colTinhTrang.Name = "colTinhTrang";
-            // 
-            // colNgayMuon
-            // 
-            this.colNgayMuon.DataPropertyName = "ngayMuon";
-            this.colNgayMuon.HeaderText = "Ngày mượn";
-            this.colNgayMuon.Name = "colNgayMuon";
-            // 
-            // colNgayDuKienTra
-            // 
-            this.colNgayDuKienTra.DataPropertyName = "ngayDuKienTra";
-            this.colNgayDuKienTra.HeaderText = "Ngày dự kiến trả";
-            this.colNgayDuKienTra.Name = "colNgayDuKienTra";
-            // 
-            // colNgayTra
-            // 
-            this.colNgayTra.DataPropertyName = "ngayTra";
-            this.colNgayTra.HeaderText = "Ngày trả";
-            this.colNgayTra.Name = "colNgayTra";
+            this.colGiaTien.Width = 68;
             // 
             // colLoaiSach
             // 
             this.colLoaiSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colLoaiSach.DataPropertyName = "tenLoaiSach";
-            this.colLoaiSach.HeaderText = "Tên loại sách";
+            this.colLoaiSach.HeaderText = "Loại sách";
             this.colLoaiSach.Name = "colLoaiSach";
             this.colLoaiSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colLoaiSach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -397,7 +347,7 @@
             // 
             this.colTacGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTacGia.DataPropertyName = "tenTacGia";
-            this.colTacGia.HeaderText = "Tên tác giả";
+            this.colTacGia.HeaderText = "Tác giả";
             this.colTacGia.Name = "colTacGia";
             this.colTacGia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colTacGia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -406,7 +356,7 @@
             // 
             this.colNhaXB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colNhaXB.DataPropertyName = "tenNXB";
-            this.colNhaXB.HeaderText = "Tên nhà xuất bản";
+            this.colNhaXB.HeaderText = "Nhà xuất bản";
             this.colNhaXB.Name = "colNhaXB";
             this.colNhaXB.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colNhaXB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -415,21 +365,64 @@
             // 
             this.colKhoSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colKhoSach.DataPropertyName = "tenKhoSach";
-            this.colKhoSach.HeaderText = "Tên kho sách";
+            this.colKhoSach.HeaderText = "Kho sách";
             this.colKhoSach.Name = "colKhoSach";
             this.colKhoSach.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.colKhoSach.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // colTienPhat
+            // colSoLuong
             // 
-            this.colTienPhat.HeaderText = "Tiền phạt";
-            this.colTienPhat.Name = "colTienPhat";
+            this.colSoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoLuong.DataPropertyName = "soLuong";
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.Width = 74;
+            // 
+            // colSoLuongDangMuon
+            // 
+            this.colSoLuongDangMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoLuongDangMuon.DataPropertyName = "soLuongDangMuon";
+            this.colSoLuongDangMuon.HeaderText = "Số lượng đang mượn";
+            this.colSoLuongDangMuon.Name = "colSoLuongDangMuon";
+            this.colSoLuongDangMuon.Width = 96;
+            // 
+            // colSoLuongCon
+            // 
+            this.colSoLuongCon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colSoLuongCon.DataPropertyName = "soLuongCon";
+            this.colSoLuongCon.HeaderText = "Số lượng còn";
+            this.colSoLuongCon.Name = "colSoLuongCon";
+            this.colSoLuongCon.Width = 87;
+            // 
+            // colThoiHanMuon
+            // 
+            this.colThoiHanMuon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colThoiHanMuon.DataPropertyName = "thoiHanMuon";
+            this.colThoiHanMuon.HeaderText = "Thời hạn mượn";
+            this.colThoiHanMuon.Name = "colThoiHanMuon";
+            this.colThoiHanMuon.Width = 95;
+            // 
+            // colNgayTraMin
+            // 
+            this.colNgayTraMin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNgayTraMin.DataPropertyName = "NgayTraMin";
+            this.colNgayTraMin.HeaderText = "Ngày trả min";
+            this.colNgayTraMin.Name = "colNgayTraMin";
+            this.colNgayTraMin.Width = 71;
+            // 
+            // colNgayTraMax
+            // 
+            this.colNgayTraMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colNgayTraMax.DataPropertyName = "NgayTraMax";
+            this.colNgayTraMax.HeaderText = "Ngày trả max";
+            this.colNgayTraMax.Name = "colNgayTraMax";
+            this.colNgayTraMax.Width = 71;
             // 
             // FormTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -480,18 +473,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNamXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiHanMuon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaTien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayDuKienTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNhaXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn colKhoSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTienPhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuongDangMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuongCon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiHanMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTraMin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgayTraMax;
     }
 }

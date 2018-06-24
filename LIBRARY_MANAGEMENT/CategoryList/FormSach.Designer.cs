@@ -110,7 +110,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(868, 749);
+            this.panelControl1.Size = new System.Drawing.Size(868, 733);
             this.panelControl1.TabIndex = 0;
             // 
             // dataGridView_Sach
@@ -132,7 +132,7 @@
             this.dataGridView_Sach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_Sach.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_Sach.Name = "dataGridView_Sach";
-            this.dataGridView_Sach.Size = new System.Drawing.Size(864, 745);
+            this.dataGridView_Sach.Size = new System.Drawing.Size(864, 729);
             this.dataGridView_Sach.TabIndex = 0;
             this.dataGridView_Sach.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Sach_RowEnter);
             // 
@@ -544,7 +544,7 @@
             // radioGroup_Sach
             // 
             this.radioGroup_Sach.EditValue = "Add";
-            this.radioGroup_Sach.Location = new System.Drawing.Point(223, 35);
+            this.radioGroup_Sach.Location = new System.Drawing.Point(224, 33);
             this.radioGroup_Sach.Name = "radioGroup_Sach";
             this.radioGroup_Sach.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm Sách"),
@@ -557,7 +557,7 @@
             // simpleButton_Sach
             // 
             this.simpleButton_Sach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_Sach.Location = new System.Drawing.Point(33, 78);
+            this.simpleButton_Sach.Location = new System.Drawing.Point(49, 71);
             this.simpleButton_Sach.Name = "simpleButton_Sach";
             this.simpleButton_Sach.Size = new System.Drawing.Size(146, 60);
             this.simpleButton_Sach.TabIndex = 4;
@@ -571,7 +571,7 @@
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl4.Location = new System.Drawing.Point(868, 588);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(461, 161);
+            this.panelControl4.Size = new System.Drawing.Size(461, 145);
             this.panelControl4.TabIndex = 5;
             // 
             // groupControl_LuaChonThucHien
@@ -581,7 +581,7 @@
             this.groupControl_LuaChonThucHien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl_LuaChonThucHien.Location = new System.Drawing.Point(2, 2);
             this.groupControl_LuaChonThucHien.Name = "groupControl_LuaChonThucHien";
-            this.groupControl_LuaChonThucHien.Size = new System.Drawing.Size(457, 157);
+            this.groupControl_LuaChonThucHien.Size = new System.Drawing.Size(457, 141);
             this.groupControl_LuaChonThucHien.TabIndex = 8;
             this.groupControl_LuaChonThucHien.Text = "LỰA CHỌN THỰC HIỆN";
             // 
@@ -590,7 +590,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1329, 749);
+            this.ClientSize = new System.Drawing.Size(1329, 733);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);

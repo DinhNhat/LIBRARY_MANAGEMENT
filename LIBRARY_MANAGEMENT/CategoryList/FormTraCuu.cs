@@ -14,7 +14,7 @@ using Presenter;
 
 namespace LIBRARY_MANAGEMENT.CategoryList
 {
-    public partial class FormTraCuu : DevExpress.XtraEditors.XtraForm, IViewEntity<TraCuu>, IViewListEntity<LoaiSach>, IViewListEntity<TacGia>, IViewListEntity<NhaXuatBan>, IViewListEntity<KhoSach>
+    public partial class FormTraCuu : DevExpress.XtraEditors.XtraForm, IViewEntity<View_Sach>, IViewListEntity<LoaiSach>, IViewListEntity<TacGia>, IViewListEntity<NhaXuatBan>, IViewListEntity<KhoSach>
     {
         PreTraCuu pretracuu = new PreTraCuu();
         PreLoaiSach preloaisach = new PreLoaiSach();
@@ -42,30 +42,31 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         }
 
         #region CRUD Methods
-        void IViewEntity<TraCuu>.viewEntity(TraCuu entity)
+        void IViewEntity<View_Sach>.viewEntity(View_Sach entity)
         {
             throw new NotImplementedException();
         }
 
-        TraCuu IViewEntity<TraCuu>.AddNewEntity()
+        View_Sach IViewEntity<View_Sach>.AddNewEntity()
         {
             throw new NotImplementedException();
         }
 
-        TraCuu IViewEntity<TraCuu>.DeleteEntity()
+        View_Sach IViewEntity<View_Sach>.DeleteEntity()
         {
             throw new NotImplementedException();
         }
 
-        TraCuu IViewEntity<TraCuu>.UpdateEntity()
+        View_Sach IViewEntity<View_Sach>.UpdateEntity()
         {
             throw new NotImplementedException();
         }
 
-        void IViewListEntity<TraCuu>.viewListEntity(BindingSource entities)
+        void IViewListEntity<View_Sach>.viewListEntity(BindingSource entities)
         {
             dataGridView_SachTraCuu.DataSource = entities;
         }
+        #endregion
 
         void IViewListEntity<LoaiSach>.viewListEntity(BindingSource entities)
         {
@@ -86,7 +87,6 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             lookUpEdit_KhoSachTraCuu.Properties.DataSource = entities;
         }
-        #endregion
 
         #region Implement LookUpEdit ViewListEntity
         //void IViewListEntity<NhaXuatBan>.viewListEntity(BindingSource entities)
@@ -157,5 +157,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             pretracuu.FilterbyTenSach(tensach);
             pretracuu.ViewList();
         }
+
+        
     }
 }
