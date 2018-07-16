@@ -35,6 +35,7 @@
             this.simpleButton_TrangThai = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_TrangThai = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl_ErrorHeThong = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl_TrangThai)).BeginInit();
@@ -55,7 +56,9 @@
             // 
             // listBoxControl_TrangThai
             // 
+            this.listBoxControl_TrangThai.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.listBoxControl_TrangThai.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_TrangThai.Appearance.Options.UseBackColor = true;
             this.listBoxControl_TrangThai.Appearance.Options.UseFont = true;
             this.listBoxControl_TrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_TrangThai.Location = new System.Drawing.Point(2, 2);
@@ -66,6 +69,7 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.labelControl_ErrorHeThong);
             this.panelControl2.Controls.Add(this.radioGroup_TrangThai);
             this.panelControl2.Controls.Add(this.simpleButton_TrangThai);
             this.panelControl2.Controls.Add(this.textEdit_TrangThai);
@@ -79,7 +83,7 @@
             // radioGroup_TrangThai
             // 
             this.radioGroup_TrangThai.EditValue = "Add";
-            this.radioGroup_TrangThai.Location = new System.Drawing.Point(288, 134);
+            this.radioGroup_TrangThai.Location = new System.Drawing.Point(288, 118);
             this.radioGroup_TrangThai.Name = "radioGroup_TrangThai";
             this.radioGroup_TrangThai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup_TrangThai.Properties.Appearance.Options.UseFont = true;
@@ -96,7 +100,7 @@
             this.simpleButton_TrangThai.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_TrangThai.Appearance.Options.UseFont = true;
             this.simpleButton_TrangThai.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_TrangThai.Location = new System.Drawing.Point(77, 174);
+            this.simpleButton_TrangThai.Location = new System.Drawing.Point(70, 158);
             this.simpleButton_TrangThai.Name = "simpleButton_TrangThai";
             this.simpleButton_TrangThai.Size = new System.Drawing.Size(168, 59);
             this.simpleButton_TrangThai.TabIndex = 2;
@@ -121,6 +125,15 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Tên trạng thái :";
             // 
+            // labelControl_ErrorHeThong
+            // 
+            this.labelControl_ErrorHeThong.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_ErrorHeThong.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl_ErrorHeThong.Location = new System.Drawing.Point(140, 249);
+            this.labelControl_ErrorHeThong.Name = "labelControl_ErrorHeThong";
+            this.labelControl_ErrorHeThong.Size = new System.Drawing.Size(0, 16);
+            this.labelControl_ErrorHeThong.TabIndex = 4;
+            // 
             // FormTrangThai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,7 +143,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FormTrangThai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormTrangThai";
+            this.Text = "Trạng thái";
             this.Load += new System.EventHandler(this.FormTrangThai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -153,5 +166,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton_TrangThai;
         private DevExpress.XtraEditors.TextEdit textEdit_TrangThai;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl_ErrorHeThong;
     }
 }

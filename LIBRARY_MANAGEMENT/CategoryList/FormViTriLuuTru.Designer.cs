@@ -50,17 +50,19 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(323, 294);
+            this.panelControl1.Size = new System.Drawing.Size(294, 274);
             this.panelControl1.TabIndex = 0;
             // 
             // listBoxControl_VTLT
             // 
+            this.listBoxControl_VTLT.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.listBoxControl_VTLT.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_VTLT.Appearance.Options.UseBackColor = true;
             this.listBoxControl_VTLT.Appearance.Options.UseFont = true;
             this.listBoxControl_VTLT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_VTLT.Location = new System.Drawing.Point(2, 2);
             this.listBoxControl_VTLT.Name = "listBoxControl_VTLT";
-            this.listBoxControl_VTLT.Size = new System.Drawing.Size(319, 290);
+            this.listBoxControl_VTLT.Size = new System.Drawing.Size(290, 270);
             this.listBoxControl_VTLT.TabIndex = 0;
             this.listBoxControl_VTLT.SelectedIndexChanged += new System.EventHandler(this.listBoxControl_VTLT_SelectedIndexChanged);
             // 
@@ -71,9 +73,9 @@
             this.panelControl2.Controls.Add(this.textEdit_VTLT);
             this.panelControl2.Controls.Add(this.labelControl_VTLT);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(323, 0);
+            this.panelControl2.Location = new System.Drawing.Point(294, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(556, 294);
+            this.panelControl2.Size = new System.Drawing.Size(472, 274);
             this.panelControl2.TabIndex = 1;
             // 
             // simpleButton_VTLT
@@ -81,17 +83,17 @@
             this.simpleButton_VTLT.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_VTLT.Appearance.Options.UseFont = true;
             this.simpleButton_VTLT.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_VTLT.Location = new System.Drawing.Point(83, 165);
+            this.simpleButton_VTLT.Location = new System.Drawing.Point(36, 165);
             this.simpleButton_VTLT.Name = "simpleButton_VTLT";
             this.simpleButton_VTLT.Size = new System.Drawing.Size(165, 58);
-            this.simpleButton_VTLT.TabIndex = 3;
+            this.simpleButton_VTLT.TabIndex = 2;
             this.simpleButton_VTLT.Text = "Thêm vị trí lưu trữ";
             this.simpleButton_VTLT.Click += new System.EventHandler(this.simpleButton_VTLT_Click);
             // 
             // radioGroup_VTLT
             // 
             this.radioGroup_VTLT.EditValue = "Add";
-            this.radioGroup_VTLT.Location = new System.Drawing.Point(289, 122);
+            this.radioGroup_VTLT.Location = new System.Drawing.Point(236, 122);
             this.radioGroup_VTLT.Name = "radioGroup_VTLT";
             this.radioGroup_VTLT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup_VTLT.Properties.Appearance.Options.UseFont = true;
@@ -109,7 +111,7 @@
             this.textEdit_VTLT.Name = "textEdit_VTLT";
             this.textEdit_VTLT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_VTLT.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_VTLT.Size = new System.Drawing.Size(322, 22);
+            this.textEdit_VTLT.Size = new System.Drawing.Size(269, 22);
             this.textEdit_VTLT.TabIndex = 1;
             // 
             // labelControl_VTLT
@@ -125,12 +127,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 294);
+            this.ClientSize = new System.Drawing.Size(766, 274);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormViTriLuuTru";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormViTriLuuTru";
+            this.Text = "Vị trí lưu trữ";
             this.Load += new System.EventHandler(this.FormViTriLuuTru_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

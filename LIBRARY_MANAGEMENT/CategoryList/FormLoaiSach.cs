@@ -18,8 +18,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     {
         PreLoaiSach preLoaiSach = new PreLoaiSach();
         PreViTriLuuTru preVTLT = new PreViTriLuuTru();
+        PreSach preSach = new PreSach();
+
         string maLoaiSach;
         int rowIndex;
+        Boolean lblErrHeThongCheck = false;
 
         public FormLoaiSach()
         {
@@ -39,19 +42,34 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public LoaiSach AddNewEntity()
         {
-            LoaiSach ls = new LoaiSach();
-            ls.maLoaiSach = textEdit_MaLoaiSach.Text;
-            ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
-            if(lookUpEdit_TenVTLT.EditValue != null)
-                ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
-            return ls;
+            if (textEdit_MaLoaiSach.Text != null && textEdit_MaLoaiSach.Text.Length > 0)
+            {
+                LoaiSach ls = new LoaiSach();
+                ls.maLoaiSach = textEdit_MaLoaiSach.Text;
+                ls.tenLoaiSach = textEdit_TenLoaiSach.Text;
+                if (lookUpEdit_TenVTLT.EditValue != null)
+                    ls.maViTriLuuTru = (int?)lookUpEdit_TenVTLT.EditValue;
+                this.lblErrHeThongCheck = false;
+                return ls;
+            }
+            else
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            } 
         }
 
         public LoaiSach DeleteEntity()
         {
             LoaiSach ls = new LoaiSach();
             ls.maLoaiSach = maLoaiSach;
-            return ls;
+            if (preSach.getEntityByMaloaisach(ls.maLoaiSach) != null)
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            else
+                return ls;
         }
 
         public LoaiSach UpdateEntity()
@@ -89,39 +107,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             if (radioGroup_LoaiSach.EditValue.Equals("Add"))
             {
-                try
-                {
-                    preLoaiSach.addNewEntity();
-                    rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
-                }
-                catch
+                preLoaiSach.addNewEntity();
+                rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
+                if(this.lblErrHeThongCheck == true)
                 {
                     labelControl_ErrorheThong.ForeColor = Color.Red;
                     labelControl_ErrorheThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
                     labelControl_ErrorheThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorheThong.ForeColor = Color.Blue;
+                    labelControl_ErrorheThong.Text = "Thêm thành công.";
+                    labelControl_ErrorheThong.Update();
                 }
             }
-            //else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
-            //{
-            //    try
-            //    {
-            //        preLoaiSach.deleteEntity();
-            //    }
-            //    catch
-            //    {
-            //        labelControl_ErrorheThong.ForeColor = Color.Red;
-            //        labelControl_ErrorheThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
-            //        labelControl_ErrorheThong.Update();
-            //    }
-            //}
-            //if (radioGroup_LoaiSach.EditValue.Equals("Add"))
-            //{
-            //    preLoaiSach.addNewEntity();
-            //    rowIndex = dataGridView_LoaiSach.DataBindings.Count - 1;
-            //}
             else if (radioGroup_LoaiSach.EditValue.Equals("Delete"))
             {
                 preLoaiSach.deleteEntity();
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorheThong.ForeColor = Color.Red;
+                    labelControl_ErrorheThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+                    labelControl_ErrorheThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorheThong.ForeColor = Color.Blue;
+                    labelControl_ErrorheThong.Text = "Xóa thành công.";
+                    labelControl_ErrorheThong.Update();
+                }
             }
             else if (radioGroup_LoaiSach.EditValue.Equals("Update"))
                 preLoaiSach.updateEntity();
@@ -162,15 +179,18 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             }
         }
 
-        //private void textEdit_MaLoaiSach_Leave(object sender, EventArgs e)
+        //private void dataGridView_LoaiSach_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    string check = textEdit_MaLoaiSach.Text;
-        //    if(check == "")
-        //    {
-        //        labelControl_ErrorMaLoaiSach.ForeColor = Color.Red;
-        //        labelControl_ErrorMaLoaiSach.Text = "Mã loại sách không được để trống";
-        //        labelControl_ErrorMaLoaiSach.Update();
-        //    }
+        //    //if (this.oldIndexOfRow == e.RowIndex)
+        //    //    dataGridView_LoaiSach.CurrentRow.DefaultCellStyle.BackColor = Color.Salmon;
+        //    //else
+        //    //{
+        //    //    // oldIndexOfRow out of range
+
+        //    //    dataGridView_LoaiSach.Rows[this.oldIndexOfRow].DefaultCellStyle.BackColor = Color.PaleGoldenrod;
+        //    //    this.oldIndexOfRow = e.RowIndex;
+        //    //    dataGridView_LoaiSach.CurrentRow.DefaultCellStyle.BackColor = Color.Salmon;
+        //    //}
         //}
     }
 }

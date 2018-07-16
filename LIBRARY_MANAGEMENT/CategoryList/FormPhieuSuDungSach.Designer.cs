@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.dataGridView_PhieuSD = new System.Windows.Forms.DataGridView();
             this.colMaPhieuSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +66,7 @@
             this.groupControl_ThucHienPhieu = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton_PhieuSD = new DevExpress.XtraEditors.SimpleButton();
             this.radioGroup_PhieuSD = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl_ErrorHeThong = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PhieuSD)).BeginInit();
@@ -91,6 +101,7 @@
             // dataGridView_PhieuSD
             // 
             this.dataGridView_PhieuSD.AllowUserToAddRows = false;
+            this.dataGridView_PhieuSD.AllowUserToResizeRows = false;
             this.dataGridView_PhieuSD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_PhieuSD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaPhieuSD,
@@ -103,7 +114,26 @@
             this.dataGridView_PhieuSD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_PhieuSD.Location = new System.Drawing.Point(2, 2);
             this.dataGridView_PhieuSD.Name = "dataGridView_PhieuSD";
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_PhieuSD.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridView_PhieuSD.RowHeadersVisible = false;
             this.dataGridView_PhieuSD.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView_PhieuSD.RowsDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridView_PhieuSD.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.dataGridView_PhieuSD.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView_PhieuSD.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Salmon;
+            this.dataGridView_PhieuSD.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView_PhieuSD.RowTemplate.ReadOnly = true;
             this.dataGridView_PhieuSD.Size = new System.Drawing.Size(751, 546);
             this.dataGridView_PhieuSD.TabIndex = 0;
             this.dataGridView_PhieuSD.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PhieuSD_RowEnter);
@@ -112,6 +142,11 @@
             // 
             this.colMaPhieuSD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colMaPhieuSD.DataPropertyName = "maPhieuSD";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.colMaPhieuSD.DefaultCellStyle = dataGridViewCellStyle10;
             this.colMaPhieuSD.HeaderText = "Mã Phiếu Sử Dụng";
             this.colMaPhieuSD.Name = "colMaPhieuSD";
             // 
@@ -119,6 +154,11 @@
             // 
             this.colHoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colHoTen.DataPropertyName = "hoTen";
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.colHoTen.DefaultCellStyle = dataGridViewCellStyle11;
             this.colHoTen.HeaderText = "Họ Tên";
             this.colHoTen.Name = "colHoTen";
             // 
@@ -126,12 +166,22 @@
             // 
             this.colNgayThangNamSinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colNgayThangNamSinh.DataPropertyName = "ngayThangNamSinh";
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.colNgayThangNamSinh.DefaultCellStyle = dataGridViewCellStyle12;
             this.colNgayThangNamSinh.HeaderText = "Ngày Tháng Năm Sinh";
             this.colNgayThangNamSinh.Name = "colNgayThangNamSinh";
             // 
             // colGioiTinh
             // 
             this.colGioiTinh.DataPropertyName = "gioiTinh";
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            this.colGioiTinh.DefaultCellStyle = dataGridViewCellStyle13;
             this.colGioiTinh.HeaderText = "Giới Tính";
             this.colGioiTinh.Name = "colGioiTinh";
             // 
@@ -139,6 +189,11 @@
             // 
             this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colEmail.DataPropertyName = "email";
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.colEmail.DefaultCellStyle = dataGridViewCellStyle14;
             this.colEmail.HeaderText = "Email";
             this.colEmail.Name = "colEmail";
             // 
@@ -146,12 +201,22 @@
             // 
             this.colSoDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colSoDT.DataPropertyName = "soDT";
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.colSoDT.DefaultCellStyle = dataGridViewCellStyle15;
             this.colSoDT.HeaderText = "Số Điện Thoại";
             this.colSoDT.Name = "colSoDT";
             // 
             // colTenLop
             // 
             this.colTenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.PowderBlue;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.colTenLop.DefaultCellStyle = dataGridViewCellStyle16;
             this.colTenLop.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.colTenLop.HeaderText = "Tên Lớp";
             this.colTenLop.Name = "colTenLop";
@@ -167,6 +232,7 @@
             this.lookUpEdit_TenLop.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("tenLop", "Tên lớp")});
             this.lookUpEdit_TenLop.Properties.DisplayMember = "tenLop";
+            this.lookUpEdit_TenLop.Properties.NullText = "Chọn lớp";
             this.lookUpEdit_TenLop.Properties.ValueMember = "maLop";
             this.lookUpEdit_TenLop.Size = new System.Drawing.Size(197, 22);
             this.lookUpEdit_TenLop.TabIndex = 12;
@@ -232,7 +298,7 @@
             this.textEdit_MaPhieu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_MaPhieu.Properties.Appearance.Options.UseFont = true;
             this.textEdit_MaPhieu.Size = new System.Drawing.Size(197, 22);
-            this.textEdit_MaPhieu.TabIndex = 12;
+            this.textEdit_MaPhieu.TabIndex = 1;
             // 
             // dateEdit_NamSinh
             // 
@@ -255,7 +321,7 @@
             this.textEdit_SoDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_SoDT.Properties.Appearance.Options.UseFont = true;
             this.textEdit_SoDT.Size = new System.Drawing.Size(197, 22);
-            this.textEdit_SoDT.TabIndex = 7;
+            this.textEdit_SoDT.TabIndex = 4;
             // 
             // labelControl5
             // 
@@ -273,7 +339,7 @@
             this.textEdit_HoTen.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_HoTen.Properties.Appearance.Options.UseFont = true;
             this.textEdit_HoTen.Size = new System.Drawing.Size(197, 22);
-            this.textEdit_HoTen.TabIndex = 1;
+            this.textEdit_HoTen.TabIndex = 2;
             // 
             // textEdit_Email
             // 
@@ -282,7 +348,7 @@
             this.textEdit_Email.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_Email.Properties.Appearance.Options.UseFont = true;
             this.textEdit_Email.Size = new System.Drawing.Size(197, 22);
-            this.textEdit_Email.TabIndex = 6;
+            this.textEdit_Email.TabIndex = 3;
             // 
             // labelControl7
             // 
@@ -340,6 +406,7 @@
             // 
             // groupControl_ThucHienPhieu
             // 
+            this.groupControl_ThucHienPhieu.Controls.Add(this.labelControl_ErrorHeThong);
             this.groupControl_ThucHienPhieu.Controls.Add(this.simpleButton_PhieuSD);
             this.groupControl_ThucHienPhieu.Controls.Add(this.radioGroup_PhieuSD);
             this.groupControl_ThucHienPhieu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -354,17 +421,17 @@
             this.simpleButton_PhieuSD.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_PhieuSD.Appearance.Options.UseFont = true;
             this.simpleButton_PhieuSD.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_PhieuSD.Location = new System.Drawing.Point(38, 91);
+            this.simpleButton_PhieuSD.Location = new System.Drawing.Point(21, 63);
             this.simpleButton_PhieuSD.Name = "simpleButton_PhieuSD";
             this.simpleButton_PhieuSD.Size = new System.Drawing.Size(182, 67);
-            this.simpleButton_PhieuSD.TabIndex = 1;
+            this.simpleButton_PhieuSD.TabIndex = 5;
             this.simpleButton_PhieuSD.Text = "Thêm phiếu sử dụng";
             this.simpleButton_PhieuSD.Click += new System.EventHandler(this.simpleButton_PhieuSD_Click);
             // 
             // radioGroup_PhieuSD
             // 
             this.radioGroup_PhieuSD.EditValue = "Add";
-            this.radioGroup_PhieuSD.Location = new System.Drawing.Point(245, 50);
+            this.radioGroup_PhieuSD.Location = new System.Drawing.Point(243, 23);
             this.radioGroup_PhieuSD.Name = "radioGroup_PhieuSD";
             this.radioGroup_PhieuSD.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup_PhieuSD.Properties.Appearance.Options.UseFont = true;
@@ -376,6 +443,15 @@
             this.radioGroup_PhieuSD.TabIndex = 0;
             this.radioGroup_PhieuSD.SelectedIndexChanged += new System.EventHandler(this.radioGroup_PhieuSD_SelectedIndexChanged);
             // 
+            // labelControl_ErrorHeThong
+            // 
+            this.labelControl_ErrorHeThong.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl_ErrorHeThong.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl_ErrorHeThong.Location = new System.Drawing.Point(99, 146);
+            this.labelControl_ErrorHeThong.Name = "labelControl_ErrorHeThong";
+            this.labelControl_ErrorHeThong.Size = new System.Drawing.Size(0, 16);
+            this.labelControl_ErrorHeThong.TabIndex = 2;
+            // 
             // FormPhieuSuDungSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,7 +462,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FormPhieuSuDungSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormPhieuSuDungSach";
+            this.Text = "Phiếu sử dụng sách";
             this.Load += new System.EventHandler(this.FormPhieuSuDungSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -408,6 +484,7 @@
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl_ThucHienPhieu)).EndInit();
             this.groupControl_ThucHienPhieu.ResumeLayout(false);
+            this.groupControl_ThucHienPhieu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup_PhieuSD.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -435,6 +512,8 @@
         private DevExpress.XtraEditors.TextEdit textEdit_MaPhieu;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.RadioGroup radioGroup_GioiTinh;
+        private DevExpress.XtraEditors.GroupControl groupControl_ChiTietPhieuSD;
+        private DevExpress.XtraEditors.GroupControl groupControl_ThucHienPhieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaPhieuSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayThangNamSinh;
@@ -442,7 +521,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoDT;
         private System.Windows.Forms.DataGridViewComboBoxColumn colTenLop;
-        private DevExpress.XtraEditors.GroupControl groupControl_ChiTietPhieuSD;
-        private DevExpress.XtraEditors.GroupControl groupControl_ThucHienPhieu;
+        private DevExpress.XtraEditors.LabelControl labelControl_ErrorHeThong;
     }
 }

@@ -17,7 +17,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     public partial class FormTrangThai : DevExpress.XtraEditors.XtraForm, IViewEntity<TrangThai>
     {
         PreTrangThai preTrangThai = new PreTrangThai();
+        PreMuonTraSach preMuonTraSach = new PreMuonTraSach();
         int maTrangThai;
+        Boolean lblErrHeThongCheck = false;
 
         public FormTrangThai()
         {
@@ -33,17 +35,35 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public TrangThai AddNewEntity()
         {
-            TrangThai tt = new TrangThai();
-            tt.maTrangThai = preTrangThai.LastKey + 1;
-            tt.tenTrangThai = textEdit_TrangThai.Text;
-            return tt;
+            if(textEdit_TrangThai.Text != null && textEdit_TrangThai.Text.Length > 0)
+            {
+                TrangThai tt = new TrangThai();
+                tt.maTrangThai = preTrangThai.LastKey + 1;
+                tt.tenTrangThai = textEdit_TrangThai.Text;
+                this.lblErrHeThongCheck = false;
+                return tt;
+            }
+            else
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
         }
 
         public TrangThai DeleteEntity()
         {
             TrangThai tt = new TrangThai();
             tt.maTrangThai = maTrangThai;
-            return tt;
+            if (preMuonTraSach.GetEntityByMaTrangThai(tt.maTrangThai) != null)
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            else
+            {
+                tt.tenTrangThai = textEdit_TrangThai.Text;
+                return tt;
+            }
         }
 
         public TrangThai UpdateEntity()
@@ -79,12 +99,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 int num = preTrangThai.addNewEntity();
                 if(num > 0)
                     listBoxControl_TrangThai.SelectedIndex = listBoxControl_TrangThai.ItemCount - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Thêm thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else if (radioGroup_TrangThai.EditValue.Equals("Delete"))
             {
                 int num = preTrangThai.deleteEntity();
                 if (num > 0)
                     listBoxControl_TrangThai.SelectedIndex = selectedIndex - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Xóa thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else
             {

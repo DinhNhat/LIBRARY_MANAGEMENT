@@ -68,14 +68,14 @@
             this.labelControl_Error.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl_Error.Location = new System.Drawing.Point(183, 194);
             this.labelControl_Error.Name = "labelControl_Error";
-            this.labelControl_Error.Size = new System.Drawing.Size(46, 19);
+            this.labelControl_Error.Size = new System.Drawing.Size(0, 19);
             this.labelControl_Error.TabIndex = 2;
             // 
             // textEdit_TenUser
             // 
             this.textEdit_TenUser.Location = new System.Drawing.Point(183, 32);
             this.textEdit_TenUser.Name = "textEdit_TenUser";
-            this.textEdit_TenUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_TenUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_TenUser.Properties.Appearance.Options.UseFont = true;
             this.textEdit_TenUser.Size = new System.Drawing.Size(264, 22);
             this.textEdit_TenUser.TabIndex = 1;
@@ -89,8 +89,9 @@
             // 
             this.textEdit_Password.Location = new System.Drawing.Point(183, 80);
             this.textEdit_Password.Name = "textEdit_Password";
-            this.textEdit_Password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_Password.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_Password.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_Password.Properties.PasswordChar = '*';
             this.textEdit_Password.Size = new System.Drawing.Size(264, 22);
             this.textEdit_Password.TabIndex = 2;
             // 
@@ -120,9 +121,13 @@
             // 
             // FormDangNhap
             // 
+            this.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Appearance.BorderColor = System.Drawing.Color.Red;
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 247);
+            this.ClientSize = new System.Drawing.Size(603, 237);
             this.Controls.Add(this.simpleButton_Thoat);
             this.Controls.Add(this.simpleButton_DangNhap);
             this.Controls.Add(this.textEdit_Password);
@@ -132,7 +137,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDangNhap";
+            this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangNhap_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_Password.Properties)).EndInit();

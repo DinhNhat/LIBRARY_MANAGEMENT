@@ -181,5 +181,26 @@ namespace Presenter.Presenters
             return ob;
         }
 
+        public MuonSach GetEntityByMaPhieuSuDung(string maphieusudung)
+        {
+            MuonSach muonsach = null;
+            muonsach = base.entitySet.FirstOrDefault(t => t.maPhieuSD == maphieusudung);
+            return muonsach;
+        }
+
+        public MuonSach GetEntityByMaTrangThai(int matrangthai)
+        {
+            MuonSach muonsach = null;
+            muonsach = base.entitySet.FirstOrDefault(t => t.maTrangThai == matrangthai);
+            return muonsach;
+        }
+
+        public MuonSach GetEntityByMaTinhTrangSach(int matinhtrangsach)
+        {
+            MuonSach muonsach = null;
+            muonsach = base.entitySet.FirstOrDefault(t => t.maTinhTrangSach == matinhtrangsach);
+            return muonsach;
+        }
+
     }
 }

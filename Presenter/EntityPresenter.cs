@@ -25,10 +25,10 @@ namespace Presenter
         {
             int num = 0;
             T entity = view.AddNewEntity();
-            if (getEntity(entity) == null)
+            if (entity != null && getEntity(entity) == null)
             {
                 entitySet.Add(entity);
-                countBindingSourcePresenter = bindingsource.Count; // check how many enities in bindingsource
+                countBindingSourcePresenter = entitySet.Local.Count; // check how many enities in bindingsource
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                 {
@@ -48,10 +48,11 @@ namespace Presenter
             if (entityToDelete != null)
             {
                 entitySet.Remove(entityToDelete);
-                countBindingSourcePresenter = bindingsource.Count; // check how many enities in bindingsource
+                countBindingSourcePresenter = entitySet.Local.Count; // check how many enities in bindingsource
                 num = entitiesTV.SaveChanges();
                 if (num > 0)
                     this.bindingsource.DataSource = entitySet.ToList();
+                // jump out to RowEnter
             }
             return num;
         }

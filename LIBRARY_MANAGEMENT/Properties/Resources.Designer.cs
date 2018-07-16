@@ -63,6 +63,16 @@ namespace LIBRARY_MANAGEMENT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32104959_1904451836245522_2356403999877365760_n {
+            get {
+                object obj = ResourceManager.GetObject("32104959_1904451836245522_2356403999877365760_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addnewdatasource_32x32 {
             get {
                 object obj = ResourceManager.GetObject("addnewdatasource_32x32", resourceCulture);
@@ -86,6 +96,16 @@ namespace LIBRARY_MANAGEMENT.Properties {
         internal static System.Drawing.Bitmap editdatasource_32x32 {
             get {
                 object obj = ResourceManager.GetObject("editdatasource_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_truong_du_bi_dai_hoc_dan_toc_nha_trang {
+            get {
+                object obj = ResourceManager.GetObject("logo-truong-du-bi-dai-hoc-dan-toc-nha-trang", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -20,7 +20,14 @@ namespace Presenter.Presenters
         protected override PhieuSuDungSach getEntity(PhieuSuDungSach o)
         {
             PhieuSuDungSach phieu = null;
-            phieu = base.entitySet.FirstOrDefault(t => t.maPhieuSD == o.maPhieuSD);
+            if(o == null)
+            {
+                o = new PhieuSuDungSach();
+                o.maPhieuSD = "";
+                phieu = base.entitySet.FirstOrDefault(t => t.maPhieuSD == o.maPhieuSD);
+            }
+            else
+                phieu = base.entitySet.FirstOrDefault(t => t.maPhieuSD == o.maPhieuSD);
             return phieu;
         }
 
@@ -38,6 +45,13 @@ namespace Presenter.Presenters
         {
             PhieuSuDungSach ph;
             ph = base.entitySet.FirstOrDefault(t => t.maPhieuSD == maphieu);
+            return ph;
+        }
+
+        public PhieuSuDungSach getEntityByMaLop(int malop)
+        {
+            PhieuSuDungSach ph = null;
+            ph = base.entitySet.FirstOrDefault(t => t.maLop == malop);
             return ph;
         }
     }

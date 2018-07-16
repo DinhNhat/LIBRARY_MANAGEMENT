@@ -77,7 +77,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void simpleButton_UpdatePassword_Click(object sender, EventArgs e)
         {
             // check new password again == new password Is??
-            if(textEdit_NewPassword.Text != "")
+            if(textEdit_NewPassword.Text != null && textEdit_NewPassword.Text.Length > 0)
             {
                 if(textEdit_NewPasswordAgain.Text == textEdit_NewPassword.Text)
                 {

@@ -38,66 +38,77 @@ namespace LIBRARY_MANAGEMENT
         {
             FormLop lop = new FormLop();
             lop.Show();
+            lop.MdiParent = this;
         }
 
         private void barStaticItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormNamHoc nh = new FormNamHoc();
             nh.Show();
+            nh.MdiParent = this;
         }
 
         private void barStaticItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormPhieuSuDungSach phieu = new FormPhieuSuDungSach();
             phieu.Show();
+            phieu.MdiParent = this;
         }
 
         private void barStaticItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormLoaiSach ls = new FormLoaiSach();
             ls.Show();
+            ls.MdiParent = this;
         }
 
         private void barStaticItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormViTriLuuTru vtlt = new FormViTriLuuTru();
             vtlt.Show();
+            vtlt.MdiParent = this;
         }
 
         private void barStaticItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormNXB nxb = new FormNXB();
             nxb.Show();
+            nxb.MdiParent = this;
         }
 
         private void barStaticItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormKhoSach ks = new FormKhoSach();
             ks.Show();
+            ks.MdiParent = this;
         }
 
         private void barStaticItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormTacGia tg = new FormTacGia();
             tg.Show();
+            tg.MdiParent = this;
         }
 
         private void barStaticItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormSach sach = new FormSach();
             sach.Show();
+            sach.MdiParent = this;
         }
 
         private void barStaticItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormTrangThai tt = new FormTrangThai();
             tt.Show();
+            tt.MdiParent = this;
         }
 
         private void barStaticItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormTinhTrangSachMuonTra ttsmt = new FormTinhTrangSachMuonTra();
             ttsmt.Show();
+            ttsmt.MdiParent = this;
         }
 
         private void barStaticItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -114,12 +125,14 @@ namespace LIBRARY_MANAGEMENT
         {
             FormMuonTraSach mts = new FormMuonTraSach();
             mts.Show();
+            mts.MdiParent = this;
         } 
 
         private void barStaticItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormQuanLyNguoiSuDung qlUser = new FormQuanLyNguoiSuDung();
             qlUser.Show();
+            qlUser.MdiParent = this;
         }
 
         // show FormXacThuc
@@ -134,12 +147,21 @@ namespace LIBRARY_MANAGEMENT
         {
             FormDoiMatKhau dmk = new FormDoiMatKhau();
             dmk.ShowDialog();
+            dmk.MdiParent = this;
         }
 
         private void barStaticItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FormTraCuu tracuu = new FormTraCuu();
             tracuu.Show();
+            tracuu.MdiParent = this;
+        }
+
+        private void barStaticItem_ThongKeSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormThongKe thongke = new FormThongKe();
+            thongke.Show();
+            thongke.MdiParent = this;
         }
 
         #endregion
@@ -191,9 +213,9 @@ namespace LIBRARY_MANAGEMENT
             FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.ShowDialog();
             if (user.admin == true)
-                this.barSubItem9.Enabled = true;
+                this.barSubItem_QuanTriHeThong.Enabled = true;
             else
-                this.barSubItem9.Enabled = false;
+                this.barSubItem_QuanTriHeThong.Enabled = false;
         }
 
         private void QLTVMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -201,6 +223,5 @@ namespace LIBRARY_MANAGEMENT
             predangnhap.updateEntity();
             Application.Exit();
         }
-
     }
 }

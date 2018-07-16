@@ -22,7 +22,14 @@ namespace Presenter.Presenters
         protected override TrangThai getEntity(TrangThai o)
         {
             TrangThai tt = null;
-            tt = base.entitySet.FirstOrDefault(t => t.maTrangThai == o.maTrangThai || t.tenTrangThai == o.tenTrangThai);
+            if(o == null)
+            {
+                o = new TrangThai();
+                o.maTrangThai = -1;
+                tt = base.entitySet.FirstOrDefault(t => t.maTrangThai == o.maTrangThai && t.tenTrangThai == o.tenTrangThai);
+            }
+            else
+                tt = base.entitySet.FirstOrDefault(t => t.maTrangThai == o.maTrangThai && t.tenTrangThai == o.tenTrangThai);
             return tt;
         }
 

@@ -24,6 +24,10 @@ namespace Presenter.Presenters
         // for Update Method (assign all values from new entity to old entity)
         protected override void setNewInfo(Sach newEntity, Sach old)
         {
+            old.maTacGia = newEntity.maTacGia;
+            old.maLoaiSach = newEntity.maLoaiSach;
+            old.maNXB = newEntity.maNXB;
+            old.maKhoSach = newEntity.maKhoSach;
             old.tenSach = newEntity.tenSach;
             old.namXB = newEntity.namXB;
             old.soTrang = newEntity.soTrang;
@@ -36,6 +40,13 @@ namespace Presenter.Presenters
         {
             Sach sach = null;
             sach = base.entitySet.FirstOrDefault(t => t.maSach == masach);
+            return sach;
+        }
+
+        public Sach getEntityByMaloaisach(string maloaisach)
+        {
+            Sach sach = null;
+            sach = base.entitySet.FirstOrDefault(t => t.maLoaiSach == maloaisach);
             return sach;
         }
     }

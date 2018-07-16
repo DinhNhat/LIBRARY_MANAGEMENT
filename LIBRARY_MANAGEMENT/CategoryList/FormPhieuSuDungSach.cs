@@ -18,8 +18,12 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     {
         PrePhieuSuDungSach prePhieuSD = new PrePhieuSuDungSach();
         PreLop preLop = new PreLop();
+        PreMuonTraSach preMuonTraSach = new PreMuonTraSach();
+
         string maPhieu;
         int rowIndex;
+        int oldIndexOfRow;
+        Boolean lblErrHeThongCheck = false;
 
         public FormPhieuSuDungSach()
         {
@@ -43,37 +47,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public PhieuSuDungSach AddNewEntity()
         {
-            PhieuSuDungSach phieu = new PhieuSuDungSach();
-            //object maphieu = new object();
-            //maphieu = textEdit_MaPhieu.Text;
-            //if(maphieu != null)
-            //{
-            //    if (maphieu.ToString() != "")
-            //        phieu.maPhieuSD = textEdit_MaPhieu.Text;
-            //    else
-            //        phieu.maPhieuSD = null;
-            //}
-            //else
-            //{
-            //    phieu.maPhieuSD = null;
-            //}
-            //phieu.maPhieuSD = textEdit_MaPhieu.Text;
-            phieu.maPhieuSD = textEdit_MaPhieu.Text;
-            phieu.hoTen = textEdit_HoTen.Text;
-            phieu.ngayThangNamSinh = (DateTime)dateEdit_NamSinh.EditValue;
-            phieu.gioiTinh = (bool)radioGroup_GioiTinh.EditValue;
-            phieu.email = textEdit_Email.Text;
-            phieu.soDT = textEdit_SoDT.Text;
-            if (lookUpEdit_TenLop.EditValue != null)
-                phieu.maLop = (int?)lookUpEdit_TenLop.EditValue;
-            return phieu;
+            if (textEdit_MaPhieu.Text != null && textEdit_MaPhieu.Text.Length > 0)
+            {
+                PhieuSuDungSach phieu = new PhieuSuDungSach();
+                phieu.maPhieuSD = textEdit_MaPhieu.Text;
+                phieu.hoTen = textEdit_HoTen.Text;
+                phieu.ngayThangNamSinh = (DateTime)dateEdit_NamSinh.EditValue;
+                phieu.gioiTinh = (bool)radioGroup_GioiTinh.EditValue;
+                phieu.email = textEdit_Email.Text;
+                phieu.soDT = textEdit_SoDT.Text;
+                if (lookUpEdit_TenLop.EditValue != null)
+                    phieu.maLop = (int?)lookUpEdit_TenLop.EditValue;
+                this.lblErrHeThongCheck = false;
+                return phieu;
+            }
+            else
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
         }
 
         public PhieuSuDungSach DeleteEntity()
         {
             PhieuSuDungSach phieu = new PhieuSuDungSach();
             phieu.maPhieuSD = maPhieu;
-            return phieu;
+            if(preMuonTraSach.GetEntityByMaPhieuSuDung(phieu.maPhieuSD) != null)
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            else
+                return phieu;
         }
 
         public PhieuSuDungSach UpdateEntity()
@@ -109,14 +114,45 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         {
             prePhieuSD.ViewList();
             preLop.ViewList();
+            this.oldIndexOfRow = 0;
         }
 
         private void simpleButton_PhieuSD_Click(object sender, EventArgs e)
         {
             if (radioGroup_PhieuSD.EditValue.Equals("Add"))
+            {
                 prePhieuSD.addNewEntity();
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Thêm thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
+            } 
             else if (radioGroup_PhieuSD.EditValue.Equals("Delete"))
+            {
                 prePhieuSD.deleteEntity();
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Xóa thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
+            }
             else if (radioGroup_PhieuSD.EditValue.Equals("Update"))
                 prePhieuSD.updateEntity();
         }
@@ -138,6 +174,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 textEdit_SoDT.ReadOnly = false;
                 lookUpEdit_TenLop.ReadOnly = false;
                 radioGroup_GioiTinh.ReadOnly = false;
+                simpleButton_PhieuSD.Text = "Thêm phiếu sử dụng";
+                this.simpleButton_PhieuSD.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
             }
             else if (radioGroup_PhieuSD.EditValue.Equals("Delete"))
             {
@@ -148,6 +186,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 textEdit_SoDT.ReadOnly = true;
                 lookUpEdit_TenLop.ReadOnly = true;
                 radioGroup_GioiTinh.ReadOnly = true;
+                simpleButton_PhieuSD.Text = "Xóa phiếu sử dụng";
+                this.simpleButton_PhieuSD.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
             }
             else if (radioGroup_PhieuSD.EditValue.Equals("Update"))
             {
@@ -158,6 +198,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 textEdit_SoDT.ReadOnly = false;
                 lookUpEdit_TenLop.ReadOnly = false;
                 radioGroup_GioiTinh.ReadOnly = false;
+                simpleButton_PhieuSD.Text = "Sửa thông tin phiếu";
+                this.simpleButton_PhieuSD.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
             }
         }
     }

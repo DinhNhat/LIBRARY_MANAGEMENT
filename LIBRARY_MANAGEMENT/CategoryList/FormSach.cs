@@ -23,6 +23,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         PreKhoSach preKhoSach = new PreKhoSach();
         string maSach;
         int rowIndex;
+        int oldIndexOfRow;
 
         public FormSach()
         {
@@ -53,34 +54,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public Sach AddNewEntity()
         {
-            Sach sach = new Sach();
-            //sach.maSach = preSach.LastKey + 1.ToString();
-            sach.maSach = textEdit_MaSach.Text;
-            sach.tenSach = textEdit_TenSach.Text;
-            sach.namXB= Int32.Parse(textEdit_NamXB.Text);
-            sach.soTrang = Int32.Parse(textEdit_SoTrang.Text);
-            sach.soLuong = Int32.Parse(textEdit_SoLuong.Text);
-            //sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
-            if(textEdit_ThoiHanMuon.Text == "" || textEdit_ThoiHanMuon.Text == "0")
-                sach.thoiHanMuon = null;
+            if (textEdit_MaSach.Text != null && textEdit_MaSach.Text.Length > 0)
+            {
+                Sach sach = new Sach();
+                //sach.maSach = preSach.LastKey + 1.ToString();
+                sach.maSach = textEdit_MaSach.Text;
+                sach.tenSach = textEdit_TenSach.Text;
+                sach.namXB = Int32.Parse(textEdit_NamXB.Text);
+                sach.soTrang = Int32.Parse(textEdit_SoTrang.Text);
+                sach.soLuong = Int32.Parse(textEdit_SoLuong.Text);
+                //sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
+                if (textEdit_ThoiHanMuon.Text == "" || textEdit_ThoiHanMuon.Text == "0")
+                    sach.thoiHanMuon = null;
+                else
+                    sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
+                sach.giaTien = Int32.Parse(textEdit_GiaTien.Text);
+                if (lookUpEdit_TenTacGia.EditValue != null)
+                    sach.maTacGia = (int?)lookUpEdit_TenTacGia.EditValue;
+                if (lookUpEdit_TenLoaiSach.EditValue != null)
+                    sach.maLoaiSach = (string)lookUpEdit_TenLoaiSach.EditValue;
+                if (lookUpEdit_TenNXB.EditValue != null)
+                    sach.maNXB = (int?)lookUpEdit_TenNXB.EditValue;
+                if (lookUpEdit_TenKhoSach.EditValue != null)
+                    sach.maKhoSach = (int?)lookUpEdit_TenKhoSach.EditValue;
+                return sach;
+            }
             else
-                sach.thoiHanMuon = Int32.Parse(textEdit_ThoiHanMuon.Text);
-            sach.giaTien = Int32.Parse(textEdit_GiaTien.Text);
-            if (lookUpEdit_TenTacGia.EditValue != null)
-                sach.maTacGia = (int?)lookUpEdit_TenTacGia.EditValue;
-            if (lookUpEdit_TenLoaiSach.EditValue != null)
-                sach.maLoaiSach = (string)lookUpEdit_TenLoaiSach.EditValue;
-            if (lookUpEdit_TenNXB.EditValue != null)
-                sach.maNXB = (int?)lookUpEdit_TenNXB.EditValue;
-            if (lookUpEdit_TenKhoSach.EditValue != null)
-                sach.maKhoSach = (int?)lookUpEdit_TenKhoSach.EditValue;
-            return sach;
+                return null; 
         }
 
         public Sach DeleteEntity()
         {
             Sach sach = new Sach();
-            //ls.maLoaiSach = textEdit_MaLoaiSach.Text;
             sach.maSach = maSach;
             return sach;
         }
@@ -158,6 +163,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preTacGia.ViewList();
             preNXB.ViewList();
             preKhoSach.ViewList();
+            this.oldIndexOfRow = 0;
         }
 
         private void simpleButton_Sach_Click(object sender, EventArgs e)
@@ -173,7 +179,21 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         private void dataGridView_Sach_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             rowIndex = e.RowIndex;
+            //dataGridView_Sach.CurrentRow.DefaultCellStyle.BackColor = Color.Salmon;
             preSach.viewEntityAt(rowIndex);
+
+            //int indexRowofCell = e.RowIndex;
+            //if (indexRowofCell == this.oldIndexofRow)
+            //{
+            //    this.oldIndexofRow = indexRowofCell;
+            //    dataGridView_Sach.CurrentRow.DefaultCellStyle.BackColor = Color.Salmon;
+            //}
+            //else
+            //{
+            //    dataGridView_Sach.Rows[this.oldIndexofRow].DefaultCellStyle.BackColor = Color.PaleGoldenrod;
+            //    dataGridView_Sach.CurrentRow.DefaultCellStyle.BackColor = Color.PaleGoldenrod;
+            //}
+
         }
 
         private void radioGroup_Sach_SelectedIndexChanged(object sender, EventArgs e)

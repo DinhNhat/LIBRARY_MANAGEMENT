@@ -77,6 +77,7 @@
             this.textEdit_OldPassword.Name = "textEdit_OldPassword";
             this.textEdit_OldPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_OldPassword.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_OldPassword.Properties.PasswordChar = '*';
             this.textEdit_OldPassword.Size = new System.Drawing.Size(300, 24);
             this.textEdit_OldPassword.TabIndex = 1;
             this.textEdit_OldPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textEdit_OldPassword_KeyUp);
@@ -87,6 +88,7 @@
             this.textEdit_NewPassword.Name = "textEdit_NewPassword";
             this.textEdit_NewPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_NewPassword.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_NewPassword.Properties.PasswordChar = '*';
             this.textEdit_NewPassword.Size = new System.Drawing.Size(300, 24);
             this.textEdit_NewPassword.TabIndex = 2;
             // 
@@ -96,6 +98,7 @@
             this.textEdit_NewPasswordAgain.Name = "textEdit_NewPasswordAgain";
             this.textEdit_NewPasswordAgain.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_NewPasswordAgain.Properties.Appearance.Options.UseFont = true;
+            this.textEdit_NewPasswordAgain.Properties.PasswordChar = '*';
             this.textEdit_NewPasswordAgain.Size = new System.Drawing.Size(300, 24);
             this.textEdit_NewPasswordAgain.TabIndex = 3;
             // 
@@ -104,7 +107,7 @@
             this.labelControl_DoiMatKhau.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl_DoiMatKhau.Location = new System.Drawing.Point(204, 307);
             this.labelControl_DoiMatKhau.Name = "labelControl_DoiMatKhau";
-            this.labelControl_DoiMatKhau.Size = new System.Drawing.Size(57, 19);
+            this.labelControl_DoiMatKhau.Size = new System.Drawing.Size(0, 19);
             this.labelControl_DoiMatKhau.TabIndex = 6;
             // 
             // labelControl_CheckOldPassword
@@ -143,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 357);
+            this.ClientSize = new System.Drawing.Size(608, 357);
             this.Controls.Add(this.labelControl_CheckOldPassword);
             this.Controls.Add(this.labelControl_DoiMatKhau);
             this.Controls.Add(this.simpleButton_Exit);
@@ -156,7 +159,7 @@
             this.Controls.Add(this.labelControl1);
             this.Name = "FormDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDoiMatKhau";
+            this.Text = "Đổi mật khẩu";
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_OldPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NewPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_NewPasswordAgain.Properties)).EndInit();

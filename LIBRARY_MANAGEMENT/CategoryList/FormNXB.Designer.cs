@@ -55,7 +55,9 @@
             // 
             // listBoxControl_NXB
             // 
-            this.listBoxControl_NXB.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_NXB.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.listBoxControl_NXB.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_NXB.Appearance.Options.UseBackColor = true;
             this.listBoxControl_NXB.Appearance.Options.UseFont = true;
             this.listBoxControl_NXB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_NXB.Location = new System.Drawing.Point(2, 2);
@@ -79,7 +81,7 @@
             // radioGroup_NXB
             // 
             this.radioGroup_NXB.EditValue = "Add";
-            this.radioGroup_NXB.Location = new System.Drawing.Point(251, 134);
+            this.radioGroup_NXB.Location = new System.Drawing.Point(268, 134);
             this.radioGroup_NXB.Name = "radioGroup_NXB";
             this.radioGroup_NXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioGroup_NXB.Properties.Appearance.Options.UseFont = true;
@@ -96,10 +98,10 @@
             this.simpleButton_NXB.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_NXB.Appearance.Options.UseFont = true;
             this.simpleButton_NXB.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_NXB.Location = new System.Drawing.Point(61, 178);
+            this.simpleButton_NXB.Location = new System.Drawing.Point(19, 178);
             this.simpleButton_NXB.Name = "simpleButton_NXB";
-            this.simpleButton_NXB.Size = new System.Drawing.Size(165, 61);
-            this.simpleButton_NXB.TabIndex = 5;
+            this.simpleButton_NXB.Size = new System.Drawing.Size(200, 61);
+            this.simpleButton_NXB.TabIndex = 2;
             this.simpleButton_NXB.Text = "Thêm nhà xuất bản";
             this.simpleButton_NXB.Click += new System.EventHandler(this.simpleButton_NXB_Click);
             // 
@@ -107,9 +109,9 @@
             // 
             this.textEdit_NXB.Location = new System.Drawing.Point(151, 43);
             this.textEdit_NXB.Name = "textEdit_NXB";
-            this.textEdit_NXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit_NXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_NXB.Properties.Appearance.Options.UseFont = true;
-            this.textEdit_NXB.Size = new System.Drawing.Size(281, 24);
+            this.textEdit_NXB.Size = new System.Drawing.Size(298, 22);
             this.textEdit_NXB.TabIndex = 1;
             // 
             // labelControl1
@@ -130,7 +132,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FormNXB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNXB";
+            this.Text = "Nhà xuất bản";
             this.Load += new System.EventHandler(this.FormNXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

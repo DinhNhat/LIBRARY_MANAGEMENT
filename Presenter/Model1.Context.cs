@@ -41,5 +41,6 @@ namespace Presenter
         public DbSet<TrangThai> TrangThais { get; set; }
         public DbSet<ViTriLuuTru> ViTriLuuTrus { get; set; }
         public DbSet<View_Sach> View_Sach { get; set; }
+        public DbSet<View_ThongKeSach> View_ThongKeSach { get; set; }
     }
 }

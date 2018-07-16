@@ -127,7 +127,10 @@
   <data name="addnewdatasource_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addnewdatasource_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="deletedatasource2_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deletedatasource2_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="32104959_1904451836245522_2356403999877365760_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32104959_1904451836245522_2356403999877365760_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo-truong-du-bi-dai-hoc-dan-toc-nha-trang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-truong-du-bi-dai-hoc-dan-toc-nha-trang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

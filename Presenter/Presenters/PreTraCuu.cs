@@ -29,5 +29,25 @@ namespace Presenter.Presenters
         {
             base.bindingsource.DataSource = base.entitySet.Where(ts => ts.tenSach.Contains(tensach.Trim())).ToList();
         }
+
+        public void FilterbyMaTacGia(int matacgia)
+        {
+            base.bindingsource.DataSource = base.entitySet.Where(ts => ts.maTacGia == matacgia).ToList();
+        }
+
+        public void FilterbyMaLoaiSach(string maloaisach)
+        {
+            base.bindingsource.DataSource = base.entitySet.Where(ts => ts.maLoaiSach == maloaisach).ToList();
+        }
+
+        public void FilterbyMaNXB(int manxb)
+        {
+            base.bindingsource.DataSource = base.entitySet.Where(ts => ts.maNXB == manxb).ToList();
+        }
+
+        public void FilterbyMaKhoSach(int makhosach)
+        {
+            base.bindingsource.DataSource = base.entitySet.Where(ts => ts.maKhoSach == makhosach).ToList();
+        }
     }
 }

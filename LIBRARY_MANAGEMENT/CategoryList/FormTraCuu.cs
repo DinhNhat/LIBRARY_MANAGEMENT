@@ -22,6 +22,8 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         PreNhaXuatBan prenhaxuatban = new PreNhaXuatBan();
         PreKhoSach prekhosach = new PreKhoSach();
 
+        int oldIndexOfRow;
+
         public FormTraCuu()
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             pretacgia.ViewList();
             prenhaxuatban.ViewList();
             prekhosach.ViewList();
+            this.oldIndexOfRow = 0;
         }
 
         #region CRUD Methods
@@ -88,76 +91,61 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             lookUpEdit_KhoSachTraCuu.Properties.DataSource = entities;
         }
 
-        #region Implement LookUpEdit ViewListEntity
-        //void IViewListEntity<NhaXuatBan>.viewListEntity(BindingSource entities)
-        //{
-        //    lookUpEdit_NXBTraCuu.Properties.DataSource = entities;
-        //    colNhaXB.DataSource = entities;
-        //    colNhaXB.DataPropertyName = "maNXB";
-        //    colNhaXB.ValueMember = "maNXB";
-        //    colNhaXB.DataPropertyName = "tenNXB";
-        //}
-
-        //void IViewListEntity<KhoSach>.viewListEntity(BindingSource entities)
-        //{
-        //    lookUpEdit_KhoSach.Properties.DataSource = entities;
-        //    colKhoSach.DataSource = entities;
-        //    colNhaXB.DataPropertyName = "maKhoSach";
-        //    colNhaXB.ValueMember = "maKhoSach";
-        //    colKhoSach.DataPropertyName = "tenKhoSach";
-        //}
-
-        //void IViewListEntity<TacGia>.viewListEntity(BindingSource entities)
-        //{
-        //    lookUpEdit_TenTacGiaTraCuu.Properties.DataSource = entities;
-        //    colTacGia.DataSource = entities;
-        //    colNhaXB.DataPropertyName = "maTacGia";
-        //    colNhaXB.ValueMember = "maTacGia";
-        //    colTacGia.DataPropertyName = "tenTacGia";
-        //}
-
-        //void IViewListEntity<LoaiSach>.viewListEntity(BindingSource entities)
-        //{
-        //    lookUpEdit_LoaiSachTraCuu.Properties.DataSource = entities;
-        //    colLoaiSach.DataSource = entities;
-        //    colNhaXB.DataPropertyName = "maLoaiSach";
-        //    colNhaXB.ValueMember = "maLoaiSach";
-        //    colLoaiSach.DataPropertyName = "tenLoaiSach";
-        //}
-
-        //void IViewEntity<TraCuu1>.viewEntity(TraCuu1 entity)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //TraCuu1 IViewEntity<TraCuu1>.AddNewEntity()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //TraCuu1 IViewEntity<TraCuu1>.DeleteEntity()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //TraCuu1 IViewEntity<TraCuu1>.UpdateEntity()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //void IViewListEntity<TraCuu1>.viewListEntity(BindingSource entities)
-        //{
-        //    dataGridView_SachTraCuu.DataSource = entities;
-        //}
-        #endregion
-
+        #region Classification by Searching
         private void simpleButton_TenSachTraCuu_Click(object sender, EventArgs e)
         {
             string tensach = textEdit_TenSachTraCuu.Text;
             pretracuu.FilterbyTenSach(tensach);
             pretracuu.ViewList();
+            lookUpEdit_LoaiSachTraCuu.EditValue = null;
+            lookUpEdit_KhoSachTraCuu.EditValue = null;
+            lookUpEdit_NXBTraCuu.EditValue = null;
+            lookUpEdit_TacGiaTraCuu.EditValue = null;
         }
 
-        
+        private void simpleButton_TenTacGiaTraCuu_Click(object sender, EventArgs e)
+        {
+            int matacgia = (Int32)lookUpEdit_TacGiaTraCuu.EditValue;
+            pretracuu.FilterbyMaTacGia(matacgia);
+            pretracuu.ViewList();
+            textEdit_TenSachTraCuu.Text = "";
+            lookUpEdit_KhoSachTraCuu.EditValue = null;
+            lookUpEdit_LoaiSachTraCuu.EditValue = null;
+            lookUpEdit_NXBTraCuu.EditValue = null;
+        }
+
+        private void simpleButton_LoaiSachTraCuu_Click(object sender, EventArgs e)
+        {
+            string maloaisach = lookUpEdit_LoaiSachTraCuu.EditValue.ToString();
+            pretracuu.FilterbyMaLoaiSach(maloaisach);
+            pretracuu.ViewList();
+            textEdit_TenSachTraCuu.Text = "";
+            lookUpEdit_KhoSachTraCuu.EditValue = null;
+            lookUpEdit_NXBTraCuu.EditValue = null;
+            lookUpEdit_TacGiaTraCuu.EditValue = null;
+        }
+
+        private void simpleButton_TraCuuNXB_Click(object sender, EventArgs e)
+        {
+            int manxb = (Int32)lookUpEdit_NXBTraCuu.EditValue;
+            pretracuu.FilterbyMaNXB(manxb);
+            pretracuu.ViewList();
+            textEdit_TenSachTraCuu.Text = "";
+            lookUpEdit_KhoSachTraCuu.EditValue = null;
+            lookUpEdit_LoaiSachTraCuu.EditValue = null;
+            lookUpEdit_TacGiaTraCuu.EditValue = null;
+        }
+
+        private void simpleButton_TraCuuKhoSach_Click(object sender, EventArgs e)
+        {
+            int makhosach = (Int32)lookUpEdit_KhoSachTraCuu.EditValue;
+            pretracuu.FilterbyMaKhoSach(makhosach);
+            pretracuu.ViewList();
+            textEdit_TenSachTraCuu.Text = "";
+            lookUpEdit_LoaiSachTraCuu.EditValue = null;
+            lookUpEdit_NXBTraCuu.EditValue = null;
+            lookUpEdit_TacGiaTraCuu.EditValue = null;
+        }
+        #endregion
     }
 }

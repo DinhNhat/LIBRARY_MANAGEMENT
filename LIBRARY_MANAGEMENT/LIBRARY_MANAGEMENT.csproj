@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Everaldo-Desktoon-Library.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -123,6 +126,12 @@
     <Compile Include="CategoryList\FormTacGia.Designer.cs">
       <DependentUpon>FormTacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryList\FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryList\FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="CategoryList\FormTinhTrangSachMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +218,9 @@
     <EmbeddedResource Include="CategoryList\FormTacGia.resx">
       <DependentUpon>FormTacGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CategoryList\FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoryList\FormTinhTrangSachMuonTra.resx">
       <DependentUpon>FormTinhTrangSachMuonTra.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +281,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\deletedatasource2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32104959_1904451836245522_2356403999877365760_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-truong-du-bi-dai-hoc-dan-toc-nha-trang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Everaldo-Desktoon-Library.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

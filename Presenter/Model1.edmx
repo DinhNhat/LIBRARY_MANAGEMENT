@@ -180,6 +180,28 @@ warning 6013: The table/view 'ThuVienDBDH.dbo.View_SachDangMuon' does not have a
           <Property Name="NgayTraMax" Type="datetime" />
           <Property Name="soLuongDangMuon" Type="int" />
         </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ThuVienDBDH.dbo.View_ThongKeSach' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_ThongKeSach">
+          <Key>
+            <PropertyRef Name="maSach" />
+          </Key>
+          <Property Name="maSach" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="maTacGia" Type="int" />
+          <Property Name="tenTacGia" Type="nvarchar" MaxLength="50" />
+          <Property Name="maLoaiSach" Type="varchar" MaxLength="10" />
+          <Property Name="tenLoaiSach" Type="nvarchar" MaxLength="50" />
+          <Property Name="maNXB" Type="int" />
+          <Property Name="tenNXB" Type="nvarchar" MaxLength="50" />
+          <Property Name="namXB" Type="int" />
+          <Property Name="soLuong" Type="int" />
+          <Property Name="giaTien" Type="int" />
+          <Property Name="ngayMuon" Type="datetime" />
+          <Property Name="maTrangThai" Type="int" />
+          <Property Name="tienPhat" Type="int" />
+          <Property Name="maTinhTrangSach" Type="int" />
+        </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
           <End Role="DangNhap" Type="Self.DangNhap" Multiplicity="*" />
@@ -387,6 +409,25 @@ warning 6013: The table/view 'ThuVienDBDH.dbo.View_SachDangMuon' does not have a
 [View_Sach].[tenTacGia] AS [tenTacGia], 
 [View_Sach].[tenKhoSach] AS [tenKhoSach]
 FROM [dbo].[View_Sach] AS [View_Sach]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ThongKeSach" EntityType="Self.View_ThongKeSach" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_ThongKeSach].[maSach] AS [maSach], 
+[View_ThongKeSach].[tenSach] AS [tenSach], 
+[View_ThongKeSach].[maTacGia] AS [maTacGia], 
+[View_ThongKeSach].[tenTacGia] AS [tenTacGia], 
+[View_ThongKeSach].[maLoaiSach] AS [maLoaiSach], 
+[View_ThongKeSach].[tenLoaiSach] AS [tenLoaiSach], 
+[View_ThongKeSach].[maNXB] AS [maNXB], 
+[View_ThongKeSach].[tenNXB] AS [tenNXB], 
+[View_ThongKeSach].[namXB] AS [namXB], 
+[View_ThongKeSach].[soLuong] AS [soLuong], 
+[View_ThongKeSach].[giaTien] AS [giaTien], 
+[View_ThongKeSach].[ngayMuon] AS [ngayMuon], 
+[View_ThongKeSach].[maTrangThai] AS [maTrangThai], 
+[View_ThongKeSach].[tienPhat] AS [tienPhat], 
+[View_ThongKeSach].[maTinhTrangSach] AS [maTinhTrangSach]
+FROM [dbo].[View_ThongKeSach] AS [View_ThongKeSach]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDung" />
@@ -643,6 +684,26 @@ FROM [dbo].[View_Sach] AS [View_Sach]</DefiningQuery>
           <Property Name="tenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="tenKhoSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="View_ThongKeSach">
+          <Key>
+            <PropertyRef Name="maSach" />
+          </Key>
+          <Property Name="maSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="maTacGia" Type="Int32" />
+          <Property Name="tenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="maLoaiSach" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tenLoaiSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="maNXB" Type="Int32" />
+          <Property Name="tenNXB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="namXB" Type="Int32" />
+          <Property Name="soLuong" Type="Int32" />
+          <Property Name="giaTien" Type="Int32" />
+          <Property Name="ngayMuon" Type="DateTime" Precision="3" />
+          <Property Name="maTrangThai" Type="Int32" />
+          <Property Name="tienPhat" Type="Int32" />
+          <Property Name="maTinhTrangSach" Type="Int32" />
+        </EntityType>
         <Association Name="FK_DANGNHAP_RELATIONS_NGUOISUD">
           <End Role="NguoiSuDung" Type="Self.NguoiSuDung" Multiplicity="0..1" />
           <End Role="DangNhap" Type="Self.DangNhap" Multiplicity="*" />
@@ -828,6 +889,7 @@ FROM [dbo].[View_Sach] AS [View_Sach]</DefiningQuery>
           <EntitySet Name="TrangThais" EntityType="Self.TrangThai" />
           <EntitySet Name="ViTriLuuTrus" EntityType="Self.ViTriLuuTru" />
           <EntitySet Name="View_Sach" EntityType="Self.View_Sach" />
+          <EntitySet Name="View_ThongKeSach" EntityType="Self.View_ThongKeSach" />
           <AssociationSet Name="FK_DANGNHAP_RELATIONS_NGUOISUD" Association="Self.FK_DANGNHAP_RELATIONS_NGUOISUD">
             <End Role="NguoiSuDung" EntitySet="NguoiSuDungs" />
             <End Role="DangNhap" EntitySet="DangNhaps" />
@@ -1067,6 +1129,27 @@ FROM [dbo].[View_Sach] AS [View_Sach]</DefiningQuery>
                 <ScalarProperty Name="tenNXB" ColumnName="tenNXB" />
                 <ScalarProperty Name="tenTacGia" ColumnName="tenTacGia" />
                 <ScalarProperty Name="tenKhoSach" ColumnName="tenKhoSach" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ThongKeSach">
+            <EntityTypeMapping TypeName="ThuVienDBDHModel.View_ThongKeSach">
+              <MappingFragment StoreEntitySet="View_ThongKeSach">
+                <ScalarProperty Name="maSach" ColumnName="maSach" />
+                <ScalarProperty Name="tenSach" ColumnName="tenSach" />
+                <ScalarProperty Name="maTacGia" ColumnName="maTacGia" />
+                <ScalarProperty Name="tenTacGia" ColumnName="tenTacGia" />
+                <ScalarProperty Name="maLoaiSach" ColumnName="maLoaiSach" />
+                <ScalarProperty Name="tenLoaiSach" ColumnName="tenLoaiSach" />
+                <ScalarProperty Name="maNXB" ColumnName="maNXB" />
+                <ScalarProperty Name="tenNXB" ColumnName="tenNXB" />
+                <ScalarProperty Name="namXB" ColumnName="namXB" />
+                <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+                <ScalarProperty Name="giaTien" ColumnName="giaTien" />
+                <ScalarProperty Name="ngayMuon" ColumnName="ngayMuon" />
+                <ScalarProperty Name="maTrangThai" ColumnName="maTrangThai" />
+                <ScalarProperty Name="tienPhat" ColumnName="tienPhat" />
+                <ScalarProperty Name="maTinhTrangSach" ColumnName="maTinhTrangSach" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

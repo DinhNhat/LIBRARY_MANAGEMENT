@@ -32,30 +32,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLTVMain));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem_DocGia = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_Lop = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_NamHoc = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_PhieuSDSach = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem_Sach = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_LoaiSach = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_ViTriLuuTru = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_ChiTietSach = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem_DanhMuc = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_NXB = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_KhoSach = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_TacGia = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem_MuonTraSach = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_TrangThai = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_TinhTrangSach = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItemQuanLyMuonTraSach = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
-            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem9 = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem_QuanLyMuonTraSach = new DevExpress.XtraBars.BarStaticItem();
+            this.barSubItem_TraCuuThongKe = new DevExpress.XtraBars.BarSubItem();
+            this.barStaticItem_TraCuSach = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem_ThongKeSach = new DevExpress.XtraBars.BarStaticItem();
+            this.barSubItem_QuanTriHeThong = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_QuanLyNguoiSuDung = new DevExpress.XtraBars.BarStaticItem();
             this.barSubItem_CaiDatCaNhan = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem_DoiMatKhau = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem_DangXuat = new DevExpress.XtraBars.BarStaticItem();
-            this.barSubItem_CuaSo = new DevExpress.XtraBars.BarSubItem();
+            this.barMdiChildrenListItem_CuaSo = new DevExpress.XtraBars.BarMdiChildrenListItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -65,7 +66,9 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
+            this.barSubItem_CuaSo = new DevExpress.XtraBars.BarSubItem();
             this.barStaticItem17 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem_DocGia1 = new DevExpress.XtraBars.BarStaticItem();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -84,37 +87,40 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barSubItem1,
+            this.barSubItem_DocGia,
             this.barStaticItem_Lop,
             this.barStaticItem_NamHoc,
             this.barStaticItem_PhieuSDSach,
             this.barListItem1,
-            this.barSubItem3,
+            this.barSubItem_Sach,
             this.barToolbarsListItem1,
             this.barEditItem1,
             this.barStaticItem_LoaiSach,
             this.barStaticItem_ViTriLuuTru,
-            this.barSubItem5,
+            this.barSubItem_DanhMuc,
             this.barStaticItem_NXB,
             this.barStaticItem_KhoSach,
             this.barStaticItem5,
             this.barStaticItem_TacGia,
             this.barStaticItem_ChiTietSach,
-            this.barSubItem7,
-            this.barSubItem8,
-            this.barSubItem9,
+            this.barSubItem_MuonTraSach,
+            this.barSubItem_TraCuuThongKe,
+            this.barSubItem_QuanTriHeThong,
             this.barSubItem_CaiDatCaNhan,
             this.barSubItem_CuaSo,
             this.barStaticItem_TrangThai,
             this.barStaticItem_TinhTrangSach,
             this.barStaticItem_QuanLyNguoiSuDung,
-            this.barStaticItemQuanLyMuonTraSach,
+            this.barStaticItem_QuanLyMuonTraSach,
             this.barStaticItem_DoiMatKhau,
             this.barStaticItem_DangXuat,
             this.barStaticItem17,
-            this.barStaticItem1});
+            this.barStaticItem_TraCuSach,
+            this.barStaticItem_ThongKeSach,
+            this.barStaticItem_DocGia1,
+            this.barMdiChildrenListItem_CuaSo});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 44;
+            this.barManager1.MaxItemId = 48;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemLookUpEdit1,
@@ -127,29 +133,29 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem5, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem7, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem8, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem9, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_DocGia, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_Sach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_DanhMuc, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_MuonTraSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_TraCuuThongKe, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_QuanTriHeThong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_CaiDatCaNhan, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barSubItem_CuaSo, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barMdiChildrenListItem_CuaSo)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // barSubItem1
+            // barSubItem_DocGia
             // 
-            this.barSubItem1.Caption = "Độc giả";
-            this.barSubItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.Glyph")));
-            this.barSubItem1.Id = 0;
-            this.barSubItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem1.LargeGlyph")));
-            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.barSubItem_DocGia.Caption = "Độc giả";
+            this.barSubItem_DocGia.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_DocGia.Glyph")));
+            this.barSubItem_DocGia.Id = 0;
+            this.barSubItem_DocGia.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_DocGia.LargeGlyph")));
+            this.barSubItem_DocGia.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_Lop, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_NamHoc, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_PhieuSDSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem_DocGia.Name = "barSubItem_DocGia";
             // 
             // barStaticItem_Lop
             // 
@@ -178,17 +184,17 @@
             this.barStaticItem_PhieuSDSach.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem_PhieuSDSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem3_ItemClick);
             // 
-            // barSubItem3
+            // barSubItem_Sach
             // 
-            this.barSubItem3.Caption = "Sách";
-            this.barSubItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.Glyph")));
-            this.barSubItem3.Id = 8;
-            this.barSubItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem3.LargeGlyph")));
-            this.barSubItem3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.barSubItem_Sach.Caption = "Sách";
+            this.barSubItem_Sach.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_Sach.Glyph")));
+            this.barSubItem_Sach.Id = 8;
+            this.barSubItem_Sach.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_Sach.LargeGlyph")));
+            this.barSubItem_Sach.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_LoaiSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_ViTriLuuTru, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_ChiTietSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem3.Name = "barSubItem3";
+            this.barSubItem_Sach.Name = "barSubItem_Sach";
             // 
             // barStaticItem_LoaiSach
             // 
@@ -217,17 +223,17 @@
             this.barStaticItem_ChiTietSach.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem_ChiTietSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem4_ItemClick);
             // 
-            // barSubItem5
+            // barSubItem_DanhMuc
             // 
-            this.barSubItem5.Caption = "Danh mục";
-            this.barSubItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem5.Glyph")));
-            this.barSubItem5.Id = 18;
-            this.barSubItem5.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem5.LargeGlyph")));
-            this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.barSubItem_DanhMuc.Caption = "Danh mục";
+            this.barSubItem_DanhMuc.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_DanhMuc.Glyph")));
+            this.barSubItem_DanhMuc.Id = 18;
+            this.barSubItem_DanhMuc.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_DanhMuc.LargeGlyph")));
+            this.barSubItem_DanhMuc.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_NXB, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_KhoSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_TacGia, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem5.Name = "barSubItem5";
+            this.barSubItem_DanhMuc.Name = "barSubItem_DanhMuc";
             // 
             // barStaticItem_NXB
             // 
@@ -240,7 +246,7 @@
             // 
             // barStaticItem_KhoSach
             // 
-            this.barStaticItem_KhoSach.Caption = "Kho sách";
+            this.barStaticItem_KhoSach.Caption = "Khổ sách";
             this.barStaticItem_KhoSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem_KhoSach.Glyph")));
             this.barStaticItem_KhoSach.Id = 25;
             this.barStaticItem_KhoSach.Name = "barStaticItem_KhoSach";
@@ -256,16 +262,16 @@
             this.barStaticItem_TacGia.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem_TacGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem8_ItemClick);
             // 
-            // barSubItem7
+            // barSubItem_MuonTraSach
             // 
-            this.barSubItem7.Caption = "Mượn trả sách";
-            this.barSubItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem7.Glyph")));
-            this.barSubItem7.Id = 29;
-            this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.barSubItem_MuonTraSach.Caption = "Mượn trả sách";
+            this.barSubItem_MuonTraSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_MuonTraSach.Glyph")));
+            this.barSubItem_MuonTraSach.Id = 29;
+            this.barSubItem_MuonTraSach.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_TrangThai, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_TinhTrangSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItemQuanLyMuonTraSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem7.Name = "barSubItem7";
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_QuanLyMuonTraSach, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            this.barSubItem_MuonTraSach.Name = "barSubItem_MuonTraSach";
             // 
             // barStaticItem_TrangThai
             // 
@@ -285,41 +291,51 @@
             this.barStaticItem_TinhTrangSach.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem_TinhTrangSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem13_ItemClick);
             // 
-            // barStaticItemQuanLyMuonTraSach
+            // barStaticItem_QuanLyMuonTraSach
             // 
-            this.barStaticItemQuanLyMuonTraSach.Caption = "Quản lý mượn trả sách";
-            this.barStaticItemQuanLyMuonTraSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItemQuanLyMuonTraSach.Glyph")));
-            this.barStaticItemQuanLyMuonTraSach.Id = 38;
-            this.barStaticItemQuanLyMuonTraSach.Name = "barStaticItemQuanLyMuonTraSach";
-            this.barStaticItemQuanLyMuonTraSach.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.barStaticItemQuanLyMuonTraSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_2);
+            this.barStaticItem_QuanLyMuonTraSach.Caption = "Quản lý mượn trả sách";
+            this.barStaticItem_QuanLyMuonTraSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem_QuanLyMuonTraSach.Glyph")));
+            this.barStaticItem_QuanLyMuonTraSach.Id = 38;
+            this.barStaticItem_QuanLyMuonTraSach.Name = "barStaticItem_QuanLyMuonTraSach";
+            this.barStaticItem_QuanLyMuonTraSach.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem_QuanLyMuonTraSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem10_ItemClick_2);
             // 
-            // barSubItem8
+            // barSubItem_TraCuuThongKe
             // 
-            this.barSubItem8.Caption = "Tra cứu thống kê";
-            this.barSubItem8.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem8.Glyph")));
-            this.barSubItem8.Id = 30;
-            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem1)});
-            this.barSubItem8.Name = "barSubItem8";
+            this.barSubItem_TraCuuThongKe.Caption = "Tra cứu thống kê";
+            this.barSubItem_TraCuuThongKe.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_TraCuuThongKe.Glyph")));
+            this.barSubItem_TraCuuThongKe.Id = 30;
+            this.barSubItem_TraCuuThongKe.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem_TraCuSach),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barStaticItem_ThongKeSach)});
+            this.barSubItem_TraCuuThongKe.Name = "barSubItem_TraCuuThongKe";
             // 
-            // barStaticItem1
+            // barStaticItem_TraCuSach
             // 
-            this.barStaticItem1.Caption = "Tra cứu";
-            this.barStaticItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem1.Glyph")));
-            this.barStaticItem1.Id = 43;
-            this.barStaticItem1.Name = "barStaticItem1";
-            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.barStaticItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem1_ItemClick_1);
+            this.barStaticItem_TraCuSach.Caption = "Tra cứu sách";
+            this.barStaticItem_TraCuSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem_TraCuSach.Glyph")));
+            this.barStaticItem_TraCuSach.Id = 43;
+            this.barStaticItem_TraCuSach.Name = "barStaticItem_TraCuSach";
+            this.barStaticItem_TraCuSach.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem_TraCuSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem1_ItemClick_1);
             // 
-            // barSubItem9
+            // barStaticItem_ThongKeSach
             // 
-            this.barSubItem9.Caption = "Quản trị hệ thống";
-            this.barSubItem9.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem9.Glyph")));
-            this.barSubItem9.Id = 31;
-            this.barSubItem9.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.barStaticItem_ThongKeSach.Caption = "Thống kê sách";
+            this.barStaticItem_ThongKeSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barStaticItem_ThongKeSach.Glyph")));
+            this.barStaticItem_ThongKeSach.Id = 44;
+            this.barStaticItem_ThongKeSach.Name = "barStaticItem_ThongKeSach";
+            this.barStaticItem_ThongKeSach.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.barStaticItem_ThongKeSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem_ThongKeSach_ItemClick);
+            // 
+            // barSubItem_QuanTriHeThong
+            // 
+            this.barSubItem_QuanTriHeThong.Caption = "Quản trị hệ thống";
+            this.barSubItem_QuanTriHeThong.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_QuanTriHeThong.Glyph")));
+            this.barSubItem_QuanTriHeThong.Id = 31;
+            this.barSubItem_QuanTriHeThong.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barStaticItem_QuanLyNguoiSuDung, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.barSubItem9.Name = "barSubItem9";
+            this.barSubItem_QuanTriHeThong.Name = "barSubItem_QuanTriHeThong";
             // 
             // barStaticItem_QuanLyNguoiSuDung
             // 
@@ -358,12 +374,13 @@
             this.barStaticItem_DangXuat.TextAlignment = System.Drawing.StringAlignment.Near;
             this.barStaticItem_DangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem16_ItemClick);
             // 
-            // barSubItem_CuaSo
+            // barMdiChildrenListItem_CuaSo
             // 
-            this.barSubItem_CuaSo.Caption = "Cửa sổ";
-            this.barSubItem_CuaSo.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_CuaSo.Glyph")));
-            this.barSubItem_CuaSo.Id = 33;
-            this.barSubItem_CuaSo.Name = "barSubItem_CuaSo";
+            this.barMdiChildrenListItem_CuaSo.Caption = "Cửa sổ";
+            this.barMdiChildrenListItem_CuaSo.Glyph = ((System.Drawing.Image)(resources.GetObject("barMdiChildrenListItem_CuaSo.Glyph")));
+            this.barMdiChildrenListItem_CuaSo.Id = 47;
+            this.barMdiChildrenListItem_CuaSo.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barMdiChildrenListItem_CuaSo.LargeGlyph")));
+            this.barMdiChildrenListItem_CuaSo.Name = "barMdiChildrenListItem_CuaSo";
             // 
             // barDockControlTop
             // 
@@ -426,12 +443,26 @@
             this.barStaticItem5.Name = "barStaticItem5";
             this.barStaticItem5.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // barSubItem_CuaSo
+            // 
+            this.barSubItem_CuaSo.Caption = "Cửa sổ";
+            this.barSubItem_CuaSo.Glyph = ((System.Drawing.Image)(resources.GetObject("barSubItem_CuaSo.Glyph")));
+            this.barSubItem_CuaSo.Id = 33;
+            this.barSubItem_CuaSo.Name = "barSubItem_CuaSo";
+            // 
             // barStaticItem17
             // 
             this.barStaticItem17.Caption = "Đăng nhập bằng tài khoản khác";
             this.barStaticItem17.Id = 42;
             this.barStaticItem17.Name = "barStaticItem17";
             this.barStaticItem17.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem_DocGia1
+            // 
+            this.barStaticItem_DocGia1.Caption = "DocGia 1";
+            this.barStaticItem_DocGia1.Id = 46;
+            this.barStaticItem_DocGia1.Name = "barStaticItem_DocGia1";
+            this.barStaticItem_DocGia1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -449,8 +480,15 @@
             // 
             // QLTVMain
             // 
+            this.Appearance.BackColor = System.Drawing.Color.DarkGray;
+            this.Appearance.BackColor2 = System.Drawing.Color.PaleTurquoise;
+            this.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseBorderColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageStore = global::LIBRARY_MANAGEMENT.Properties.Resources._32104959_1904451836245522_2356403999877365760_n;
             this.ClientSize = new System.Drawing.Size(1073, 380);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -458,6 +496,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.IsMdiContainer = true;
             this.Name = "QLTVMain";
+            this.ShowMdiChildCaptionInParentTitle = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLTVMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -476,7 +515,7 @@
 
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarSubItem barSubItem_DocGia;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_Lop;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -485,7 +524,7 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem_NamHoc;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_PhieuSDSach;
         private DevExpress.XtraBars.BarListItem barListItem1;
-        private DevExpress.XtraBars.BarSubItem barSubItem3;
+        private DevExpress.XtraBars.BarSubItem barSubItem_Sach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_LoaiSach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_ViTriLuuTru;
         private DevExpress.XtraBars.BarToolbarsListItem barToolbarsListItem1;
@@ -493,24 +532,28 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
-        private DevExpress.XtraBars.BarSubItem barSubItem5;
+        private DevExpress.XtraBars.BarSubItem barSubItem_DanhMuc;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_NXB;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_KhoSach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_TacGia;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_ChiTietSach;
-        private DevExpress.XtraBars.BarSubItem barSubItem7;
+        private DevExpress.XtraBars.BarSubItem barSubItem_MuonTraSach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_TrangThai;
-        private DevExpress.XtraBars.BarSubItem barSubItem8;
-        private DevExpress.XtraBars.BarSubItem barSubItem9;
+        private DevExpress.XtraBars.BarSubItem barSubItem_TraCuuThongKe;
+        private DevExpress.XtraBars.BarSubItem barSubItem_QuanTriHeThong;
         private DevExpress.XtraBars.BarSubItem barSubItem_CaiDatCaNhan;
         private DevExpress.XtraBars.BarSubItem barSubItem_CuaSo;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_TinhTrangSach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_QuanLyNguoiSuDung;
-        private DevExpress.XtraBars.BarStaticItem barStaticItemQuanLyMuonTraSach;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem_QuanLyMuonTraSach;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_DoiMatKhau;
         private DevExpress.XtraBars.BarStaticItem barStaticItem_DangXuat;
         private DevExpress.XtraBars.BarStaticItem barStaticItem17;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem_TraCuSach;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem_ThongKeSach;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem_DocGia1;
+        private DevExpress.XtraBars.BarMdiChildrenListItem barMdiChildrenListItem_CuaSo;
+        // Automatic barStaticItem in SumItem_CuaSo
     }
 }

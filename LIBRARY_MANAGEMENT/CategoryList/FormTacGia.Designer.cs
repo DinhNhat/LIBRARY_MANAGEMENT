@@ -55,7 +55,9 @@
             // 
             // listBoxControl_TacGia
             // 
+            this.listBoxControl_TacGia.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.listBoxControl_TacGia.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_TacGia.Appearance.Options.UseBackColor = true;
             this.listBoxControl_TacGia.Appearance.Options.UseFont = true;
             this.listBoxControl_TacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_TacGia.Location = new System.Drawing.Point(2, 2);
@@ -130,7 +132,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FormTacGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormTacGia";
+            this.Text = "Tác giả";
             this.Load += new System.EventHandler(this.FormTacGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

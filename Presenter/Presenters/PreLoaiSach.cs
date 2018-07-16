@@ -21,7 +21,14 @@ namespace Presenter.Presenters
         protected override LoaiSach getEntity(LoaiSach o)
         {
             LoaiSach ls = null;
-            ls = base.entitySet.FirstOrDefault(t => t.maLoaiSach == o.maLoaiSach);
+            if(o == null)
+            {
+                o = new LoaiSach();
+                o.maLoaiSach = "";
+                ls = base.entitySet.FirstOrDefault(t => t.maLoaiSach == o.maLoaiSach);
+            }
+            else
+                ls = base.entitySet.FirstOrDefault(t => t.maLoaiSach == o.maLoaiSach);
             return ls;
         }
 

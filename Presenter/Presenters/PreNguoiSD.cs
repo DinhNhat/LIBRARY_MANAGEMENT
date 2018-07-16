@@ -8,6 +8,7 @@ namespace Presenter.Presenters
 {
     public class PreNguoiSD : EntityPresenter<NguoiSuDung>
     {
+
         public PreNguoiSD() : base()
         {
             // set real value for fields entitySet and bindingsource.
@@ -28,6 +29,13 @@ namespace Presenter.Presenters
             old.password = newEntity.password;
             old.admin = newEntity.admin;
             old.enable = newEntity.enable;
+        }
+
+        public NguoiSuDung getUserbyIDforUpdateNewPassword(NguoiSuDung o)
+        {
+            NguoiSuDung ngsd = null;
+            ngsd = base.entitySet.FirstOrDefault(t => t.maNguoiSD == o.maNguoiSD);
+            return ngsd;
         }
 
         public NguoiSuDung CheckUser(NguoiSuDung ng)

@@ -17,7 +17,9 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     public partial class FormTinhTrangSachMuonTra : DevExpress.XtraEditors.XtraForm, IViewEntity<TinhTrangSachMuonTra>
     {
         PreTinhTrangSachMuonTra preTinhTrangSachMuonTra = new PreTinhTrangSachMuonTra();
+        PreMuonTraSach preMuonTraSach = new PreMuonTraSach();
         int maTinhTrangSach;
+        Boolean lblErrHeThongCheck = false;
 
         public FormTinhTrangSachMuonTra()
         {
@@ -27,17 +29,36 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public TinhTrangSachMuonTra AddNewEntity()
         {
-            TinhTrangSachMuonTra ttsmt = new TinhTrangSachMuonTra();
-            ttsmt.maTinhTrangSach = preTinhTrangSachMuonTra.LastKey + 1;
-            ttsmt.tenTinhTrangSach = textEdit_TTSMT.Text;
-            return ttsmt;
+            if (textEdit_TTSMT.Text != null && textEdit_TTSMT.Text.Length > 0)
+            {
+                TinhTrangSachMuonTra ttsmt = new TinhTrangSachMuonTra();
+                ttsmt.maTinhTrangSach = preTinhTrangSachMuonTra.LastKey + 1;
+                ttsmt.tenTinhTrangSach = textEdit_TTSMT.Text;
+                this.lblErrHeThongCheck = false;
+                return ttsmt;
+            }
+            else
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            
         }
 
         public TinhTrangSachMuonTra DeleteEntity()
         {
             TinhTrangSachMuonTra ttsmt = new TinhTrangSachMuonTra();
             ttsmt.maTinhTrangSach = maTinhTrangSach;
-            return ttsmt;
+            if(preMuonTraSach.GetEntityByMaTinhTrangSach(ttsmt.maTinhTrangSach) != null)
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            else
+            {
+                ttsmt.tenTinhTrangSach = textEdit_TTSMT.Text;
+                return ttsmt;
+            }
         }
 
         public TinhTrangSachMuonTra UpdateEntity()
@@ -79,12 +100,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
                 int num = preTinhTrangSachMuonTra.addNewEntity();
                 if (num > 0)
                     listBoxControl_TTSMT.SelectedIndex = listBoxControl_TTSMT.ItemCount - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Thêm thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else if (radioGroup_TTSMT.EditValue.Equals("Delete"))
             {
                 int num = preTinhTrangSachMuonTra.deleteEntity();
                 if (num > 0)
                     listBoxControl_TTSMT.SelectedIndex = selectedIndex - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Xóa thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else
             {

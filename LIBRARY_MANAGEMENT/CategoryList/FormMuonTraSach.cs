@@ -26,6 +26,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
         int soTT;
         string maPhieu;
         int rowIndex;
+        int oldIndexOfRow;
 
         public FormMuonTraSach()
         {
@@ -46,6 +47,7 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preTTSMT.ViewList();
             preTrangThai.ViewList();
             preNguoiSD.ViewList();
+            this.oldIndexOfRow = 0;
         }
 
         void IViewEntity<MuonSach>.viewEntity(MuonSach muonsach)
@@ -361,6 +363,5 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             preMuonTraSach.maPhieuSD = ms.maPhieuSD;
             ViewChiTietDocGiabyFilter();
         }
-
     }
 }

@@ -18,8 +18,11 @@ namespace LIBRARY_MANAGEMENT.CategoryList
     {
         PreLop preLop = new PreLop();
         PreNamHoc preNamHoc = new PreNamHoc();
+        PrePhieuSuDungSach prePhieu = new PrePhieuSuDungSach();
+
         int maLop;
         int rowIndex;
+        Boolean lblErrHeThongCheck = false;
 
         public FormLop()
         {
@@ -31,19 +34,38 @@ namespace LIBRARY_MANAGEMENT.CategoryList
 
         public Lop AddNewEntity()
         {
-            Lop lop = new Lop();
-            lop.maLop = preLop.LastKey + 1;
-            lop.tenLop = textEdit_TenLop.Text;
-            if (lookUpEdit_TenNamHoc.EditValue != null)
-                lop.maNamHoc = (int?)lookUpEdit_TenNamHoc.EditValue;
-            return lop;
+            if(textEdit_TenLop.Text != null && textEdit_TenLop.Text.Length > 0)
+            {
+                Lop lop = new Lop();
+                lop.tenLop = textEdit_TenLop.Text;
+                lop.maLop = preLop.LastKey + 1;
+                lop.tenLop = textEdit_TenLop.Text;
+                if (lookUpEdit_TenNamHoc.EditValue != null)
+                    lop.maNamHoc = (int?)lookUpEdit_TenNamHoc.EditValue;
+                this.lblErrHeThongCheck = false;
+                return lop;
+            }
+            else
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            } 
         }
 
         public Lop DeleteEntity()
         {
             Lop lop = new Lop();
             lop.maLop = maLop;
-            return lop;
+            if(prePhieu.getEntityByMaLop(lop.maLop) != null)
+            {
+                this.lblErrHeThongCheck = true;
+                return null;
+            }
+            else
+            {
+                lop.tenLop = textEdit_TenLop.Text;
+                return lop;
+            }
         }
 
         public Lop UpdateEntity()
@@ -83,10 +105,37 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             {
                 preLop.addNewEntity();
                 rowIndex = dataGridView_Lop.DataBindings.Count - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Thêm không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Thêm thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else if (radioGroup_Lop.EditValue.Equals("Delete"))
             {
                 preLop.deleteEntity();
+                rowIndex = dataGridView_Lop.DataBindings.Count - 1;
+                if (this.lblErrHeThongCheck == true)
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Red;
+                    labelControl_ErrorHeThong.Text = "Lỗi hệ thống !!! Xóa không thành công.";
+                    labelControl_ErrorHeThong.Update();
+                    this.lblErrHeThongCheck = false;
+                }
+                else
+                {
+                    labelControl_ErrorHeThong.ForeColor = Color.Blue;
+                    labelControl_ErrorHeThong.Text = "Xóa thành công.";
+                    labelControl_ErrorHeThong.Update();
+                }
             }
             else if (radioGroup_Lop.EditValue.Equals("Update"))
             {

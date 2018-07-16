@@ -55,7 +55,9 @@
             // 
             // listBoxControl_NamHoc
             // 
+            this.listBoxControl_NamHoc.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.listBoxControl_NamHoc.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxControl_NamHoc.Appearance.Options.UseBackColor = true;
             this.listBoxControl_NamHoc.Appearance.Options.UseFont = true;
             this.listBoxControl_NamHoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxControl_NamHoc.Location = new System.Drawing.Point(2, 2);
@@ -66,6 +68,8 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Appearance.BackColor = System.Drawing.Color.Red;
+            this.panelControl2.Appearance.Options.UseBackColor = true;
             this.panelControl2.Controls.Add(this.simpleButton_NamHoc);
             this.panelControl2.Controls.Add(this.radioGroup_NamHoc);
             this.panelControl2.Controls.Add(this.textEdit_NamHoc);
@@ -81,10 +85,10 @@
             this.simpleButton_NamHoc.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton_NamHoc.Appearance.Options.UseFont = true;
             this.simpleButton_NamHoc.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
-            this.simpleButton_NamHoc.Location = new System.Drawing.Point(46, 187);
+            this.simpleButton_NamHoc.Location = new System.Drawing.Point(21, 187);
             this.simpleButton_NamHoc.Name = "simpleButton_NamHoc";
-            this.simpleButton_NamHoc.Size = new System.Drawing.Size(140, 56);
-            this.simpleButton_NamHoc.TabIndex = 3;
+            this.simpleButton_NamHoc.Size = new System.Drawing.Size(174, 56);
+            this.simpleButton_NamHoc.TabIndex = 2;
             this.simpleButton_NamHoc.Text = "Thêm năm học";
             this.simpleButton_NamHoc.Click += new System.EventHandler(this.simpleButton_NamHoc_Click);
             // 
@@ -99,13 +103,13 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Add", "Thêm năm học"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Update", "Sửa tên năm học"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("Delete", "Xóa năm học")});
-            this.radioGroup_NamHoc.Size = new System.Drawing.Size(158, 102);
+            this.radioGroup_NamHoc.Size = new System.Drawing.Size(184, 102);
             this.radioGroup_NamHoc.TabIndex = 2;
             this.radioGroup_NamHoc.SelectedIndexChanged += new System.EventHandler(this.radioGroup_NamHoc_SelectedIndexChanged);
             // 
             // textEdit_NamHoc
             // 
-            this.textEdit_NamHoc.Location = new System.Drawing.Point(102, 54);
+            this.textEdit_NamHoc.Location = new System.Drawing.Point(128, 54);
             this.textEdit_NamHoc.Name = "textEdit_NamHoc";
             this.textEdit_NamHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit_NamHoc.Properties.Appearance.Options.UseFont = true;
@@ -123,6 +127,8 @@
             // 
             // FormNamHoc
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 296);
@@ -130,7 +136,7 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FormNamHoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNamHoc";
+            this.Text = "Năm học";
             this.Load += new System.EventHandler(this.FormNamHoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

@@ -98,19 +98,19 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             if (radioGroup_KhoSach.EditValue.Equals("Add"))
             {
                 textEdit_KhoSach.ReadOnly = false;
-                simpleButton_KhoSach.Text = "Thêm kho sách";
+                simpleButton_KhoSach.Text = "Thêm khổ sách";
                 this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
             }
             else if (radioGroup_KhoSach.EditValue.Equals("Delete"))
             {
                 textEdit_KhoSach.ReadOnly = true;
-                simpleButton_KhoSach.Text = "Xóa kho sách";
+                simpleButton_KhoSach.Text = "Xóa khổ sách";
                 this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
             }
             else if (radioGroup_KhoSach.EditValue.Equals("Update"))
             {
                 textEdit_KhoSach.ReadOnly = false;
-                simpleButton_KhoSach.Text = "Sửa tên kho sách";
+                simpleButton_KhoSach.Text = "Sửa tên khổ sách";
                 this.simpleButton_KhoSach.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
             }
         }

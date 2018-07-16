@@ -99,19 +99,19 @@ namespace LIBRARY_MANAGEMENT.CategoryList
             if (radioGroup_NXB.EditValue.Equals("Add"))
             {
                 textEdit_NXB.ReadOnly = false;
-                simpleButton_NXB.Text = "Thêm kho sách";
+                simpleButton_NXB.Text = "Thêm nhà xuất bản";
                 this.simpleButton_NXB.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.addnewdatasource_32x32;
             }  
             else if (radioGroup_NXB.EditValue.Equals("Delete"))
             {
                 textEdit_NXB.ReadOnly = true;
-                simpleButton_NXB.Text = "Xóa kho sách";
+                simpleButton_NXB.Text = "Xóa nhà xuất bản";
                 this.simpleButton_NXB.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.deletedatasource2_32x32;
             }
             else if (radioGroup_NXB.EditValue.Equals("Update"))
             {
                 textEdit_NXB.ReadOnly = false;
-                simpleButton_NXB.Text = "Sửa tên kho sách";
+                simpleButton_NXB.Text = "Sửa tên nhà xuất bản";
                 this.simpleButton_NXB.Image = global::LIBRARY_MANAGEMENT.Properties.Resources.editdatasource_32x32;
             }
         }
